@@ -24,7 +24,7 @@
 	STAssertEqualObjects([c2 name], @"foo", nil);
 	STAssertEquals([c2 parent], c1, nil);
 
-	// via init and settings
+	// via init and setters
 	Context *c3 = [[[Context alloc] init] autorelease];
 	[c3 setName:@"bar"];
 	[c3 setParent:c1];

@@ -12,6 +12,9 @@
 		8D35C5FA0DFE7F7D00AF7A7D /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C5F90DFE7F7D00AF7A7D /* Context.m */; };
 		8D35C5FB0DFE7F7D00AF7A7D /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C5F90DFE7F7D00AF7A7D /* Context.m */; };
 		8D35C60B0DFE851A00AF7A7D /* ContextTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C60A0DFE851A00AF7A7D /* ContextTest.m */; };
+		8D35C6280DFE999200AF7A7D /* ContextGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6270DFE999200AF7A7D /* ContextGroup.m */; };
+		8D35C6290DFE999200AF7A7D /* ContextGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6270DFE999200AF7A7D /* ContextGroup.m */; };
+		8D35C6320DFE9C2400AF7A7D /* ContextGroupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,10 @@
 		8D35C5F90DFE7F7D00AF7A7D /* Context.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Context.m; path = Source/Context.m; sourceTree = "<group>"; };
 		8D35C6090DFE851A00AF7A7D /* ContextTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextTest.h; path = Source/ContextTest.h; sourceTree = "<group>"; };
 		8D35C60A0DFE851A00AF7A7D /* ContextTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextTest.m; path = Source/ContextTest.m; sourceTree = "<group>"; };
+		8D35C6260DFE999200AF7A7D /* ContextGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextGroup.h; path = Source/ContextGroup.h; sourceTree = "<group>"; };
+		8D35C6270DFE999200AF7A7D /* ContextGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextGroup.m; path = Source/ContextGroup.m; sourceTree = "<group>"; };
+		8D35C6300DFE9C2400AF7A7D /* ContextGroupTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextGroupTest.h; path = Source/ContextGroupTest.h; sourceTree = "<group>"; };
+		8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextGroupTest.m; path = Source/ContextGroupTest.m; sourceTree = "<group>"; };
 		8DE55AD20DFE7AF800D79CF0 /* Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE55AD30DFE7AF800D79CF0 /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unit Tests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +138,10 @@
 				8D35C5F90DFE7F7D00AF7A7D /* Context.m */,
 				8D35C6090DFE851A00AF7A7D /* ContextTest.h */,
 				8D35C60A0DFE851A00AF7A7D /* ContextTest.m */,
+				8D35C6260DFE999200AF7A7D /* ContextGroup.h */,
+				8D35C6270DFE999200AF7A7D /* ContextGroup.m */,
+				8D35C6300DFE9C2400AF7A7D /* ContextGroupTest.h */,
+				8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -232,6 +243,7 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				8D35C5FB0DFE7F7D00AF7A7D /* Context.m in Sources */,
+				8D35C6290DFE999200AF7A7D /* ContextGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +253,8 @@
 			files = (
 				8D35C5FA0DFE7F7D00AF7A7D /* Context.m in Sources */,
 				8D35C60B0DFE851A00AF7A7D /* ContextTest.m in Sources */,
+				8D35C6280DFE999200AF7A7D /* ContextGroup.m in Sources */,
+				8D35C6320DFE9C2400AF7A7D /* ContextGroupTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
