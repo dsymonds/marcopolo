@@ -15,6 +15,8 @@
 		8D35C6280DFE999200AF7A7D /* ContextGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6270DFE999200AF7A7D /* ContextGroup.m */; };
 		8D35C6290DFE999200AF7A7D /* ContextGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6270DFE999200AF7A7D /* ContextGroup.m */; };
 		8D35C6320DFE9C2400AF7A7D /* ContextGroupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */; };
+		8D56753C0E0105AC00EFEBA2 /* TimeOfDaySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */; };
+		8D56756A0E01088A00EFEBA2 /* TimeOfDaySensor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D56752E0E01055E00EFEBA2 /* TimeOfDaySensor-Info.plist */; };
 		8D5A064A0DFFBD49009346BF /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A06490DFFBD49009346BF /* SensorData.m */; };
 		8D5A064B0DFFBD49009346BF /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A06490DFFBD49009346BF /* SensorData.m */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,10 @@
 		8D35C6270DFE999200AF7A7D /* ContextGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextGroup.m; path = Source/ContextGroup.m; sourceTree = "<group>"; };
 		8D35C6300DFE9C2400AF7A7D /* ContextGroupTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextGroupTest.h; path = Source/ContextGroupTest.h; sourceTree = "<group>"; };
 		8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextGroupTest.m; path = Source/ContextGroupTest.m; sourceTree = "<group>"; };
+		8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeOfDaySensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D56752E0E01055E00EFEBA2 /* TimeOfDaySensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TimeOfDaySensor-Info.plist"; path = "Sensors/TimeOfDaySensor/TimeOfDaySensor-Info.plist"; sourceTree = "<group>"; };
+		8D56753A0E0105AC00EFEBA2 /* TimeOfDaySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeOfDaySensor.h; path = Sensors/TimeOfDaySensor/TimeOfDaySensor.h; sourceTree = "<group>"; };
+		8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeOfDaySensor.m; path = Sensors/TimeOfDaySensor/TimeOfDaySensor.m; sourceTree = "<group>"; };
 		8D5A06480DFFBD49009346BF /* SensorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorData.h; path = Source/SensorData.h; sourceTree = "<group>"; };
 		8D5A06490DFFBD49009346BF /* SensorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorData.m; path = Source/SensorData.m; sourceTree = "<group>"; };
 		8D5A064D0DFFBE60009346BF /* Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sensor.h; path = Source/Sensor.h; sourceTree = "<group>"; };
@@ -49,6 +55,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D56752B0E01055E00EFEBA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +106,7 @@
 			children = (
 				8D1107320486CEB800E47090 /* MarcoPolo.app */,
 				8DE55AD20DFE7AF800D79CF0 /* Unit Tests.octest */,
+				8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
+				8D5675390E01058100EFEBA2 /* Sensors */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -154,6 +169,16 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		8D5675390E01058100EFEBA2 /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				8D56752E0E01055E00EFEBA2 /* TimeOfDaySensor-Info.plist */,
+				8D56753A0E0105AC00EFEBA2 /* TimeOfDaySensor.h */,
+				8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */,
+			);
+			name = Sensors;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,6 +199,23 @@
 			productName = MarcoPolo;
 			productReference = 8D1107320486CEB800E47090 /* MarcoPolo.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8D56752C0E01055E00EFEBA2 /* TimeOfDaySensor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D5675320E01055F00EFEBA2 /* Build configuration list for PBXNativeTarget "TimeOfDaySensor" */;
+			buildPhases = (
+				8D5675290E01055E00EFEBA2 /* Resources */,
+				8D56752A0E01055E00EFEBA2 /* Sources */,
+				8D56752B0E01055E00EFEBA2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeOfDaySensor;
+			productName = TimeOfDaySensor;
+			productReference = 8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */;
+			productType = "com.apple.product-type.bundle";
 		};
 		8DE55AD10DFE7AF800D79CF0 /* Unit Tests */ = {
 			isa = PBXNativeTarget;
@@ -207,6 +249,7 @@
 			targets = (
 				8D1107260486CEB800E47090 /* MarcoPolo */,
 				8DE55AD10DFE7AF800D79CF0 /* Unit Tests */,
+				8D56752C0E01055E00EFEBA2 /* TimeOfDaySensor */,
 			);
 		};
 /* End PBXProject section */
@@ -216,6 +259,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D5675290E01055E00EFEBA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D56756A0E01088A00EFEBA2 /* TimeOfDaySensor-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +307,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D56752A0E01055E00EFEBA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D56753C0E0105AC00EFEBA2 /* TimeOfDaySensor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DE55ACE0DFE7AF800D79CF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -271,6 +330,60 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		8D5675300E01055F00EFEBA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Sensors/TimeOfDaySensor/TimeOfDaySensor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TimeOfDaySensor;
+				WRAPPER_EXTENSION = sensor;
+			};
+			name = Debug;
+		};
+		8D5675310E01055F00EFEBA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Sensors/TimeOfDaySensor/TimeOfDaySensor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = TimeOfDaySensor;
+				WRAPPER_EXTENSION = sensor;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		8DE55AD40DFE7AF900D79CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -390,6 +503,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8D5675320E01055F00EFEBA2 /* Build configuration list for PBXNativeTarget "TimeOfDaySensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D5675300E01055F00EFEBA2 /* Debug */,
+				8D5675310E01055F00EFEBA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8DE55AD60DFE7AF900D79CF0 /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
