@@ -9,18 +9,22 @@
 
 
 // The interface for all types of sensors.
-// A sensor is considered "active" once it is created via alloc & init.
 @protocol Sensor
-
-// Return this sensor's name. MUST be reimplemented by descendant classes.
-+ (NSString *)name;
-
-// Whether this sensor takes on multiple values at a time, or only a single value.
-// MUST be reimplemented by descendant classes.
-+ (BOOL)isMultiValued;
 
 // The standard init/dealloc MAY be extended by descendant classes.
 - (id)init;
 - (void)dealloc;
+
+// Return this sensor's name. MUST be implemented.
+- (NSString *)name;
+
+// Whether this sensor takes on multiple values at a time, or only a single value.
+// MUST be implemented.
+- (BOOL)isMultiValued;
+
+// Start/stop the sensor. MUST be implemented.
+// Return value is YES on success, NO on failure.
+- (BOOL)start;
+- (BOOL)stop;
 
 @end

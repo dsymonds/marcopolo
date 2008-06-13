@@ -10,16 +10,6 @@
 
 @implementation TimeOfDaySensor
 
-+ (NSString *)name
-{
-	return @"TimeOfDay";
-}
-
-+ (BOOL)isMultiValued
-{
-	return NO;
-}
-
 - (id)init
 {
 	if (!(self = [super init]))
@@ -31,6 +21,30 @@
 - (void)dealloc
 {
 	[super dealloc];
+}
+
+- (NSString *)name
+{
+	return @"TimeOfDay";
+}
+
+- (BOOL)isMultiValued
+{
+	return NO;
+}
+
+- (BOOL)start
+{
+	// TODO
+	NSLog(@"TODO: -[%@ %s]", [self class], _cmd);
+	return YES;
+}
+
+- (BOOL)stop
+{
+	// TODO
+	NSLog(@"TODO: -[%@ %s]", [self class], _cmd);
+	return YES;
 }
 
 @end

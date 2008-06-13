@@ -17,9 +17,39 @@
 		8D35C6320DFE9C2400AF7A7D /* ContextGroupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */; };
 		8D56753C0E0105AC00EFEBA2 /* TimeOfDaySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */; };
 		8D56756A0E01088A00EFEBA2 /* TimeOfDaySensor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D56752E0E01055E00EFEBA2 /* TimeOfDaySensor-Info.plist */; };
+		8D56758C0E010AAD00EFEBA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		8D5675920E010AE800EFEBA2 /* SensorTester.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5675910E010AE800EFEBA2 /* SensorTester.nib */; };
+		8D5675970E010C9200EFEBA2 /* SensorArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5675960E010C9200EFEBA2 /* SensorArrayController.m */; };
+		8D5675980E010C9200EFEBA2 /* SensorArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5675960E010C9200EFEBA2 /* SensorArrayController.m */; };
+		8D5675A70E010ECA00EFEBA2 /* TimeOfDaySensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */; };
+		8D56765F0E01EDD300EFEBA2 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
+		8D5676600E01EDD300EFEBA2 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
 		8D5A064A0DFFBD49009346BF /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A06490DFFBD49009346BF /* SensorData.m */; };
 		8D5A064B0DFFBD49009346BF /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A06490DFFBD49009346BF /* SensorData.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8D52EC640E025EE00051B22B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D56752C0E01055E00EFEBA2 /* TimeOfDaySensor */;
+			remoteInfo = TimeOfDaySensor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8D56759E0E010EC200EFEBA2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8D5675A70E010ECA00EFEBA2 /* TimeOfDaySensor.sensor in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -28,7 +58,7 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* MarcoPolo.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarcoPolo.pch; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* MarcoPolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarcoPolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D35C5F80DFE7F7D00AF7A7D /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Context.h; path = Source/Context.h; sourceTree = "<group>"; };
 		8D35C5F90DFE7F7D00AF7A7D /* Context.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Context.m; path = Source/Context.m; sourceTree = "<group>"; };
@@ -42,11 +72,18 @@
 		8D56752E0E01055E00EFEBA2 /* TimeOfDaySensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TimeOfDaySensor-Info.plist"; path = "Sensors/TimeOfDaySensor/TimeOfDaySensor-Info.plist"; sourceTree = "<group>"; };
 		8D56753A0E0105AC00EFEBA2 /* TimeOfDaySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeOfDaySensor.h; path = Sensors/TimeOfDaySensor/TimeOfDaySensor.h; sourceTree = "<group>"; };
 		8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeOfDaySensor.m; path = Sensors/TimeOfDaySensor/TimeOfDaySensor.m; sourceTree = "<group>"; };
+		8D56757A0E0109CD00EFEBA2 /* SensorTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SensorTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D56757C0E0109CD00EFEBA2 /* SensorTester-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SensorTester-Info.plist"; path = "Resources/SensorTester-Info.plist"; sourceTree = "<group>"; };
+		8D5675910E010AE800EFEBA2 /* SensorTester.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = SensorTester.nib; path = Resources/SensorTester.nib; sourceTree = "<group>"; };
+		8D5675950E010C9200EFEBA2 /* SensorArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorArrayController.h; path = Source/SensorArrayController.h; sourceTree = "<group>"; };
+		8D5675960E010C9200EFEBA2 /* SensorArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorArrayController.m; path = Source/SensorArrayController.m; sourceTree = "<group>"; };
+		8D56765D0E01EDD300EFEBA2 /* SensorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorController.h; path = Source/SensorController.h; sourceTree = "<group>"; };
+		8D56765E0E01EDD300EFEBA2 /* SensorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorController.m; path = Source/SensorController.m; sourceTree = "<group>"; };
 		8D5A06480DFFBD49009346BF /* SensorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorData.h; path = Source/SensorData.h; sourceTree = "<group>"; };
 		8D5A06490DFFBD49009346BF /* SensorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorData.m; path = Source/SensorData.m; sourceTree = "<group>"; };
 		8D5A064D0DFFBE60009346BF /* Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sensor.h; path = Source/Sensor.h; sourceTree = "<group>"; };
 		8DE55AD20DFE7AF800D79CF0 /* Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DE55AD30DFE7AF800D79CF0 /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Unit Tests-Info.plist"; sourceTree = "<group>"; };
+		8DE55AD30DFE7AF800D79CF0 /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Unit Tests-Info.plist"; path = "Resources/Unit Tests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +96,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8D56752B0E01055E00EFEBA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D5675780E0109CD00EFEBA2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,6 +123,10 @@
 			isa = PBXGroup;
 			children = (
 				8D35C5F70DFE7F3300AF7A7D /* Models */,
+				8D5675950E010C9200EFEBA2 /* SensorArrayController.h */,
+				8D5675960E010C9200EFEBA2 /* SensorArrayController.m */,
+				8D56765D0E01EDD300EFEBA2 /* SensorController.h */,
+				8D56765E0E01EDD300EFEBA2 /* SensorController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -107,6 +155,7 @@
 				8D1107320486CEB800E47090 /* MarcoPolo.app */,
 				8DE55AD20DFE7AF800D79CF0 /* Unit Tests.octest */,
 				8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */,
+				8D56757A0E0109CD00EFEBA2 /* SensorTester.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,8 +185,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D56757C0E0109CD00EFEBA2 /* SensorTester-Info.plist */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				8DE55AD30DFE7AF800D79CF0 /* Unit Tests-Info.plist */,
+				8D5675910E010AE800EFEBA2 /* SensorTester.nib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -217,6 +268,25 @@
 			productReference = 8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */;
 			productType = "com.apple.product-type.bundle";
 		};
+		8D5675790E0109CD00EFEBA2 /* SensorTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D56757F0E0109CE00EFEBA2 /* Build configuration list for PBXNativeTarget "SensorTester" */;
+			buildPhases = (
+				8D5675760E0109CD00EFEBA2 /* Resources */,
+				8D5675770E0109CD00EFEBA2 /* Sources */,
+				8D5675780E0109CD00EFEBA2 /* Frameworks */,
+				8D56759E0E010EC200EFEBA2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D52EC650E025EE00051B22B /* PBXTargetDependency */,
+			);
+			name = SensorTester;
+			productName = SensorTester;
+			productReference = 8D56757A0E0109CD00EFEBA2 /* SensorTester.app */;
+			productType = "com.apple.product-type.application";
+		};
 		8DE55AD10DFE7AF800D79CF0 /* Unit Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DE55AD60DFE7AF900D79CF0 /* Build configuration list for PBXNativeTarget "Unit Tests" */;
@@ -248,6 +318,7 @@
 			projectRoot = "";
 			targets = (
 				8D1107260486CEB800E47090 /* MarcoPolo */,
+				8D5675790E0109CD00EFEBA2 /* SensorTester */,
 				8DE55AD10DFE7AF800D79CF0 /* Unit Tests */,
 				8D56752C0E01055E00EFEBA2 /* TimeOfDaySensor */,
 			);
@@ -267,6 +338,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D56756A0E01088A00EFEBA2 /* TimeOfDaySensor-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D5675760E0109CD00EFEBA2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5675920E010AE800EFEBA2 /* SensorTester.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +383,8 @@
 				8D35C5FB0DFE7F7D00AF7A7D /* Context.m in Sources */,
 				8D35C6290DFE999200AF7A7D /* ContextGroup.m in Sources */,
 				8D5A064B0DFFBD49009346BF /* SensorData.m in Sources */,
+				8D5675970E010C9200EFEBA2 /* SensorArrayController.m in Sources */,
+				8D56765F0E01EDD300EFEBA2 /* SensorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +393,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D56753C0E0105AC00EFEBA2 /* TimeOfDaySensor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D5675770E0109CD00EFEBA2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D56758C0E010AAD00EFEBA2 /* main.m in Sources */,
+				8D5675980E010C9200EFEBA2 /* SensorArrayController.m in Sources */,
+				8D5676600E01EDD300EFEBA2 /* SensorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +419,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8D52EC650E025EE00051B22B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D56752C0E01055E00EFEBA2 /* TimeOfDaySensor */;
+			targetProxy = 8D52EC640E025EE00051B22B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8D5675300E01055F00EFEBA2 /* Debug */ = {
@@ -384,6 +483,58 @@
 			};
 			name = Release;
 		};
+		8D56757D0E0109CD00EFEBA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Resources/SensorTester-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = SensorTester;
+			};
+			name = Debug;
+		};
+		8D56757E0E0109CD00EFEBA2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Resources/SensorTester-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = SensorTester;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		8DE55AD40DFE7AF900D79CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -399,7 +550,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
-				INFOPLIST_FILE = "Unit Tests-Info.plist";
+				INFOPLIST_FILE = "Resources/Unit Tests-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -427,7 +578,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
-				INFOPLIST_FILE = "Unit Tests-Info.plist";
+				INFOPLIST_FILE = "Resources/Unit Tests-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -453,7 +604,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MarcoPolo.pch;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = MarcoPolo;
 			};
@@ -467,7 +618,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = MarcoPolo.pch;
-				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_FILE = Resources/Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = MarcoPolo;
 			};
@@ -508,6 +659,15 @@
 			buildConfigurations = (
 				8D5675300E01055F00EFEBA2 /* Debug */,
 				8D5675310E01055F00EFEBA2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D56757F0E0109CE00EFEBA2 /* Build configuration list for PBXNativeTarget "SensorTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D56757D0E0109CD00EFEBA2 /* Debug */,
+				8D56757E0E0109CD00EFEBA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
