@@ -10,6 +10,8 @@
 
 
 @interface TimeOfDaySensor : NSObject<Sensor> {
+	NSTimer *timer_;
+	NSCalendarDate *value_;
 }
 
 @end
