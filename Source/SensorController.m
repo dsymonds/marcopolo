@@ -18,6 +18,8 @@
 
 	sensor_ = [sensor retain];
 
+	[sensor_ addObserver:self forKeyPath:@"value" options:0 context:nil];
+
 	return self;
 }
 
@@ -58,6 +60,22 @@
 			[self setStarted:YES];  // ensure KVO
 		}
 	}
+}
+
+- (NSObject *)value
+{
+	return [sensor_ value];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
+			change:(NSDictionary *)change context:(void *)context
+{
+	if ((object == sensor_) && [keyPath isEqualToString:@"value"]) {
+		[self willChangeValueForKey:@"value"];
+		[self didChangeValueForKey:@"value"];
+	} else
+		[super observeValueForKeyPath:keyPath ofObject:object
+				       change:change context:context];
 }
 
 @end

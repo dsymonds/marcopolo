@@ -26,4 +26,7 @@
 - (BOOL)started;
 - (void)setStarted:(BOOL)start;
 
+// Binding: value
+- (NSObject *)value;
+
 @end

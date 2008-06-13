@@ -27,4 +27,8 @@
 - (BOOL)start;
 - (BOOL)stop;
 
+// Retrieve the current value of this sensor. If it is multi-valued, this must
+// return an NSArray of the values. MUST be implemented.
+- (NSObject *)value;
+
 @end
