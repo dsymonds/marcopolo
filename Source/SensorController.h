@@ -29,4 +29,7 @@
 // Binding: value
 - (NSObject *)value;
 
+// Binding: value summary
+- (NSObject *)valueSummary;
+
 @end

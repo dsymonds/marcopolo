@@ -11,6 +11,11 @@
 
 @implementation SensorController
 
++ (void)initialize
+{
+	[self setKeys:[NSArray arrayWithObject:@"value"] triggerChangeNotificationsForDependentKey:@"valueSummary"];
+}
+
 - (id)initWithSensor:(NSObject<Sensor> *)sensor
 {
 	if (!(self = [super init]))
@@ -65,6 +70,19 @@
 - (NSObject *)value
 {
 	return [sensor_ value];
+}
+
+- (NSObject *)valueSummary
+{
+	if (![sensor_ isMultiValued])
+		return [sensor_ value];
+	else {
+		NSArray *values = (NSArray *) [sensor_ value];
+		if ([values count] == 1)
+			return @"1 value";
+		else
+			return [NSString stringWithFormat:@"%d values", [values count]];
+	}
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
