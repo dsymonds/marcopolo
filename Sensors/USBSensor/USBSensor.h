@@ -11,7 +11,7 @@
 
 @interface USBSensor : NSObject<Sensor> {
 	NSLock *lock_;
-	NSMutableArray *devices_;
+	NSMutableSet *devices_;  // collection of USBDevice objects
 
 	IONotificationPortRef notificationPort_;
 	CFRunLoopSourceRef runLoopSource_;

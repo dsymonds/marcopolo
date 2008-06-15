@@ -10,6 +10,7 @@
 #import <IOKit/usb/IOUSBLib.h>
 #import <IOKit/usb/USB.h>
 
+#import "USBDevice.h"
 #import "USBSensor.h"
 #import "USBVendorDB.h"
 
@@ -24,6 +25,7 @@
 
 @end
 
+#pragma mark -
 #pragma mark C callbacks
 
 static void devAdded(void *ref, io_iterator_t iterator)
@@ -48,7 +50,7 @@ static void devRemoved(void *ref, io_iterator_t iterator)
 		return nil;
 
 	lock_ = [[NSLock alloc] init];
-	devices_ = [[NSMutableArray alloc] init];
+	devices_ = [[NSMutableSet alloc] init];
 
 	return self;
 }
@@ -112,7 +114,7 @@ static void devRemoved(void *ref, io_iterator_t iterator)
 	NSArray *arr;
 
 	[lock_ lock];
-	arr = [NSArray arrayWithArray:devices_];
+	arr = [devices_ allObjects];
 	[lock_ unlock];
 
 	return arr;
@@ -179,29 +181,15 @@ static void devRemoved(void *ref, io_iterator_t iterator)
 		// Lookup vendor name
 		NSString *vendor_name = [[self class] usbVendorById:vendor_id];
 
-		NSMutableDictionary *dev_dict = [NSMutableDictionary dictionary];
-		[dev_dict setValue:[NSNumber numberWithInt:vendor_id] forKey:@"vendor_id"];
-		[dev_dict setValue:[NSNumber numberWithInt:product_id] forKey:@"product_id"];
-		[dev_dict setValue:device_name forKey:@"device_name"];
-		[dev_dict setValue:vendor_name forKey:@"vendor_name"];
-
-		// Add to list if we can
+		// Add device to the list
+		NSString *desc = [device_name stringByAppendingFormat:@" (%@)", vendor_name];
+		USBDevice *dev = [USBDevice deviceWithVendor:vendor_id
+						     product:product_id
+						 description:desc];
 		[lock_ lock];
-		NSEnumerator *en = [devices_ objectEnumerator];
-		NSDictionary *elt;
-		while (elt = [en nextObject]) {
-			if (([[elt objectForKey:@"vendor_id"] intValue] == vendor_id) &&
-			    ([[elt objectForKey:@"product_id"] intValue] == product_id)) {
-				// Already know about this device
-				goto end_of_search;
-			}
-		}
-		//NSLog(@"USB >> [%d] Adding %@", cnt, dev_dict);
 		[self willChangeValueForKey:@"value"];
-		[devices_ addObject:dev_dict];
+		[devices_ addObject:dev];
 		[self didChangeValueForKey:@"value"];
-
-end_of_search:
 		[lock_ unlock];
 
 end_of_device_handling:

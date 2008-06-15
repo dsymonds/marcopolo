@@ -47,6 +47,7 @@
 		8D637BC10E04A637008D3EBA /* USBSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D637B8C0E04A280008D3EBA /* USBSensor.sensor */; };
 		8D637C260E04CD32008D3EBA /* USBVendorDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637C250E04CD32008D3EBA /* USBVendorDB.m */; };
 		8D637C3E0E04CEB7008D3EBA /* usb-vendors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */; };
+		8D637C5A0E04D2DD008D3EBA /* USBDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637C590E04D2DD008D3EBA /* USBDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,8 @@
 		8D637C240E04CD32008D3EBA /* USBVendorDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USBVendorDB.h; path = Sensors/USBSensor/USBVendorDB.h; sourceTree = "<group>"; };
 		8D637C250E04CD32008D3EBA /* USBVendorDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USBVendorDB.m; path = Sensors/USBSensor/USBVendorDB.m; sourceTree = "<group>"; };
 		8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "usb-vendors.txt"; path = "Resources/usb-vendors.txt"; sourceTree = "<group>"; };
+		8D637C580E04D2DD008D3EBA /* USBDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USBDevice.h; path = Sensors/USBSensor/USBDevice.h; sourceTree = "<group>"; };
+		8D637C590E04D2DD008D3EBA /* USBDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USBDevice.m; path = Sensors/USBSensor/USBDevice.m; sourceTree = "<group>"; };
 		8DE55AD20DFE7AF800D79CF0 /* Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE55AD30DFE7AF800D79CF0 /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Unit Tests-Info.plist"; path = "Resources/Unit Tests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -293,6 +296,8 @@
 				8D56752E0E01055E00EFEBA2 /* TimeOfDaySensor-Info.plist */,
 				8D56753A0E0105AC00EFEBA2 /* TimeOfDaySensor.h */,
 				8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */,
+				8D637C580E04D2DD008D3EBA /* USBDevice.h */,
+				8D637C590E04D2DD008D3EBA /* USBDevice.m */,
 			);
 			name = Sensors;
 			sourceTree = "<group>";
@@ -508,6 +513,7 @@
 			files = (
 				8D637B9A0E04A332008D3EBA /* USBSensor.m in Sources */,
 				8D637C260E04CD32008D3EBA /* USBVendorDB.m in Sources */,
+				8D637C5A0E04D2DD008D3EBA /* USBDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

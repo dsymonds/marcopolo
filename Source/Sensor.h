@@ -18,8 +18,8 @@
 // Return this sensor's name. MUST be implemented.
 - (NSString *)name;
 
-// Whether this sensor takes on multiple values at a time, or only a single value.
-// MUST be implemented.
+// Whether this sensor takes on multiple values at a time,
+// or only a single value. MUST be implemented.
 - (BOOL)isMultiValued;
 
 // Start/stop the sensor. MUST be implemented.
@@ -27,8 +27,11 @@
 - (BOOL)start;
 - (BOOL)stop;
 
-// Retrieve the current value of this sensor. If it is multi-valued, this must
-// return an NSArray of the values. MUST be implemented.
+// Retrieve the current value(s) of this sensor. If it is multi-valued, this
+// must return an NSArray of the values. MUST be implemented.
+// Values may be any NSObject descendant that conforms to NSCoding.
+// Where possible, values should respond to the -description message to yield a
+// human readable string.
 - (NSObject *)value;
 
 @end
