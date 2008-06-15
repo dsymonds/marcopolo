@@ -11,6 +11,7 @@
 #import <IOKit/usb/USB.h>
 
 #import "USBSensor.h"
+#import "USBVendorDB.h"
 
 
 @interface USBSensor (Private)
@@ -165,7 +166,7 @@ static void devRemoved(void *ref, io_iterator_t iterator)
 		}
 
 		// Skip if it's a known internal device
-		unsigned int i = sizeof(internal_devices)/sizeof(internal_devices[0]);
+		unsigned int i = sizeof(internal_devices) / sizeof(internal_devices[0]);
 		while (i-- > 0) {
 			if (internal_devices[i].vendor_id != vendor_id)
 				continue;
@@ -243,15 +244,12 @@ end_of_device_handling:
 // Returns a string, or the vendor_id in hexadecimal.
 + (NSString *)usbVendorById:(UInt16)vendor_id
 {
-	// TODO
-#if 0
-	NSDictionary *vendDb = [DB sharedUSBVendorDB];
+	NSDictionary *db = [USBVendorDB sharedUSBVendorDB];
 	NSString *vid = [NSString stringWithFormat:@"%d", vendor_id];
-	NSString *name = [vendDb valueForKey:vid];
+	NSString *name = [db valueForKey:vid];
 
 	if (name)
 		return name;
-#endif
 
 	return [NSString stringWithFormat:@"0x%04X", vendor_id];
 }

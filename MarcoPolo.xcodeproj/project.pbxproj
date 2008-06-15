@@ -45,6 +45,8 @@
 		8D637B9A0E04A332008D3EBA /* USBSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637B990E04A332008D3EBA /* USBSensor.m */; };
 		8D637BAC0E04A61C008D3EBA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D637BAB0E04A61C008D3EBA /* IOKit.framework */; };
 		8D637BC10E04A637008D3EBA /* USBSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D637B8C0E04A280008D3EBA /* USBSensor.sensor */; };
+		8D637C260E04CD32008D3EBA /* USBVendorDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637C250E04CD32008D3EBA /* USBVendorDB.m */; };
+		8D637C3E0E04CEB7008D3EBA /* usb-vendors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +130,9 @@
 		8D637B980E04A332008D3EBA /* USBSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USBSensor.h; path = Sensors/USBSensor/USBSensor.h; sourceTree = "<group>"; };
 		8D637B990E04A332008D3EBA /* USBSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USBSensor.m; path = Sensors/USBSensor/USBSensor.m; sourceTree = "<group>"; };
 		8D637BAB0E04A61C008D3EBA /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		8D637C240E04CD32008D3EBA /* USBVendorDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USBVendorDB.h; path = Sensors/USBSensor/USBVendorDB.h; sourceTree = "<group>"; };
+		8D637C250E04CD32008D3EBA /* USBVendorDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USBVendorDB.m; path = Sensors/USBSensor/USBVendorDB.m; sourceTree = "<group>"; };
+		8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "usb-vendors.txt"; path = "Resources/usb-vendors.txt"; sourceTree = "<group>"; };
 		8DE55AD20DFE7AF800D79CF0 /* Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE55AD30DFE7AF800D79CF0 /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Unit Tests-Info.plist"; path = "Resources/Unit Tests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,10 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				8D35C5F70DFE7F3300AF7A7D /* Models */,
-				8D5675950E010C9200EFEBA2 /* SensorArrayController.h */,
-				8D5675960E010C9200EFEBA2 /* SensorArrayController.m */,
-				8D56765D0E01EDD300EFEBA2 /* SensorController.h */,
-				8D56765E0E01EDD300EFEBA2 /* SensorController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -240,6 +241,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */,
 				8D56757C0E0109CD00EFEBA2 /* SensorTester-Info.plist */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				8DE55AD30DFE7AF800D79CF0 /* Unit Tests-Info.plist */,
@@ -263,15 +265,19 @@
 			children = (
 				8D35C5F80DFE7F7D00AF7A7D /* Context.h */,
 				8D35C5F90DFE7F7D00AF7A7D /* Context.m */,
-				8D35C6090DFE851A00AF7A7D /* ContextTest.h */,
-				8D35C60A0DFE851A00AF7A7D /* ContextTest.m */,
 				8D35C6260DFE999200AF7A7D /* ContextGroup.h */,
 				8D35C6270DFE999200AF7A7D /* ContextGroup.m */,
 				8D35C6300DFE9C2400AF7A7D /* ContextGroupTest.h */,
 				8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */,
+				8D35C6090DFE851A00AF7A7D /* ContextTest.h */,
+				8D35C60A0DFE851A00AF7A7D /* ContextTest.m */,
+				8D5A064D0DFFBE60009346BF /* Sensor.h */,
+				8D5675950E010C9200EFEBA2 /* SensorArrayController.h */,
+				8D5675960E010C9200EFEBA2 /* SensorArrayController.m */,
+				8D56765D0E01EDD300EFEBA2 /* SensorController.h */,
+				8D56765E0E01EDD300EFEBA2 /* SensorController.m */,
 				8D5A06480DFFBD49009346BF /* SensorData.h */,
 				8D5A06490DFFBD49009346BF /* SensorData.m */,
-				8D5A064D0DFFBE60009346BF /* Sensor.h */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -279,6 +285,8 @@
 		8D5675390E01058100EFEBA2 /* Sensors */ = {
 			isa = PBXGroup;
 			children = (
+				8D637C240E04CD32008D3EBA /* USBVendorDB.h */,
+				8D637C250E04CD32008D3EBA /* USBVendorDB.m */,
 				8D637B980E04A332008D3EBA /* USBSensor.h */,
 				8D637B990E04A332008D3EBA /* USBSensor.m */,
 				8D637B8D0E04A280008D3EBA /* USBSensor-Info.plist */,
@@ -433,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D637B940E04A2E3008D3EBA /* USBSensor-Info.plist in Resources */,
+				8D637C3E0E04CEB7008D3EBA /* usb-vendors.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D637B9A0E04A332008D3EBA /* USBSensor.m in Sources */,
+				8D637C260E04CD32008D3EBA /* USBVendorDB.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
