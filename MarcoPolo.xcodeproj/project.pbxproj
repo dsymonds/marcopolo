@@ -13,6 +13,7 @@
 			buildPhases = (
 			);
 			dependencies = (
+				8D637B930E04A2C7008D3EBA /* PBXTargetDependency */,
 				8D637B5C0E04A126008D3EBA /* PBXTargetDependency */,
 			);
 			name = "All Sensors";
@@ -40,6 +41,10 @@
 		8D5A064A0DFFBD49009346BF /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A06490DFFBD49009346BF /* SensorData.m */; };
 		8D5A064B0DFFBD49009346BF /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A06490DFFBD49009346BF /* SensorData.m */; };
 		8D637B7F0E04A1E3008D3EBA /* TimeOfDaySensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */; };
+		8D637B940E04A2E3008D3EBA /* USBSensor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D637B8D0E04A280008D3EBA /* USBSensor-Info.plist */; };
+		8D637B9A0E04A332008D3EBA /* USBSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637B990E04A332008D3EBA /* USBSensor.m */; };
+		8D637BAC0E04A61C008D3EBA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D637BAB0E04A61C008D3EBA /* IOKit.framework */; };
+		8D637BC10E04A637008D3EBA /* USBSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D637B8C0E04A280008D3EBA /* USBSensor.sensor */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +69,13 @@
 			remoteGlobalIDString = 8D637B580E04A111008D3EBA /* All Sensors */;
 			remoteInfo = "All Sensors";
 		};
+		8D637B920E04A2C7008D3EBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D637B8B0E04A280008D3EBA /* USBSensor */;
+			remoteInfo = USBSensor;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,6 +85,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				8D637BC10E04A637008D3EBA /* USBSensor.sensor in CopyFiles */,
 				8D637B7F0E04A1E3008D3EBA /* TimeOfDaySensor.sensor in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +123,11 @@
 		8D5A06480DFFBD49009346BF /* SensorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorData.h; path = Source/SensorData.h; sourceTree = "<group>"; };
 		8D5A06490DFFBD49009346BF /* SensorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorData.m; path = Source/SensorData.m; sourceTree = "<group>"; };
 		8D5A064D0DFFBE60009346BF /* Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sensor.h; path = Source/Sensor.h; sourceTree = "<group>"; };
+		8D637B8C0E04A280008D3EBA /* USBSensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = USBSensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D637B8D0E04A280008D3EBA /* USBSensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "USBSensor-Info.plist"; path = "Sensors/USBSensor/USBSensor-Info.plist"; sourceTree = "<group>"; };
+		8D637B980E04A332008D3EBA /* USBSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USBSensor.h; path = Sensors/USBSensor/USBSensor.h; sourceTree = "<group>"; };
+		8D637B990E04A332008D3EBA /* USBSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USBSensor.m; path = Sensors/USBSensor/USBSensor.m; sourceTree = "<group>"; };
+		8D637BAB0E04A61C008D3EBA /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		8DE55AD20DFE7AF800D79CF0 /* Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE55AD30DFE7AF800D79CF0 /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Unit Tests-Info.plist"; path = "Resources/Unit Tests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +152,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D637B8A0E04A280008D3EBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D637BAC0E04A61C008D3EBA /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +210,7 @@
 				8DE55AD20DFE7AF800D79CF0 /* Unit Tests.octest */,
 				8D56757A0E0109CD00EFEBA2 /* SensorTester.app */,
 				8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */,
+				8D637B8C0E04A280008D3EBA /* USBSensor.sensor */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,6 +251,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D637BAB0E04A61C008D3EBA /* IOKit.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -251,6 +279,9 @@
 		8D5675390E01058100EFEBA2 /* Sensors */ = {
 			isa = PBXGroup;
 			children = (
+				8D637B980E04A332008D3EBA /* USBSensor.h */,
+				8D637B990E04A332008D3EBA /* USBSensor.m */,
+				8D637B8D0E04A280008D3EBA /* USBSensor-Info.plist */,
 				8D56752E0E01055E00EFEBA2 /* TimeOfDaySensor-Info.plist */,
 				8D56753A0E0105AC00EFEBA2 /* TimeOfDaySensor.h */,
 				8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */,
@@ -316,6 +347,23 @@
 			productReference = 8D56757A0E0109CD00EFEBA2 /* SensorTester.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8D637B8B0E04A280008D3EBA /* USBSensor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D637B900E04A280008D3EBA /* Build configuration list for PBXNativeTarget "USBSensor" */;
+			buildPhases = (
+				8D637B880E04A280008D3EBA /* Resources */,
+				8D637B890E04A280008D3EBA /* Sources */,
+				8D637B8A0E04A280008D3EBA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = USBSensor;
+			productName = USBSensor;
+			productReference = 8D637B8C0E04A280008D3EBA /* USBSensor.sensor */;
+			productType = "com.apple.product-type.bundle";
+		};
 		8DE55AD10DFE7AF800D79CF0 /* Unit Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DE55AD60DFE7AF900D79CF0 /* Build configuration list for PBXNativeTarget "Unit Tests" */;
@@ -351,6 +399,7 @@
 				8DE55AD10DFE7AF800D79CF0 /* Unit Tests */,
 				8D637B580E04A111008D3EBA /* All Sensors */,
 				8D56752C0E01055E00EFEBA2 /* TimeOfDaySensor */,
+				8D637B8B0E04A280008D3EBA /* USBSensor */,
 			);
 		};
 /* End PBXProject section */
@@ -376,6 +425,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5675920E010AE800EFEBA2 /* SensorTester.nib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D637B880E04A280008D3EBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D637B940E04A2E3008D3EBA /* USBSensor-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +493,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D637B890E04A280008D3EBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D637B9A0E04A332008D3EBA /* USBSensor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DE55ACE0DFE7AF800D79CF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -465,6 +530,11 @@
 			isa = PBXTargetDependency;
 			target = 8D637B580E04A111008D3EBA /* All Sensors */;
 			targetProxy = 8D637B5F0E04A145008D3EBA /* PBXContainerItemProxy */;
+		};
+		8D637B930E04A2C7008D3EBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D637B8B0E04A280008D3EBA /* USBSensor */;
+			targetProxy = 8D637B920E04A2C7008D3EBA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -592,6 +662,60 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = "All Sensors";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		8D637B8E0E04A280008D3EBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Sensors/USBSensor/USBSensor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = USBSensor;
+				WRAPPER_EXTENSION = sensor;
+			};
+			name = Debug;
+		};
+		8D637B8F0E04A280008D3EBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Sensors/USBSensor/USBSensor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = USBSensor;
+				WRAPPER_EXTENSION = sensor;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -738,6 +862,15 @@
 			buildConfigurations = (
 				8D637B590E04A112008D3EBA /* Debug */,
 				8D637B5A0E04A112008D3EBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D637B900E04A280008D3EBA /* Build configuration list for PBXNativeTarget "USBSensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D637B8E0E04A280008D3EBA /* Debug */,
+				8D637B8F0E04A280008D3EBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

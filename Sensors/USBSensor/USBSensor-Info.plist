@@ -7,18 +7,14 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
-	<string>au.id.symonds.MarcoPolo.SensorTester</string>
+	<string>au.id.symonds.MarcoPolo.USBSensor</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
-	<string>APPL</string>
+	<string>BNDL</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>3.0</string>
-	<key>NSMainNibFile</key>
-	<string>SensorTester</string>
-	<key>NSPrincipalClass</key>
-	<string>NSApplication</string>
+	<string>1.0</string>
 </dict>
 </plist>
