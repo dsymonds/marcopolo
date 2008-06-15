@@ -131,7 +131,9 @@ static void devRemoved(void *ref, io_iterator_t iterator)
 		{ 0x05AC, 0x8205 },		// (Apple) IOUSBWirelessControllerDevice
 		{ 0x05AC, 0x8206 },		// (Apple) IOUSBWirelessControllerDevice
 		{ 0x05AC, 0x8240 },		// (Apple) IR Receiver
+		{ 0x05AC, 0x8242 },		// (Apple) IR Receiver
 		{ 0x05AC, 0x8501 },		// (Apple) Built-in iSight
+		{ 0x05AC, 0x8502 },		// (Apple) Built-in iSight
 	};
 	if (!iterator)
 		NSLog(@"USB devAdded >> passed null io_iterator_t!");
