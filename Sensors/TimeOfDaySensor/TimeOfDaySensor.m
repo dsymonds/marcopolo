@@ -55,6 +55,12 @@
 	[timer_ invalidate];
 	[timer_ release];
 	timer_ = nil;
+
+	[self willChangeValueForKey:@"value"];
+	[value_ autorelease];
+	value_ = nil;
+	[self didChangeValueForKey:@"value"];
+
 	return YES;
 }
 
