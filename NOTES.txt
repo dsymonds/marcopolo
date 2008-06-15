@@ -1,0 +1,32 @@
+USB data
+--------
+To update:
+	wget http://www.usb.org/developers/tools/comp_dump \
+		-O Resources/usb-vendors.txt
+
+OUI data
+--------
+To update:
+	curl http://standards.ieee.org/regauth/oui/oui.txt \
+		| grep "^..-..-.." | sed "s/(hex)//" \
+		| tr -s '\t' \
+		> Resources/oui.txt
+
+Pre-Release Checklist
+---------------------
+	+ Update USB vendor and OUI databases (see above)
+	+ Check version numbers in Info.plist
+	+ Git tag
+	+ Run ./make_disk_image.sh
+	+ Update appcast.xml
+	+ Upload *.dmg and appcast.xml
+
+Post-Release Checklist
+----------------------
+	+ Test automatic update
+	+ Update Trac (Versions, Milestones, etc.)
+	+ Update websites:
+		- http://osx.iusethis.com/app/marcopolo
+		- http://www.macupdate.com/developer
+	+ Post announcement to MarcoPolo-discuss
+
