@@ -196,11 +196,11 @@ static void devRemoved(void *ref, io_iterator_t iterator)
 		USBDevice *dev = [USBDevice deviceWithVendor:vendor_id
 						     product:product_id
 						 description:desc];
-		[lock_ lock];
 		[self willChangeValueForKey:@"value"];
+		[lock_ lock];
 		[devices_ addObject:dev];
-		[self didChangeValueForKey:@"value"];
 		[lock_ unlock];
+		[self didChangeValueForKey:@"value"];
 
 end_of_device_handling:
 		IOObjectRelease(device);
