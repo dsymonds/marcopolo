@@ -31,6 +31,8 @@
 - (NSObject *)value;
 
 // Binding: value summary
+// This is either the value's description (if it's single-valued),
+// or the number of values (if it's multi-valued).
 - (NSObject *)valueSummary;
 
 @end

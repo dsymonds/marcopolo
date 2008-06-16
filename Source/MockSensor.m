@@ -57,13 +57,22 @@
 
 - (NSObject *)value
 {
+	if (!started_)
+		return nil;
+
 	if (!multi_) {
-		return [NSNumber numberWithInt:value_];
+		return [NSDictionary dictionaryWithObjectsAndKeys:
+			[NSNumber numberWithInt:value_], @"data",
+			[NSString stringWithFormat:@"<%d>", value_], @"description", nil];
 	} else {
 		NSMutableArray *v = [NSMutableArray arrayWithCapacity:3];
 		int i;
-		for (i = 0; i < 3; ++i)
-			[v addObject:[NSNumber numberWithInt:(value_ + i) % MOCK_VALUE_CYCLE_LEN]];
+		for (i = 0; i < 3; ++i) {
+			NSNumber *d = [NSNumber numberWithInt:(value_ + i) % MOCK_VALUE_CYCLE_LEN];
+			[v addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+				      d, @"data",
+				      [NSString stringWithFormat:@"<%@>", d], @"description", nil]];
+		}
 		return v;
 	}
 }

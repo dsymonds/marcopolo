@@ -111,13 +111,23 @@ static void devRemoved(void *ref, io_iterator_t iterator)
 
 - (NSObject *)value
 {
-	NSArray *arr;
-
 	[lock_ lock];
-	arr = [devices_ allObjects];
+
+	NSMutableArray *array = [NSMutableArray arrayWithCapacity:[devices_ count]];
+	NSEnumerator *en = [devices_ objectEnumerator];
+	USBDevice *device;
+	while ((device = [en nextObject])) {
+		NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
+				      [device vendorID], @"vendor_id",
+				      [device productID], @"product_id", nil];
+		[array addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+				  data, @"data",
+				  [device description], @"description"]];
+	}
+
 	[lock_ unlock];
 
-	return arr;
+	return array;
 }
 
 - (void)devAdded:(io_iterator_t)iterator

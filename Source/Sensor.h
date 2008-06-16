@@ -29,9 +29,10 @@
 
 // Retrieve the current value(s) of this sensor. If it is multi-valued, this
 // must return an NSArray of the values. MUST be implemented.
-// Values may be any NSObject descendant that conforms to NSCoding.
-// Where possible, values should respond to the -description message to yield a
-// human readable string.
+// Each value (or the value) MUST be an NSDictionary with two keys:
+// - data: An NSCoding-conformant NSObject descendant.
+// - description: A human-readable string describing the value.
+// If there is no data (or the sensor is stopped) the sensor MAY return nil.
 - (NSObject *)value;
 
 @end

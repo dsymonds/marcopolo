@@ -68,17 +68,18 @@
 	STAssertEquals([sensorController started], YES, nil);
 
 	[mockSensor setMulti:NO];
-	NSNumber *val = (NSNumber *) [sensorController value];
+	NSDictionary *dict = (NSDictionary *) [sensorController value];
+	NSNumber *val = [val valueForKey:@"data"];
 	STAssertEquals([val intValue], 0, nil);
-	STAssertEqualObjects([sensorController valueSummary], val, nil);
+	STAssertEqualObjects([sensorController valueSummary], [dict valueForKey:@"description"], nil);
 
 	notifiedOfValueChange = NO;
 	[mockSensor changeValue];
 	STAssertTrue(notifiedOfValueChange, @"was not notified of value change");
 	STAssertTrue(notifiedOfValueSummaryChange, @"was not notified of valueSummary change");
 
-	val = (NSNumber *) [sensorController value];
-	STAssertEquals([val intValue], 1, nil);
+	dict = (NSDictionary *) [sensorController value];
+	STAssertEquals([[dict valueForKey:@"data"] intValue], 1, nil);
 
 	[mockSensor setMulti:YES];
 	NSArray *valArray = (NSArray *) [sensorController value];
@@ -86,7 +87,8 @@
 	STAssertEqualObjects([sensorController valueSummary], @"3 values", nil);
 	int i;
 	for (i = 0; i < 3; ++i)
-		STAssertEquals([valArray objectAtIndex:i], [NSNumber numberWithInt:i + 1], nil);
+		STAssertEquals([[valArray objectAtIndex:i] valueForKey:@"data"],
+			       [NSNumber numberWithInt:i + 1], nil);
 }
 
 @end

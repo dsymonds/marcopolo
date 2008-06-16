@@ -83,9 +83,15 @@
 
 - (NSObject *)value
 {
+	if (!value_)
+		return nil;
+
 	// Knock out seconds
-	return [value_ dateByAddingYears:0 months:0 days:0
-				   hours:0 minutes:0 seconds:-[value_ secondOfMinute]];
+	NSDate *date = [value_ dateByAddingYears:0 months:0 days:0
+					   hours:0 minutes:0 seconds:-[value_ secondOfMinute]];
+	return [NSDictionary dictionaryWithObjectsAndKeys:
+		date, @"data",
+		[date description], @"description", nil];
 }
 
 @end
