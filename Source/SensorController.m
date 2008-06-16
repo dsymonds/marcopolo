@@ -16,6 +16,11 @@
 	[self setKeys:[NSArray arrayWithObject:@"value"] triggerChangeNotificationsForDependentKey:@"valueSummary"];
 }
 
++ (id)sensorControllerWithSensor:(NSObject<Sensor> *)sensor
+{
+	return [[[[self class] alloc] initWithSensor:sensor] autorelease];
+}
+
 - (id)initWithSensor:(NSObject<Sensor> *)sensor
 {
 	if (!(self = [super init]))

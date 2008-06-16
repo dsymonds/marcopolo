@@ -48,6 +48,9 @@
 		8D637C260E04CD32008D3EBA /* USBVendorDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637C250E04CD32008D3EBA /* USBVendorDB.m */; };
 		8D637C3E0E04CEB7008D3EBA /* usb-vendors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */; };
 		8D637C5A0E04D2DD008D3EBA /* USBDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637C590E04D2DD008D3EBA /* USBDevice.m */; };
+		8DA7FE190E064F6F00248CF8 /* MockSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE180E064F6F00248CF8 /* MockSensor.m */; };
+		8DA7FE2B0E06519000248CF8 /* SensorControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */; };
+		8DA7FE310E0653EB00248CF8 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,28 +58,28 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D56752C0E01055E00EFEBA2 /* TimeOfDaySensor */;
+			remoteGlobalIDString = 8D56752C0E01055E00EFEBA2;
 			remoteInfo = TimeOfDaySensor;
 		};
 		8D637B5D0E04A13E008D3EBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D637B580E04A111008D3EBA /* All Sensors */;
+			remoteGlobalIDString = 8D637B580E04A111008D3EBA;
 			remoteInfo = "All Sensors";
 		};
 		8D637B5F0E04A145008D3EBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D637B580E04A111008D3EBA /* All Sensors */;
+			remoteGlobalIDString = 8D637B580E04A111008D3EBA;
 			remoteInfo = "All Sensors";
 		};
 		8D637B920E04A2C7008D3EBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D637B8B0E04A280008D3EBA /* USBSensor */;
+			remoteGlobalIDString = 8D637B8B0E04A280008D3EBA;
 			remoteInfo = USBSensor;
 		};
 /* End PBXContainerItemProxy section */
@@ -136,6 +139,10 @@
 		8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "usb-vendors.txt"; path = "Resources/usb-vendors.txt"; sourceTree = "<group>"; };
 		8D637C580E04D2DD008D3EBA /* USBDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USBDevice.h; path = Sensors/USBSensor/USBDevice.h; sourceTree = "<group>"; };
 		8D637C590E04D2DD008D3EBA /* USBDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USBDevice.m; path = Sensors/USBSensor/USBDevice.m; sourceTree = "<group>"; };
+		8DA7FE170E064F6F00248CF8 /* MockSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MockSensor.h; path = Source/MockSensor.h; sourceTree = "<group>"; };
+		8DA7FE180E064F6F00248CF8 /* MockSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MockSensor.m; path = Source/MockSensor.m; sourceTree = "<group>"; };
+		8DA7FE290E06519000248CF8 /* SensorControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorControllerTest.h; path = Source/SensorControllerTest.h; sourceTree = "<group>"; };
+		8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorControllerTest.m; path = Source/SensorControllerTest.m; sourceTree = "<group>"; };
 		8DE55AD20DFE7AF800D79CF0 /* Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE55AD30DFE7AF800D79CF0 /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Unit Tests-Info.plist"; path = "Resources/Unit Tests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,6 +191,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8DA7FE280E06516400248CF8 /* Controllers */,
 				8D35C5F70DFE7F3300AF7A7D /* Models */,
 			);
 			name = Classes;
@@ -275,10 +283,6 @@
 				8D35C6090DFE851A00AF7A7D /* ContextTest.h */,
 				8D35C60A0DFE851A00AF7A7D /* ContextTest.m */,
 				8D5A064D0DFFBE60009346BF /* Sensor.h */,
-				8D5675950E010C9200EFEBA2 /* SensorArrayController.h */,
-				8D5675960E010C9200EFEBA2 /* SensorArrayController.m */,
-				8D56765D0E01EDD300EFEBA2 /* SensorController.h */,
-				8D56765E0E01EDD300EFEBA2 /* SensorController.m */,
 				8D5A06480DFFBD49009346BF /* SensorData.h */,
 				8D5A06490DFFBD49009346BF /* SensorData.m */,
 			);
@@ -298,8 +302,23 @@
 				8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */,
 				8D637C580E04D2DD008D3EBA /* USBDevice.h */,
 				8D637C590E04D2DD008D3EBA /* USBDevice.m */,
+				8DA7FE170E064F6F00248CF8 /* MockSensor.h */,
+				8DA7FE180E064F6F00248CF8 /* MockSensor.m */,
 			);
 			name = Sensors;
+			sourceTree = "<group>";
+		};
+		8DA7FE280E06516400248CF8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8D5675950E010C9200EFEBA2 /* SensorArrayController.h */,
+				8D5675960E010C9200EFEBA2 /* SensorArrayController.m */,
+				8D56765D0E01EDD300EFEBA2 /* SensorController.h */,
+				8D56765E0E01EDD300EFEBA2 /* SensorController.m */,
+				8DA7FE290E06519000248CF8 /* SensorControllerTest.h */,
+				8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,6 +545,9 @@
 				8D35C6280DFE999200AF7A7D /* ContextGroup.m in Sources */,
 				8D35C6320DFE9C2400AF7A7D /* ContextGroupTest.m in Sources */,
 				8D5A064A0DFFBD49009346BF /* SensorData.m in Sources */,
+				8DA7FE190E064F6F00248CF8 /* MockSensor.m in Sources */,
+				8DA7FE2B0E06519000248CF8 /* SensorControllerTest.m in Sources */,
+				8DA7FE310E0653EB00248CF8 /* SensorController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

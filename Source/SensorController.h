@@ -17,6 +17,7 @@
 	BOOL started_;
 }
 
++ (id)sensorControllerWithSensor:(NSObject<Sensor> *)sensor;
 - (id)initWithSensor:(NSObject<Sensor> *)sensor;
 
 // Binding: name
