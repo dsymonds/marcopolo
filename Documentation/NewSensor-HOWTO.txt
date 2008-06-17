@@ -1,0 +1,26 @@
+Adding a new sensor
+-------------------
+* mkdir Sensors/FooSensor
+* Make a new sensor bundle
+  - Right-click on "Targets", Add -> New Target...
+  - Loadable Bundle
+  - Name: "FooSensor"
+  - Build tab: (All Configurations)
+    - Info.plist File: "Sensors/FooSensor/FooSensor-Info.plist"
+    - Wrapper Extension: "sensor"
+  - Properties tab:
+    - Identifier: "au.id.symonds.MarcoPolo.FooSensor"
+* Move FooSensor-Info.plist file into Sensors group
+* Edit FooSensor-Info.plist
+  - CFBundleDevelopmentRegion: "en"
+* Change FooSensor-Info.plist Info:
+  - Targets tab:
+    - Select FooSensor only
+* mv FooSensor-Info.plist Sensors/FooSensor/  [and adjust in Xcode]
+* Add FooSensor.{m,h}, add them to FooSensor target only
+
+* Add FooSensor bundle to:
+  - "All Sensors" target
+* Add FooSensor.sensor product to:
+  - "Copy Files" phase of SensorTester target
+  - "Copy Files" phase of MarcoPolo target  [not yet, though]
