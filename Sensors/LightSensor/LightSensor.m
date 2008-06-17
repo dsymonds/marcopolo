@@ -7,8 +7,8 @@
 
 #import "LightSensor.h"
 
-// Update every 1.5 seconds
-#define LIGHT_UPDATE_INTERVAL ((NSTimeInterval) 1.5)
+// Update every half second
+#define LIGHT_UPDATE_INTERVAL ((NSTimeInterval) 0.5)
 
 
 @interface LightSensor (Private)
