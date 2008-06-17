@@ -13,6 +13,7 @@
 			buildPhases = (
 			);
 			dependencies = (
+				8D0EACD60E07ADB6004ABEF2 /* PBXTargetDependency */,
 				8D637B930E04A2C7008D3EBA /* PBXTargetDependency */,
 				8D637B5C0E04A126008D3EBA /* PBXTargetDependency */,
 			);
@@ -22,6 +23,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		8D0EACC10E07AAA6004ABEF2 /* LightSensor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D0EACA40E07A931004ABEF2 /* LightSensor-Info.plist */; };
+		8D0EACC50E07AB1C004ABEF2 /* LightSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D0EACC40E07AB1C004ABEF2 /* LightSensor.m */; };
+		8D0EACF40E07AE60004ABEF2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D637BAB0E04A61C008D3EBA /* IOKit.framework */; };
+		8D0EACFE0E07AEA2004ABEF2 /* LightSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D0EACB00E07A99C004ABEF2 /* LightSensor.sensor */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		8D35C5FA0DFE7F7D00AF7A7D /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C5F90DFE7F7D00AF7A7D /* Context.m */; };
@@ -54,6 +59,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8D0EACD50E07ADB6004ABEF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D0EACAF0E07A99C004ABEF2 /* LightSensor */;
+			remoteInfo = LightSensor;
+		};
 		8D637B5B0E04A126008D3EBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -91,6 +103,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				8D0EACFE0E07AEA2004ABEF2 /* LightSensor.sensor in CopyFiles */,
 				8D637BC10E04A637008D3EBA /* USBSensor.sensor in CopyFiles */,
 				8D637B7F0E04A1E3008D3EBA /* TimeOfDaySensor.sensor in CopyFiles */,
 			);
@@ -105,6 +118,10 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* MarcoPolo.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarcoPolo.pch; sourceTree = "<group>"; };
+		8D0EACA40E07A931004ABEF2 /* LightSensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LightSensor-Info.plist"; path = "Sensors/LightSensor/LightSensor-Info.plist"; sourceTree = "<group>"; };
+		8D0EACB00E07A99C004ABEF2 /* LightSensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightSensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D0EACC30E07AB1C004ABEF2 /* LightSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightSensor.h; path = Sensors/LightSensor/LightSensor.h; sourceTree = "<group>"; };
+		8D0EACC40E07AB1C004ABEF2 /* LightSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightSensor.m; path = Sensors/LightSensor/LightSensor.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* MarcoPolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarcoPolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D35C5F80DFE7F7D00AF7A7D /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Context.h; path = Source/Context.h; sourceTree = "<group>"; };
@@ -148,6 +165,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8D0EACAE0E07A99C004ABEF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0EACF40E07AE60004ABEF2 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072E0486CEB800E47090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,6 +248,7 @@
 				8D56757A0E0109CD00EFEBA2 /* SensorTester.app */,
 				8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */,
 				8D637B8C0E04A280008D3EBA /* USBSensor.sensor */,
+				8D0EACB00E07A99C004ABEF2 /* LightSensor.sensor */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -292,6 +318,9 @@
 		8D5675390E01058100EFEBA2 /* Sensors */ = {
 			isa = PBXGroup;
 			children = (
+				8D0EACC30E07AB1C004ABEF2 /* LightSensor.h */,
+				8D0EACC40E07AB1C004ABEF2 /* LightSensor.m */,
+				8D0EACA40E07A931004ABEF2 /* LightSensor-Info.plist */,
 				8D637C240E04CD32008D3EBA /* USBVendorDB.h */,
 				8D637C250E04CD32008D3EBA /* USBVendorDB.m */,
 				8D637B980E04A332008D3EBA /* USBSensor.h */,
@@ -324,6 +353,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8D0EACAF0E07A99C004ABEF2 /* LightSensor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D0EACBD0E07A99D004ABEF2 /* Build configuration list for PBXNativeTarget "LightSensor" */;
+			buildPhases = (
+				8D0EACAC0E07A99C004ABEF2 /* Resources */,
+				8D0EACAD0E07A99C004ABEF2 /* Sources */,
+				8D0EACAE0E07A99C004ABEF2 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LightSensor;
+			productName = LightSensor;
+			productReference = 8D0EACB00E07A99C004ABEF2 /* LightSensor.sensor */;
+			productType = "com.apple.product-type.bundle";
+		};
 		8D1107260486CEB800E47090 /* MarcoPolo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "MarcoPolo" */;
@@ -430,6 +476,7 @@
 				8D5675790E0109CD00EFEBA2 /* SensorTester */,
 				8DE55AD10DFE7AF800D79CF0 /* Unit Tests */,
 				8D637B580E04A111008D3EBA /* All Sensors */,
+				8D0EACAF0E07A99C004ABEF2 /* LightSensor */,
 				8D56752C0E01055E00EFEBA2 /* TimeOfDaySensor */,
 				8D637B8B0E04A280008D3EBA /* USBSensor */,
 			);
@@ -437,6 +484,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8D0EACAC0E07A99C004ABEF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0EACC10E07AAA6004ABEF2 /* LightSensor-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D1107290486CEB800E47090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -495,6 +550,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8D0EACAD0E07A99C004ABEF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0EACC50E07AB1C004ABEF2 /* LightSensor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -554,6 +617,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8D0EACD60E07ADB6004ABEF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D0EACAF0E07A99C004ABEF2 /* LightSensor */;
+			targetProxy = 8D0EACD50E07ADB6004ABEF2 /* PBXContainerItemProxy */;
+		};
 		8D637B5C0E04A126008D3EBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8D56752C0E01055E00EFEBA2 /* TimeOfDaySensor */;
@@ -577,6 +645,60 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		8D0EACB50E07A99C004ABEF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Sensors/LightSensor/LightSensor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = LightSensor;
+				WRAPPER_EXTENSION = sensor;
+			};
+			name = Debug;
+		};
+		8D0EACB60E07A99C004ABEF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Sensors/LightSensor/LightSensor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = LightSensor;
+				WRAPPER_EXTENSION = sensor;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		8D5675300E01055F00EFEBA2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -877,6 +999,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8D0EACBD0E07A99D004ABEF2 /* Build configuration list for PBXNativeTarget "LightSensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D0EACB50E07A99C004ABEF2 /* Debug */,
+				8D0EACB60E07A99C004ABEF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8D5675320E01055F00EFEBA2 /* Build configuration list for PBXNativeTarget "TimeOfDaySensor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
