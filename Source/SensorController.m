@@ -45,6 +45,8 @@
 
 - (void)dealloc
 {
+	[sensor_ removeObserver:self forKeyPath:@"value"];
+
 	[sensor_ release];
 	[super dealloc];
 }

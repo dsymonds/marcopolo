@@ -27,6 +27,9 @@
 
 - (void)tearDown
 {
+	[sensorController removeObserver:self forKeyPath:@"value"];
+	[sensorController removeObserver:self forKeyPath:@"valueSummary"];
+
 	[mockSensor release];
 	[sensorController release];
 }

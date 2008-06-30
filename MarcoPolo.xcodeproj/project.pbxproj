@@ -48,8 +48,6 @@
 		8D5675980E010C9200EFEBA2 /* SensorArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5675960E010C9200EFEBA2 /* SensorArrayController.m */; };
 		8D56765F0E01EDD300EFEBA2 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
 		8D5676600E01EDD300EFEBA2 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
-		8D5A064A0DFFBD49009346BF /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A06490DFFBD49009346BF /* SensorData.m */; };
-		8D5A064B0DFFBD49009346BF /* SensorData.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A06490DFFBD49009346BF /* SensorData.m */; };
 		8D637B7F0E04A1E3008D3EBA /* TimeOfDaySensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */; };
 		8D637B940E04A2E3008D3EBA /* USBSensor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D637B8D0E04A280008D3EBA /* USBSensor-Info.plist */; };
 		8D637B9A0E04A332008D3EBA /* USBSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637B990E04A332008D3EBA /* USBSensor.m */; };
@@ -58,8 +56,8 @@
 		8D637C260E04CD32008D3EBA /* USBVendorDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637C250E04CD32008D3EBA /* USBVendorDB.m */; };
 		8D637C3E0E04CEB7008D3EBA /* usb-vendors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */; };
 		8D637C5A0E04D2DD008D3EBA /* USBDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637C590E04D2DD008D3EBA /* USBDevice.m */; };
+		8D95D9010E19A0BD002C1B79 /* SensorControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */; };
 		8DA7FE190E064F6F00248CF8 /* MockSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE180E064F6F00248CF8 /* MockSensor.m */; };
-		8DA7FE2B0E06519000248CF8 /* SensorControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */; };
 		8DA7FE310E0653EB00248CF8 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +73,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D1B84610E0A79AA00D47563 /* PowerSensor */;
+			remoteGlobalIDString = 8D1B84610E0A79AA00D47563;
 			remoteInfo = PowerSensor;
 		};
 		8D637B5B0E04A126008D3EBA /* PBXContainerItemProxy */ = {
@@ -160,8 +158,6 @@
 		8D5675960E010C9200EFEBA2 /* SensorArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorArrayController.m; path = Source/SensorArrayController.m; sourceTree = "<group>"; };
 		8D56765D0E01EDD300EFEBA2 /* SensorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorController.h; path = Source/SensorController.h; sourceTree = "<group>"; };
 		8D56765E0E01EDD300EFEBA2 /* SensorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorController.m; path = Source/SensorController.m; sourceTree = "<group>"; };
-		8D5A06480DFFBD49009346BF /* SensorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorData.h; path = Source/SensorData.h; sourceTree = "<group>"; };
-		8D5A06490DFFBD49009346BF /* SensorData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorData.m; path = Source/SensorData.m; sourceTree = "<group>"; };
 		8D5A064D0DFFBE60009346BF /* Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Sensor.h; path = Source/Sensor.h; sourceTree = "<group>"; };
 		8D637B8C0E04A280008D3EBA /* USBSensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = USBSensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D637B8D0E04A280008D3EBA /* USBSensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "USBSensor-Info.plist"; path = "Sensors/USBSensor/USBSensor-Info.plist"; sourceTree = "<group>"; };
@@ -335,8 +331,6 @@
 				8D35C6090DFE851A00AF7A7D /* ContextTest.h */,
 				8D35C60A0DFE851A00AF7A7D /* ContextTest.m */,
 				8D5A064D0DFFBE60009346BF /* Sensor.h */,
-				8D5A06480DFFBD49009346BF /* SensorData.h */,
-				8D5A06490DFFBD49009346BF /* SensorData.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -620,7 +614,6 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				8D35C5FB0DFE7F7D00AF7A7D /* Context.m in Sources */,
 				8D35C6290DFE999200AF7A7D /* ContextGroup.m in Sources */,
-				8D5A064B0DFFBD49009346BF /* SensorData.m in Sources */,
 				8D5675970E010C9200EFEBA2 /* SensorArrayController.m in Sources */,
 				8D56765F0E01EDD300EFEBA2 /* SensorController.m in Sources */,
 			);
@@ -670,10 +663,9 @@
 				8D35C60B0DFE851A00AF7A7D /* ContextTest.m in Sources */,
 				8D35C6280DFE999200AF7A7D /* ContextGroup.m in Sources */,
 				8D35C6320DFE9C2400AF7A7D /* ContextGroupTest.m in Sources */,
-				8D5A064A0DFFBD49009346BF /* SensorData.m in Sources */,
 				8DA7FE190E064F6F00248CF8 /* MockSensor.m in Sources */,
-				8DA7FE2B0E06519000248CF8 /* SensorControllerTest.m in Sources */,
 				8DA7FE310E0653EB00248CF8 /* SensorController.m in Sources */,
+				8D95D9010E19A0BD002C1B79 /* SensorControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1013,6 +1005,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1042,6 +1035,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_TEST_COVERAGE_FILES = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
