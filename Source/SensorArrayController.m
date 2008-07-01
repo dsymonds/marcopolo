@@ -7,6 +7,7 @@
 
 #import "SensorArrayController.h"
 #import "SensorController.h"
+#import "ValueSet.h"
 
 
 @implementation SensorArrayController
@@ -48,6 +49,7 @@
 	NSObject<Sensor> *sensor = [[[sensorClass alloc] init] autorelease];
 	SensorController *sc = [[SensorController alloc] initWithSensor:sensor];
 	[self addObject:sc];
+	[sc addObserver:self forKeyPath:@"value" options:0 context:nil];
 }
 
 - (void)loadSensorsInPath:(NSString *)path
@@ -74,6 +76,38 @@
 	NSString *path;
 	while ((path = [en nextObject]))
 		[self loadSensorsInPath:path];
+}
+
+- (ValueSet *)valueSet
+{
+	ValueSet *vs = [ValueSet valueSet];
+
+	NSEnumerator *en = [[self arrangedObjects] objectEnumerator];
+	NSObject<Sensor> *sensor;
+	while ((sensor = [en nextObject])) {
+		NSObject *value = [sensor value];
+		if (!value)
+			continue;
+		if (![sensor isMultiValued])
+			[vs setValueForSensor:[sensor name] value:value];
+		else
+			[vs setValuesForSensor:[sensor name] values:(NSArray *) value];
+	}
+
+	return vs;
+}
+
+#pragma mark -
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
+			change:(NSDictionary *)change context:(void *)context
+{
+	if ([object isKindOfClass:[SensorController class]] && [keyPath isEqualToString:@"value"]) {
+		[self willChangeValueForKey:@"valueSet"];
+		[self didChangeValueForKey:@"valueSet"];
+	} else
+		[super observeValueForKeyPath:keyPath ofObject:object
+				       change:change context:context];
 }
 
 @end

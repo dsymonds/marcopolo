@@ -9,9 +9,14 @@
 #import "Sensor.h"
 
 
+@class ValueSet;
+
 @interface SensorArrayController : NSArrayController {
 }
 
 - (void)loadSensors;
+
+// Binding: valueSet
+- (ValueSet *)valueSet;
 
 @end

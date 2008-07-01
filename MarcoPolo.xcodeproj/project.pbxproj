@@ -57,6 +57,7 @@
 		8D637C3E0E04CEB7008D3EBA /* usb-vendors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */; };
 		8D637C5A0E04D2DD008D3EBA /* USBDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637C590E04D2DD008D3EBA /* USBDevice.m */; };
 		8D95D9010E19A0BD002C1B79 /* SensorControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */; };
+		8D96C3CD0E1AF70100287BC1 /* ValueSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC10E1A2902009F1FCE /* ValueSet.m */; };
 		8DA7FE190E064F6F00248CF8 /* MockSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE180E064F6F00248CF8 /* MockSensor.m */; };
 		8DA7FE310E0653EB00248CF8 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
 		8DBF0AC40E1A2902009F1FCE /* ValueSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC10E1A2902009F1FCE /* ValueSet.m */; };
@@ -654,6 +655,7 @@
 				8D56758C0E010AAD00EFEBA2 /* main.m in Sources */,
 				8D5675980E010C9200EFEBA2 /* SensorArrayController.m in Sources */,
 				8D5676600E01EDD300EFEBA2 /* SensorController.m in Sources */,
+				8D96C3CD0E1AF70100287BC1 /* ValueSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
