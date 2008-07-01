@@ -59,6 +59,9 @@
 		8D95D9010E19A0BD002C1B79 /* SensorControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */; };
 		8DA7FE190E064F6F00248CF8 /* MockSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE180E064F6F00248CF8 /* MockSensor.m */; };
 		8DA7FE310E0653EB00248CF8 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
+		8DBF0AC40E1A2902009F1FCE /* ValueSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC10E1A2902009F1FCE /* ValueSet.m */; };
+		8DBF0AC60E1A2906009F1FCE /* ValueSetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC30E1A2902009F1FCE /* ValueSetTest.m */; };
+		8DBF0AC70E1A2907009F1FCE /* ValueSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC10E1A2902009F1FCE /* ValueSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +176,10 @@
 		8DA7FE180E064F6F00248CF8 /* MockSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MockSensor.m; path = Source/MockSensor.m; sourceTree = "<group>"; };
 		8DA7FE290E06519000248CF8 /* SensorControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorControllerTest.h; path = Source/SensorControllerTest.h; sourceTree = "<group>"; };
 		8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorControllerTest.m; path = Source/SensorControllerTest.m; sourceTree = "<group>"; };
+		8DBF0AC00E1A2902009F1FCE /* ValueSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValueSet.h; path = Source/ValueSet.h; sourceTree = "<group>"; };
+		8DBF0AC10E1A2902009F1FCE /* ValueSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ValueSet.m; path = Source/ValueSet.m; sourceTree = "<group>"; };
+		8DBF0AC20E1A2902009F1FCE /* ValueSetTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValueSetTest.h; path = Source/ValueSetTest.h; sourceTree = "<group>"; };
+		8DBF0AC30E1A2902009F1FCE /* ValueSetTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ValueSetTest.m; path = Source/ValueSetTest.m; sourceTree = "<group>"; };
 		8DE55AD20DFE7AF800D79CF0 /* Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE55AD30DFE7AF800D79CF0 /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Unit Tests-Info.plist"; path = "Resources/Unit Tests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -322,6 +329,10 @@
 		8D35C5F70DFE7F3300AF7A7D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8DBF0AC00E1A2902009F1FCE /* ValueSet.h */,
+				8DBF0AC10E1A2902009F1FCE /* ValueSet.m */,
+				8DBF0AC20E1A2902009F1FCE /* ValueSetTest.h */,
+				8DBF0AC30E1A2902009F1FCE /* ValueSetTest.m */,
 				8D35C5F80DFE7F7D00AF7A7D /* Context.h */,
 				8D35C5F90DFE7F7D00AF7A7D /* Context.m */,
 				8D35C6260DFE999200AF7A7D /* ContextGroup.h */,
@@ -616,6 +627,7 @@
 				8D35C6290DFE999200AF7A7D /* ContextGroup.m in Sources */,
 				8D5675970E010C9200EFEBA2 /* SensorArrayController.m in Sources */,
 				8D56765F0E01EDD300EFEBA2 /* SensorController.m in Sources */,
+				8DBF0AC40E1A2902009F1FCE /* ValueSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,6 +678,8 @@
 				8DA7FE190E064F6F00248CF8 /* MockSensor.m in Sources */,
 				8DA7FE310E0653EB00248CF8 /* SensorController.m in Sources */,
 				8D95D9010E19A0BD002C1B79 /* SensorControllerTest.m in Sources */,
+				8DBF0AC60E1A2906009F1FCE /* ValueSetTest.m in Sources */,
+				8DBF0AC70E1A2907009F1FCE /* ValueSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
