@@ -71,8 +71,11 @@
 	STAssertEquals([sensorController started], YES, nil);
 
 	[mockSensor setMulti:NO];
-	NSDictionary *dict = (NSDictionary *) [sensorController value];
-	NSNumber *val = [val valueForKey:@"data"];
+	NSObject *sval = [sensorController value];
+	STAssertNotNil(sval, nil);
+	STAssertTrue([sval isKindOfClass:[NSDictionary class]], nil);
+	NSDictionary *dict = (NSDictionary *) sval;
+	NSNumber *val = [dict valueForKey:@"data"];
 	STAssertEquals([val intValue], 0, nil);
 	STAssertEqualObjects([sensorController valueSummary], [dict valueForKey:@"description"], nil);
 
@@ -85,7 +88,10 @@
 	STAssertEquals([[dict valueForKey:@"data"] intValue], 1, nil);
 
 	[mockSensor setMulti:YES];
-	NSArray *valArray = (NSArray *) [sensorController value];
+	sval = [sensorController value];
+	STAssertNotNil(sval, nil);
+	STAssertTrue([sval isKindOfClass:[NSArray class]], nil);
+	NSArray *valArray = (NSArray *) sval;
 	STAssertTrue([valArray count] == 3, nil);
 	STAssertEqualObjects([sensorController valueSummary], @"3 values", nil);
 	int i;
