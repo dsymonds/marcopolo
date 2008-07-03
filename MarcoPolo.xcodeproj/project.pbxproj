@@ -132,7 +132,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 8; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = "<group>"; tabWidth = 8; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		32CA4F630368D1EE00C91783 /* MarcoPolo.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarcoPolo.pch; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* MarcoPolo.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MarcoPolo.pch; path = Source/MarcoPolo.pch; sourceTree = "<group>"; };
 		8D0EACA40E07A931004ABEF2 /* LightSensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LightSensor-Info.plist"; path = "Sensors/LightSensor/LightSensor-Info.plist"; sourceTree = "<group>"; };
 		8D0EACB00E07A99C004ABEF2 /* LightSensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightSensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D0EACC30E07AB1C004ABEF2 /* LightSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightSensor.h; path = Sensors/LightSensor/LightSensor.h; sourceTree = "<group>"; };
