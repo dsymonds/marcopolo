@@ -122,7 +122,7 @@ static void devRemoved(void *ref, io_iterator_t iterator)
 				      [device productID], @"product_id", nil];
 		[array addObject:[NSDictionary dictionaryWithObjectsAndKeys:
 				  data, @"data",
-				  [device description], @"description"]];
+				  [device description], @"description", nil]];
 	}
 
 	[lock_ unlock];
