@@ -6,21 +6,33 @@
 //
 
 #import "ExactRule.h"
+#import "ValueSet.h"
 
 
 @implementation ExactRule
+
++ (id)exactRuleWithSensor:(NSString *)sensor value:(NSObject *)value
+{
+	return [[[self alloc] initWithSensor:sensor value:value] autorelease];
+}
+
+- (id)initWithSensor:(NSString *)sensor value:(NSObject *)value
+{
+	if (!(self = [super init]))
+		return nil;
+
+	sensor_ = [sensor retain];
+	value_ = [value retain];
+
+	return self;
+}
 
 #pragma mark NSCoder protocol
 
 - (id)initWithCoder:(NSCoder *)coder
 {
-	if (!(self = [super init]))
-		return nil;
-
-	sensor_ = [[coder decodeObjectForKey:@"Sensor"] retain];
-	value_ = [[coder decodeObjectForKey:@"Value"], retain];
-
-	return self;
+	return [self initWithSensor:[coder decodeObjectForKey:@"Sensor"]
+			      value:[coder decodeObjectForKey:@"Value"]];
 }
 
 - (void)encodeWithCoder:(NSCoder *)coder
@@ -33,8 +45,7 @@
 
 - (BOOL)matches:(ValueSet *)valueSet
 {
-	// TODO
-	return NO;
+	return [[valueSet valuesForSensor:sensor_] containsObject:value_];
 }
 
 @end

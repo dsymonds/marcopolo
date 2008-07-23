@@ -15,4 +15,7 @@
 	NSObject *value_;
 }
 
++ (id)exactRuleWithSensor:(NSString *)sensor value:(NSObject *)value;
+- (id)initWithSensor:(NSString *)sensor value:(NSObject *)value;
+
 @end
