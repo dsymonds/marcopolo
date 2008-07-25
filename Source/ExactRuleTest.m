@@ -15,7 +15,7 @@
 - (ValueSet *)mockValueSetWithValues:(NSArray *)valueArray
 {
 	ValueSet *vs = [ValueSet valueSet];
-	[vs setValuesForSensor:@"Mock" values:valueArray];
+	[vs setValues:valueArray forSensor:@"Mock"];
 	return vs;
 }
 

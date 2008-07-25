@@ -45,13 +45,13 @@
 	return [[self valuesForSensor:sensorName] objectEnumerator];
 }
 
-- (void)setValueForSensor:(NSString *)sensorName value:(NSObject *)value
+- (void)setValue:(NSObject *)value forSensor:(NSString *)sensorName
 {
-	[self setValuesForSensor:sensorName
-			  values:[NSArray arrayWithObject:value]];
+	[self setValues:[NSArray arrayWithObject:value]
+	      forSensor:sensorName];
 }
 
-- (void)setValuesForSensor:(NSString *)sensorName values:(NSArray *)values
+- (void)setValues:(NSArray *)values forSensor:(NSString *)sensorName
 {
 	[values_ setValue:values forKey:sensorName];
 }

@@ -89,9 +89,9 @@
 		if (!value)
 			continue;
 		if (![sensor isMultiValued])
-			[vs setValueForSensor:[sensor name] value:value];
+			[vs setValue:value forSensor:[sensor name]];
 		else
-			[vs setValuesForSensor:[sensor name] values:(NSArray *) value];
+			[vs setValues:(NSArray *) value forSensor:[sensor name]];
 	}
 
 	return vs;

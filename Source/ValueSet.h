@@ -22,7 +22,7 @@
 - (NSArray *)valuesForSensor:(NSString *)sensorName;
 - (NSEnumerator *)valueEnumeratorForSensor:(NSString *)sensorName;
 
-- (void)setValueForSensor:(NSString *)sensorName value:(NSObject *)value;
-- (void)setValuesForSensor:(NSString *)sensorName values:(NSArray *)values;
+- (void)setValue:(NSObject *)value forSensor:(NSString *)sensorName;
+- (void)setValues:(NSArray *)values forSensor:(NSString *)sensorName;
 
 @end

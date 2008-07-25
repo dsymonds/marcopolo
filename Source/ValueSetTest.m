@@ -23,7 +23,7 @@
 {
 	ValueSet *vs = [ValueSet valueSet];
 
-	[vs setValueForSensor:@"Mock" value:[NSNumber numberWithFloat:23.9]];
+	[vs setValue:[NSNumber numberWithFloat:23.9] forSensor:@"Mock"];
 	NSArray *vals = [vs valuesForSensor:@"Mock"];
 	STAssertTrue([vals count] == 1, nil);
 	STAssertEqualObjects([vals lastObject], [NSNumber numberWithFloat:23.9], nil);
