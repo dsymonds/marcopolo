@@ -60,6 +60,7 @@
 		8D76DEE80E371D3B00DF4015 /* ExactRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEE70E371D3B00DF4015 /* ExactRule.m */; };
 		8D76DEFB0E371FBC00DF4015 /* RuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEFA0E371FBC00DF4015 /* RuleSet.m */; };
 		8D76DEFC0E371FBC00DF4015 /* RuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEFA0E371FBC00DF4015 /* RuleSet.m */; };
+		8D93F7870E50FB0000AE3E1E /* LogicRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D93F7860E50FB0000AE3E1E /* LogicRuleTest.m */; };
 		8D95D9010E19A0BD002C1B79 /* SensorControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */; };
 		8D96C3CD0E1AF70100287BC1 /* ValueSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC10E1A2902009F1FCE /* ValueSet.m */; };
 		8DA608060E1D93A600066EA8 /* IPSensor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DA607F70E1D931A00066EA8 /* IPSensor-Info.plist */; };
@@ -70,6 +71,8 @@
 		8DA7FE310E0653EB00248CF8 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
 		8DBE19930E39C93E002AC5EC /* ExactRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE19920E39C93E002AC5EC /* ExactRuleTest.m */; };
 		8DBE199D0E39CAB7002AC5EC /* ExactRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEE70E371D3B00DF4015 /* ExactRule.m */; };
+		8DBE19E00E39CE7A002AC5EC /* LogicRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE19DF0E39CE7A002AC5EC /* LogicRule.m */; };
+		8DBE19E10E39CE7A002AC5EC /* LogicRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE19DF0E39CE7A002AC5EC /* LogicRule.m */; };
 		8DBF0AC40E1A2902009F1FCE /* ValueSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC10E1A2902009F1FCE /* ValueSet.m */; };
 		8DBF0AC60E1A2906009F1FCE /* ValueSetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC30E1A2902009F1FCE /* ValueSetTest.m */; };
 		8DBF0AC70E1A2907009F1FCE /* ValueSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC10E1A2902009F1FCE /* ValueSet.m */; };
@@ -196,6 +199,8 @@
 		8D76DEE70E371D3B00DF4015 /* ExactRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExactRule.m; path = Source/ExactRule.m; sourceTree = "<group>"; };
 		8D76DEF90E371FBC00DF4015 /* RuleSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuleSet.h; path = Source/RuleSet.h; sourceTree = "<group>"; };
 		8D76DEFA0E371FBC00DF4015 /* RuleSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RuleSet.m; path = Source/RuleSet.m; sourceTree = "<group>"; };
+		8D93F7850E50FB0000AE3E1E /* LogicRuleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicRuleTest.h; path = Source/LogicRuleTest.h; sourceTree = "<group>"; };
+		8D93F7860E50FB0000AE3E1E /* LogicRuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogicRuleTest.m; path = Source/LogicRuleTest.m; sourceTree = "<group>"; };
 		8DA607F60E1D931A00066EA8 /* IPSensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IPSensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA607F70E1D931A00066EA8 /* IPSensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "IPSensor-Info.plist"; path = "Sensors/IPSensor/IPSensor-Info.plist"; sourceTree = "<group>"; };
 		8DA608070E1D93C600066EA8 /* IPSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPSensor.h; path = Sensors/IPSensor/IPSensor.h; sourceTree = "<group>"; };
@@ -207,6 +212,8 @@
 		8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorControllerTest.m; path = Source/SensorControllerTest.m; sourceTree = "<group>"; };
 		8DBE19910E39C93E002AC5EC /* ExactRuleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExactRuleTest.h; path = Source/ExactRuleTest.h; sourceTree = "<group>"; };
 		8DBE19920E39C93E002AC5EC /* ExactRuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExactRuleTest.m; path = Source/ExactRuleTest.m; sourceTree = "<group>"; };
+		8DBE19DE0E39CE7A002AC5EC /* LogicRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicRule.h; path = Source/LogicRule.h; sourceTree = "<group>"; };
+		8DBE19DF0E39CE7A002AC5EC /* LogicRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogicRule.m; path = Source/LogicRule.m; sourceTree = "<group>"; };
 		8DBF0AC00E1A2902009F1FCE /* ValueSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValueSet.h; path = Source/ValueSet.h; sourceTree = "<group>"; };
 		8DBF0AC10E1A2902009F1FCE /* ValueSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ValueSet.m; path = Source/ValueSet.m; sourceTree = "<group>"; };
 		8DBF0AC20E1A2902009F1FCE /* ValueSetTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValueSetTest.h; path = Source/ValueSetTest.h; sourceTree = "<group>"; };
@@ -390,6 +397,10 @@
 				8D76DEFA0E371FBC00DF4015 /* RuleSet.m */,
 				8DBE19910E39C93E002AC5EC /* ExactRuleTest.h */,
 				8DBE19920E39C93E002AC5EC /* ExactRuleTest.m */,
+				8DBE19DE0E39CE7A002AC5EC /* LogicRule.h */,
+				8DBE19DF0E39CE7A002AC5EC /* LogicRule.m */,
+				8D93F7850E50FB0000AE3E1E /* LogicRuleTest.h */,
+				8D93F7860E50FB0000AE3E1E /* LogicRuleTest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -707,6 +718,7 @@
 				8DBF0AC40E1A2902009F1FCE /* ValueSet.m in Sources */,
 				8D76DEE80E371D3B00DF4015 /* ExactRule.m in Sources */,
 				8D76DEFB0E371FBC00DF4015 /* RuleSet.m in Sources */,
+				8DBE19E00E39CE7A002AC5EC /* LogicRule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,6 +783,8 @@
 				8D76DEFC0E371FBC00DF4015 /* RuleSet.m in Sources */,
 				8DBE19930E39C93E002AC5EC /* ExactRuleTest.m in Sources */,
 				8DBE199D0E39CAB7002AC5EC /* ExactRule.m in Sources */,
+				8DBE19E10E39CE7A002AC5EC /* LogicRule.m in Sources */,
+				8D93F7870E50FB0000AE3E1E /* LogicRuleTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
