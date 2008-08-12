@@ -12,25 +12,31 @@
 
 + (id)logicRuleOfType:(LogicRuleType)type withSubrules:(NSArray *)subrules
 {
-	LogicRule *lr = [[[self alloc] initAsType:type] autorelease];
-	NSEnumerator *en = [subrules objectEnumerator];
-	id obj;
-	while ((obj = [en nextObject])) {
-		if ([obj conformsToProtocol:@protocol(Rule)])
-			[lr addSubrule:obj];
-		else
-			NSLog(@"WARNING: Tried to add a subrule that wasn't a rule!");
-	}
-	return lr;
+	return [[[LogicRule alloc] initAsType:type withSubrules:subrules] autorelease];
 }
 
 - (id)initAsType:(LogicRuleType)type
+{
+	return [self initAsType:type withSubrules:[NSArray array]];
+}
+
+- (id)initAsType:(LogicRuleType)type withSubrules:(NSArray *)subrules
 {
 	if (!(self = [super init]))
 		return nil;
 
 	type_ = type;
 	subrules_ = [[NSMutableArray alloc] init];
+
+	// Verify each subrule conforms to the Rule protocol.
+	NSEnumerator *en = [subrules objectEnumerator];
+	id obj;
+	while ((obj = [en nextObject])) {
+		if ([obj conformsToProtocol:@protocol(Rule)])
+			[subrules_ addObject:obj];
+		else
+			NSLog(@"WARNING: Tried to add a subrule that wasn't a rule!");
+	}
 
 	return self;
 }
@@ -39,17 +45,14 @@
 
 - (id)initWithCoder:(NSCoder *)coder
 {
-	// TODO
-//	return [self initWithSensor:[coder decodeObjectForKey:@"Sensor"]
-//			      value:[coder decodeObjectForKey:@"Value"]];
-	return [self init];
+	return [self initAsType:[coder decodeIntForKey:@"Type"]
+		   withSubrules:[coder decodeObjectForKey:@"Subrules"]];
 }
 
 - (void)encodeWithCoder:(NSCoder *)coder
 {
-	// TODO
-//	[coder encodeObject:sensor_ forKey:@"Sensor"];
-//	[coder encodeObject:value_ forKey:@"Value"];
+	[coder encodeInt:type_ forKey:@"Type"];
+	[coder encodeObject:subrules_ forKey:@"Subrules"];
 }
 
 #pragma mark Rule protocol
