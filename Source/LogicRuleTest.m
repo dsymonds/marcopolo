@@ -116,4 +116,6 @@
 	STAssertFalse([lr matches:[self mockValueSetWithValues:one_two_three_four]], nil);
 }
 
+// TODO: Add unit tests for nested logic rules.
+
 @end

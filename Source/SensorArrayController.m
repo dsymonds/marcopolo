@@ -29,6 +29,9 @@
 		      sensorClass, [bundle bundlePath]);
 		return;
 	}
+	// Since this is a compiled sensor we are loading, it might be declaring that it
+	// conforms to an older Sensor protocol, so we check that the requred methods are
+	// actually implemented.
 	NSArray *requiredInstanceMethods = [NSArray arrayWithObjects:
 					    @"init", @"dealloc",
 					    @"name",
