@@ -76,6 +76,8 @@
 		8DBF0AC40E1A2902009F1FCE /* ValueSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC10E1A2902009F1FCE /* ValueSet.m */; };
 		8DBF0AC60E1A2906009F1FCE /* ValueSetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC30E1A2902009F1FCE /* ValueSetTest.m */; };
 		8DBF0AC70E1A2907009F1FCE /* ValueSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC10E1A2902009F1FCE /* ValueSet.m */; };
+		8DFEDA360E54E7140069AA8C /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8DFEDA350E54E7140069AA8C /* MainMenu.nib */; };
+		8DFEDA3C0E54E8C00069AA8C /* ApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFEDA3B0E54E8C00069AA8C /* ApplicationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,6 +222,9 @@
 		8DBF0AC30E1A2902009F1FCE /* ValueSetTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ValueSetTest.m; path = Source/ValueSetTest.m; sourceTree = "<group>"; };
 		8DE55AD20DFE7AF800D79CF0 /* Unit Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE55AD30DFE7AF800D79CF0 /* Unit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Unit Tests-Info.plist"; path = "Resources/Unit Tests-Info.plist"; sourceTree = "<group>"; };
+		8DFEDA350E54E7140069AA8C /* MainMenu.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = MainMenu.nib; path = Resources/MainMenu.nib; sourceTree = "<group>"; };
+		8DFEDA3A0E54E8C00069AA8C /* ApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ApplicationController.h; path = Source/ApplicationController.h; sourceTree = "<group>"; };
+		8DFEDA3B0E54E8C00069AA8C /* ApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ApplicationController.m; path = Source/ApplicationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +364,7 @@
 				8D1107310486CEB800E47090 /* Info.plist */,
 				8DE55AD30DFE7AF800D79CF0 /* Unit Tests-Info.plist */,
 				8D5675910E010AE800EFEBA2 /* SensorTester.nib */,
+				8DFEDA350E54E7140069AA8C /* MainMenu.nib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -442,6 +448,8 @@
 				8D56765E0E01EDD300EFEBA2 /* SensorController.m */,
 				8DA7FE290E06519000248CF8 /* SensorControllerTest.h */,
 				8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */,
+				8DFEDA3A0E54E8C00069AA8C /* ApplicationController.h */,
+				8DFEDA3B0E54E8C00069AA8C /* ApplicationController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -628,6 +636,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DFEDA360E54E7140069AA8C /* MainMenu.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +728,7 @@
 				8D76DEE80E371D3B00DF4015 /* ExactRule.m in Sources */,
 				8D76DEFB0E371FBC00DF4015 /* RuleSet.m in Sources */,
 				8DBE19E00E39CE7A002AC5EC /* LogicRule.m in Sources */,
+				8DFEDA3C0E54E8C00069AA8C /* ApplicationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
