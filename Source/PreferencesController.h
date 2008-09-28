@@ -10,8 +10,11 @@
 
 @interface PreferencesController : NSObject {
 	@private
-	NSWindow *preferencesWindow_;
 	NSArray *panes_;
+	NSMutableDictionary *currentPane_;
+
+	NSWindow *preferencesWindow_;
+	NSToolbar *toolbar_;
 }
 
 - (id)init;

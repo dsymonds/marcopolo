@@ -32,6 +32,7 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		8D16A7080E8F66C900765403 /* GeneralPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D16A7070E8F66C900765403 /* GeneralPrefs.nib */; };
+		8D16A79F0E8FB1FE00765403 /* GeneralPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D16A79E0E8FB1FE00765403 /* GeneralPrefs.tiff */; };
 		8D1B84800E0A7A1E00D47563 /* PowerSensor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D1B847D0E0A7A1E00D47563 /* PowerSensor-Info.plist */; };
 		8D1B84810E0A7A1E00D47563 /* PowerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B847F0E0A7A1E00D47563 /* PowerSensor.m */; };
 		8D1B848C0E0A7A6700D47563 /* PowerSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1B84620E0A79AA00D47563 /* PowerSensor.sensor */; };
@@ -165,6 +166,7 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* MarcoPolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarcoPolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D16A7070E8F66C900765403 /* GeneralPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = GeneralPrefs.nib; path = Resources/GeneralPrefs.nib; sourceTree = "<group>"; };
+		8D16A79E0E8FB1FE00765403 /* GeneralPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = GeneralPrefs.tiff; path = Resources/GeneralPrefs.tiff; sourceTree = "<group>"; };
 		8D1B84620E0A79AA00D47563 /* PowerSensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PowerSensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1B847D0E0A7A1E00D47563 /* PowerSensor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "PowerSensor-Info.plist"; path = "Sensors/PowerSensor/PowerSensor-Info.plist"; sourceTree = "<group>"; };
 		8D1B847E0E0A7A1E00D47563 /* PowerSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PowerSensor.h; path = Sensors/PowerSensor/PowerSensor.h; sourceTree = "<group>"; };
@@ -348,7 +350,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				8D16A7070E8F66C900765403 /* GeneralPrefs.nib */,
 			);
 			name = MarcoPolo;
 			sourceTree = "<group>";
@@ -365,6 +366,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D16A7A00E8FB20100765403 /* Prefs */,
 				8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */,
 				8D56757C0E0109CD00EFEBA2 /* SensorTester-Info.plist */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -384,6 +386,15 @@
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D16A7A00E8FB20100765403 /* Prefs */ = {
+			isa = PBXGroup;
+			children = (
+				8D16A79E0E8FB1FE00765403 /* GeneralPrefs.tiff */,
+				8D16A7070E8F66C900765403 /* GeneralPrefs.nib */,
+			);
+			name = Prefs;
 			sourceTree = "<group>";
 		};
 		8D35C5F70DFE7F3300AF7A7D /* Models */ = {
@@ -646,6 +657,7 @@
 			files = (
 				8DFEDA360E54E7140069AA8C /* MainMenu.nib in Resources */,
 				8D16A7080E8F66C900765403 /* GeneralPrefs.nib in Resources */,
+				8D16A79F0E8FB1FE00765403 /* GeneralPrefs.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
