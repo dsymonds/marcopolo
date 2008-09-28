@@ -31,6 +31,7 @@
 		8D0EACFE0E07AEA2004ABEF2 /* LightSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D0EACB00E07A99C004ABEF2 /* LightSensor.sensor */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		8D16A7080E8F66C900765403 /* GeneralPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D16A7070E8F66C900765403 /* GeneralPrefs.nib */; };
 		8D1B84800E0A7A1E00D47563 /* PowerSensor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D1B847D0E0A7A1E00D47563 /* PowerSensor-Info.plist */; };
 		8D1B84810E0A7A1E00D47563 /* PowerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B847F0E0A7A1E00D47563 /* PowerSensor.m */; };
 		8D1B848C0E0A7A6700D47563 /* PowerSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1B84620E0A79AA00D47563 /* PowerSensor.sensor */; };
@@ -69,6 +70,7 @@
 		8DA608630E1D977500066EA8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA608620E1D977500066EA8 /* SystemConfiguration.framework */; };
 		8DA7FE190E064F6F00248CF8 /* MockSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE180E064F6F00248CF8 /* MockSensor.m */; };
 		8DA7FE310E0653EB00248CF8 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
+		8DBB44840E8B01F300B2D66F /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB44830E8B01F300B2D66F /* PreferencesController.m */; };
 		8DBE19930E39C93E002AC5EC /* ExactRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE19920E39C93E002AC5EC /* ExactRuleTest.m */; };
 		8DBE199D0E39CAB7002AC5EC /* ExactRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEE70E371D3B00DF4015 /* ExactRule.m */; };
 		8DBE19E00E39CE7A002AC5EC /* LogicRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE19DF0E39CE7A002AC5EC /* LogicRule.m */; };
@@ -162,6 +164,7 @@
 		8D0EACC40E07AB1C004ABEF2 /* LightSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightSensor.m; path = Sensors/LightSensor/LightSensor.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* MarcoPolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarcoPolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D16A7070E8F66C900765403 /* GeneralPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = GeneralPrefs.nib; path = Resources/GeneralPrefs.nib; sourceTree = "<group>"; };
 		8D1B84620E0A79AA00D47563 /* PowerSensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PowerSensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1B847D0E0A7A1E00D47563 /* PowerSensor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "PowerSensor-Info.plist"; path = "Sensors/PowerSensor/PowerSensor-Info.plist"; sourceTree = "<group>"; };
 		8D1B847E0E0A7A1E00D47563 /* PowerSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PowerSensor.h; path = Sensors/PowerSensor/PowerSensor.h; sourceTree = "<group>"; };
@@ -212,6 +215,8 @@
 		8DA7FE180E064F6F00248CF8 /* MockSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MockSensor.m; path = Source/MockSensor.m; sourceTree = "<group>"; };
 		8DA7FE290E06519000248CF8 /* SensorControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorControllerTest.h; path = Source/SensorControllerTest.h; sourceTree = "<group>"; };
 		8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorControllerTest.m; path = Source/SensorControllerTest.m; sourceTree = "<group>"; };
+		8DBB44820E8B01F300B2D66F /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesController.h; path = Source/PreferencesController.h; sourceTree = "<group>"; };
+		8DBB44830E8B01F300B2D66F /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesController.m; path = Source/PreferencesController.m; sourceTree = "<group>"; };
 		8DBE19910E39C93E002AC5EC /* ExactRuleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExactRuleTest.h; path = Source/ExactRuleTest.h; sourceTree = "<group>"; };
 		8DBE19920E39C93E002AC5EC /* ExactRuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExactRuleTest.m; path = Source/ExactRuleTest.m; sourceTree = "<group>"; };
 		8DBE19DE0E39CE7A002AC5EC /* LogicRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicRule.h; path = Source/LogicRule.h; sourceTree = "<group>"; };
@@ -343,6 +348,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				8D16A7070E8F66C900765403 /* GeneralPrefs.nib */,
 			);
 			name = MarcoPolo;
 			sourceTree = "<group>";
@@ -450,6 +456,8 @@
 				8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */,
 				8DFEDA3A0E54E8C00069AA8C /* ApplicationController.h */,
 				8DFEDA3B0E54E8C00069AA8C /* ApplicationController.m */,
+				8DBB44820E8B01F300B2D66F /* PreferencesController.h */,
+				8DBB44830E8B01F300B2D66F /* PreferencesController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -637,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DFEDA360E54E7140069AA8C /* MainMenu.nib in Resources */,
+				8D16A7080E8F66C900765403 /* GeneralPrefs.nib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,6 +738,7 @@
 				8D76DEFB0E371FBC00DF4015 /* RuleSet.m in Sources */,
 				8DBE19E00E39CE7A002AC5EC /* LogicRule.m in Sources */,
 				8DFEDA3C0E54E8C00069AA8C /* ApplicationController.m in Sources */,
+				8DBB44840E8B01F300B2D66F /* PreferencesController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

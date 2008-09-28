@@ -8,10 +8,17 @@
 #import <Cocoa/Cocoa.h>
 
 
+@class PreferencesController;
+
+
 @interface ApplicationController : NSObject {
 	IBOutlet NSMenu *statusBarMenu;
 	NSStatusItem *statusBarItem_;
+
+	PreferencesController *preferencesController_;
 }
+
+- (IBAction)runPreferences:(id)sender;
 
 - (void)loadStatusItem;
 

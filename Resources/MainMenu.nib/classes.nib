@@ -24,12 +24,19 @@
 			<string>NSObject</string>
 		</dict>
 		<dict>
+			<key>ACTIONS</key>
+			<dict>
+				<key>runPreferences</key>
+				<string>id</string>
+			</dict>
 			<key>CLASS</key>
 			<string>ApplicationController</string>
 			<key>LANGUAGE</key>
 			<string>ObjC</string>
 			<key>OUTLETS</key>
 			<dict>
+				<key>preferencesWindow_</key>
+				<string>NSWindow</string>
 				<key>statusBarMenu</key>
 				<string>NSMenu</string>
 			</dict>

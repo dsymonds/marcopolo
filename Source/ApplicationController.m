@@ -6,13 +6,36 @@
 //
 
 #import "ApplicationController.h"
+#import "PreferencesController.h"
 
 
 @implementation ApplicationController
 
+- (id)init
+{
+	if (!(self = [super init]))
+		return nil;
+
+	preferencesController_ = [[PreferencesController alloc] init];
+
+	return self;
+}
+
+- (void)dealloc
+{
+	[preferencesController_ release];
+
+	[super dealloc];
+}
+
 - (void)awakeFromNib
 {
 	[self loadStatusItem];
+}
+
+- (IBAction)runPreferences:(id)sender
+{
+	[preferencesController_ runPreferences];
 }
 
 - (void)loadStatusItem
