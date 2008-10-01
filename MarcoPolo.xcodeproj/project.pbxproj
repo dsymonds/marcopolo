@@ -37,6 +37,9 @@
 		8D1B84810E0A7A1E00D47563 /* PowerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B847F0E0A7A1E00D47563 /* PowerSensor.m */; };
 		8D1B848C0E0A7A6700D47563 /* PowerSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1B84620E0A79AA00D47563 /* PowerSensor.sensor */; };
 		8D1B849E0E0A7DBE00D47563 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D637BAB0E04A61C008D3EBA /* IOKit.framework */; };
+		8D2CEBA30E92F8BB00E1895A /* RulesPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */; };
+		8D2CEBA50E92F9AD00E1895A /* ContextsPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA40E92F9AD00E1895A /* ContextsPrefs.nib */; };
+		8D2CEBA70E92F9D600E1895A /* ContextsPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA60E92F9D600E1895A /* ContextsPrefs.tiff */; };
 		8D35C5FA0DFE7F7D00AF7A7D /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C5F90DFE7F7D00AF7A7D /* Context.m */; };
 		8D35C5FB0DFE7F7D00AF7A7D /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C5F90DFE7F7D00AF7A7D /* Context.m */; };
 		8D35C60B0DFE851A00AF7A7D /* ContextTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C60A0DFE851A00AF7A7D /* ContextTest.m */; };
@@ -171,6 +174,9 @@
 		8D1B847D0E0A7A1E00D47563 /* PowerSensor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "PowerSensor-Info.plist"; path = "Sensors/PowerSensor/PowerSensor-Info.plist"; sourceTree = "<group>"; };
 		8D1B847E0E0A7A1E00D47563 /* PowerSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PowerSensor.h; path = Sensors/PowerSensor/PowerSensor.h; sourceTree = "<group>"; };
 		8D1B847F0E0A7A1E00D47563 /* PowerSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PowerSensor.m; path = Sensors/PowerSensor/PowerSensor.m; sourceTree = "<group>"; };
+		8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = RulesPrefs.tiff; path = Resources/RulesPrefs.tiff; sourceTree = "<group>"; };
+		8D2CEBA40E92F9AD00E1895A /* ContextsPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ContextsPrefs.nib; path = Resources/ContextsPrefs.nib; sourceTree = "<group>"; };
+		8D2CEBA60E92F9D600E1895A /* ContextsPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = ContextsPrefs.tiff; path = Resources/ContextsPrefs.tiff; sourceTree = "<group>"; };
 		8D35C5F80DFE7F7D00AF7A7D /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Context.h; path = Source/Context.h; sourceTree = "<group>"; };
 		8D35C5F90DFE7F7D00AF7A7D /* Context.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Context.m; path = Source/Context.m; sourceTree = "<group>"; };
 		8D35C6090DFE851A00AF7A7D /* ContextTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextTest.h; path = Source/ContextTest.h; sourceTree = "<group>"; };
@@ -391,8 +397,11 @@
 		8D16A7A00E8FB20100765403 /* Prefs */ = {
 			isa = PBXGroup;
 			children = (
-				8D16A79E0E8FB1FE00765403 /* GeneralPrefs.tiff */,
+				8D2CEBA40E92F9AD00E1895A /* ContextsPrefs.nib */,
+				8D2CEBA60E92F9D600E1895A /* ContextsPrefs.tiff */,
 				8D16A7070E8F66C900765403 /* GeneralPrefs.nib */,
+				8D16A79E0E8FB1FE00765403 /* GeneralPrefs.tiff */,
+				8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */,
 			);
 			name = Prefs;
 			sourceTree = "<group>";
@@ -658,6 +667,9 @@
 				8DFEDA360E54E7140069AA8C /* MainMenu.nib in Resources */,
 				8D16A7080E8F66C900765403 /* GeneralPrefs.nib in Resources */,
 				8D16A79F0E8FB1FE00765403 /* GeneralPrefs.tiff in Resources */,
+				8D2CEBA30E92F8BB00E1895A /* RulesPrefs.tiff in Resources */,
+				8D2CEBA50E92F9AD00E1895A /* ContextsPrefs.nib in Resources */,
+				8D2CEBA70E92F9D600E1895A /* ContextsPrefs.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

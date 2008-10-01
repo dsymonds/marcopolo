@@ -11,7 +11,7 @@
 @interface PreferencesController (Private)
 
 - (void)switchToPane:(NSMutableDictionary *)pane;
-- (void)resizeWindowToSize:(NSSize)size withMinSize:(NSSize)minSize limitMaxSize:(BOOL)limitMaxSize;
+- (void)resizeWindowToSize:(NSSize)size withMinSize:(NSSize)minSize resizeable:(BOOL)resizeable;
 
 @end
 
@@ -72,7 +72,17 @@
 		       @"general", @"id",
 		       NSLocalizedString(@"General", @"Preferences Pane name"), @"name",
 		       [[[self class] loadPaneViewFromNibNamd:@"GeneralPrefs"] autorelease], @"view",
+		       [NSNumber numberWithBool:NO], @"resizeable",
 		       @"GeneralPrefs", @"icon",
+		       nil]];
+
+	// Contexts
+	[ps addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:
+		       @"contexts", @"id",
+		       NSLocalizedString(@"Contexts", @"Preferences Pane name"), @"name",
+		       [[[self class] loadPaneViewFromNibNamd:@"ContextsPrefs"] autorelease], @"view",
+		       [NSNumber numberWithBool:YES], @"resizeable",
+		       @"ContextsPrefs", @"icon",
 		       nil]];
 
 	// Use the starting size as each pane's minimum size
@@ -184,17 +194,23 @@
 				  [[pane valueForKey:@"last_height"] floatValue]);
 	}
 
+	BOOL resizeable = [[pane valueForKey:@"resizeable"] boolValue];
+	[preferencesWindow_ setShowsResizeIndicator:resizeable];
+
 	// Shift to a blank view of the correct size first
 	NSView *blank = [[[NSView alloc] init] autorelease];
 	[preferencesWindow_ setContentView:blank];
-	[self resizeWindowToSize:size withMinSize:minSize limitMaxSize:NO];
+	[self resizeWindowToSize:size
+		     withMinSize:minSize
+		      resizeable:resizeable];
 
 	if ([toolbar_ respondsToSelector:@selector(setSelectedItemIdentifier:)])
 		[toolbar_ setSelectedItemIdentifier:[pane valueForKey:@"id"]];
 	[preferencesWindow_ setContentView:[pane valueForKey:@"view"]];
+	currentPane_ = pane;
 }
 
-- (void)resizeWindowToSize:(NSSize)size withMinSize:(NSSize)minSize limitMaxSize:(BOOL)limitMaxSize
+- (void)resizeWindowToSize:(NSSize)size withMinSize:(NSSize)minSize resizeable:(BOOL)resizeable
 {
 	NSRect frame;
 	float tbHeight, newHeight, newWidth;
@@ -218,7 +234,7 @@
 	minSize.height += [self titleBarHeight];
 	[preferencesWindow_ setMinSize:minSize];
 
-	[preferencesWindow_ setMaxSize:(limitMaxSize ? minSize : NSMakeSize(FLT_MAX, FLT_MAX))];
+	[preferencesWindow_ setMaxSize:(resizeable ? NSMakeSize(FLT_MAX, FLT_MAX) : minSize)];
 }
 
 #pragma mark -
