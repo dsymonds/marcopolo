@@ -22,6 +22,7 @@
 + (NSWindow *)createPreferencesWindow
 {
 	int mask = NSTitledWindowMask | NSClosableWindowMask | NSResizableWindowMask;
+	// TODO: Use NSUnifiedTitleAndToolbarWindowMask here somewhere?
 	NSWindow *w = [[NSWindow alloc] initWithContentRect:NSMakeRect(0, 0, 500, 400)
 						  styleMask:mask
 						    backing:NSBackingStoreBuffered
@@ -273,6 +274,11 @@
 }
 
 - (NSArray *)toolbarDefaultItemIdentifiers:(NSToolbar *)toolbar
+{
+	return [self toolbarAllowedItemIdentifiers:toolbar];
+}
+
+- (NSArray *)toolbarSelectableItemIdentifiers:(NSToolbar *)toolbar
 {
 	return [self toolbarAllowedItemIdentifiers:toolbar];
 }
