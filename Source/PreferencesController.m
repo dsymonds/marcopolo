@@ -21,8 +21,9 @@
 
 + (NSWindow *)createPreferencesWindow
 {
+	int mask = NSTitledWindowMask | NSClosableWindowMask | NSResizableWindowMask;
 	NSWindow *w = [[NSWindow alloc] initWithContentRect:NSMakeRect(0, 0, 500, 400)
-						  styleMask:(NSClosableWindowMask | NSResizableWindowMask)
+						  styleMask:mask
 						    backing:NSBackingStoreBuffered
 						      defer:NO];
 	[w setReleasedWhenClosed:NO];
@@ -196,6 +197,9 @@
 
 	BOOL resizeable = [[pane valueForKey:@"resizeable"] boolValue];
 	[preferencesWindow_ setShowsResizeIndicator:resizeable];
+
+	[preferencesWindow_ setTitle:[NSString stringWithFormat:@"MarcoPolo  %C  %@",
+				      0x2014, [pane valueForKey:@"name"]]];
 
 	// Shift to a blank view of the correct size first
 	NSView *blank = [[[NSView alloc] init] autorelease];
