@@ -8,6 +8,7 @@
 #import <Cocoa/Cocoa.h>
 
 
+@class ContextsController;
 @class PreferencesController;
 
 
@@ -16,10 +17,12 @@
 	NSStatusItem *statusBarItem_;
 
 	PreferencesController *preferencesController_;
+
+	ContextsController *contextsController_;
 }
 
 - (IBAction)runPreferences:(id)sender;
 
-- (void)loadStatusItem;
+- (ContextsController *)contextsController;
 
 @end

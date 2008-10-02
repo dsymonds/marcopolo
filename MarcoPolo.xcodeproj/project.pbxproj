@@ -40,6 +40,7 @@
 		8D2CEBA30E92F8BB00E1895A /* RulesPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */; };
 		8D2CEBA50E92F9AD00E1895A /* ContextsPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA40E92F9AD00E1895A /* ContextsPrefs.nib */; };
 		8D2CEBA70E92F9D600E1895A /* ContextsPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA60E92F9D600E1895A /* ContextsPrefs.tiff */; };
+		8D2E7D2B0E943C3500121762 /* ContextsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E7D2A0E943C3500121762 /* ContextsController.m */; };
 		8D35C5FA0DFE7F7D00AF7A7D /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C5F90DFE7F7D00AF7A7D /* Context.m */; };
 		8D35C5FB0DFE7F7D00AF7A7D /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C5F90DFE7F7D00AF7A7D /* Context.m */; };
 		8D35C60B0DFE851A00AF7A7D /* ContextTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C60A0DFE851A00AF7A7D /* ContextTest.m */; };
@@ -65,6 +66,8 @@
 		8D76DEE80E371D3B00DF4015 /* ExactRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEE70E371D3B00DF4015 /* ExactRule.m */; };
 		8D76DEFB0E371FBC00DF4015 /* RuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEFA0E371FBC00DF4015 /* RuleSet.m */; };
 		8D76DEFC0E371FBC00DF4015 /* RuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEFA0E371FBC00DF4015 /* RuleSet.m */; };
+		8D7D5A2A0E94BE1C005279AD /* ContextsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D5A290E94BE1C005279AD /* ContextsView.m */; };
+		8D7D5ABB0E958D9C005279AD /* PreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */; };
 		8D93F7870E50FB0000AE3E1E /* LogicRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D93F7860E50FB0000AE3E1E /* LogicRuleTest.m */; };
 		8D95D9010E19A0BD002C1B79 /* SensorControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */; };
 		8D96C3CD0E1AF70100287BC1 /* ValueSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC10E1A2902009F1FCE /* ValueSet.m */; };
@@ -177,6 +180,8 @@
 		8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = RulesPrefs.tiff; path = Resources/RulesPrefs.tiff; sourceTree = "<group>"; };
 		8D2CEBA40E92F9AD00E1895A /* ContextsPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ContextsPrefs.nib; path = Resources/ContextsPrefs.nib; sourceTree = "<group>"; };
 		8D2CEBA60E92F9D600E1895A /* ContextsPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = ContextsPrefs.tiff; path = Resources/ContextsPrefs.tiff; sourceTree = "<group>"; };
+		8D2E7D290E943C3500121762 /* ContextsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextsController.h; path = Source/ContextsController.h; sourceTree = "<group>"; };
+		8D2E7D2A0E943C3500121762 /* ContextsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextsController.m; path = Source/ContextsController.m; sourceTree = "<group>"; };
 		8D35C5F80DFE7F7D00AF7A7D /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Context.h; path = Source/Context.h; sourceTree = "<group>"; };
 		8D35C5F90DFE7F7D00AF7A7D /* Context.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Context.m; path = Source/Context.m; sourceTree = "<group>"; };
 		8D35C6090DFE851A00AF7A7D /* ContextTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextTest.h; path = Source/ContextTest.h; sourceTree = "<group>"; };
@@ -212,6 +217,10 @@
 		8D76DEE70E371D3B00DF4015 /* ExactRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExactRule.m; path = Source/ExactRule.m; sourceTree = "<group>"; };
 		8D76DEF90E371FBC00DF4015 /* RuleSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuleSet.h; path = Source/RuleSet.h; sourceTree = "<group>"; };
 		8D76DEFA0E371FBC00DF4015 /* RuleSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RuleSet.m; path = Source/RuleSet.m; sourceTree = "<group>"; };
+		8D7D5A280E94BE1C005279AD /* ContextsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextsView.h; path = Source/ContextsView.h; sourceTree = "<group>"; };
+		8D7D5A290E94BE1C005279AD /* ContextsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextsView.m; path = Source/ContextsView.m; sourceTree = "<group>"; };
+		8D7D5AB90E958D9C005279AD /* PreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesPaneController.h; path = Source/PreferencesPaneController.h; sourceTree = "<group>"; };
+		8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesPaneController.m; path = Source/PreferencesPaneController.m; sourceTree = "<group>"; };
 		8D93F7850E50FB0000AE3E1E /* LogicRuleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicRuleTest.h; path = Source/LogicRuleTest.h; sourceTree = "<group>"; };
 		8D93F7860E50FB0000AE3E1E /* LogicRuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogicRuleTest.m; path = Source/LogicRuleTest.m; sourceTree = "<group>"; };
 		8DA607F60E1D931A00066EA8 /* IPSensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IPSensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -310,6 +319,7 @@
 			children = (
 				8DA7FE280E06516400248CF8 /* Controllers */,
 				8D35C5F70DFE7F3300AF7A7D /* Models */,
+				8D7D5A270E94BDF5005279AD /* Views */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -465,6 +475,15 @@
 			name = Sensors;
 			sourceTree = "<group>";
 		};
+		8D7D5A270E94BDF5005279AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D7D5A280E94BE1C005279AD /* ContextsView.h */,
+				8D7D5A290E94BE1C005279AD /* ContextsView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		8DA7FE280E06516400248CF8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +497,10 @@
 				8DFEDA3B0E54E8C00069AA8C /* ApplicationController.m */,
 				8DBB44820E8B01F300B2D66F /* PreferencesController.h */,
 				8DBB44830E8B01F300B2D66F /* PreferencesController.m */,
+				8D7D5AB90E958D9C005279AD /* PreferencesPaneController.h */,
+				8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */,
+				8D2E7D290E943C3500121762 /* ContextsController.h */,
+				8D2E7D2A0E943C3500121762 /* ContextsController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -763,6 +786,9 @@
 				8DBE19E00E39CE7A002AC5EC /* LogicRule.m in Sources */,
 				8DFEDA3C0E54E8C00069AA8C /* ApplicationController.m in Sources */,
 				8DBB44840E8B01F300B2D66F /* PreferencesController.m in Sources */,
+				8D2E7D2B0E943C3500121762 /* ContextsController.m in Sources */,
+				8D7D5A2A0E94BE1C005279AD /* ContextsView.m in Sources */,
+				8D7D5ABB0E958D9C005279AD /* PreferencesPaneController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

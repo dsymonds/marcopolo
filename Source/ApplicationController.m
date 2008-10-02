@@ -6,8 +6,17 @@
 //
 
 #import "ApplicationController.h"
+#import "ContextsController.h"
 #import "PreferencesController.h"
 
+
+@interface ApplicationController (Private)
+
+- (void)loadStatusItem;
+
+@end
+
+#pragma mark -
 
 @implementation ApplicationController
 
@@ -16,7 +25,9 @@
 	if (!(self = [super init]))
 		return nil;
 
-	preferencesController_ = [[PreferencesController alloc] init];
+	contextsController_ = [[ContextsController alloc] init];
+
+	preferencesController_ = [[PreferencesController alloc] initWithApplicationController:self];
 
 	return self;
 }
@@ -24,6 +35,8 @@
 - (void)dealloc
 {
 	[preferencesController_ release];
+
+	[contextsController_ release];
 
 	[super dealloc];
 }
@@ -52,6 +65,13 @@
 	//[statusBarItem_ setImage:XXX];
 	[statusBarItem_ setTitle:@"hi"];
 	[statusBarItem_ setMenu:statusBarMenu];
+}
+
+#pragma mark -
+
+- (ContextsController *)contextsController
+{
+	return contextsController_;
 }
 
 @end

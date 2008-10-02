@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">352.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="1"/>
+			<integer value="9"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -17,7 +17,7 @@
 		<object class="NSMutableArray" key="IBDocument.RootObjects" id="1000">
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<object class="NSCustomObject" id="1001">
-				<string key="NSClassName">NSObject</string>
+				<string key="NSClassName">PreferencesPaneController</string>
 			</object>
 			<object class="NSCustomObject" id="1003">
 				<string key="NSClassName">FirstResponder</string>
@@ -40,7 +40,7 @@
 							<int key="NSCellFlags">68288064</int>
 							<int key="NSCellFlags2">272630784</int>
 							<string key="NSContents">Context groups will go here</string>
-							<object class="NSFont" key="NSSupport" id="797198871">
+							<object class="NSFont" key="NSSupport">
 								<string key="NSName">LucidaGrande</string>
 								<double key="NSSize">1.300000e+01</double>
 								<int key="NSfFlags">1044</int>
@@ -98,23 +98,23 @@
 										<object class="NSMutableArray" key="NSTableColumns">
 											<bool key="EncodedWithXMLCoder">YES</bool>
 											<object class="NSTableColumn" id="940432606">
-												<double key="NSWidth">1.010000e+02</double>
+												<double key="NSWidth">3.560000e+02</double>
 												<double key="NSMinWidth">1.600000e+01</double>
 												<double key="NSMaxWidth">1.000000e+03</double>
 												<object class="NSTableHeaderCell" key="NSHeaderCell">
 													<int key="NSCellFlags">75628032</int>
 													<int key="NSCellFlags2">0</int>
 													<string key="NSContents"/>
-													<object class="NSFont" key="NSSupport" id="26">
+													<object class="NSFont" key="NSSupport">
 														<string key="NSName">LucidaGrande</string>
 														<double key="NSSize">1.100000e+01</double>
 														<int key="NSfFlags">3100</int>
 													</object>
-													<object class="NSColor" key="NSBackgroundColor" id="298868666">
+													<object class="NSColor" key="NSBackgroundColor">
 														<int key="NSColorSpace">3</int>
 														<bytes key="NSWhite">MC4zMzMzMzI5OQA</bytes>
 													</object>
-													<object class="NSColor" key="NSTextColor" id="597964217">
+													<object class="NSColor" key="NSTextColor">
 														<int key="NSColorSpace">6</int>
 														<string key="NSCatalogName">System</string>
 														<string key="NSColorName">headerTextColor</string>
@@ -125,7 +125,11 @@
 													<int key="NSCellFlags">337772096</int>
 													<int key="NSCellFlags2">2048</int>
 													<string key="NSContents">Text Cell</string>
-													<reference key="NSSupport" ref="797198871"/>
+													<object class="NSFont" key="NSSupport">
+														<string key="NSName">LucidaGrande</string>
+														<double key="NSSize">1.300000e+01</double>
+														<int key="NSfFlags">16</int>
+													</object>
 													<reference key="NSControlView" ref="566746446"/>
 													<object class="NSColor" key="NSBackgroundColor" id="982417734">
 														<int key="NSColorSpace">6</int>
@@ -133,32 +137,6 @@
 														<string key="NSColorName">controlBackgroundColor</string>
 														<reference key="NSColor" ref="580217478"/>
 													</object>
-													<reference key="NSTextColor" ref="881974501"/>
-												</object>
-												<int key="NSResizingMask">3</int>
-												<bool key="NSIsResizeable">YES</bool>
-												<bool key="NSIsEditable">YES</bool>
-												<reference key="NSTableView" ref="566746446"/>
-											</object>
-											<object class="NSTableColumn" id="823549317">
-												<double key="NSWidth">2.540000e+02</double>
-												<double key="NSMinWidth">4.000000e+01</double>
-												<double key="NSMaxWidth">1.000000e+03</double>
-												<object class="NSTableHeaderCell" key="NSHeaderCell">
-													<int key="NSCellFlags">75628032</int>
-													<int key="NSCellFlags2">0</int>
-													<string key="NSContents"/>
-													<reference key="NSSupport" ref="26"/>
-													<reference key="NSBackgroundColor" ref="298868666"/>
-													<reference key="NSTextColor" ref="597964217"/>
-												</object>
-												<object class="NSTextFieldCell" key="NSDataCell" id="482117996">
-													<int key="NSCellFlags">337772096</int>
-													<int key="NSCellFlags2">2048</int>
-													<string key="NSContents">Text Cell</string>
-													<reference key="NSSupport" ref="797198871"/>
-													<reference key="NSControlView" ref="566746446"/>
-													<reference key="NSBackgroundColor" ref="982417734"/>
 													<reference key="NSTextColor" ref="881974501"/>
 												</object>
 												<int key="NSResizingMask">3</int>
@@ -183,8 +161,8 @@
 											</object>
 										</object>
 										<double key="NSRowHeight">1.700000e+01</double>
-										<int key="NSTvFlags">-767557632</int>
-										<int key="NSColumnAutoresizingStyle">4</int>
+										<int key="NSTvFlags">-769654784</int>
+										<int key="NSColumnAutoresizingStyle">5</int>
 										<int key="NSDraggingSourceMaskForLocal">15</int>
 										<int key="NSDraggingSourceMaskForNonLocal">0</int>
 										<bool key="NSAllowsTypeSelect">YES</bool>
@@ -215,7 +193,8 @@
 								<int key="NSsFlags">1</int>
 								<reference key="NSTarget" ref="833389171"/>
 								<string key="NSAction">_doScroller:</string>
-								<double key="NSPercent">5.714286e-01</double>
+								<double key="NSCurValue">1.000000e+00</double>
+								<double key="NSPercent">9.890411e-01</double>
 							</object>
 							<object class="NSClipView" id="431664205">
 								<reference key="NSNextResponder" ref="833389171"/>
@@ -253,6 +232,14 @@
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<object class="NSMutableArray" key="connectionRecords">
 				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">preferencesPaneController</string>
+						<reference key="source" ref="566746446"/>
+						<reference key="destination" ref="1001"/>
+					</object>
+					<int key="connectionID">14</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -336,7 +323,6 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="940432606"/>
-							<reference ref="823549317"/>
 						</object>
 						<reference key="parent" ref="833389171"/>
 					</object>
@@ -353,20 +339,6 @@
 							<reference ref="87868575"/>
 						</object>
 						<reference key="parent" ref="566746446"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">10</int>
-						<reference key="object" ref="823549317"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="482117996"/>
-						</object>
-						<reference key="parent" ref="566746446"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">11</int>
-						<reference key="object" ref="482117996"/>
-						<reference key="parent" ref="823549317"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
@@ -386,14 +358,13 @@
 					<string>1.IBPluginDependency</string>
 					<string>1.WindowOrigin</string>
 					<string>1.editorWindowContentRectSynchronizationRect</string>
-					<string>10.IBPluginDependency</string>
-					<string>11.IBPluginDependency</string>
 					<string>12.IBPluginDependency</string>
 					<string>2.IBPluginDependency</string>
 					<string>3.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
 					<string>6.IBPluginDependency</string>
+					<string>7.CustomClassName</string>
 					<string>7.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
 					<string>9.IBPluginDependency</string>
@@ -413,8 +384,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>ContextsView</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -440,9 +410,33 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">12</int>
+			<int key="maxID">14</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<bool key="EncodedWithXMLCoder">YES</bool>
+				<object class="IBPartialClassDescription">
+					<string key="className">ContextsView</string>
+					<string key="superclassName">NSOutlineView</string>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">preferencesPaneController</string>
+						<string key="NS.object.0">PreferencesPaneController</string>
+					</object>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Source/ContextsView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">PreferencesPaneController</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Source/PreferencesPaneController.h</string>
+					</object>
+				</object>
+			</object>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.LastKnownRelativeProjectPath">../MarcoPolo.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>

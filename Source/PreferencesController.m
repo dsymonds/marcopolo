@@ -6,6 +6,7 @@
 //
 
 #import "PreferencesController.h"
+#import "PreferencesPaneController.h"
 
 
 @interface PreferencesController (Private)
@@ -44,11 +45,13 @@
 	return t;
 }
 
-+ (NSView *)loadPaneViewFromNibNamd:(NSString *)nibName
+- (NSView *)loadPaneViewFromNibNamed:(NSString *)nibName
 {
 	NSNib *nib = [[[NSNib alloc] initWithNibNamed:nibName bundle:nil] autorelease];
 	NSArray *objects;
-	if (![nib instantiateNibWithOwner:self topLevelObjects:&objects]) {
+	PreferencesPaneController *owner = [[[PreferencesPaneController alloc]
+					     initWithApplicationController:applicationController_] autorelease];
+	if (![nib instantiateNibWithOwner:owner topLevelObjects:&objects]) {
 		NSLog(@"Failed instantiating prefs pane from prefs nib: %@", nibName);
 		return nil;
 	}
@@ -65,7 +68,7 @@
 	return (NSView *) [obj retain];
 }
 
-+ (NSArray *)loadPanes
+- (NSArray *)loadPanes
 {
 	NSMutableArray *ps = [[NSMutableArray alloc] init];
 
@@ -73,7 +76,7 @@
 	[ps addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:
 		       @"general", @"id",
 		       NSLocalizedString(@"General", @"Preferences Pane name"), @"name",
-		       [[[self class] loadPaneViewFromNibNamd:@"GeneralPrefs"] autorelease], @"view",
+		       [[self loadPaneViewFromNibNamed:@"GeneralPrefs"] autorelease], @"view",
 		       [NSNumber numberWithBool:NO], @"resizeable",
 		       @"GeneralPrefs", @"icon",
 		       nil]];
@@ -82,7 +85,7 @@
 	[ps addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:
 		       @"contexts", @"id",
 		       NSLocalizedString(@"Contexts", @"Preferences Pane name"), @"name",
-		       [[[self class] loadPaneViewFromNibNamd:@"ContextsPrefs"] autorelease], @"view",
+		       [[self loadPaneViewFromNibNamed:@"ContextsPrefs"] autorelease], @"view",
 		       [NSNumber numberWithBool:YES], @"resizeable",
 		       @"ContextsPrefs", @"icon",
 		       nil]];
@@ -102,12 +105,14 @@
 
 #pragma mark -
 
-- (id)init
+- (id)initWithApplicationController:(ApplicationController *)applicationController
 {
 	if (!(self = [super init]))
 		return nil;
 
-	panes_ = [[self class] loadPanes];
+	applicationController_ = [applicationController retain];
+
+	panes_ = [self loadPanes];
 	currentPane_ = nil;
 
 	preferencesWindow_ = [[self class] createPreferencesWindow];
@@ -121,6 +126,7 @@
 
 - (void)dealloc
 {
+	[applicationController_ release];
 	[panes_ release];
 	[preferencesWindow_ release];
 
@@ -281,6 +287,13 @@
 - (NSArray *)toolbarSelectableItemIdentifiers:(NSToolbar *)toolbar
 {
 	return [self toolbarAllowedItemIdentifiers:toolbar];
+}
+
+#pragma mark -
+
+- (ApplicationController *)application
+{
+	return applicationController_;
 }
 
 @end

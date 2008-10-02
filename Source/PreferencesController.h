@@ -8,8 +8,13 @@
 #import <Cocoa/Cocoa.h>
 
 
+@class ApplicationController;
+
+
 @interface PreferencesController : NSObject {
 	@private
+	ApplicationController *applicationController_;
+
 	NSArray *panes_;
 	NSMutableDictionary *currentPane_;
 
@@ -17,8 +22,11 @@
 	NSToolbar *toolbar_;
 }
 
-- (id)init;
+- (id)initWithApplicationController:(ApplicationController *)applicationController;
 
 - (void)runPreferences;
+
+// Bindings
+- (ApplicationController *)application;
 
 @end
