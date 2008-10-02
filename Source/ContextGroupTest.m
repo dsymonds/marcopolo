@@ -15,18 +15,21 @@
 - (void)testCreation
 {
 	// via class methods
-	ContextGroup *cg = [ContextGroup contextGroup];
+	ContextGroup *cg = [ContextGroup contextGroupWithName:@"Location"];
 	STAssertNotNil(cg, nil);
+	STAssertEqualObjects([cg name], @"Location", nil);
 	STAssertEquals([cg count], 0, nil);
 
-	cg = [ContextGroup contextGroupWithContexts:[NSArray array]];
+	cg = [ContextGroup contextGroupWithName:@"Location" contexts:[NSArray array]];
 	STAssertNotNil(cg, nil);
+	STAssertEqualObjects([cg name], @"Location", nil);
 	STAssertEquals([cg count], 0, nil);
 
 	// via init and setters
-	cg = [[[ContextGroup alloc] init] autorelease];
+	cg = [[[ContextGroup alloc] initWithName:@"Location"] autorelease];
 	[cg addContextsFromArray:[NSArray array]];
 	STAssertNotNil(cg, nil);
+	STAssertEqualObjects([cg name], @"Location", nil);
 	STAssertEquals([cg count], 0, nil);
 }
 
@@ -37,8 +40,9 @@
 	Context *workDesk = [Context contextWithName:@"Desk" parent:work];
 	NSArray *contexts = [NSArray arrayWithObjects:
 			     home, work, workDesk, nil];
-	ContextGroup *cg = [ContextGroup contextGroupWithContexts:contexts];
+	ContextGroup *cg = [ContextGroup contextGroupWithName:@"Location" contexts:contexts];
 	STAssertNotNil(cg, nil);
+	STAssertEqualObjects([cg name], @"Location", nil);
 	STAssertEquals([cg count], 3, nil);
 	STAssertEqualObjects([cg contexts], contexts, nil);
 

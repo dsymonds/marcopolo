@@ -11,32 +11,46 @@
 
 @implementation ContextGroup
 
-+ (id)contextGroup
++ (id)contextGroupWithName:(NSString *)name
 {
-	return [[[self alloc] init] autorelease];
+	return [[[self alloc] initWithName:name] autorelease];
 }
 
-+ (id)contextGroupWithContexts:(NSArray *)contextArray
++ (id)contextGroupWithName:(NSString *)name contexts:(NSArray *)contextArray
 {
-	ContextGroup *cg = [self contextGroup];
+	ContextGroup *cg = [self contextGroupWithName:name];
 
 	[cg addContextsFromArray:contextArray];
 
 	return cg;
 }
 
-- (id)init
+- (id)initWithName:(NSString *)name
 {
 	if (!(self = [super init]))
 		return nil;
 
+	name_ = [name retain];
 	contexts_ = [[NSMutableArray alloc] init];
 	selection_ = nil;
 
 	return self;
 }
 
+- (void)dealloc
+{
+	[name_ release];
+	[contexts_ release];
+
+	[super dealloc];
+}
+
 #pragma mark Accessors
+
+- (NSString *)name
+{
+	return name_;
+}
 
 - (int)count
 {
