@@ -66,6 +66,9 @@
 		8D76DEE80E371D3B00DF4015 /* ExactRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEE70E371D3B00DF4015 /* ExactRule.m */; };
 		8D76DEFB0E371FBC00DF4015 /* RuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEFA0E371FBC00DF4015 /* RuleSet.m */; };
 		8D76DEFC0E371FBC00DF4015 /* RuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEFA0E371FBC00DF4015 /* RuleSet.m */; };
+		8D7906500E984CA8001F38AF /* ContextTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D79064F0E984CA8001F38AF /* ContextTree.m */; };
+		8D7906650E988364001F38AF /* ContextTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D79064F0E984CA8001F38AF /* ContextTree.m */; };
+		8D7906680E98837D001F38AF /* ContextTreeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7906670E98837D001F38AF /* ContextTreeTest.m */; };
 		8D7D5A2A0E94BE1C005279AD /* ContextsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D5A290E94BE1C005279AD /* ContextsView.m */; };
 		8D7D5ABB0E958D9C005279AD /* PreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */; };
 		8D93F7870E50FB0000AE3E1E /* LogicRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D93F7860E50FB0000AE3E1E /* LogicRuleTest.m */; };
@@ -217,6 +220,10 @@
 		8D76DEE70E371D3B00DF4015 /* ExactRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExactRule.m; path = Source/ExactRule.m; sourceTree = "<group>"; };
 		8D76DEF90E371FBC00DF4015 /* RuleSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuleSet.h; path = Source/RuleSet.h; sourceTree = "<group>"; };
 		8D76DEFA0E371FBC00DF4015 /* RuleSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RuleSet.m; path = Source/RuleSet.m; sourceTree = "<group>"; };
+		8D79064E0E984CA8001F38AF /* ContextTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextTree.h; path = Source/ContextTree.h; sourceTree = "<group>"; };
+		8D79064F0E984CA8001F38AF /* ContextTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextTree.m; path = Source/ContextTree.m; sourceTree = "<group>"; };
+		8D7906660E98837D001F38AF /* ContextTreeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextTreeTest.h; path = Source/ContextTreeTest.h; sourceTree = "<group>"; };
+		8D7906670E98837D001F38AF /* ContextTreeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextTreeTest.m; path = Source/ContextTreeTest.m; sourceTree = "<group>"; };
 		8D7D5A280E94BE1C005279AD /* ContextsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextsView.h; path = Source/ContextsView.h; sourceTree = "<group>"; };
 		8D7D5A290E94BE1C005279AD /* ContextsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextsView.m; path = Source/ContextsView.m; sourceTree = "<group>"; };
 		8D7D5AB90E958D9C005279AD /* PreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesPaneController.h; path = Source/PreferencesPaneController.h; sourceTree = "<group>"; };
@@ -443,6 +450,10 @@
 				8DBE19DF0E39CE7A002AC5EC /* LogicRule.m */,
 				8D93F7850E50FB0000AE3E1E /* LogicRuleTest.h */,
 				8D93F7860E50FB0000AE3E1E /* LogicRuleTest.m */,
+				8D79064E0E984CA8001F38AF /* ContextTree.h */,
+				8D79064F0E984CA8001F38AF /* ContextTree.m */,
+				8D7906660E98837D001F38AF /* ContextTreeTest.h */,
+				8D7906670E98837D001F38AF /* ContextTreeTest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -789,6 +800,7 @@
 				8D2E7D2B0E943C3500121762 /* ContextsController.m in Sources */,
 				8D7D5A2A0E94BE1C005279AD /* ContextsView.m in Sources */,
 				8D7D5ABB0E958D9C005279AD /* PreferencesPaneController.m in Sources */,
+				8D7906500E984CA8001F38AF /* ContextTree.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,6 +867,8 @@
 				8DBE199D0E39CAB7002AC5EC /* ExactRule.m in Sources */,
 				8DBE19E10E39CE7A002AC5EC /* LogicRule.m in Sources */,
 				8D93F7870E50FB0000AE3E1E /* LogicRuleTest.m in Sources */,
+				8D7906650E988364001F38AF /* ContextTree.m in Sources */,
+				8D7906680E98837D001F38AF /* ContextTreeTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
