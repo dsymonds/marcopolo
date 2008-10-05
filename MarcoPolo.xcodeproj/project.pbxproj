@@ -25,7 +25,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		8D0EACC10E07AAA6004ABEF2 /* LightSensor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D0EACA40E07A931004ABEF2 /* LightSensor-Info.plist */; };
 		8D0EACC50E07AB1C004ABEF2 /* LightSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D0EACC40E07AB1C004ABEF2 /* LightSensor.m */; };
 		8D0EACF40E07AE60004ABEF2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D637BAB0E04A61C008D3EBA /* IOKit.framework */; };
 		8D0EACFE0E07AEA2004ABEF2 /* LightSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D0EACB00E07A99C004ABEF2 /* LightSensor.sensor */; };
@@ -33,7 +32,6 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		8D16A7080E8F66C900765403 /* GeneralPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D16A7070E8F66C900765403 /* GeneralPrefs.nib */; };
 		8D16A79F0E8FB1FE00765403 /* GeneralPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D16A79E0E8FB1FE00765403 /* GeneralPrefs.tiff */; };
-		8D1B84800E0A7A1E00D47563 /* PowerSensor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D1B847D0E0A7A1E00D47563 /* PowerSensor-Info.plist */; };
 		8D1B84810E0A7A1E00D47563 /* PowerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B847F0E0A7A1E00D47563 /* PowerSensor.m */; };
 		8D1B848C0E0A7A6700D47563 /* PowerSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1B84620E0A79AA00D47563 /* PowerSensor.sensor */; };
 		8D1B849E0E0A7DBE00D47563 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D637BAB0E04A61C008D3EBA /* IOKit.framework */; };
@@ -48,7 +46,6 @@
 		8D35C6290DFE999200AF7A7D /* ContextGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6270DFE999200AF7A7D /* ContextGroup.m */; };
 		8D35C6320DFE9C2400AF7A7D /* ContextGroupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */; };
 		8D56753C0E0105AC00EFEBA2 /* TimeOfDaySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */; };
-		8D56756A0E01088A00EFEBA2 /* TimeOfDaySensor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D56752E0E01055E00EFEBA2 /* TimeOfDaySensor-Info.plist */; };
 		8D56758C0E010AAD00EFEBA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		8D5675920E010AE800EFEBA2 /* SensorTester.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5675910E010AE800EFEBA2 /* SensorTester.nib */; };
 		8D5675970E010C9200EFEBA2 /* SensorArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5675960E010C9200EFEBA2 /* SensorArrayController.m */; };
@@ -56,12 +53,10 @@
 		8D56765F0E01EDD300EFEBA2 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
 		8D5676600E01EDD300EFEBA2 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
 		8D637B7F0E04A1E3008D3EBA /* TimeOfDaySensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */; };
-		8D637B940E04A2E3008D3EBA /* USBSensor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D637B8D0E04A280008D3EBA /* USBSensor-Info.plist */; };
 		8D637B9A0E04A332008D3EBA /* USBSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637B990E04A332008D3EBA /* USBSensor.m */; };
 		8D637BAC0E04A61C008D3EBA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D637BAB0E04A61C008D3EBA /* IOKit.framework */; };
 		8D637BC10E04A637008D3EBA /* USBSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D637B8C0E04A280008D3EBA /* USBSensor.sensor */; };
 		8D637C260E04CD32008D3EBA /* USBVendorDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637C250E04CD32008D3EBA /* USBVendorDB.m */; };
-		8D637C3E0E04CEB7008D3EBA /* usb-vendors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */; };
 		8D637C5A0E04D2DD008D3EBA /* USBDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637C590E04D2DD008D3EBA /* USBDevice.m */; };
 		8D76DEE80E371D3B00DF4015 /* ExactRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEE70E371D3B00DF4015 /* ExactRule.m */; };
 		8D76DEFB0E371FBC00DF4015 /* RuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEFA0E371FBC00DF4015 /* RuleSet.m */; };
@@ -74,7 +69,6 @@
 		8D93F7870E50FB0000AE3E1E /* LogicRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D93F7860E50FB0000AE3E1E /* LogicRuleTest.m */; };
 		8D95D9010E19A0BD002C1B79 /* SensorControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */; };
 		8D96C3CD0E1AF70100287BC1 /* ValueSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC10E1A2902009F1FCE /* ValueSet.m */; };
-		8DA608060E1D93A600066EA8 /* IPSensor-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DA607F70E1D931A00066EA8 /* IPSensor-Info.plist */; };
 		8DA608090E1D93C600066EA8 /* IPSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA608080E1D93C600066EA8 /* IPSensor.m */; };
 		8DA6081F0E1D942A00066EA8 /* IPSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DA607F60E1D931A00066EA8 /* IPSensor.sensor */; };
 		8DA608630E1D977500066EA8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA608620E1D977500066EA8 /* SystemConfiguration.framework */; };
@@ -523,7 +517,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D0EACBD0E07A99D004ABEF2 /* Build configuration list for PBXNativeTarget "LightSensor" */;
 			buildPhases = (
-				8D0EACAC0E07A99C004ABEF2 /* Resources */,
 				8D0EACAD0E07A99C004ABEF2 /* Sources */,
 				8D0EACAE0E07A99C004ABEF2 /* Frameworks */,
 			);
@@ -559,7 +552,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D1B84660E0A79AB00D47563 /* Build configuration list for PBXNativeTarget "PowerSensor" */;
 			buildPhases = (
-				8D1B845E0E0A79AA00D47563 /* Resources */,
 				8D1B845F0E0A79AA00D47563 /* Sources */,
 				8D1B84600E0A79AA00D47563 /* Frameworks */,
 			);
@@ -576,7 +568,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D5675320E01055F00EFEBA2 /* Build configuration list for PBXNativeTarget "TimeOfDaySensor" */;
 			buildPhases = (
-				8D5675290E01055E00EFEBA2 /* Resources */,
 				8D56752A0E01055E00EFEBA2 /* Sources */,
 				8D56752B0E01055E00EFEBA2 /* Frameworks */,
 			);
@@ -612,7 +603,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D637B900E04A280008D3EBA /* Build configuration list for PBXNativeTarget "USBSensor" */;
 			buildPhases = (
-				8D637B880E04A280008D3EBA /* Resources */,
 				8D637B890E04A280008D3EBA /* Sources */,
 				8D637B8A0E04A280008D3EBA /* Frameworks */,
 			);
@@ -629,7 +619,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DA607FA0E1D931B00066EA8 /* Build configuration list for PBXNativeTarget "IPSensor" */;
 			buildPhases = (
-				8DA607F20E1D931A00066EA8 /* Resources */,
 				8DA607F30E1D931A00066EA8 /* Sources */,
 				8DA607F40E1D931A00066EA8 /* Frameworks */,
 			);
@@ -686,14 +675,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8D0EACAC0E07A99C004ABEF2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D0EACC10E07AAA6004ABEF2 /* LightSensor-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D1107290486CEB800E47090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -707,44 +688,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D1B845E0E0A79AA00D47563 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D1B84800E0A7A1E00D47563 /* PowerSensor-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D5675290E01055E00EFEBA2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D56756A0E01088A00EFEBA2 /* TimeOfDaySensor-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8D5675760E0109CD00EFEBA2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8D5675920E010AE800EFEBA2 /* SensorTester.nib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D637B880E04A280008D3EBA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D637B940E04A2E3008D3EBA /* USBSensor-Info.plist in Resources */,
-				8D637C3E0E04CEB7008D3EBA /* usb-vendors.txt in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8DA607F20E1D931A00066EA8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8DA608060E1D93A600066EA8 /* IPSensor-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
