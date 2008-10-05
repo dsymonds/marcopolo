@@ -7,6 +7,7 @@
 
 #import "Context.h"
 #import "ContextGroup.h"
+#import "ContextTree.h"
 #import "ContextsController.h"
 
 
@@ -20,11 +21,12 @@
 	contextGroups_ = [[NSMutableArray alloc] init];
 
 	{
-		// DUMMY GROUPS
-		Context *home = [Context contextWithName:@"Home" parent:nil];
-		Context *work = [Context contextWithName:@"Work" parent:nil];
+		// DUMMY CONTEXTS
+		ContextTree *tree = [ContextTree contextTree];
+		[tree addContext:[Context contextWithName:@"Home"]];
+		[tree addContext:[Context contextWithName:@"Work"]];
 		ContextGroup *cg = [ContextGroup contextGroupWithName:@"Location"
-							     contexts:[NSArray arrayWithObjects:home, work, nil]];
+							  contextTree:tree];
 		[contextGroups_ addObject:cg];
 	}
 
