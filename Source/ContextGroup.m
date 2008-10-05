@@ -7,6 +7,7 @@
 
 #import "Context.h"
 #import "ContextGroup.h"
+#import "ContextTree.h"
 
 
 @implementation ContextGroup
@@ -16,11 +17,11 @@
 	return [[[self alloc] initWithName:name] autorelease];
 }
 
-+ (id)contextGroupWithName:(NSString *)name contexts:(NSArray *)contextArray
++ (id)contextGroupWithName:(NSString *)name contextTree:(ContextTree *)contextTree
 {
 	ContextGroup *cg = [self contextGroupWithName:name];
 
-	[cg addContextsFromArray:contextArray];
+	[cg setContextTree:contextTree];
 
 	return cg;
 }
@@ -31,7 +32,7 @@
 		return nil;
 
 	name_ = [name retain];
-	contexts_ = [[NSMutableArray alloc] init];
+	contextTree_ = [[ContextTree alloc] init];
 	selection_ = nil;
 
 	return self;
@@ -40,7 +41,7 @@
 - (void)dealloc
 {
 	[name_ release];
-	[contexts_ release];
+	[contextTree_ release];
 
 	[super dealloc];
 }
@@ -54,36 +55,20 @@
 
 - (int)count
 {
-	return [contexts_ count];
+	return [contextTree_ count];
 }
 
-- (NSArray *)contexts
+- (ContextTree *)contextTree
 {
-	return contexts_;
+	return contextTree_;
 }
 
-- (NSArray *)topLevelContexts
-{
-	NSMutableArray *array = [NSMutableArray array];
-	NSEnumerator *en = [contexts_ objectEnumerator];
-	Context *c;
-	while ((c = [en nextObject]))
-		if (![c parent])
-			[array addObject:c];
-	return array;
-}
+#pragma mark -
 
-- (void)addContext:(Context *)context
+- (void)setContextTree:(ContextTree *)contextTree
 {
-	[contexts_ addObject:context];
-}
-
-- (void)addContextsFromArray:(NSArray *)contextArray
-{
-	NSEnumerator *en = [contextArray objectEnumerator];
-	Context *c;
-	while ((c = [en nextObject]))
-		[self addContext:c];
+	[contextTree_ autorelease];
+	contextTree_ = [contextTree retain];
 }
 
 @end

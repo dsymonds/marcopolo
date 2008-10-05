@@ -8,6 +8,7 @@
 #import "Context.h"
 #import "ContextGroup.h"
 #import "ContextGroupTest.h"
+#import "ContextTree.h"
 
 
 @implementation ContextGroupTest
@@ -20,36 +21,17 @@
 	STAssertEqualObjects([cg name], @"Location", nil);
 	STAssertEquals([cg count], 0, nil);
 
-	cg = [ContextGroup contextGroupWithName:@"Location" contexts:[NSArray array]];
+	cg = [ContextGroup contextGroupWithName:@"Location"
+				    contextTree:[ContextTree contextTree]];
 	STAssertNotNil(cg, nil);
 	STAssertEqualObjects([cg name], @"Location", nil);
 	STAssertEquals([cg count], 0, nil);
 
 	// via init and setters
 	cg = [[[ContextGroup alloc] initWithName:@"Location"] autorelease];
-	[cg addContextsFromArray:[NSArray array]];
 	STAssertNotNil(cg, nil);
 	STAssertEqualObjects([cg name], @"Location", nil);
 	STAssertEquals([cg count], 0, nil);
-}
-
-- (void)testContextAccessors
-{
-	Context *home = [Context contextWithName:@"Home" parent:nil];
-	Context *work = [Context contextWithName:@"Work" parent:nil];
-	Context *workDesk = [Context contextWithName:@"Desk" parent:work];
-	NSArray *contexts = [NSArray arrayWithObjects:
-			     home, work, workDesk, nil];
-	ContextGroup *cg = [ContextGroup contextGroupWithName:@"Location" contexts:contexts];
-	STAssertNotNil(cg, nil);
-	STAssertEqualObjects([cg name], @"Location", nil);
-	STAssertEquals([cg count], 3, nil);
-	STAssertEqualObjects([cg contexts], contexts, nil);
-
-	NSSet *tlc = [NSSet setWithArray:[cg topLevelContexts]];
-	STAssertTrue([tlc count] == 2, nil);
-	NSSet *expected = [NSSet setWithObjects:home, work, nil];
-	STAssertEqualObjects(tlc, expected, nil);
 }
 
 @end

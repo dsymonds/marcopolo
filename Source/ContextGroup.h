@@ -8,26 +8,25 @@
 #import <Cocoa/Cocoa.h>
 
 
-@class Context;
+@class ContextTree;
 
 
 // A group of contexts, with zero or one of them selected.
 @interface ContextGroup : NSObject {
 	@private
 	NSString *name_;
-	NSMutableArray *contexts_;
+	ContextTree *contextTree_;
 	Context *selection_;
 }
 
 + (id)contextGroupWithName:(NSString *)name;
-+ (id)contextGroupWithName:(NSString *)name contexts:(NSArray *)contextArray;
++ (id)contextGroupWithName:(NSString *)name contextTree:(ContextTree *)contextTree;
 - (id)initWithName:(NSString *)name;
 
 - (NSString *)name;
 - (int)count;
-- (NSArray *)contexts;
-- (NSArray *)topLevelContexts;
-- (void)addContext:(Context *)context;
-- (void)addContextsFromArray:(NSArray *)contextArray;
+- (ContextTree *)contextTree;
+
+- (void)setContextTree:(ContextTree *)contextTree;
 
 @end
