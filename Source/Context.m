@@ -15,6 +15,13 @@
 	return [[[self alloc] init] autorelease];
 }
 
++ (id)contextWithName:(NSString *)name
+{
+	Context *c = [self context];
+	[c setName:name];
+	return c;
+}
+
 + (id)contextWithName:(NSString *)name parent:(Context *)parent
 {
 	Context *c = [self context];

@@ -16,6 +16,7 @@
 }
 
 + (id)context;
++ (id)contextWithName:(NSString *)name;
 + (id)contextWithName:(NSString *)name parent:(Context *)parent;
 - (id)init;
 
