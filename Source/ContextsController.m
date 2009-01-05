@@ -48,19 +48,31 @@
 	if (!item) {
 		// Top-level: a whole context group
 		return [contextGroups_ objectAtIndex:index];
-	} else {
-		// TODO: traverse into context groups
-		NSLog(@"TODO: NYI! %@", _cmd);
-		return nil;
+	} else if ([item isKindOfClass:[ContextGroup class]]) {
+		// A context group: top-level contexts.
+		ContextTree *tree = [(ContextGroup *) item contextTree];
+		return [[tree topLevelContexts] objectAtIndex:index];
+	} else if ([item isKindOfClass:[Context class]]) {
+		// A context in a tree: return its children
+		Context *ctxt = (Context *) item;
+		ContextTree *tree = [ctxt tree];
+		return [[tree childrenOfContext:ctxt] objectAtIndex:index];
 	}
+
+	NSLog(@"ERROR: This should never be reached! (%s)", _cmd);
+	return nil;
 }
 
 - (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item
 {
 	if ([item isKindOfClass:[ContextGroup class]])
 		return YES;
+	else if ([item isKindOfClass:[Context class]]) {
+		// A context is expandable iff it has children.
+		return ([self outlineView:outlineView numberOfChildrenOfItem:item] > 0);
+	}
 
-	// TODO
+	NSLog(@"ERROR: This should never be reached! (%s)", _cmd);
 	return NO;
 }
 
@@ -69,10 +81,19 @@
 	if (!item) {
 		// Top-level: context groups
 		return [contextGroups_ count];
-	} else {
-		// TODO: traverse into context groups
-		return 0;
+	} else if ([item isKindOfClass:[ContextGroup class]]) {
+		// A context group: count the number of top-level contexts
+		ContextTree *tree = [(ContextGroup *) item contextTree];
+		return [[tree topLevelContexts] count];
+	} else if ([item isKindOfClass:[Context class]]) {
+		// A context in a tree: count its children
+		Context *ctxt = (Context *) item;
+		ContextTree *tree = [ctxt tree];
+		return [[tree childrenOfContext:ctxt] count];
 	}
+
+	NSLog(@"ERROR: This should never be reached! (%s)", _cmd);
+	return 0;
 }
 
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
@@ -82,8 +103,11 @@
 	if ([item isKindOfClass:[ContextGroup class]]) {
 		ContextGroup *cg = item;
 		return [cg name];
+	} else if ([item isKindOfClass:[Context class]]) {
+		return [(Context *) item name];
 	}
 
+	NSLog(@"ERROR: This should never be reached! (%s)", _cmd);
 	return @"???";
 }
 
