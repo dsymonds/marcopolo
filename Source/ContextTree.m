@@ -57,6 +57,20 @@
 	return topLevelContexts_;
 }
 
+- (NSArray *)childrenOfContext:(Context *)context
+{
+	NSMutableArray *children = [NSMutableArray array];
+
+	NSEnumerator *en = [contexts_ objectEnumerator];
+	Context *c;
+	while ((c = [en nextObject])) {
+		if ([c parent] == context)
+			[children addObject:c];
+	}
+
+	return children;
+}
+
 #pragma mark -
 
 - (void)addContext:(Context *)context
@@ -73,6 +87,7 @@
 	[contexts_ addObject:context];
 	if (!parent)
 		[topLevelContexts_ addObject:context];
+	[context setTree:self];
 }
 
 - (void)addContextsFromArray:(NSArray *)array

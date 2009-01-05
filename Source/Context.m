@@ -37,6 +37,7 @@
 
 	name_ = @"";
 	parent_ = nil;
+	tree_ = nil;
 
 	return self;
 }
@@ -45,6 +46,7 @@
 {
 	[name_ release];
 	[parent_ release];
+	[tree_ release];
 	[super dealloc];
 }
 
@@ -60,6 +62,11 @@
 	return parent_;
 }
 
+- (ContextTree *)tree
+{
+	return tree_;
+}
+
 - (void)setName:(NSString *)name
 {
 	[name_ autorelease];
@@ -70,6 +77,12 @@
 {
 	[parent_ autorelease];
 	parent_ = [parent retain];
+}
+
+- (void)setTree:(ContextTree *)tree
+{
+	[tree_ autorelease];
+	tree_ = [tree retain];
 }
 
 @end

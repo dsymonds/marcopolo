@@ -24,6 +24,7 @@
 - (BOOL)containsContext:(Context *)context;
 - (NSArray *)allContexts;
 - (NSArray *)topLevelContexts;
+- (NSArray *)childrenOfContext:(Context *)context;
 
 // Add a context. Its parent attribute will be used, and should already exist
 // in this context tree.
