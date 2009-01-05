@@ -21,12 +21,21 @@
 	contextGroups_ = [[NSMutableArray alloc] init];
 
 	{
-		// DUMMY CONTEXTS
+		// XXX: DUMMY CONTEXTS
 		ContextTree *tree = [ContextTree contextTree];
 		[tree addContext:[Context contextWithName:@"Home"]];
-		[tree addContext:[Context contextWithName:@"Work"]];
+		Context *work = [Context contextWithName:@"Work"];
+		[tree addContext:work];
+		[tree addContext:[Context contextWithName:@"Desk" parent:work]];
+		[tree addContext:[Context contextWithName:@"Conference Room" parent:work]];
 		ContextGroup *cg = [ContextGroup contextGroupWithName:@"Location"
 							  contextTree:tree];
+		[contextGroups_ addObject:cg];
+
+		tree = [ContextTree contextTree];
+		[tree addContext:[Context contextWithName:@"Automatic"]];
+		[tree addContext:[Context contextWithName:@"Work"]];
+		cg = [ContextGroup contextGroupWithName:@"Network" contextTree:tree];
 		[contextGroups_ addObject:cg];
 	}
 
