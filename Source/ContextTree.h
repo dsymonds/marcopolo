@@ -11,6 +11,9 @@
 @class Context;
 
 
+// A tree of contexts.
+// The tree structure is defined by the context objects (they have parent links).
+// This class manages a collection of context objects, and provides convenience methods.
 @interface ContextTree : NSObject {
 	@private
 	NSMutableArray *contexts_;
