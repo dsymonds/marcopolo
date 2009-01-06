@@ -34,6 +34,7 @@
 	name_ = [name retain];
 	contextTree_ = [[ContextTree alloc] init];
 	selection_ = nil;
+	attrName_ = nil;
 
 	return self;
 }
@@ -42,6 +43,7 @@
 {
 	[name_ release];
 	[contextTree_ release];
+	[attrName_ release];
 
 	[super dealloc];
 }
@@ -51,6 +53,18 @@
 - (NSString *)name
 {
 	return name_;
+}
+
+- (NSAttributedString *)attributedName
+{
+	if (!attrName_) {
+		NSDictionary *attrs = [NSDictionary dictionaryWithObject:[NSFont boldSystemFontOfSize:
+									  [NSFont systemFontSize]]
+								  forKey:NSFontAttributeName];
+		attrName_ = [[NSAttributedString alloc] initWithString:name_ attributes:attrs];
+	}
+
+	return attrName_;
 }
 
 - (int)count

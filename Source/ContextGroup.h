@@ -8,6 +8,7 @@
 #import <Cocoa/Cocoa.h>
 
 
+@class Context;
 @class ContextTree;
 
 
@@ -17,6 +18,8 @@
 	NSString *name_;
 	ContextTree *contextTree_;
 	Context *selection_;
+
+	NSAttributedString *attrName_;
 }
 
 + (id)contextGroupWithName:(NSString *)name;
@@ -24,6 +27,7 @@
 - (id)initWithName:(NSString *)name;
 
 - (NSString *)name;
+- (NSAttributedString *)attributedName;
 - (int)count;
 - (ContextTree *)contextTree;
 

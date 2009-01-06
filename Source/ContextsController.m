@@ -111,7 +111,7 @@
 
 	if ([item isKindOfClass:[ContextGroup class]]) {
 		ContextGroup *cg = item;
-		return [cg name];
+		return [cg attributedName];
 	} else if ([item isKindOfClass:[Context class]]) {
 		return [(Context *) item name];
 	}
@@ -122,6 +122,7 @@
 
 //- (void)outlineView:(NSOutlineView *)outlineView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
 //{
+// TODO!
 //}
 
 @end
