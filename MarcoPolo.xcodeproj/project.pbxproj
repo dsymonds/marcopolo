@@ -66,6 +66,9 @@
 		8D7906680E98837D001F38AF /* ContextTreeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7906670E98837D001F38AF /* ContextTreeTest.m */; };
 		8D7D5A2A0E94BE1C005279AD /* ContextsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D5A290E94BE1C005279AD /* ContextsView.m */; };
 		8D7D5ABB0E958D9C005279AD /* PreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */; };
+		8D93600B0F14A11700D3990A /* minus-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9360080F14A11700D3990A /* minus-8.png */; };
+		8D93600C0F14A11700D3990A /* plus-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9360090F14A11700D3990A /* plus-8.png */; };
+		8D93600D0F14A11700D3990A /* plus-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D93600A0F14A11700D3990A /* plus-arrow.png */; };
 		8D93F7870E50FB0000AE3E1E /* LogicRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D93F7860E50FB0000AE3E1E /* LogicRuleTest.m */; };
 		8D95D9010E19A0BD002C1B79 /* SensorControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */; };
 		8D96C3CD0E1AF70100287BC1 /* ValueSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF0AC10E1A2902009F1FCE /* ValueSet.m */; };
@@ -222,6 +225,9 @@
 		8D7D5A290E94BE1C005279AD /* ContextsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextsView.m; path = Source/ContextsView.m; sourceTree = "<group>"; };
 		8D7D5AB90E958D9C005279AD /* PreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesPaneController.h; path = Source/PreferencesPaneController.h; sourceTree = "<group>"; };
 		8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesPaneController.m; path = Source/PreferencesPaneController.m; sourceTree = "<group>"; };
+		8D9360080F14A11700D3990A /* minus-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "minus-8.png"; path = "Resources/minus-8.png"; sourceTree = "<group>"; };
+		8D9360090F14A11700D3990A /* plus-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plus-8.png"; path = "Resources/plus-8.png"; sourceTree = "<group>"; };
+		8D93600A0F14A11700D3990A /* plus-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plus-arrow.png"; path = "Resources/plus-arrow.png"; sourceTree = "<group>"; };
 		8D93F7850E50FB0000AE3E1E /* LogicRuleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogicRuleTest.h; path = Source/LogicRuleTest.h; sourceTree = "<group>"; };
 		8D93F7860E50FB0000AE3E1E /* LogicRuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogicRuleTest.m; path = Source/LogicRuleTest.m; sourceTree = "<group>"; };
 		8DA607F60E1D931A00066EA8 /* IPSensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IPSensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -383,6 +389,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D9360070F14A0F900D3990A /* Misc. Graphics */,
 				8D16A7A00E8FB20100765403 /* Prefs */,
 				8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */,
 				8D56757C0E0109CD00EFEBA2 /* SensorTester-Info.plist */,
@@ -487,6 +494,16 @@
 				8D7D5A290E94BE1C005279AD /* ContextsView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		8D9360070F14A0F900D3990A /* Misc. Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				8D9360080F14A11700D3990A /* minus-8.png */,
+				8D9360090F14A11700D3990A /* plus-8.png */,
+				8D93600A0F14A11700D3990A /* plus-arrow.png */,
+			);
+			name = "Misc. Graphics";
 			sourceTree = "<group>";
 		};
 		8DA7FE280E06516400248CF8 /* Controllers */ = {
@@ -685,6 +702,9 @@
 				8D2CEBA30E92F8BB00E1895A /* RulesPrefs.tiff in Resources */,
 				8D2CEBA50E92F9AD00E1895A /* ContextsPrefs.nib in Resources */,
 				8D2CEBA70E92F9D600E1895A /* ContextsPrefs.tiff in Resources */,
+				8D93600B0F14A11700D3990A /* minus-8.png in Resources */,
+				8D93600C0F14A11700D3990A /* plus-8.png in Resources */,
+				8D93600D0F14A11700D3990A /* plus-arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
