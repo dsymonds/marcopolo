@@ -98,4 +98,18 @@
 		[self addContext:c];
 }
 
+- (void)removeContext:(Context *)context
+{
+	// Don't allow removing foreign contexts, or contexts with children
+	if (![self containsContext:context])
+		return;
+	if ([[self childrenOfContext:context] count] > 0)
+		return;
+
+	[context setTree:nil];
+	if (![context parent])
+		[topLevelContexts_ removeObject:context];
+	[contexts_ removeObject:context];
+}
+
 @end

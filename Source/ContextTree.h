@@ -36,4 +36,8 @@
 // Bulk add. Equivalent to calling -addContext on each element of the array.
 - (void)addContextsFromArray:(NSArray *)array;
 
+// Remove a context from this tree. May cause the context to be deallocated if the
+// tree is the last retainer.
+- (void)removeContext:(Context *)context;
+
 @end

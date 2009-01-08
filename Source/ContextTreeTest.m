@@ -40,14 +40,23 @@
 	STAssertTrue([tree containsContext:[contexts objectAtIndex:0]], nil);
 	STAssertTrue([tree containsContext:[contexts objectAtIndex:1]], nil);
 	STAssertFalse([tree containsContext:[Context contextWithName:@"Park"]], nil);
+
+	[tree removeContext:[contexts objectAtIndex:1]];
+	STAssertEquals([tree count], 1, nil);
+	count = [[tree allContexts] count];
+	STAssertEquals(count, 1, nil);
+	count = [[tree topLevelContexts] count];
+	STAssertEquals(count, 1, nil);
+	STAssertTrue([tree containsContext:[contexts objectAtIndex:0]], nil);
+	STAssertFalse([tree containsContext:[contexts objectAtIndex:1]], nil);
 }
 
 - (void)testComplexTree
 {
 	// Tree looks like:
 	//  Work [w]
-	//    Conference Room [wdc]
-	//      Upstairs [wdcu]
+	//    Conference Room [wc]
+	//      Upstairs [wcu]
 	//    Desk [wd]
 	//  Home [h]
 	//    Couch [hc]
@@ -79,6 +88,25 @@
 	STAssertEquals(count, 2, nil);
 	STAssertTrue([kids containsObject:wc], nil);
 	STAssertTrue([kids containsObject:wd], nil);
+
+	// Try to remove a non-leaf context; shouldn't change the tree
+	[tree removeContext:w];
+	STAssertEquals([tree count], 7, nil);
+	count = [[tree allContexts] count];
+	STAssertEquals(count, 7, nil);
+	count = [[tree topLevelContexts] count];
+	STAssertEquals(count, 2, nil);
+
+	// Remove a leaf context
+	[tree removeContext:wcu];
+	STAssertEquals([tree count], 6, nil);
+	count = [[tree allContexts] count];
+	STAssertEquals(count, 6, nil);
+	count = [[tree topLevelContexts] count];
+	STAssertEquals(count, 2, nil);
+	STAssertFalse([tree containsContext:wcu], nil);
+	count = [[tree childrenOfContext:wc] count];
+	STAssertEquals(count, 0, nil);
 }
 
 @end
