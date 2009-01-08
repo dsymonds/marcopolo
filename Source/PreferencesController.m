@@ -179,6 +179,13 @@
 	[self switchToPane:pane];
 }
 
+- (void)switchToPaneNamed:(NSString *)paneIdentifier
+{
+	NSMutableDictionary *pane = [self paneByIdentifier:paneIdentifier];
+	if (pane)
+		[self switchToPane:pane];
+}
+
 - (void)switchToPane:(NSMutableDictionary *)pane
 {
 	if (pane == currentPane_)

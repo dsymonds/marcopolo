@@ -44,6 +44,16 @@
 - (void)awakeFromNib
 {
 	[self loadStatusItem];
+
+	NSString *prefPane = [[NSUserDefaults standardUserDefaults] stringForKey:@"DebugShowPrefPaneOnStartup"];
+	if (prefPane) {
+		[self performSelector:@selector(runPreferences:)
+			   withObject:self
+			   afterDelay:0.5];
+		[preferencesController_ performSelector:@selector(switchToPaneNamed:)
+					     withObject:prefPane
+					     afterDelay:1.0];
+	}
 }
 
 - (IBAction)runPreferences:(id)sender
