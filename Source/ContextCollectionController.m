@@ -1,24 +1,25 @@
 //
-//  ContextsController.m
+//  ContextCollectionController.m
 //  MarcoPolo
 //
 //  Created by David Symonds on 2/10/08.
 //
 
 #import "Context.h"
+#import "ContextCollection.h"
+#import "ContextCollectionController.h"
 #import "ContextGroup.h"
 #import "ContextTree.h"
-#import "ContextsController.h"
 
 
-@implementation ContextsController
+@implementation ContextCollectionController
 
 - (id)init
 {
 	if (!(self = [super init]))
 		return nil;
 
-	contextGroups_ = [[NSMutableArray alloc] init];
+	contextCollection_ = [[ContextCollection alloc] init];
 
 	{
 		// XXX: DUMMY CONTEXTS
@@ -30,13 +31,13 @@
 		[tree addContext:[Context contextWithName:@"Conference Room" parent:work]];
 		ContextGroup *cg = [ContextGroup contextGroupWithName:@"Location"
 							  contextTree:tree];
-		[contextGroups_ addObject:cg];
+		[contextCollection_ addContextGroup:cg];
 
 		tree = [ContextTree contextTree];
 		[tree addContext:[Context contextWithName:@"Automatic"]];
 		[tree addContext:[Context contextWithName:@"Work"]];
 		cg = [ContextGroup contextGroupWithName:@"Network" contextTree:tree];
-		[contextGroups_ addObject:cg];
+		[contextCollection_ addContextGroup:cg];
 	}
 
 	return self;
@@ -44,8 +45,7 @@
 
 - (void)dealloc
 {
-	[contextGroups_ release];
-
+	[contextCollection_ release];
 	[super dealloc];
 }
 
@@ -56,7 +56,7 @@
 {
 	if (!item) {
 		// Top-level: a whole context group
-		return [contextGroups_ objectAtIndex:index];
+		return [contextCollection_ contextGroupAtIndex:index];
 	} else if ([item isKindOfClass:[ContextGroup class]]) {
 		// A context group: top-level contexts.
 		ContextTree *tree = [(ContextGroup *) item contextTree];
@@ -89,7 +89,7 @@
 {
 	if (!item) {
 		// Top-level: context groups
-		return [contextGroups_ count];
+		return [contextCollection_ count];
 	} else if ([item isKindOfClass:[ContextGroup class]]) {
 		// A context group: count the number of top-level contexts
 		ContextTree *tree = [(ContextGroup *) item contextTree];

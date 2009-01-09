@@ -1,5 +1,5 @@
 //
-//  ContextsView.h
+//  ContextCollectionView.h
 //  MarcoPolo
 //
 //  Created by David Symonds on 2/10/08.
@@ -11,7 +11,7 @@
 @class PreferencesPaneController;
 
 
-@interface ContextsView : NSOutlineView {
+@interface ContextCollectionView : NSOutlineView {
 	IBOutlet PreferencesPaneController *preferencesPaneController;
 }
 

@@ -6,7 +6,7 @@
 //
 
 #import "ApplicationController.h"
-#import "ContextsController.h"
+#import "ContextCollectionController.h"
 #import "PreferencesController.h"
 
 
@@ -25,7 +25,7 @@
 	if (!(self = [super init]))
 		return nil;
 
-	contextsController_ = [[ContextsController alloc] init];
+	contextCollectionController_ = [[ContextCollectionController alloc] init];
 
 	preferencesController_ = [[PreferencesController alloc] initWithApplicationController:self];
 
@@ -36,7 +36,7 @@
 {
 	[preferencesController_ release];
 
-	[contextsController_ release];
+	[contextCollectionController_ release];
 
 	[super dealloc];
 }
@@ -79,9 +79,9 @@
 
 #pragma mark -
 
-- (ContextsController *)contextsController
+- (ContextCollectionController *)contextCollectionController
 {
-	return contextsController_;
+	return contextCollectionController_;
 }
 
 @end

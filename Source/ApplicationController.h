@@ -8,7 +8,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@class ContextsController;
+@class ContextCollectionController;
 @class PreferencesController;
 
 
@@ -18,11 +18,11 @@
 
 	PreferencesController *preferencesController_;
 
-	ContextsController *contextsController_;
+	ContextCollectionController *contextCollectionController_;
 }
 
 - (IBAction)runPreferences:(id)sender;
 
-- (ContextsController *)contextsController;
+- (ContextCollectionController *)contextCollectionController;
 
 @end
