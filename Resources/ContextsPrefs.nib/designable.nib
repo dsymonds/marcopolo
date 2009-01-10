@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">352.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="4"/>
+			<integer value="7"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -48,20 +48,21 @@
 										<bool key="NSEnabled">YES</bool>
 										<object class="_NSCornerView" key="NSCornerView">
 											<nil key="NSNextResponder"/>
-											<int key="NSvFlags">256</int>
-											<string key="NSFrame">{{362, 0}, {16, 17}}</string>
+											<int key="NSvFlags">-2147483392</int>
+											<string key="NSFrame">{{303, 0}, {16, 17}}</string>
 										</object>
 										<object class="NSMutableArray" key="NSTableColumns">
 											<bool key="EncodedWithXMLCoder">YES</bool>
 											<object class="NSTableColumn" id="940432606">
-												<double key="NSWidth">3.140000e+02</double>
+												<string key="NSIdentifier">name</string>
+												<double key="NSWidth">2.110000e+02</double>
 												<double key="NSMinWidth">1.600000e+01</double>
 												<double key="NSMaxWidth">1.000000e+03</double>
 												<object class="NSTableHeaderCell" key="NSHeaderCell">
 													<int key="NSCellFlags">75628032</int>
 													<int key="NSCellFlags2">0</int>
 													<string key="NSContents"/>
-													<object class="NSFont" key="NSSupport">
+													<object class="NSFont" key="NSSupport" id="26">
 														<string key="NSName">LucidaGrande</string>
 														<double key="NSSize">1.100000e+01</double>
 														<int key="NSfFlags">3100</int>
@@ -70,7 +71,7 @@
 														<int key="NSColorSpace">3</int>
 														<bytes key="NSWhite">MC4zMzMzMzI5OQA</bytes>
 													</object>
-													<object class="NSColor" key="NSTextColor">
+													<object class="NSColor" key="NSTextColor" id="407661388">
 														<int key="NSColorSpace">6</int>
 														<string key="NSCatalogName">System</string>
 														<string key="NSColorName">headerTextColor</string>
@@ -99,7 +100,7 @@
 															<bytes key="NSWhite">MC42NjY2NjY2OQA</bytes>
 														</object>
 													</object>
-													<object class="NSColor" key="NSTextColor">
+													<object class="NSColor" key="NSTextColor" id="255769163">
 														<int key="NSColorSpace">6</int>
 														<string key="NSCatalogName">System</string>
 														<string key="NSColorName">controlTextColor</string>
@@ -111,13 +112,48 @@
 												<bool key="NSIsEditable">YES</bool>
 												<reference key="NSTableView" ref="566746446"/>
 											</object>
+											<object class="NSTableColumn" id="1059661820">
+												<string key="NSIdentifier">state</string>
+												<double key="NSWidth">6.400000e+01</double>
+												<double key="NSMinWidth">1.000000e+01</double>
+												<double key="NSMaxWidth">3.402823e+38</double>
+												<object class="NSTableHeaderCell" key="NSHeaderCell">
+													<int key="NSCellFlags">75628032</int>
+													<int key="NSCellFlags2">67108864</int>
+													<string key="NSContents"/>
+													<reference key="NSSupport" ref="26"/>
+													<object class="NSColor" key="NSBackgroundColor">
+														<int key="NSColorSpace">6</int>
+														<string key="NSCatalogName">System</string>
+														<string key="NSColorName">headerColor</string>
+														<object class="NSColor" key="NSColor" id="159112278">
+															<int key="NSColorSpace">3</int>
+															<bytes key="NSWhite">MQA</bytes>
+														</object>
+													</object>
+													<reference key="NSTextColor" ref="407661388"/>
+												</object>
+												<object class="NSTextFieldCell" key="NSDataCell" id="959735500">
+													<int key="NSCellFlags">337772096</int>
+													<int key="NSCellFlags2">67110912</int>
+													<string key="NSContents">Text Cell</string>
+													<object class="NSFont" key="NSSupport">
+														<string key="NSName">LucidaGrande</string>
+														<double key="NSSize">1.300000e+01</double>
+														<int key="NSfFlags">1044</int>
+													</object>
+													<reference key="NSControlView" ref="566746446"/>
+													<reference key="NSBackgroundColor" ref="982417734"/>
+													<reference key="NSTextColor" ref="255769163"/>
+												</object>
+												<int key="NSResizingMask">3</int>
+												<bool key="NSIsResizeable">YES</bool>
+												<reference key="NSTableView" ref="566746446"/>
+											</object>
 										</object>
-										<double key="NSIntercellSpacingWidth">3.000000e+00</double>
-										<double key="NSIntercellSpacingHeight">2.000000e+00</double>
-										<object class="NSColor" key="NSBackgroundColor">
-											<int key="NSColorSpace">3</int>
-											<bytes key="NSWhite">MQA</bytes>
-										</object>
+										<double key="NSIntercellSpacingWidth">2.000000e+00</double>
+										<double key="NSIntercellSpacingHeight">3.000000e+00</double>
+										<reference key="NSBackgroundColor" ref="159112278"/>
 										<object class="NSColor" key="NSGridColor">
 											<int key="NSColorSpace">6</int>
 											<string key="NSCatalogName">System</string>
@@ -128,7 +164,7 @@
 											</object>
 										</object>
 										<double key="NSRowHeight">1.700000e+01</double>
-										<int key="NSTvFlags">-767557632</int>
+										<int key="NSTvFlags">1379926016</int>
 										<int key="NSColumnAutoresizingStyle">5</int>
 										<int key="NSDraggingSourceMaskForLocal">15</int>
 										<int key="NSDraggingSourceMaskForNonLocal">0</int>
@@ -145,11 +181,11 @@
 							<object class="NSScroller" id="860164332">
 								<reference key="NSNextResponder" ref="833389171"/>
 								<int key="NSvFlags">-2147483392</int>
-								<string key="NSFrame">{{362, 1}, {15, 208}}</string>
+								<string key="NSFrame">{{303, 1}, {15, 211}}</string>
 								<reference key="NSSuperview" ref="833389171"/>
 								<reference key="NSTarget" ref="833389171"/>
 								<string key="NSAction">_doScroller:</string>
-								<double key="NSPercent">9.948718e-01</double>
+								<double key="NSPercent">9.952830e-01</double>
 							</object>
 							<object class="NSScroller" id="222061088">
 								<reference key="NSNextResponder" ref="833389171"/>
@@ -169,7 +205,7 @@
 						<reference key="NSVScroller" ref="860164332"/>
 						<reference key="NSHScroller" ref="222061088"/>
 						<reference key="NSContentView" ref="107843995"/>
-						<bytes key="NSScrollAmts">QSAAAEEgAABBmAAAQZgAAA</bytes>
+						<bytes key="NSScrollAmts">QSAAAEEgAABBoAAAQaAAAA</bytes>
 					</object>
 				</object>
 				<string key="NSFrameSize">{359, 253}</string>
@@ -255,6 +291,7 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="940432606"/>
+							<reference ref="1059661820"/>
 						</object>
 						<reference key="parent" ref="833389171"/>
 					</object>
@@ -271,6 +308,20 @@
 						<int key="objectID">12</int>
 						<reference key="object" ref="87868575"/>
 						<reference key="parent" ref="940432606"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">15</int>
+						<reference key="object" ref="1059661820"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="959735500"/>
+						</object>
+						<reference key="parent" ref="566746446"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">16</int>
+						<reference key="object" ref="959735500"/>
+						<reference key="parent" ref="1059661820"/>
 					</object>
 				</object>
 			</object>
@@ -331,7 +382,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">14</int>
+			<int key="maxID">19</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

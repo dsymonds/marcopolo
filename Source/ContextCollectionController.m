@@ -23,20 +23,31 @@
 
 	{
 		// XXX: DUMMY CONTEXTS
-		ContextTree *tree = [ContextTree contextTree];
-		[tree addContext:[Context contextWithName:@"Home"]];
+		Context *home = [Context contextWithName:@"Home"];
 		Context *work = [Context contextWithName:@"Work"];
-		[tree addContext:work];
-		[tree addContext:[Context contextWithName:@"Desk" parent:work]];
-		[tree addContext:[Context contextWithName:@"Conference Room" parent:work]];
+		Context *work_desk = [Context contextWithName:@"Desk" parent:work];
+		Context *work_conf = [Context contextWithName:@"Conference Room" parent:work];
+		Context *net_auto = [Context contextWithName:@"Automatic"];
+		Context *net_work = [Context contextWithName:@"Work"];
+
+		[work setConfidence:[NSNumber numberWithFloat:0.8]];
+		[work_desk setConfidence:[NSNumber numberWithFloat:0.85]];
+		[net_work setConfidence:[NSNumber numberWithFloat:0.9]];
+
+		ContextTree *location_tree = [ContextTree contextTree];
+		[location_tree addContextsFromArray:[NSArray arrayWithObjects:
+					    home, work, work_desk, work_conf, nil]];
 		ContextGroup *cg = [ContextGroup contextGroupWithName:@"Location"
-							  contextTree:tree];
+							  contextTree:location_tree];
+		[cg setSelection:work_desk];
 		[contextCollection_ addContextGroup:cg];
 
-		tree = [ContextTree contextTree];
-		[tree addContext:[Context contextWithName:@"Automatic"]];
-		[tree addContext:[Context contextWithName:@"Work"]];
-		cg = [ContextGroup contextGroupWithName:@"Network" contextTree:tree];
+		ContextTree *net_tree = [ContextTree contextTree];
+		[net_tree addContextsFromArray:[NSArray arrayWithObjects:
+						net_auto, net_work, nil]];
+		cg = [ContextGroup contextGroupWithName:@"Network"
+					    contextTree:net_tree];
+		[cg setSelection:net_work];
 		[contextCollection_ addContextGroup:cg];
 	}
 
@@ -105,15 +116,32 @@
 	return 0;
 }
 
+- (NSString *)formatConfidence:(NSNumber *)confidence
+{
+	NSNumberFormatter *nf = [[[NSNumberFormatter alloc] init] autorelease];
+	[nf setFormatterBehavior:NSNumberFormatterBehavior10_4];
+	[nf setNumberStyle:NSNumberFormatterPercentStyle];
+	return [nf stringFromNumber:confidence];
+}
+
 - (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
 {
+	NSString *column = [tableColumn identifier];
 	// TODO: support multiple columns
 
 	if ([item isKindOfClass:[ContextGroup class]]) {
 		ContextGroup *cg = item;
-		return [cg attributedName];
+		if ([column isEqualToString:@"name"])
+			return [cg attributedName];
+		else if ([column isEqualToString:@"state"]) {
+			return [cg attributedState];
+		}
 	} else if ([item isKindOfClass:[Context class]]) {
-		return [(Context *) item name];
+		Context *c = item;
+		if ([column isEqualToString:@"name"])
+			return [c name];
+		else if ([column isEqualToString:@"state"])
+			return [self formatConfidence:[c confidence]];
 	}
 
 	NSLog(@"ERROR: This should never be reached! (%s)", _cmd);

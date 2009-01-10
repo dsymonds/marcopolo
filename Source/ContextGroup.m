@@ -35,6 +35,7 @@
 	contextTree_ = [[ContextTree alloc] init];
 	selection_ = nil;
 	attrName_ = nil;
+	attrState_ = nil;
 
 	return self;
 }
@@ -44,7 +45,7 @@
 	[name_ release];
 	[contextTree_ release];
 	[attrName_ release];
-
+	[attrState_ release];
 	[super dealloc];
 }
 
@@ -67,6 +68,19 @@
 	return attrName_;
 }
 
+- (NSAttributedString *)attributedState
+{
+	if (!attrState_) {
+		NSFont *font = [NSFont systemFontOfSize:[NSFont smallSystemFontSize]];
+		NSDictionary *attrs = [NSDictionary dictionaryWithObject:font
+								  forKey:NSFontAttributeName];
+		NSString *s = selection_ ? [selection_ fullPath] : @"";
+		attrState_ = [[NSAttributedString alloc] initWithString:s attributes:attrs];
+	}
+
+	return attrState_;
+}
+
 - (int)count
 {
 	return [contextTree_ count];
@@ -77,12 +91,30 @@
 	return contextTree_;
 }
 
+- (Context *)selection
+{
+	return selection_;
+}
+
 #pragma mark -
 
 - (void)setContextTree:(ContextTree *)contextTree
 {
 	[contextTree_ autorelease];
 	contextTree_ = [contextTree retain];
+}
+
+- (void)setSelection:(Context *)context
+{
+	[attrState_ autorelease];
+	attrState_ = nil;
+
+	if (![contextTree_ containsContext:context]) {
+		NSLog(@"-[%@ %@]: Asked to select a foreign context!", [self class], _cmd);
+		selection_ = nil;
+		return;
+	}
+	selection_ = context;
 }
 
 @end

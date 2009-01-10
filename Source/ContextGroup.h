@@ -19,7 +19,7 @@
 	ContextTree *contextTree_;
 	Context *selection_;
 
-	NSAttributedString *attrName_;
+	NSAttributedString *attrName_, *attrState_;
 }
 
 + (id)contextGroupWithName:(NSString *)name;
@@ -28,9 +28,12 @@
 
 - (NSString *)name;
 - (NSAttributedString *)attributedName;
+- (NSAttributedString *)attributedState;
 - (int)count;
 - (ContextTree *)contextTree;
+- (Context *)selection;
 
 - (void)setContextTree:(ContextTree *)contextTree;
+- (void)setSelection:(Context *)context;
 
 @end
