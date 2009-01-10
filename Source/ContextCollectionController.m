@@ -116,41 +116,4 @@
 	return 0;
 }
 
-- (NSString *)formatConfidence:(NSNumber *)confidence
-{
-	NSNumberFormatter *nf = [[[NSNumberFormatter alloc] init] autorelease];
-	[nf setFormatterBehavior:NSNumberFormatterBehavior10_4];
-	[nf setNumberStyle:NSNumberFormatterPercentStyle];
-	return [nf stringFromNumber:confidence];
-}
-
-- (id)outlineView:(NSOutlineView *)outlineView objectValueForTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
-{
-	NSString *column = [tableColumn identifier];
-	// TODO: support multiple columns
-
-	if ([item isKindOfClass:[ContextGroup class]]) {
-		ContextGroup *cg = item;
-		if ([column isEqualToString:@"name"])
-			return [cg attributedName];
-		else if ([column isEqualToString:@"state"]) {
-			return [cg attributedState];
-		}
-	} else if ([item isKindOfClass:[Context class]]) {
-		Context *c = item;
-		if ([column isEqualToString:@"name"])
-			return [c name];
-		else if ([column isEqualToString:@"state"])
-			return [self formatConfidence:[c confidence]];
-	}
-
-	NSLog(@"ERROR: This should never be reached! (%s)", _cmd);
-	return @"???";
-}
-
-//- (void)outlineView:(NSOutlineView *)outlineView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn byItem:(id)item
-//{
-// TODO!
-//}
-
 @end

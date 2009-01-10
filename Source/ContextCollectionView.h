@@ -13,6 +13,9 @@
 
 @interface ContextCollectionView : NSOutlineView {
 	IBOutlet PreferencesPaneController *preferencesPaneController;
+
+	@private
+	ContextCollectionController *ccc_;
 }
 
 @end

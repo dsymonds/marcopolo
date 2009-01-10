@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">352.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="7"/>
+			<integer value="4"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -42,7 +42,7 @@
 									<bool key="EncodedWithXMLCoder">YES</bool>
 									<object class="NSOutlineView" id="566746446">
 										<reference key="NSNextResponder" ref="107843995"/>
-										<int key="NSvFlags">256</int>
+										<int key="NSvFlags">274</int>
 										<string key="NSFrameSize">{317, 211}</string>
 										<reference key="NSSuperview" ref="107843995"/>
 										<bool key="NSEnabled">YES</bool>
@@ -55,8 +55,8 @@
 											<bool key="EncodedWithXMLCoder">YES</bool>
 											<object class="NSTableColumn" id="940432606">
 												<string key="NSIdentifier">name</string>
-												<double key="NSWidth">2.110000e+02</double>
-												<double key="NSMinWidth">1.600000e+01</double>
+												<double key="NSWidth">2.000000e+02</double>
+												<double key="NSMinWidth">1.000000e+02</double>
 												<double key="NSMaxWidth">1.000000e+03</double>
 												<object class="NSTableHeaderCell" key="NSHeaderCell">
 													<int key="NSCellFlags">75628032</int>
@@ -115,8 +115,8 @@
 											<object class="NSTableColumn" id="1059661820">
 												<string key="NSIdentifier">state</string>
 												<double key="NSWidth">6.400000e+01</double>
-												<double key="NSMinWidth">1.000000e+01</double>
-												<double key="NSMaxWidth">3.402823e+38</double>
+												<double key="NSMinWidth">6.400000e+01</double>
+												<double key="NSMaxWidth">1.000000e+03</double>
 												<object class="NSTableHeaderCell" key="NSHeaderCell">
 													<int key="NSCellFlags">75628032</int>
 													<int key="NSCellFlags2">67108864</int>
@@ -201,7 +201,7 @@
 						<string key="NSFrame">{{20, 20}, {319, 213}}</string>
 						<reference key="NSSuperview" ref="1005"/>
 						<reference key="NSNextKeyView" ref="107843995"/>
-						<int key="NSsFlags">530</int>
+						<int key="NSsFlags">562</int>
 						<reference key="NSVScroller" ref="860164332"/>
 						<reference key="NSHScroller" ref="222061088"/>
 						<reference key="NSContentView" ref="107843995"/>
