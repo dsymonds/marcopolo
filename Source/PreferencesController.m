@@ -45,11 +45,11 @@
 	return t;
 }
 
-- (NSView *)loadPaneViewFromNibNamed:(NSString *)nibName
+- (NSView *)loadPaneViewFromNibNamed:(NSString *)nibName ownerClass:(Class)ownerClass
 {
 	NSNib *nib = [[[NSNib alloc] initWithNibNamed:nibName bundle:nil] autorelease];
 	NSArray *objects;
-	PreferencesPaneController *owner = [[[PreferencesPaneController alloc]
+	PreferencesPaneController *owner = [[[ownerClass alloc]
 					     initWithApplicationController:applicationController_] autorelease];
 	if (![nib instantiateNibWithOwner:owner topLevelObjects:&objects]) {
 		NSLog(@"Failed instantiating prefs pane from prefs nib: %@", nibName);
@@ -76,7 +76,8 @@
 	[ps addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:
 		       @"general", @"id",
 		       NSLocalizedString(@"General", @"Preferences Pane name"), @"name",
-		       [[self loadPaneViewFromNibNamed:@"GeneralPrefs"] autorelease], @"view",
+		       @"GeneralPrefs", @"nib_name",
+		       [PreferencesPaneController class], @"nib_owner_class",
 		       [NSNumber numberWithBool:NO], @"resizeable",
 		       @"GeneralPrefs", @"icon",
 		       nil]];
@@ -85,16 +86,20 @@
 	[ps addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:
 		       @"contexts", @"id",
 		       NSLocalizedString(@"Contexts", @"Preferences Pane name"), @"name",
-		       [[self loadPaneViewFromNibNamed:@"ContextsPrefs"] autorelease], @"view",
+		       @"ContextsPrefs", @"nib_name",
+		       [PreferencesPaneController class], @"nib_owner_class",
 		       [NSNumber numberWithBool:YES], @"resizeable",
 		       @"ContextsPrefs", @"icon",
 		       nil]];
 
-	// Use the starting size as each pane's minimum size
 	NSEnumerator *en = [ps objectEnumerator];
 	NSMutableDictionary *pane;
 	while ((pane = [en nextObject])) {
-		NSView *view = [pane valueForKey:@"view"];
+		NSView *view = [[self loadPaneViewFromNibNamed:[pane valueForKey:@"nib_name"]
+						    ownerClass:[pane valueForKey:@"nib_owner_class"]] autorelease];
+		[pane setValue:view forKey:@"view"];
+
+		// Use the starting size as each pane's minimum size
 		NSSize size = [view frame].size;
 		[pane setValue:[NSNumber numberWithFloat:size.width] forKey:@"min_width"];
 		[pane setValue:[NSNumber numberWithFloat:size.height] forKey:@"min_height"];
