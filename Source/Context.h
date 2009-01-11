@@ -15,10 +15,13 @@
 @interface Context : NSObject {
 	@private
 	NSString *name_;
-	Context *parent_;
-	ContextTree *tree_;
+
+	NSMutableArray *children_;
+	Context *parent_;  // not retained
 
 	NSNumber *confidence_;	// in [0,1]
+
+	NSAttributedString *attributedState_;
 }
 
 + (id)context;
@@ -27,14 +30,15 @@
 - (id)init;
 
 - (NSString *)name;
+- (NSString *)attributedName;
+- (NSAttributedString *)attributedState;
+- (NSArray *)children;
 - (Context *)parent;
-- (ContextTree *)tree;
 - (NSNumber *)confidence;
 - (NSString *)fullPath;
 
 - (void)setName:(NSString *)name;
-- (void)setParent:(Context *)parent;
-- (void)setTree:(ContextTree *)tree;
+- (void)addChild:(Context *)parent;
 - (void)setConfidence:(NSNumber *)confidence;
 
 @end

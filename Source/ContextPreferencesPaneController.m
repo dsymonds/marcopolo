@@ -26,7 +26,7 @@
 	int row = [contextCollectionView selectedRow];
 	if (row >= 0) {
 		id item = [contextCollectionView itemAtRow:row];
-		removable = ![contextCollectionView outlineView:contextCollectionView isItemExpandable:item];
+		removable = ![contextCollectionView isExpandable:item];
 	}
 	[self setValue:[NSNumber numberWithBool:removable] forKey:@"canRemove"];
 

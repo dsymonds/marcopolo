@@ -38,7 +38,6 @@
 		8D2CEBA30E92F8BB00E1895A /* RulesPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */; };
 		8D2CEBA50E92F9AD00E1895A /* ContextsPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA40E92F9AD00E1895A /* ContextsPrefs.nib */; };
 		8D2CEBA70E92F9D600E1895A /* ContextsPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA60E92F9D600E1895A /* ContextsPrefs.tiff */; };
-		8D2E7D2B0E943C3500121762 /* ContextCollectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2E7D2A0E943C3500121762 /* ContextCollectionController.m */; };
 		8D35C5FA0DFE7F7D00AF7A7D /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C5F90DFE7F7D00AF7A7D /* Context.m */; };
 		8D35C5FB0DFE7F7D00AF7A7D /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C5F90DFE7F7D00AF7A7D /* Context.m */; };
 		8D35C60B0DFE851A00AF7A7D /* ContextTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C60A0DFE851A00AF7A7D /* ContextTest.m */; };
@@ -63,10 +62,6 @@
 		8D76DEE80E371D3B00DF4015 /* ExactRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEE70E371D3B00DF4015 /* ExactRule.m */; };
 		8D76DEFB0E371FBC00DF4015 /* RuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEFA0E371FBC00DF4015 /* RuleSet.m */; };
 		8D76DEFC0E371FBC00DF4015 /* RuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEFA0E371FBC00DF4015 /* RuleSet.m */; };
-		8D7906500E984CA8001F38AF /* ContextTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D79064F0E984CA8001F38AF /* ContextTree.m */; };
-		8D7906650E988364001F38AF /* ContextTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D79064F0E984CA8001F38AF /* ContextTree.m */; };
-		8D7906680E98837D001F38AF /* ContextTreeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7906670E98837D001F38AF /* ContextTreeTest.m */; };
-		8D7D5A2A0E94BE1C005279AD /* ContextCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D5A290E94BE1C005279AD /* ContextCollectionView.m */; };
 		8D7D5ABB0E958D9C005279AD /* PreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */; };
 		8D9053C20F19775E0096466F /* ContextPreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9053C10F19775E0096466F /* ContextPreferencesPaneController.m */; };
 		8D93600B0F14A11700D3990A /* minus-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9360080F14A11700D3990A /* minus-8.png */; };
@@ -183,8 +178,6 @@
 		8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = RulesPrefs.tiff; path = Resources/RulesPrefs.tiff; sourceTree = "<group>"; };
 		8D2CEBA40E92F9AD00E1895A /* ContextsPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ContextsPrefs.nib; path = Resources/ContextsPrefs.nib; sourceTree = "<group>"; };
 		8D2CEBA60E92F9D600E1895A /* ContextsPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = ContextsPrefs.tiff; path = Resources/ContextsPrefs.tiff; sourceTree = "<group>"; };
-		8D2E7D290E943C3500121762 /* ContextCollectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextCollectionController.h; path = Source/ContextCollectionController.h; sourceTree = "<group>"; };
-		8D2E7D2A0E943C3500121762 /* ContextCollectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextCollectionController.m; path = Source/ContextCollectionController.m; sourceTree = "<group>"; };
 		8D35C5F80DFE7F7D00AF7A7D /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Context.h; path = Source/Context.h; sourceTree = "<group>"; };
 		8D35C5F90DFE7F7D00AF7A7D /* Context.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Context.m; path = Source/Context.m; sourceTree = "<group>"; };
 		8D35C6090DFE851A00AF7A7D /* ContextTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextTest.h; path = Source/ContextTest.h; sourceTree = "<group>"; };
@@ -222,12 +215,6 @@
 		8D76DEE70E371D3B00DF4015 /* ExactRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExactRule.m; path = Source/ExactRule.m; sourceTree = "<group>"; };
 		8D76DEF90E371FBC00DF4015 /* RuleSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuleSet.h; path = Source/RuleSet.h; sourceTree = "<group>"; };
 		8D76DEFA0E371FBC00DF4015 /* RuleSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RuleSet.m; path = Source/RuleSet.m; sourceTree = "<group>"; };
-		8D79064E0E984CA8001F38AF /* ContextTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextTree.h; path = Source/ContextTree.h; sourceTree = "<group>"; };
-		8D79064F0E984CA8001F38AF /* ContextTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextTree.m; path = Source/ContextTree.m; sourceTree = "<group>"; };
-		8D7906660E98837D001F38AF /* ContextTreeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextTreeTest.h; path = Source/ContextTreeTest.h; sourceTree = "<group>"; };
-		8D7906670E98837D001F38AF /* ContextTreeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextTreeTest.m; path = Source/ContextTreeTest.m; sourceTree = "<group>"; };
-		8D7D5A280E94BE1C005279AD /* ContextCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextCollectionView.h; path = Source/ContextCollectionView.h; sourceTree = "<group>"; };
-		8D7D5A290E94BE1C005279AD /* ContextCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextCollectionView.m; path = Source/ContextCollectionView.m; sourceTree = "<group>"; };
 		8D7D5AB90E958D9C005279AD /* PreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesPaneController.h; path = Source/PreferencesPaneController.h; sourceTree = "<group>"; };
 		8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesPaneController.m; path = Source/PreferencesPaneController.m; sourceTree = "<group>"; };
 		8D9053C00F19775E0096466F /* ContextPreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextPreferencesPaneController.h; path = Source/ContextPreferencesPaneController.h; sourceTree = "<group>"; };
@@ -460,10 +447,6 @@
 				8DBE19DF0E39CE7A002AC5EC /* LogicRule.m */,
 				8D93F7850E50FB0000AE3E1E /* LogicRuleTest.h */,
 				8D93F7860E50FB0000AE3E1E /* LogicRuleTest.m */,
-				8D79064E0E984CA8001F38AF /* ContextTree.h */,
-				8D79064F0E984CA8001F38AF /* ContextTree.m */,
-				8D7906660E98837D001F38AF /* ContextTreeTest.h */,
-				8D7906670E98837D001F38AF /* ContextTreeTest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -499,8 +482,6 @@
 		8D7D5A270E94BDF5005279AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8D7D5A280E94BE1C005279AD /* ContextCollectionView.h */,
-				8D7D5A290E94BE1C005279AD /* ContextCollectionView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -530,8 +511,6 @@
 				8DBB44830E8B01F300B2D66F /* PreferencesController.m */,
 				8D7D5AB90E958D9C005279AD /* PreferencesPaneController.h */,
 				8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */,
-				8D2E7D290E943C3500121762 /* ContextCollectionController.h */,
-				8D2E7D2A0E943C3500121762 /* ContextCollectionController.m */,
 				8D9053C00F19775E0096466F /* ContextPreferencesPaneController.h */,
 				8D9053C10F19775E0096466F /* ContextPreferencesPaneController.m */,
 			);
@@ -776,10 +755,7 @@
 				8DBE19E00E39CE7A002AC5EC /* LogicRule.m in Sources */,
 				8DFEDA3C0E54E8C00069AA8C /* ApplicationController.m in Sources */,
 				8DBB44840E8B01F300B2D66F /* PreferencesController.m in Sources */,
-				8D2E7D2B0E943C3500121762 /* ContextCollectionController.m in Sources */,
-				8D7D5A2A0E94BE1C005279AD /* ContextCollectionView.m in Sources */,
 				8D7D5ABB0E958D9C005279AD /* PreferencesPaneController.m in Sources */,
-				8D7906500E984CA8001F38AF /* ContextTree.m in Sources */,
 				8D69AD020F1741A70019E8A8 /* ContextCollection.m in Sources */,
 				8D9053C20F19775E0096466F /* ContextPreferencesPaneController.m in Sources */,
 			);
@@ -848,8 +824,6 @@
 				8DBE199D0E39CAB7002AC5EC /* ExactRule.m in Sources */,
 				8DBE19E10E39CE7A002AC5EC /* LogicRule.m in Sources */,
 				8D93F7870E50FB0000AE3E1E /* LogicRuleTest.m in Sources */,
-				8D7906650E988364001F38AF /* ContextTree.m in Sources */,
-				8D7906680E98837D001F38AF /* ContextTreeTest.m in Sources */,
 				8D69AD030F1741A70019E8A8 /* ContextCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

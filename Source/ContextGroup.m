@@ -7,8 +7,15 @@
 
 #import "Context.h"
 #import "ContextGroup.h"
-#import "ContextTree.h"
 
+
+@interface ContextGroup (Private)
+
+- (void)recomputeAttributedState;
+
+@end
+
+#pragma mark -
 
 @implementation ContextGroup
 
@@ -17,11 +24,11 @@
 	return [[[self alloc] initWithName:name] autorelease];
 }
 
-+ (id)contextGroupWithName:(NSString *)name contextTree:(ContextTree *)contextTree
++ (id)contextGroupWithName:(NSString *)name topLevelContexts:(NSArray *)contexts
 {
 	ContextGroup *cg = [self contextGroupWithName:name];
 
-	[cg setContextTree:contextTree];
+	[cg addTopLevelContextsFromArray:contexts];
 
 	return cg;
 }
@@ -32,8 +39,9 @@
 		return nil;
 
 	name_ = [name retain];
-	contextTree_ = [[ContextTree alloc] init];
+	children_ = [[NSMutableArray alloc] init];
 	selection_ = nil;
+
 	attrName_ = nil;
 	attrState_ = nil;
 
@@ -43,7 +51,7 @@
 - (void)dealloc
 {
 	[name_ release];
-	[contextTree_ release];
+	[children_ release];
 	[attrName_ release];
 	[attrState_ release];
 	[super dealloc];
@@ -70,25 +78,12 @@
 
 - (NSAttributedString *)attributedState
 {
-	if (!attrState_) {
-		NSFont *font = [NSFont systemFontOfSize:[NSFont smallSystemFontSize]];
-		NSDictionary *attrs = [NSDictionary dictionaryWithObject:font
-								  forKey:NSFontAttributeName];
-		NSString *s = selection_ ? [selection_ fullPath] : @"";
-		attrState_ = [[NSAttributedString alloc] initWithString:s attributes:attrs];
-	}
-
 	return attrState_;
 }
 
-- (int)count
+- (NSArray *)children
 {
-	return [contextTree_ count];
-}
-
-- (ContextTree *)contextTree
-{
-	return contextTree_;
+	return children_;
 }
 
 - (Context *)selection
@@ -98,23 +93,49 @@
 
 #pragma mark -
 
-- (void)setContextTree:(ContextTree *)contextTree
+- (void)addTopLevelContext:(Context *)context
 {
-	[contextTree_ autorelease];
-	contextTree_ = [contextTree retain];
+	[children_ addObject:context];
+}
+
+- (void)addTopLevelContextsFromArray:(NSArray *)contexts
+{
+	NSEnumerator *en = [contexts objectEnumerator];
+	Context *c;
+	while ((c = [en nextObject]))
+		[self addTopLevelContext:c];
 }
 
 - (void)setSelection:(Context *)context
 {
-	[attrState_ autorelease];
-	attrState_ = nil;
-
-	if (![contextTree_ containsContext:context]) {
-		NSLog(@"-[%@ %@]: Asked to select a foreign context!", [self class], _cmd);
-		selection_ = nil;
-		return;
-	}
+	// TODO: Verify this context is actually in this context group!
+//	if (![contextTree_ containsContext:context]) {
+//		NSLog(@"-[%@ %@]: Asked to select a foreign context!", [self class], _cmd);
+//		selection_ = nil;
+//		return;
+//	}
 	selection_ = context;
+	[self recomputeAttributedState];
+}
+
+- (void)recomputeAttributedState
+{
+	[self willChangeValueForKey:@"attributedState"];
+
+	[attrState_ release];
+	if (selection_) {
+		NSFont *font = [NSFont systemFontOfSize:[NSFont smallSystemFontSize]];
+		NSMutableParagraphStyle *para = [[[NSMutableParagraphStyle alloc] init] autorelease];
+		[para setAlignment:NSRightTextAlignment];
+		NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:
+				       font, NSFontAttributeName,
+				       para, NSParagraphStyleAttributeName, nil];
+		attrState_ = [[NSAttributedString alloc] initWithString:[selection_ fullPath]
+							     attributes:attrs];
+	} else
+		attrState_ = nil;
+
+	[self didChangeValueForKey:@"attributedState"];
 }
 
 @end

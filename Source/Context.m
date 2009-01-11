@@ -8,6 +8,15 @@
 #import "Context.h"
 
 
+@interface Context (Private)
+
+- (void)setParent:(Context *)parent;
+- (void)recomputeAttributedState;
+
+@end
+
+#pragma mark -
+
 @implementation Context
 
 + (id)context
@@ -26,7 +35,7 @@
 {
 	Context *c = [self context];
 	[c setName:name];
-	[c setParent:parent];
+	[parent addChild:c];
 	return c;
 }
 
@@ -36,10 +45,12 @@
 		return nil;
 
 	name_ = @"";
+
+	children_ = [[NSMutableArray alloc] init];
 	parent_ = nil;
-	tree_ = nil;
 
 	confidence_ = nil;
+	attributedState_ = nil;
 
 	return self;
 }
@@ -47,9 +58,9 @@
 - (void)dealloc
 {
 	[name_ release];
-	[parent_ release];
-	[tree_ release];
+	[children_ release];
 	[confidence_ release];
+	[attributedState_ release];
 	[super dealloc];
 }
 
@@ -60,14 +71,24 @@
 	return name_;
 }
 
+- (NSString *)attributedName
+{
+	return name_;
+}
+
+- (NSAttributedString *)attributedState
+{
+	return attributedState_;
+}
+
 - (Context *)parent
 {
 	return parent_;
 }
 
-- (ContextTree *)tree
+- (NSArray *)children
 {
-	return tree_;
+	return children_;
 }
 
 - (NSNumber *)confidence
@@ -92,22 +113,40 @@
 	name_ = [name copy];
 }
 
-- (void)setParent:(Context *)parent
+- (void)addChild:(Context *)child
 {
-	[parent_ autorelease];
-	parent_ = [parent retain];
-}
-
-- (void)setTree:(ContextTree *)tree
-{
-	[tree_ autorelease];
-	tree_ = [tree retain];
+	[children_ addObject:child];
+	[child setParent:self];
 }
 
 - (void)setConfidence:(NSNumber *)confidence
 {
 	[confidence_ autorelease];
 	confidence_ = [confidence retain];
+	[self recomputeAttributedState];
+}
+
+#pragma mark -
+
+- (void)setParent:(Context *)parent
+{
+	parent_ = parent;
+}
+
+- (void)recomputeAttributedState
+{
+	[self willChangeValueForKey:@"attributedState"];
+
+	[attributedState_ release];
+	if (confidence_ > 0) {
+		NSNumberFormatter *nf = [[[NSNumberFormatter alloc] init] autorelease];
+		[nf setFormatterBehavior:NSNumberFormatterBehavior10_4];
+		[nf setNumberStyle:NSNumberFormatterPercentStyle];
+		attributedState_ = [[nf stringFromNumber:confidence_] retain];
+	} else
+		attributedState_ = nil;
+
+	[self didChangeValueForKey:@"attributedState"];
 }
 
 @end

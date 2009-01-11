@@ -17,8 +17,7 @@
 	NSMutableArray *contextGroups_;
 }
 
-- (int)count;
-- (ContextGroup *)contextGroupAtIndex:(int)index;
+- (NSArray *)children;
 
 - (void)addContextGroup:(ContextGroup *)contextGroup;
 
