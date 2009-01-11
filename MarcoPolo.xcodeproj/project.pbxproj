@@ -68,6 +68,7 @@
 		8D7906680E98837D001F38AF /* ContextTreeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7906670E98837D001F38AF /* ContextTreeTest.m */; };
 		8D7D5A2A0E94BE1C005279AD /* ContextCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D5A290E94BE1C005279AD /* ContextCollectionView.m */; };
 		8D7D5ABB0E958D9C005279AD /* PreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */; };
+		8D9053C20F19775E0096466F /* ContextPreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9053C10F19775E0096466F /* ContextPreferencesPaneController.m */; };
 		8D93600B0F14A11700D3990A /* minus-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9360080F14A11700D3990A /* minus-8.png */; };
 		8D93600C0F14A11700D3990A /* plus-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9360090F14A11700D3990A /* plus-8.png */; };
 		8D93600D0F14A11700D3990A /* plus-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D93600A0F14A11700D3990A /* plus-arrow.png */; };
@@ -229,6 +230,8 @@
 		8D7D5A290E94BE1C005279AD /* ContextCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextCollectionView.m; path = Source/ContextCollectionView.m; sourceTree = "<group>"; };
 		8D7D5AB90E958D9C005279AD /* PreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesPaneController.h; path = Source/PreferencesPaneController.h; sourceTree = "<group>"; };
 		8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesPaneController.m; path = Source/PreferencesPaneController.m; sourceTree = "<group>"; };
+		8D9053C00F19775E0096466F /* ContextPreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextPreferencesPaneController.h; path = Source/ContextPreferencesPaneController.h; sourceTree = "<group>"; };
+		8D9053C10F19775E0096466F /* ContextPreferencesPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextPreferencesPaneController.m; path = Source/ContextPreferencesPaneController.m; sourceTree = "<group>"; };
 		8D9360080F14A11700D3990A /* minus-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "minus-8.png"; path = "Resources/minus-8.png"; sourceTree = "<group>"; };
 		8D9360090F14A11700D3990A /* plus-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plus-8.png"; path = "Resources/plus-8.png"; sourceTree = "<group>"; };
 		8D93600A0F14A11700D3990A /* plus-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plus-arrow.png"; path = "Resources/plus-arrow.png"; sourceTree = "<group>"; };
@@ -529,6 +532,8 @@
 				8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */,
 				8D2E7D290E943C3500121762 /* ContextCollectionController.h */,
 				8D2E7D2A0E943C3500121762 /* ContextCollectionController.m */,
+				8D9053C00F19775E0096466F /* ContextPreferencesPaneController.h */,
+				8D9053C10F19775E0096466F /* ContextPreferencesPaneController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -776,6 +781,7 @@
 				8D7D5ABB0E958D9C005279AD /* PreferencesPaneController.m in Sources */,
 				8D7906500E984CA8001F38AF /* ContextTree.m in Sources */,
 				8D69AD020F1741A70019E8A8 /* ContextCollection.m in Sources */,
+				8D9053C20F19775E0096466F /* ContextPreferencesPaneController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,6 +5,7 @@
 //  Created by David Symonds on 25/09/08.
 //
 
+#import "ContextPreferencesPaneController.h"
 #import "PreferencesController.h"
 #import "PreferencesPaneController.h"
 
@@ -87,7 +88,7 @@
 		       @"contexts", @"id",
 		       NSLocalizedString(@"Contexts", @"Preferences Pane name"), @"name",
 		       @"ContextsPrefs", @"nib_name",
-		       [PreferencesPaneController class], @"nib_owner_class",
+		       [ContextPreferencesPaneController class], @"nib_owner_class",
 		       [NSNumber numberWithBool:YES], @"resizeable",
 		       @"ContextsPrefs", @"icon",
 		       nil]];
