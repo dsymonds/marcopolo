@@ -81,7 +81,7 @@
 	return attrState_;
 }
 
-- (NSArray *)children
+- (NSMutableArray *)children
 {
 	return children_;
 }
@@ -104,6 +104,13 @@
 	Context *c;
 	while ((c = [en nextObject]))
 		[self addTopLevelContext:c];
+}
+
+- (void)setChildren:(NSArray *)children
+{
+	// TODO: deal with selection_
+
+	[children_ setArray:children];
 }
 
 - (void)setSelection:(Context *)context

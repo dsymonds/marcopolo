@@ -86,7 +86,7 @@
 	return parent_;
 }
 
-- (NSArray *)children
+- (NSMutableArray *)children
 {
 	return children_;
 }
@@ -117,6 +117,16 @@
 {
 	[children_ addObject:child];
 	[child setParent:self];
+}
+
+- (void)setChildren:(NSArray *)children
+{
+	[children_ setArray:children];
+
+	NSEnumerator *en = [children_ objectEnumerator];
+	Context *c;
+	while ((c = [en nextObject]))
+		[c setParent:self];
 }
 
 - (void)setConfidence:(NSNumber *)confidence

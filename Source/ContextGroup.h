@@ -28,11 +28,12 @@
 - (NSString *)name;
 - (NSAttributedString *)attributedName;
 - (NSAttributedString *)attributedState;
-- (NSArray *)children;
+- (NSMutableArray *)children;
 - (Context *)selection;
 
 - (void)addTopLevelContext:(Context *)context;
 - (void)addTopLevelContextsFromArray:(NSArray *)contexts;
+- (void)setChildren:(NSArray *)children;
 - (void)setSelection:(Context *)context;
 
 @end

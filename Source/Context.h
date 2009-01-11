@@ -32,13 +32,14 @@
 - (NSString *)name;
 - (NSString *)attributedName;
 - (NSAttributedString *)attributedState;
-- (NSArray *)children;
+- (NSMutableArray *)children;
 - (Context *)parent;
 - (NSNumber *)confidence;
 - (NSString *)fullPath;
 
 - (void)setName:(NSString *)name;
 - (void)addChild:(Context *)parent;
+- (void)setChildren:(NSArray *)children;
 - (void)setConfidence:(NSNumber *)confidence;
 
 @end

@@ -20,5 +20,6 @@
 - (NSArray *)children;
 
 - (void)addContextGroup:(ContextGroup *)contextGroup;
+- (void)setChildren:(NSArray *)children;
 
 @end

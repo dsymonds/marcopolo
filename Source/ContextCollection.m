@@ -71,4 +71,9 @@
 	[contextGroups_ addObject:contextGroup];
 }
 
+- (void)setChildren:(NSArray *)children
+{
+	[contextGroups_ setArray:children];
+}
+
 @end
