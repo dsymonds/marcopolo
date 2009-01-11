@@ -8,7 +8,6 @@
 #import "Context.h"
 #import "ContextGroup.h"
 #import "ContextGroupTest.h"
-#import "ContextTree.h"
 
 
 @implementation ContextGroupTest
@@ -19,19 +18,22 @@
 	ContextGroup *cg = [ContextGroup contextGroupWithName:@"Location"];
 	STAssertNotNil(cg, nil);
 	STAssertEqualObjects([cg name], @"Location", nil);
-	STAssertEquals([cg count], 0, nil);
+	int count = [[cg children] count];
+	STAssertEquals(count, 0, nil);
 
 	cg = [ContextGroup contextGroupWithName:@"Location"
-				    contextTree:[ContextTree contextTree]];
+			       topLevelContexts:[NSArray array]];
 	STAssertNotNil(cg, nil);
 	STAssertEqualObjects([cg name], @"Location", nil);
-	STAssertEquals([cg count], 0, nil);
+	STAssertEquals(count, 0, nil);
 
 	// via init and setters
 	cg = [[[ContextGroup alloc] initWithName:@"Location"] autorelease];
 	STAssertNotNil(cg, nil);
 	STAssertEqualObjects([cg name], @"Location", nil);
-	STAssertEquals([cg count], 0, nil);
+	STAssertEquals(count, 0, nil);
 }
+
+// TODO: Much more testing is needed here!
 
 @end

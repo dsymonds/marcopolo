@@ -32,7 +32,7 @@
 	// via init and setters
 	Context *c4 = [[[Context alloc] init] autorelease];
 	[c4 setName:@"bar"];
-	[c4 setParent:c1];
+	[c1 addChild:c4];
 	STAssertNotNil(c4, nil);
 	STAssertEqualObjects([c4 name], @"bar", nil);
 	STAssertEquals([c4 parent], c1, nil);
