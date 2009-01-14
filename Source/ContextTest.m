@@ -7,6 +7,7 @@
 
 #import "Context.h"
 #import "ContextTest.h"
+#import "TestHelpers.h"
 
 
 @implementation ContextTest
@@ -36,6 +37,32 @@
 	STAssertNotNil(c4, nil);
 	STAssertEqualObjects([c4 name], @"bar", nil);
 	STAssertEquals([c4 parent], c1, nil);
+}
+
+- (void)testHierarchy
+{
+	// Build a hierarchy looking like this:
+	// A
+	//  B
+	//   C
+	//  D
+	//   E
+	//   F
+	Context *a = [Context contextWithName:@"A"];
+	Context *b = [Context contextWithName:@"B" parent:a];
+	Context *c = [Context contextWithName:@"C" parent:b];
+	Context *d = [Context contextWithName:@"D" parent:a];
+	Context *e = [Context contextWithName:@"E" parent:d];
+	Context *f = [Context contextWithName:@"F" parent:d];
+
+	STAssertArrayOf2([a children], b, d);
+	STAssertCount([a children], 2);
+	STAssertArrayOf1([b children], c);
+	STAssertCount([c children], 0);
+	STAssertArrayOf2([d children], e, f);
+	STAssertCount([e children], 0);
+	STAssertCount([f children], 0);
+
 }
 
 @end

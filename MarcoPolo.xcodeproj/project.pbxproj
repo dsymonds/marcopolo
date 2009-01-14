@@ -175,6 +175,7 @@
 		8D1B847D0E0A7A1E00D47563 /* PowerSensor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "PowerSensor-Info.plist"; path = "Sensors/PowerSensor/PowerSensor-Info.plist"; sourceTree = "<group>"; };
 		8D1B847E0E0A7A1E00D47563 /* PowerSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PowerSensor.h; path = Sensors/PowerSensor/PowerSensor.h; sourceTree = "<group>"; };
 		8D1B847F0E0A7A1E00D47563 /* PowerSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PowerSensor.m; path = Sensors/PowerSensor/PowerSensor.m; sourceTree = "<group>"; };
+		8D2353A80F1DD0D900A17EEA /* TestHelpers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = TestHelpers.h; path = Source/TestHelpers.h; sourceTree = "<group>"; };
 		8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = RulesPrefs.tiff; path = Resources/RulesPrefs.tiff; sourceTree = "<group>"; };
 		8D2CEBA40E92F9AD00E1895A /* ContextsPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ContextsPrefs.nib; path = Resources/ContextsPrefs.nib; sourceTree = "<group>"; };
 		8D2CEBA60E92F9D600E1895A /* ContextsPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = ContextsPrefs.tiff; path = Resources/ContextsPrefs.tiff; sourceTree = "<group>"; };
@@ -376,6 +377,7 @@
 			children = (
 				32CA4F630368D1EE00C91783 /* MarcoPolo.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				8D2353A80F1DD0D900A17EEA /* TestHelpers.h */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
