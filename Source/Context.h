@@ -36,6 +36,7 @@
 - (Context *)parent;
 - (NSNumber *)confidence;
 - (NSString *)fullPath;
+- (NSArray *)descendants;
 
 - (void)setName:(NSString *)name;
 - (void)addChild:(Context *)parent;

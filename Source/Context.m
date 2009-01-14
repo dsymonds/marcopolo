@@ -107,6 +107,20 @@
 	return path;
 }
 
+- (NSArray *)descendants
+{
+	NSMutableArray *kids = [NSMutableArray arrayWithCapacity:[children_ count]];
+
+	NSEnumerator *en = [children_ objectEnumerator];
+	Context *c;
+	while ((c = [en nextObject])) {
+		[kids addObject:c];
+		[kids addObjectsFromArray:[c descendants]];
+	}
+
+	return kids;
+}
+
 - (void)setName:(NSString *)name
 {
 	[name_ autorelease];

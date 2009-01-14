@@ -63,6 +63,9 @@
 	STAssertCount([e children], 0);
 	STAssertCount([f children], 0);
 
+	NSArray *expected = [NSArray arrayWithObjects:b, c, d, e, f, nil];
+	STAssertEqualObjects([a descendants], expected, nil);
+
 }
 
 @end
