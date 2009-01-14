@@ -123,9 +123,15 @@
 
 - (void)setChildren:(NSArray *)children
 {
-	// TODO: deal with selection_
-
 	[children_ setArray:children];
+
+	// Check that the selection hasn't gone away.
+	// TODO: This doesn't work beyond immediate children changing.
+	if (selection_) {
+		if (![[self descendants] containsObject:selection_])
+			selection_ = nil;
+		[self recomputeAttributedState];
+	}
 }
 
 - (void)setSelection:(Context *)context
