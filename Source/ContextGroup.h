@@ -30,6 +30,7 @@
 - (NSAttributedString *)attributedState;
 - (NSMutableArray *)children;
 - (Context *)selection;
+- (NSArray *)descendants;
 
 - (void)addTopLevelContext:(Context *)context;
 - (void)addTopLevelContextsFromArray:(NSArray *)contexts;

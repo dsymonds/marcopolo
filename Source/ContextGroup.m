@@ -91,6 +91,21 @@
 	return selection_;
 }
 
+// TODO: This is identical to -[Context descendants]. Refactor it!
+- (NSArray *)descendants
+{
+	NSMutableArray *kids = [NSMutableArray arrayWithCapacity:[children_ count]];
+
+	NSEnumerator *en = [children_ objectEnumerator];
+	Context *c;
+	while ((c = [en nextObject])) {
+		[kids addObject:c];
+		[kids addObjectsFromArray:[c descendants]];
+	}
+
+	return kids;
+}
+
 #pragma mark -
 
 - (void)addTopLevelContext:(Context *)context
