@@ -64,6 +64,22 @@
 	[super dealloc];
 }
 
+#pragma mark NSCoding protocol
+
+- (id)initWithCoder:(NSCoder *)decoder
+{
+	Context *c = [[Context alloc] init];
+	[c setName:[decoder decodeObjectForKey:@"Name"]];
+	[c setChildren:[decoder decodeObjectForKey:@"Children"]];
+	return c;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder
+{
+	[encoder encodeObject:name_ forKey:@"Name"];
+	[encoder encodeObject:children_ forKey:@"Children"];
+}
+
 #pragma mark Accessors
 
 - (NSString *)name

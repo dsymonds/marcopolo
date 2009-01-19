@@ -27,18 +27,18 @@
 	return self;
 }
 
-#pragma mark NSCoder protocol
+#pragma mark NSCoding protocol
 
-- (id)initWithCoder:(NSCoder *)coder
+- (id)initWithCoder:(NSCoder *)decoder
 {
-	return [self initWithSensor:[coder decodeObjectForKey:@"Sensor"]
-			      value:[coder decodeObjectForKey:@"Value"]];
+	return [self initWithSensor:[decoder decodeObjectForKey:@"Sensor"]
+			      value:[decoder decodeObjectForKey:@"Value"]];
 }
 
-- (void)encodeWithCoder:(NSCoder *)coder
+- (void)encodeWithCoder:(NSCoder *)encoder
 {
-	[coder encodeObject:sensor_ forKey:@"Sensor"];
-	[coder encodeObject:value_ forKey:@"Value"];
+	[encoder encodeObject:sensor_ forKey:@"Sensor"];
+	[encoder encodeObject:value_ forKey:@"Value"];
 }
 
 #pragma mark Rule protocol

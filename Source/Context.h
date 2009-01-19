@@ -12,15 +12,13 @@
 
 
 // A single context.
-@interface Context : NSObject {
+@interface Context : NSObject<NSCoding> {
 	@private
 	NSString *name_;
-
 	NSMutableArray *children_;
+
 	Context *parent_;  // not retained
-
 	NSNumber *confidence_;	// in [0,1]
-
 	NSAttributedString *attributedState_;
 }
 
