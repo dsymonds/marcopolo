@@ -10,7 +10,6 @@
 
 @interface Context (Private)
 
-- (void)setParent:(Context *)parent;
 - (void)recomputeAttributedState;
 
 @end
@@ -31,7 +30,7 @@
 	return c;
 }
 
-+ (id)contextWithName:(NSString *)name parent:(Context *)parent
++ (id)contextWithName:(NSString *)name parent:(ContextNode *)parent
 {
 	Context *c = [self context];
 	[c setName:name];
@@ -44,68 +43,18 @@
 	if (!(self = [super init]))
 		return nil;
 
-	name_ = @"";
-
-	children_ = [[NSMutableArray alloc] init];
-	parent_ = nil;
-
 	confidence_ = nil;
-	attributedState_ = nil;
 
 	return self;
 }
 
 - (void)dealloc
 {
-	[name_ release];
-	[children_ release];
 	[confidence_ release];
-	[attributedState_ release];
 	[super dealloc];
 }
 
-#pragma mark NSCoding protocol
-
-- (id)initWithCoder:(NSCoder *)decoder
-{
-	Context *c = [[Context alloc] init];
-	[c setName:[decoder decodeObjectForKey:@"Name"]];
-	[c setChildren:[decoder decodeObjectForKey:@"Children"]];
-	return c;
-}
-
-- (void)encodeWithCoder:(NSCoder *)encoder
-{
-	[encoder encodeObject:name_ forKey:@"Name"];
-	[encoder encodeObject:children_ forKey:@"Children"];
-}
-
 #pragma mark Accessors
-
-- (NSString *)name
-{
-	return name_;
-}
-
-- (NSString *)attributedName
-{
-	return name_;
-}
-
-- (NSAttributedString *)attributedState
-{
-	return attributedState_;
-}
-
-- (Context *)parent
-{
-	return parent_;
-}
-
-- (NSMutableArray *)children
-{
-	return children_;
-}
 
 - (NSNumber *)confidence
 {
@@ -114,50 +63,16 @@
 
 - (NSString *)fullPath
 {
-	NSMutableString *path = [NSMutableString stringWithString:name_];
-	Context *c;
-	for (c = parent_; c; c = [c parent]) {
-		[path insertString:[NSString stringWithFormat:@"%@/", [c name]]
-			   atIndex:0];
-	}
-	return path;
+	NSMutableArray *walk = [NSMutableArray array];
+
+	ContextNode *c;
+	for (c = self; c && [c isKindOfClass:[Context class]]; c = [c parent])
+		[walk insertObject:[c name] atIndex:0];
+
+	return [walk componentsJoinedByString:@"/"];
 }
 
-- (NSArray *)descendants
-{
-	NSMutableArray *kids = [NSMutableArray arrayWithCapacity:[children_ count]];
-
-	NSEnumerator *en = [children_ objectEnumerator];
-	Context *c;
-	while ((c = [en nextObject])) {
-		[kids addObject:c];
-		[kids addObjectsFromArray:[c descendants]];
-	}
-
-	return kids;
-}
-
-- (void)setName:(NSString *)name
-{
-	[name_ autorelease];
-	name_ = [name copy];
-}
-
-- (void)addChild:(Context *)child
-{
-	[children_ addObject:child];
-	[child setParent:self];
-}
-
-- (void)setChildren:(NSArray *)children
-{
-	[children_ setArray:children];
-
-	NSEnumerator *en = [children_ objectEnumerator];
-	Context *c;
-	while ((c = [en nextObject]))
-		[c setParent:self];
-}
+#pragma mark Setters
 
 - (void)setConfidence:(NSNumber *)confidence
 {
@@ -168,9 +83,14 @@
 
 #pragma mark -
 
-- (void)setParent:(Context *)parent
+- (void)recomputeAttributedName
 {
-	parent_ = parent;
+	[self willChangeValueForKey:@"attributedName"];
+
+	[attributedName_ release];
+	attributedName_ = [[NSAttributedString alloc] initWithString:[self name]];
+
+	[self didChangeValueForKey:@"attributedName"];
 }
 
 - (void)recomputeAttributedState

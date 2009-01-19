@@ -6,39 +6,24 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
-
-@class ContextTree;
+#import "ContextNode.h"
 
 
 // A single context.
-@interface Context : NSObject<NSCoding> {
+@interface Context : ContextNode {
 	@private
-	NSString *name_;
-	NSMutableArray *children_;
-
-	Context *parent_;  // not retained
 	NSNumber *confidence_;	// in [0,1]
-	NSAttributedString *attributedState_;
 }
 
 + (id)context;
 + (id)contextWithName:(NSString *)name;
-+ (id)contextWithName:(NSString *)name parent:(Context *)parent;
++ (id)contextWithName:(NSString *)name parent:(ContextNode *)parent;
 - (id)init;
 
-- (NSString *)name;
-- (NSString *)attributedName;
-- (NSAttributedString *)attributedState;
-- (NSMutableArray *)children;
-- (Context *)parent;
 - (NSNumber *)confidence;
-- (NSString *)fullPath;
-- (NSArray *)descendants;
 
-- (void)setName:(NSString *)name;
-- (void)addChild:(Context *)parent;
-- (void)setChildren:(NSArray *)children;
+- (NSString *)fullPath;
+
 - (void)setConfidence:(NSNumber *)confidence;
 
 @end

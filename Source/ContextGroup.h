@@ -6,35 +6,24 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ContextNode.h"
 
 
 @class Context;
 
 
 // A group of contexts, with zero or one of them selected.
-@interface ContextGroup : NSObject {
+@interface ContextGroup : ContextNode {
 	@private
-	NSString *name_;
-	NSMutableArray *children_;
 	Context *selection_;
-
-	NSAttributedString *attrName_, *attrState_;
 }
 
 + (id)contextGroupWithName:(NSString *)name;
 + (id)contextGroupWithName:(NSString *)name topLevelContexts:(NSArray *)contexts;
 - (id)initWithName:(NSString *)name;
 
-- (NSString *)name;
-- (NSAttributedString *)attributedName;
-- (NSAttributedString *)attributedState;
-- (NSMutableArray *)children;
 - (Context *)selection;
-- (NSArray *)descendants;
 
-- (void)addTopLevelContext:(Context *)context;
-- (void)addTopLevelContextsFromArray:(NSArray *)contexts;
-- (void)setChildren:(NSArray *)children;
 - (void)setSelection:(Context *)context;
 
 @end

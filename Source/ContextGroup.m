@@ -11,6 +11,7 @@
 
 @interface ContextGroup (Private)
 
+- (void)recomputeAttributedName;
 - (void)recomputeAttributedState;
 
 @end
@@ -28,7 +29,7 @@
 {
 	ContextGroup *cg = [self contextGroupWithName:name];
 
-	[cg addTopLevelContextsFromArray:contexts];
+	[cg setChildren:contexts];
 
 	return cg;
 }
@@ -38,101 +39,33 @@
 	if (!(self = [super init]))
 		return nil;
 
-	name_ = [name retain];
-	children_ = [[NSMutableArray alloc] init];
+	[self setName:name];
 	selection_ = nil;
-
-	attrName_ = nil;
-	attrState_ = nil;
 
 	return self;
 }
 
-- (void)dealloc
-{
-	[name_ release];
-	[children_ release];
-	[attrName_ release];
-	[attrState_ release];
-	[super dealloc];
-}
-
 #pragma mark Accessors
-
-- (NSString *)name
-{
-	return name_;
-}
-
-- (NSAttributedString *)attributedName
-{
-	if (!attrName_) {
-		NSDictionary *attrs = [NSDictionary dictionaryWithObject:[NSFont boldSystemFontOfSize:
-									  [NSFont systemFontSize]]
-								  forKey:NSFontAttributeName];
-		attrName_ = [[NSAttributedString alloc] initWithString:name_ attributes:attrs];
-	}
-
-	return attrName_;
-}
-
-- (NSAttributedString *)attributedState
-{
-	return attrState_;
-}
-
-- (NSMutableArray *)children
-{
-	return children_;
-}
 
 - (Context *)selection
 {
 	return selection_;
 }
 
-// TODO: This is identical to -[Context descendants]. Refactor it!
-- (NSArray *)descendants
-{
-	NSMutableArray *kids = [NSMutableArray arrayWithCapacity:[children_ count]];
+#pragma mark Setters
 
-	NSEnumerator *en = [children_ objectEnumerator];
-	Context *c;
-	while ((c = [en nextObject])) {
-		[kids addObject:c];
-		[kids addObjectsFromArray:[c descendants]];
-	}
-
-	return kids;
-}
-
-#pragma mark -
-
-- (void)addTopLevelContext:(Context *)context
-{
-	[children_ addObject:context];
-}
-
-- (void)addTopLevelContextsFromArray:(NSArray *)contexts
-{
-	NSEnumerator *en = [contexts objectEnumerator];
-	Context *c;
-	while ((c = [en nextObject]))
-		[self addTopLevelContext:c];
-}
-
-- (void)setChildren:(NSArray *)children
-{
-	[children_ setArray:children];
-
-	// Check that the selection hasn't gone away.
-	// TODO: This doesn't work beyond immediate children changing.
-	if (selection_) {
-		if (![[self descendants] containsObject:selection_])
-			selection_ = nil;
-		[self recomputeAttributedState];
-	}
-}
+//- (void)setChildren:(NSArray *)children
+//{
+//	[children_ setArray:children];
+//
+//	// Check that the selection hasn't gone away.
+//	// TODO: This doesn't work beyond immediate children changing.
+//	if (selection_) {
+//		if (![[self descendants] containsObject:selection_])
+//			selection_ = nil;
+//		[self recomputeAttributedState];
+//	}
+//}
 
 - (void)setSelection:(Context *)context
 {
@@ -146,11 +79,23 @@
 	[self recomputeAttributedState];
 }
 
+- (void)recomputeAttributedName
+{
+	[self willChangeValueForKey:@"attributedName"];
+
+	NSDictionary *attrs = [NSDictionary dictionaryWithObject:[NSFont boldSystemFontOfSize:
+								  [NSFont systemFontSize]]
+							  forKey:NSFontAttributeName];
+	attributedName_ = [[NSAttributedString alloc] initWithString:[self name] attributes:attrs];
+
+	[self didChangeValueForKey:@"attributedName"];
+}
+
 - (void)recomputeAttributedState
 {
 	[self willChangeValueForKey:@"attributedState"];
 
-	[attrState_ release];
+	[attributedState_ release];
 	if (selection_) {
 		NSFont *font = [NSFont systemFontOfSize:[NSFont smallSystemFontSize]];
 		NSMutableParagraphStyle *para = [[[NSMutableParagraphStyle alloc] init] autorelease];
@@ -158,10 +103,10 @@
 		NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:
 				       font, NSFontAttributeName,
 				       para, NSParagraphStyleAttributeName, nil];
-		attrState_ = [[NSAttributedString alloc] initWithString:[selection_ fullPath]
+		attributedState_ = [[NSAttributedString alloc] initWithString:[selection_ fullPath]
 							     attributes:attrs];
 	} else
-		attrState_ = nil;
+		attributedState_ = nil;
 
 	[self didChangeValueForKey:@"attributedState"];
 }

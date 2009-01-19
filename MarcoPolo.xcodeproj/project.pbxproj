@@ -44,6 +44,8 @@
 		8D35C6280DFE999200AF7A7D /* ContextGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6270DFE999200AF7A7D /* ContextGroup.m */; };
 		8D35C6290DFE999200AF7A7D /* ContextGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6270DFE999200AF7A7D /* ContextGroup.m */; };
 		8D35C6320DFE9C2400AF7A7D /* ContextGroupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */; };
+		8D477E3A0F24635B009CD458 /* ContextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D477E390F24635B009CD458 /* ContextNode.m */; };
+		8D477E3B0F24635B009CD458 /* ContextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D477E390F24635B009CD458 /* ContextNode.m */; };
 		8D56753C0E0105AC00EFEBA2 /* TimeOfDaySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */; };
 		8D56758C0E010AAD00EFEBA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		8D5675920E010AE800EFEBA2 /* SensorTester.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5675910E010AE800EFEBA2 /* SensorTester.nib */; };
@@ -187,6 +189,8 @@
 		8D35C6270DFE999200AF7A7D /* ContextGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextGroup.m; path = Source/ContextGroup.m; sourceTree = "<group>"; };
 		8D35C6300DFE9C2400AF7A7D /* ContextGroupTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextGroupTest.h; path = Source/ContextGroupTest.h; sourceTree = "<group>"; };
 		8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextGroupTest.m; path = Source/ContextGroupTest.m; sourceTree = "<group>"; };
+		8D477E380F24635B009CD458 /* ContextNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextNode.h; path = Source/ContextNode.h; sourceTree = "<group>"; };
+		8D477E390F24635B009CD458 /* ContextNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextNode.m; path = Source/ContextNode.m; sourceTree = "<group>"; };
 		8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeOfDaySensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D56752E0E01055E00EFEBA2 /* TimeOfDaySensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TimeOfDaySensor-Info.plist"; path = "Sensors/TimeOfDaySensor/TimeOfDaySensor-Info.plist"; sourceTree = "<group>"; };
 		8D56753A0E0105AC00EFEBA2 /* TimeOfDaySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeOfDaySensor.h; path = Sensors/TimeOfDaySensor/TimeOfDaySensor.h; sourceTree = "<group>"; };
@@ -449,6 +453,8 @@
 				8DBE19DF0E39CE7A002AC5EC /* LogicRule.m */,
 				8D93F7850E50FB0000AE3E1E /* LogicRuleTest.h */,
 				8D93F7860E50FB0000AE3E1E /* LogicRuleTest.m */,
+				8D477E380F24635B009CD458 /* ContextNode.h */,
+				8D477E390F24635B009CD458 /* ContextNode.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -760,6 +766,7 @@
 				8D7D5ABB0E958D9C005279AD /* PreferencesPaneController.m in Sources */,
 				8D69AD020F1741A70019E8A8 /* ContextCollection.m in Sources */,
 				8D9053C20F19775E0096466F /* ContextPreferencesPaneController.m in Sources */,
+				8D477E3B0F24635B009CD458 /* ContextNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,6 +834,7 @@
 				8DBE19E10E39CE7A002AC5EC /* LogicRule.m in Sources */,
 				8D93F7870E50FB0000AE3E1E /* LogicRuleTest.m in Sources */,
 				8D69AD030F1741A70019E8A8 /* ContextCollection.m in Sources */,
+				8D477E3A0F24635B009CD458 /* ContextNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
