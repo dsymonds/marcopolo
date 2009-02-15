@@ -18,7 +18,9 @@
 }
 
 + (id)sensorControllerWithSensor:(NSObject<Sensor> *)sensor;
++ (id)sensorControllerWithSensorInBundle:(NSBundle *)bundle;
 - (id)initWithSensor:(NSObject<Sensor> *)sensor;
+- (id)initWithSensorInBundle:(NSBundle *)bundle;
 
 // Binding: name
 - (NSString *)name;

@@ -61,6 +61,10 @@
 		8D637C5A0E04D2DD008D3EBA /* USBDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637C590E04D2DD008D3EBA /* USBDevice.m */; };
 		8D69AD020F1741A70019E8A8 /* ContextCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D69AD010F1741A70019E8A8 /* ContextCollection.m */; };
 		8D69AD030F1741A70019E8A8 /* ContextCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D69AD010F1741A70019E8A8 /* ContextCollection.m */; };
+		8D723CB00F47A20700C78FC3 /* SensorRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D723CAF0F47A20700C78FC3 /* SensorRunner.m */; };
+		8D723CC60F47A43C00C78FC3 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
+		8D723CF50F47A6A000C78FC3 /* SensorRunnerMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D723CF40F47A6A000C78FC3 /* SensorRunnerMonitor.m */; };
+		8D723D430F47AAE800C78FC3 /* SensorRunner in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D723C9F0F47A16E00C78FC3 /* SensorRunner */; };
 		8D76DEE80E371D3B00DF4015 /* ExactRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEE70E371D3B00DF4015 /* ExactRule.m */; };
 		8D76DEFB0E371FBC00DF4015 /* RuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEFA0E371FBC00DF4015 /* RuleSet.m */; };
 		8D76DEFC0E371FBC00DF4015 /* RuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEFA0E371FBC00DF4015 /* RuleSet.m */; };
@@ -156,6 +160,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D723D1D0F47AA0500C78FC3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				8D723D430F47AAE800C78FC3 /* SensorRunner in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -215,6 +229,10 @@
 		8D637C590E04D2DD008D3EBA /* USBDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USBDevice.m; path = Sensors/USBSensor/USBDevice.m; sourceTree = "<group>"; };
 		8D69AD000F1741A70019E8A8 /* ContextCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextCollection.h; path = Source/ContextCollection.h; sourceTree = "<group>"; };
 		8D69AD010F1741A70019E8A8 /* ContextCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextCollection.m; path = Source/ContextCollection.m; sourceTree = "<group>"; };
+		8D723C9F0F47A16E00C78FC3 /* SensorRunner */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SensorRunner; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D723CAF0F47A20700C78FC3 /* SensorRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorRunner.m; path = Source/SensorRunner.m; sourceTree = "<group>"; };
+		8D723CF30F47A6A000C78FC3 /* SensorRunnerMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorRunnerMonitor.h; path = Source/SensorRunnerMonitor.h; sourceTree = "<group>"; };
+		8D723CF40F47A6A000C78FC3 /* SensorRunnerMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorRunnerMonitor.m; path = Source/SensorRunnerMonitor.m; sourceTree = "<group>"; };
 		8D76DEDA0E371C7800DF4015 /* Rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rule.h; path = Source/Rule.h; sourceTree = "<group>"; };
 		8D76DEE60E371D3B00DF4015 /* ExactRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExactRule.h; path = Source/ExactRule.h; sourceTree = "<group>"; };
 		8D76DEE70E371D3B00DF4015 /* ExactRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExactRule.m; path = Source/ExactRule.m; sourceTree = "<group>"; };
@@ -302,6 +320,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D723C9D0F47A16E00C78FC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DA607F40E1D931A00066EA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,6 +384,7 @@
 				8D0EACB00E07A99C004ABEF2 /* LightSensor.sensor */,
 				8D1B84620E0A79AA00D47563 /* PowerSensor.sensor */,
 				8DA607F60E1D931A00066EA8 /* IPSensor.sensor */,
+				8D723C9F0F47A16E00C78FC3 /* SensorRunner */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -382,6 +408,9 @@
 				32CA4F630368D1EE00C91783 /* MarcoPolo.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 				8D2353A80F1DD0D900A17EEA /* TestHelpers.h */,
+				8D723CAF0F47A20700C78FC3 /* SensorRunner.m */,
+				8D723CF30F47A6A000C78FC3 /* SensorRunnerMonitor.h */,
+				8D723CF40F47A6A000C78FC3 /* SensorRunnerMonitor.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -551,6 +580,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				8D723D1D0F47AA0500C78FC3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -630,6 +660,22 @@
 			productReference = 8D637B8C0E04A280008D3EBA /* USBSensor.sensor */;
 			productType = "com.apple.product-type.bundle";
 		};
+		8D723C9E0F47A16E00C78FC3 /* SensorRunner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D723CA30F47A18C00C78FC3 /* Build configuration list for PBXNativeTarget "SensorRunner" */;
+			buildPhases = (
+				8D723C9C0F47A16E00C78FC3 /* Sources */,
+				8D723C9D0F47A16E00C78FC3 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SensorRunner;
+			productName = SensorRunner;
+			productReference = 8D723C9F0F47A16E00C78FC3 /* SensorRunner */;
+			productType = "com.apple.product-type.tool";
+		};
 		8DA607F50E1D931A00066EA8 /* IPSensor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DA607FA0E1D931B00066EA8 /* Build configuration list for PBXNativeTarget "IPSensor" */;
@@ -685,6 +731,7 @@
 				8D56752C0E01055E00EFEBA2 /* TimeOfDaySensor */,
 				8D637B8B0E04A280008D3EBA /* USBSensor */,
 				8DA607F50E1D931A00066EA8 /* IPSensor */,
+				8D723C9E0F47A16E00C78FC3 /* SensorRunner */,
 			);
 		};
 /* End PBXProject section */
@@ -804,6 +851,16 @@
 				8D637B9A0E04A332008D3EBA /* USBSensor.m in Sources */,
 				8D637C260E04CD32008D3EBA /* USBVendorDB.m in Sources */,
 				8D637C5A0E04D2DD008D3EBA /* USBDevice.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D723C9C0F47A16E00C78FC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D723CB00F47A20700C78FC3 /* SensorRunner.m in Sources */,
+				8D723CC60F47A43C00C78FC3 /* SensorController.m in Sources */,
+				8D723CF50F47A6A000C78FC3 /* SensorRunnerMonitor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1168,6 +1225,52 @@
 			};
 			name = Release;
 		};
+		8D723CA10F47A16E00C78FC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = SensorRunner;
+			};
+			name = Debug;
+		};
+		8D723CA20F47A16E00C78FC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = SensorRunner;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		8DA607F80E1D931B00066EA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1393,6 +1496,15 @@
 			buildConfigurations = (
 				8D637B8E0E04A280008D3EBA /* Debug */,
 				8D637B8F0E04A280008D3EBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D723CA30F47A18C00C78FC3 /* Build configuration list for PBXNativeTarget "SensorRunner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D723CA10F47A16E00C78FC3 /* Debug */,
+				8D723CA20F47A16E00C78FC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
