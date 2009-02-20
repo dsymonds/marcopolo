@@ -8,6 +8,7 @@
 #import "ContextPreferencesPaneController.h"
 #import "PreferencesController.h"
 #import "PreferencesPaneController.h"
+#import "SensorPreferencesPaneController.h"
 
 
 @interface PreferencesController (Private)
@@ -91,6 +92,16 @@
 		       [ContextPreferencesPaneController class], @"nib_owner_class",
 		       [NSNumber numberWithBool:YES], @"resizeable",
 		       @"ContextsPrefs", @"icon",
+		       nil]];
+
+	// Sensors
+	[ps addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:
+		       @"sensors", @"id",
+		       NSLocalizedString(@"Sensors", @"Preferences Pane name"), @"name",
+		       @"SensorsPrefs", @"nib_name",
+		       [SensorPreferencesPaneController class], @"nib_owner_class",
+		       [NSNumber numberWithBool:YES], @"resizeable",
+		       @"SensorsPrefs", @"icon",
 		       nil]];
 
 	NSEnumerator *en = [ps objectEnumerator];

@@ -46,6 +46,9 @@
 		8D35C6320DFE9C2400AF7A7D /* ContextGroupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */; };
 		8D477E3A0F24635B009CD458 /* ContextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D477E390F24635B009CD458 /* ContextNode.m */; };
 		8D477E3B0F24635B009CD458 /* ContextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D477E390F24635B009CD458 /* ContextNode.m */; };
+		8D4B0C4F0F4E961100006BDA /* SensorsPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4B0C4E0F4E961100006BDA /* SensorsPrefs.nib */; };
+		8D4B0C550F4E967A00006BDA /* SensorPreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4B0C540F4E967A00006BDA /* SensorPreferencesPaneController.m */; };
+		8D4B0C5E0F4E9CD900006BDA /* SensorsPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D4B0C5D0F4E9CD900006BDA /* SensorsPrefs.tiff */; };
 		8D56753C0E0105AC00EFEBA2 /* TimeOfDaySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */; };
 		8D56758C0E010AAD00EFEBA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		8D5675920E010AE800EFEBA2 /* SensorTester.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5675910E010AE800EFEBA2 /* SensorTester.nib */; };
@@ -205,6 +208,10 @@
 		8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextGroupTest.m; path = Source/ContextGroupTest.m; sourceTree = "<group>"; };
 		8D477E380F24635B009CD458 /* ContextNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextNode.h; path = Source/ContextNode.h; sourceTree = "<group>"; };
 		8D477E390F24635B009CD458 /* ContextNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextNode.m; path = Source/ContextNode.m; sourceTree = "<group>"; };
+		8D4B0C4E0F4E961100006BDA /* SensorsPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = SensorsPrefs.nib; path = Resources/SensorsPrefs.nib; sourceTree = "<group>"; };
+		8D4B0C530F4E967A00006BDA /* SensorPreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorPreferencesPaneController.h; path = Source/SensorPreferencesPaneController.h; sourceTree = "<group>"; };
+		8D4B0C540F4E967A00006BDA /* SensorPreferencesPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorPreferencesPaneController.m; path = Source/SensorPreferencesPaneController.m; sourceTree = "<group>"; };
+		8D4B0C5D0F4E9CD900006BDA /* SensorsPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = SensorsPrefs.tiff; path = Resources/SensorsPrefs.tiff; sourceTree = "<group>"; };
 		8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeOfDaySensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D56752E0E01055E00EFEBA2 /* TimeOfDaySensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TimeOfDaySensor-Info.plist"; path = "Sensors/TimeOfDaySensor/TimeOfDaySensor-Info.plist"; sourceTree = "<group>"; };
 		8D56753A0E0105AC00EFEBA2 /* TimeOfDaySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeOfDaySensor.h; path = Sensors/TimeOfDaySensor/TimeOfDaySensor.h; sourceTree = "<group>"; };
@@ -418,6 +425,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8D4B0C4E0F4E961100006BDA /* SensorsPrefs.nib */,
+				8D4B0C5D0F4E9CD900006BDA /* SensorsPrefs.tiff */,
 				8D9360070F14A0F900D3990A /* Misc. Graphics */,
 				8D16A7A00E8FB20100765403 /* Prefs */,
 				8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */,
@@ -550,6 +559,8 @@
 				8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */,
 				8D9053C00F19775E0096466F /* ContextPreferencesPaneController.h */,
 				8D9053C10F19775E0096466F /* ContextPreferencesPaneController.m */,
+				8D4B0C530F4E967A00006BDA /* SensorPreferencesPaneController.h */,
+				8D4B0C540F4E967A00006BDA /* SensorPreferencesPaneController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -750,6 +761,8 @@
 				8D93600B0F14A11700D3990A /* minus-8.png in Resources */,
 				8D93600C0F14A11700D3990A /* plus-8.png in Resources */,
 				8D93600D0F14A11700D3990A /* plus-arrow.png in Resources */,
+				8D4B0C4F0F4E961100006BDA /* SensorsPrefs.nib in Resources */,
+				8D4B0C5E0F4E9CD900006BDA /* SensorsPrefs.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +827,7 @@
 				8D69AD020F1741A70019E8A8 /* ContextCollection.m in Sources */,
 				8D9053C20F19775E0096466F /* ContextPreferencesPaneController.m in Sources */,
 				8D477E3B0F24635B009CD458 /* ContextNode.m in Sources */,
+				8D4B0C550F4E967A00006BDA /* SensorPreferencesPaneController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
