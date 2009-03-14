@@ -38,6 +38,8 @@
 		8D2CEBA30E92F8BB00E1895A /* RulesPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */; };
 		8D2CEBA50E92F9AD00E1895A /* ContextsPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA40E92F9AD00E1895A /* ContextsPrefs.nib */; };
 		8D2CEBA70E92F9D600E1895A /* ContextsPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA60E92F9D600E1895A /* ContextsPrefs.tiff */; };
+		8D33D4450F69FAE30017C76B /* SensorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D33D4440F69FAE30017C76B /* SensorLoader.m */; };
+		8D33D4460F69FAE30017C76B /* SensorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D33D4440F69FAE30017C76B /* SensorLoader.m */; };
 		8D35C5FA0DFE7F7D00AF7A7D /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C5F90DFE7F7D00AF7A7D /* Context.m */; };
 		8D35C5FB0DFE7F7D00AF7A7D /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C5F90DFE7F7D00AF7A7D /* Context.m */; };
 		8D35C60B0DFE851A00AF7A7D /* ContextTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C60A0DFE851A00AF7A7D /* ContextTest.m */; };
@@ -198,6 +200,8 @@
 		8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = RulesPrefs.tiff; path = Resources/RulesPrefs.tiff; sourceTree = "<group>"; };
 		8D2CEBA40E92F9AD00E1895A /* ContextsPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ContextsPrefs.nib; path = Resources/ContextsPrefs.nib; sourceTree = "<group>"; };
 		8D2CEBA60E92F9D600E1895A /* ContextsPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = ContextsPrefs.tiff; path = Resources/ContextsPrefs.tiff; sourceTree = "<group>"; };
+		8D33D4430F69FAE30017C76B /* SensorLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorLoader.h; path = Source/SensorLoader.h; sourceTree = "<group>"; };
+		8D33D4440F69FAE30017C76B /* SensorLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorLoader.m; path = Source/SensorLoader.m; sourceTree = "<group>"; };
 		8D35C5F80DFE7F7D00AF7A7D /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Context.h; path = Source/Context.h; sourceTree = "<group>"; };
 		8D35C5F90DFE7F7D00AF7A7D /* Context.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Context.m; path = Source/Context.m; sourceTree = "<group>"; };
 		8D35C6090DFE851A00AF7A7D /* ContextTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextTest.h; path = Source/ContextTest.h; sourceTree = "<group>"; };
@@ -418,6 +422,8 @@
 				8D723CAF0F47A20700C78FC3 /* SensorRunner.m */,
 				8D723CF30F47A6A000C78FC3 /* SensorRunnerMonitor.h */,
 				8D723CF40F47A6A000C78FC3 /* SensorRunnerMonitor.m */,
+				8D33D4430F69FAE30017C76B /* SensorLoader.h */,
+				8D33D4440F69FAE30017C76B /* SensorLoader.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -828,6 +834,7 @@
 				8D9053C20F19775E0096466F /* ContextPreferencesPaneController.m in Sources */,
 				8D477E3B0F24635B009CD458 /* ContextNode.m in Sources */,
 				8D4B0C550F4E967A00006BDA /* SensorPreferencesPaneController.m in Sources */,
+				8D33D4450F69FAE30017C76B /* SensorLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,6 +862,7 @@
 				8D5675980E010C9200EFEBA2 /* SensorArrayController.m in Sources */,
 				8D5676600E01EDD300EFEBA2 /* SensorController.m in Sources */,
 				8D96C3CD0E1AF70100287BC1 /* ValueSet.m in Sources */,
+				8D33D4460F69FAE30017C76B /* SensorLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
