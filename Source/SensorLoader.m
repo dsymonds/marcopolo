@@ -14,6 +14,11 @@
 + (NSObject<Sensor> *)sensorFromBundle:(NSBundle *)bundle
 {
 	Class sensorClass = [bundle principalClass];
+	if (!sensorClass) {
+		NSLog(@"Failed to find the principal class of bundle %@",
+		      [bundle bundlePath]);
+		return nil;
+	}
 
 	// Verify adherence to Sensor protocol
 	if (![sensorClass conformsToProtocol:@protocol(Sensor)]) {
