@@ -38,6 +38,8 @@
 		8D2CEBA30E92F8BB00E1895A /* RulesPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */; };
 		8D2CEBA50E92F9AD00E1895A /* ContextsPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA40E92F9AD00E1895A /* ContextsPrefs.nib */; };
 		8D2CEBA70E92F9D600E1895A /* ContextsPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA60E92F9D600E1895A /* ContextsPrefs.tiff */; };
+		8D33D43F0F69F9C20017C76B /* SensorStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D33D43E0F69F9C20017C76B /* SensorStub.m */; };
+		8D33D4400F69F9C20017C76B /* SensorStub.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D33D43E0F69F9C20017C76B /* SensorStub.m */; };
 		8D33D4450F69FAE30017C76B /* SensorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D33D4440F69FAE30017C76B /* SensorLoader.m */; };
 		8D33D4460F69FAE30017C76B /* SensorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D33D4440F69FAE30017C76B /* SensorLoader.m */; };
 		8D35C5FA0DFE7F7D00AF7A7D /* Context.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C5F90DFE7F7D00AF7A7D /* Context.m */; };
@@ -46,6 +48,12 @@
 		8D35C6280DFE999200AF7A7D /* ContextGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6270DFE999200AF7A7D /* ContextGroup.m */; };
 		8D35C6290DFE999200AF7A7D /* ContextGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6270DFE999200AF7A7D /* ContextGroup.m */; };
 		8D35C6320DFE9C2400AF7A7D /* ContextGroupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */; };
+		8D4283500F7EFA2A00E4B866 /* SensorRunner in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D723C9F0F47A16E00C78FC3 /* SensorRunner */; };
+		8D4283920F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */; };
+		8D4283930F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */; };
+		8D4283940F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */; };
+		8D4283D50F7F02D400E4B866 /* SensorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D33D4440F69FAE30017C76B /* SensorLoader.m */; };
+		8D4284030F7F046200E4B866 /* usb-vendors.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */; };
 		8D477E3A0F24635B009CD458 /* ContextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D477E390F24635B009CD458 /* ContextNode.m */; };
 		8D477E3B0F24635B009CD458 /* ContextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D477E390F24635B009CD458 /* ContextNode.m */; };
 		8D4B0C4F0F4E961100006BDA /* SensorsPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4B0C4E0F4E961100006BDA /* SensorsPrefs.nib */; };
@@ -113,6 +121,20 @@
 			remoteGlobalIDString = 8D1B84610E0A79AA00D47563;
 			remoteInfo = PowerSensor;
 		};
+		8D4284610F7F081800E4B866 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D723C9E0F47A16E00C78FC3 /* SensorRunner */;
+			remoteInfo = SensorRunner;
+		};
+		8D4284630F7F081F00E4B866 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D723C9E0F47A16E00C78FC3 /* SensorRunner */;
+			remoteInfo = SensorRunner;
+		};
 		8D637B5B0E04A126008D3EBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -151,6 +173,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		8D4283770F7EFAB800E4B866 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				8D4283500F7EFA2A00E4B866 /* SensorRunner in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D4284050F7F046800E4B866 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				8D4284030F7F046200E4B866 /* usb-vendors.txt in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D56759E0E010EC200EFEBA2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,6 +242,8 @@
 		8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = RulesPrefs.tiff; path = Resources/RulesPrefs.tiff; sourceTree = "<group>"; };
 		8D2CEBA40E92F9AD00E1895A /* ContextsPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ContextsPrefs.nib; path = Resources/ContextsPrefs.nib; sourceTree = "<group>"; };
 		8D2CEBA60E92F9D600E1895A /* ContextsPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = ContextsPrefs.tiff; path = Resources/ContextsPrefs.tiff; sourceTree = "<group>"; };
+		8D33D43D0F69F9C20017C76B /* SensorStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorStub.h; path = Source/SensorStub.h; sourceTree = "<group>"; };
+		8D33D43E0F69F9C20017C76B /* SensorStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorStub.m; path = Source/SensorStub.m; sourceTree = "<group>"; };
 		8D33D4430F69FAE30017C76B /* SensorLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorLoader.h; path = Source/SensorLoader.h; sourceTree = "<group>"; };
 		8D33D4440F69FAE30017C76B /* SensorLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorLoader.m; path = Source/SensorLoader.m; sourceTree = "<group>"; };
 		8D35C5F80DFE7F7D00AF7A7D /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Context.h; path = Source/Context.h; sourceTree = "<group>"; };
@@ -210,6 +254,8 @@
 		8D35C6270DFE999200AF7A7D /* ContextGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextGroup.m; path = Source/ContextGroup.m; sourceTree = "<group>"; };
 		8D35C6300DFE9C2400AF7A7D /* ContextGroupTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextGroupTest.h; path = Source/ContextGroupTest.h; sourceTree = "<group>"; };
 		8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextGroupTest.m; path = Source/ContextGroupTest.m; sourceTree = "<group>"; };
+		8D4283900F7EFD3500E4B866 /* SensorProtocolEndpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorProtocolEndpoint.h; path = Source/SensorProtocolEndpoint.h; sourceTree = "<group>"; };
+		8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorProtocolEndpoint.m; path = Source/SensorProtocolEndpoint.m; sourceTree = "<group>"; };
 		8D477E380F24635B009CD458 /* ContextNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextNode.h; path = Source/ContextNode.h; sourceTree = "<group>"; };
 		8D477E390F24635B009CD458 /* ContextNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextNode.m; path = Source/ContextNode.m; sourceTree = "<group>"; };
 		8D4B0C4E0F4E961100006BDA /* SensorsPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = SensorsPrefs.nib; path = Resources/SensorsPrefs.nib; sourceTree = "<group>"; };
@@ -499,6 +545,8 @@
 				8D93F7860E50FB0000AE3E1E /* LogicRuleTest.m */,
 				8D477E380F24635B009CD458 /* ContextNode.h */,
 				8D477E390F24635B009CD458 /* ContextNode.m */,
+				8D33D43D0F69F9C20017C76B /* SensorStub.h */,
+				8D33D43E0F69F9C20017C76B /* SensorStub.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -567,6 +615,8 @@
 				8D9053C10F19775E0096466F /* ContextPreferencesPaneController.m */,
 				8D4B0C530F4E967A00006BDA /* SensorPreferencesPaneController.h */,
 				8D4B0C540F4E967A00006BDA /* SensorPreferencesPaneController.m */,
+				8D4283900F7EFD3500E4B866 /* SensorProtocolEndpoint.h */,
+				8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -603,6 +653,7 @@
 			);
 			dependencies = (
 				8D637B600E04A145008D3EBA /* PBXTargetDependency */,
+				8D4284640F7F081F00E4B866 /* PBXTargetDependency */,
 			);
 			name = MarcoPolo;
 			productInstallPath = "$(HOME)/Applications";
@@ -650,11 +701,13 @@
 				8D5675770E0109CD00EFEBA2 /* Sources */,
 				8D5675780E0109CD00EFEBA2 /* Frameworks */,
 				8D56759E0E010EC200EFEBA2 /* CopyFiles */,
+				8D4283770F7EFAB800E4B866 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				8D637B5E0E04A13E008D3EBA /* PBXTargetDependency */,
+				8D4284620F7F081800E4B866 /* PBXTargetDependency */,
 			);
 			name = SensorTester;
 			productName = SensorTester;
@@ -667,6 +720,7 @@
 			buildPhases = (
 				8D637B890E04A280008D3EBA /* Sources */,
 				8D637B8A0E04A280008D3EBA /* Frameworks */,
+				8D4284050F7F046800E4B866 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -834,7 +888,9 @@
 				8D9053C20F19775E0096466F /* ContextPreferencesPaneController.m in Sources */,
 				8D477E3B0F24635B009CD458 /* ContextNode.m in Sources */,
 				8D4B0C550F4E967A00006BDA /* SensorPreferencesPaneController.m in Sources */,
+				8D33D43F0F69F9C20017C76B /* SensorStub.m in Sources */,
 				8D33D4450F69FAE30017C76B /* SensorLoader.m in Sources */,
+				8D4283920F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,7 +918,9 @@
 				8D5675980E010C9200EFEBA2 /* SensorArrayController.m in Sources */,
 				8D5676600E01EDD300EFEBA2 /* SensorController.m in Sources */,
 				8D96C3CD0E1AF70100287BC1 /* ValueSet.m in Sources */,
+				8D33D4400F69F9C20017C76B /* SensorStub.m in Sources */,
 				8D33D4460F69FAE30017C76B /* SensorLoader.m in Sources */,
+				8D4283930F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -883,6 +941,8 @@
 				8D723CB00F47A20700C78FC3 /* SensorRunner.m in Sources */,
 				8D723CC60F47A43C00C78FC3 /* SensorController.m in Sources */,
 				8D723CF50F47A6A000C78FC3 /* SensorRunnerMonitor.m in Sources */,
+				8D4283940F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */,
+				8D4283D50F7F02D400E4B866 /* SensorLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -929,6 +989,16 @@
 			isa = PBXTargetDependency;
 			target = 8D1B84610E0A79AA00D47563 /* PowerSensor */;
 			targetProxy = 8D1B84830E0A7A4F00D47563 /* PBXContainerItemProxy */;
+		};
+		8D4284620F7F081800E4B866 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D723C9E0F47A16E00C78FC3 /* SensorRunner */;
+			targetProxy = 8D4284610F7F081800E4B866 /* PBXContainerItemProxy */;
+		};
+		8D4284640F7F081F00E4B866 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D723C9E0F47A16E00C78FC3 /* SensorRunner */;
+			targetProxy = 8D4284630F7F081F00E4B866 /* PBXContainerItemProxy */;
 		};
 		8D637B5C0E04A126008D3EBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

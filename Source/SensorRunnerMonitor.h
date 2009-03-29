@@ -7,20 +7,17 @@
 
 #import <Cocoa/Cocoa.h>
 #import "SensorController.h"
+#import "SensorProtocolEndpoint.h"
 
 
 @interface SensorRunnerMonitor : NSObject {
 	@private
 	SensorController *sensorController_;
-	NSPipe *inputPipe_;
-	BOOL finished_;
-	NSMutableData *queuedData_;
+	SensorProtocolEndpoint *endpoint_;
 }
 
 + (SensorRunnerMonitor *)monitorWithSensorController:(SensorController *)sensorController;
 - (id)initWithSensorController:(SensorController *)sensorController;
-
-- (void)setInput:(NSFileHandle *)fileHandle;
 
 - (BOOL)finished;
 

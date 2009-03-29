@@ -39,6 +39,8 @@
 
 - (id)initWithSensor:(NSObject<Sensor> *)sensor
 {
+	if (!sensor)
+		return nil;
 	if (!(self = [super init]))
 		return nil;
 

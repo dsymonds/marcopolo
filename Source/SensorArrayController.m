@@ -6,7 +6,7 @@
 //
 
 #import "SensorArrayController.h"
-#import "SensorController.h"
+#import "SensorStub.h"
 #import "ValueSet.h"
 
 
@@ -21,9 +21,9 @@
 
 - (void)loadSensorFromBundle:(NSBundle *)bundle
 {
-	SensorController *sc = [[SensorController alloc] initWithSensorInBundle:bundle];
-	[self addObject:sc];
-	[sc addObserver:self forKeyPath:@"value" options:0 context:nil];
+	SensorStub *s = [[SensorStub alloc] initWithSensorInBundle:bundle];
+	[self addObject:s];
+	[s addObserver:self forKeyPath:@"value" options:0 context:nil];
 }
 
 - (void)loadSensorsInPath:(NSString *)path
@@ -57,15 +57,15 @@
 	ValueSet *vs = [ValueSet valueSet];
 
 	NSEnumerator *en = [[self arrangedObjects] objectEnumerator];
-	NSObject<Sensor> *sensor;
-	while ((sensor = [en nextObject])) {
-		NSObject *value = [sensor value];
+	SensorStub *s;
+	while ((s = [en nextObject])) {
+		NSObject *value = [s value];
 		if (!value)
 			continue;
-		if (![sensor isMultiValued])
-			[vs setValue:value forSensor:[sensor name]];
+		if (![s isMultiValued])
+			[vs setValue:value forSensor:[s name]];
 		else
-			[vs setValues:(NSArray *) value forSensor:[sensor name]];
+			[vs setValues:(NSArray *) value forSensor:[s name]];
 	}
 
 	return vs;
@@ -76,7 +76,7 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
 			change:(NSDictionary *)change context:(void *)context
 {
-	if ([object isKindOfClass:[SensorController class]] && [keyPath isEqualToString:@"value"]) {
+	if ([object isKindOfClass:[SensorStub class]] && [keyPath isEqualToString:@"value"]) {
 		[self willChangeValueForKey:@"valueSet"];
 		[self didChangeValueForKey:@"valueSet"];
 	} else

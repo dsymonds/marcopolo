@@ -35,7 +35,6 @@ int main(int argc, char *argv[])
 	}
 
 	SensorRunnerMonitor *mon = [SensorRunnerMonitor monitorWithSensorController:sc];
-	[mon setInput:[NSFileHandle fileHandleWithStandardInput]];
 
 	// Main run loop. Runs until the monitor says we're done (probably stdin EOF),
 	// checking every 0.5 seconds.

@@ -11,6 +11,7 @@
 
 @class ValueSet;
 
+// The array of sensor stubs.
 @interface SensorArrayController : NSArrayController {
 }
 
