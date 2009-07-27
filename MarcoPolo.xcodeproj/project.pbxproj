@@ -48,6 +48,7 @@
 		8D35C6280DFE999200AF7A7D /* ContextGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6270DFE999200AF7A7D /* ContextGroup.m */; };
 		8D35C6290DFE999200AF7A7D /* ContextGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6270DFE999200AF7A7D /* ContextGroup.m */; };
 		8D35C6320DFE9C2400AF7A7D /* ContextGroupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */; };
+		8D37896D101D905800D16DAF /* SensorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D33D4440F69FAE30017C76B /* SensorLoader.m */; };
 		8D4283500F7EFA2A00E4B866 /* SensorRunner in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D723C9F0F47A16E00C78FC3 /* SensorRunner */; };
 		8D4283920F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */; };
 		8D4283930F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */; };
@@ -125,14 +126,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D723C9E0F47A16E00C78FC3 /* SensorRunner */;
+			remoteGlobalIDString = 8D723C9E0F47A16E00C78FC3;
 			remoteInfo = SensorRunner;
 		};
 		8D4284630F7F081F00E4B866 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D723C9E0F47A16E00C78FC3 /* SensorRunner */;
+			remoteGlobalIDString = 8D723C9E0F47A16E00C78FC3;
 			remoteInfo = SensorRunner;
 		};
 		8D637B5B0E04A126008D3EBA /* PBXContainerItemProxy */ = {
@@ -974,6 +975,7 @@
 				8D93F7870E50FB0000AE3E1E /* LogicRuleTest.m in Sources */,
 				8D69AD030F1741A70019E8A8 /* ContextCollection.m in Sources */,
 				8D477E3A0F24635B009CD458 /* ContextNode.m in Sources */,
+				8D37896D101D905800D16DAF /* SensorLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
