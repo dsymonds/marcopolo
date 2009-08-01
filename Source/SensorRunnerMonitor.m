@@ -11,7 +11,7 @@
 
 @interface SensorRunnerMonitor (Private)
 
-- (void)processLine:(NSString *)line;
+- (void)processInput:(NSString *)line meta:(BOOL)meta;
 
 @end
 
@@ -41,7 +41,7 @@
 			       options:nil
 			       context:nil];
 
-	[endpoint_ setInputProcessor:self selector:@selector(processLine:)];
+	[endpoint_ setInputProcessor:self selector:@selector(processInput:meta:)];
 	[endpoint_ setInput:[NSFileHandle fileHandleWithStandardInput]];
 	[endpoint_ setOutput:[NSFileHandle fileHandleWithStandardOutput]];
 
@@ -74,15 +74,22 @@
 		[endpoint_ writeLine:started ? @"STARTED" : @"STOPPED"];
 	}
 	if ([keyPath isEqualToString:@"value"]) {
-		NSLog(@"Value changed!");
-		// TODO: Report this!
+		NSObject *value = [sensorController_ value];
+		if (value)
+			[endpoint_ writeValue:value];
 	}
 }
 
 #pragma mark -
 
-- (void)processLine:(NSString *)line
+- (void)processInput:(NSString *)line meta:(BOOL)meta
 {
+	// We should never receive a non-meta input, because we are the sensor.
+	if (!meta) {
+		NSLog(@"Sensor received sensor value; should not happen!");
+		return;
+	}
+
 	//NSLog(@"Processing line: [%@]", line);
 	if ([line isEqualToString:@"START"]) {
 		[sensorController_ setStarted:YES];

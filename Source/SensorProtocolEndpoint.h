@@ -12,7 +12,8 @@
 @interface SensorProtocolEndpoint : NSObject {
 	@private
 	BOOL closed_;
-	NSFileHandle* output_;
+	int valueLength_;  // total length of encoded value if non-zero.
+	NSFileHandle *output_;
 	NSMutableData *queuedData_;
 	NSInvocation *processor_;
 }
@@ -22,11 +23,14 @@
 - (void)setInput:(NSFileHandle *)fileHandle;
 - (void)setOutput:(NSFileHandle *)fileHandle;
 
-// Set the callback for when new lines arrive.
-// The callback will receive a single NSString argument.
+// Set the callback for when new data arrives.
+// The callback will receive two arguments:
+// - an NSObject, and
+// - a BOOL, indicating whether it is a meta value (YES) or a sensor value (NO).
 - (void)setInputProcessor:(id)object selector:(SEL)selector;
 
 - (void)writeLine:(NSString *)line;
+- (void)writeValue:(NSObject *)value;
 
 // Returns whether the input is closed (i.e. EOF is reached).
 - (BOOL)closed;

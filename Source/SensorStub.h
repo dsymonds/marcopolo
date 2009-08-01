@@ -11,6 +11,8 @@
 
 
 // KVO-compliant stub for running a sensor in a separate process.
+// This is the endpoint on the application side.
+// See SensorRunnerMonitor for the sensor side.
 @interface SensorStub : NSObject {
 	@private
 	NSObject<Sensor> *sensor_;

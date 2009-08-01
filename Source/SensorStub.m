@@ -11,7 +11,7 @@
 
 @interface SensorStub (Private)
 
-- (void)processLine:(NSString *)line;
+- (void)processInput:(NSObject *)object meta:(BOOL)meta;
 
 @end
 
@@ -47,7 +47,7 @@
 	[task_ setStandardOutput:[NSPipe pipe]];
 
 	endpoint_ = [[SensorProtocolEndpoint alloc] init];
-	[endpoint_ setInputProcessor:self selector:@selector(processLine:)];
+	[endpoint_ setInputProcessor:self selector:@selector(processInput:meta:)];
 	[endpoint_ setInput:[[task_ standardOutput] fileHandleForReading]];
 	[endpoint_ setOutput:[[task_ standardInput] fileHandleForWriting]];
 
@@ -102,13 +102,16 @@
 
 #pragma mark -
 
-- (void)processLine:(NSString *)line
+- (void)processInput:(NSObject *)object meta:(BOOL)meta
 {
-	NSLog(@"Need to process in stub: [%@]", line);
-	if ([line isEqualToString:@"STARTED"] || [line isEqualToString:@"STOPPED"]) {
-		[self willChangeValueForKey:@"started"];
-		started_ = [line isEqualToString:@"STARTED"];
-		[self didChangeValueForKey:@"started"];
+	NSLog(@"Need to process in stub: [%@] (meta=%d)", object, meta);
+	if (meta) {
+		NSString *line = (NSString *) object;
+		if ([line isEqualToString:@"STARTED"] || [line isEqualToString:@"STOPPED"]) {
+			[self willChangeValueForKey:@"started"];
+			started_ = [line isEqualToString:@"STARTED"];
+			[self didChangeValueForKey:@"started"];
+		}
 	}
 }
 

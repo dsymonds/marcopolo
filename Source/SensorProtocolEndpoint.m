@@ -10,7 +10,7 @@
 
 @interface SensorProtocolEndpoint (Private)
 
-- (void)processLine:(NSString *)line;
+- (void)processInput:(NSObject *)object meta:(BOOL)meta;
 
 @end
 
@@ -24,6 +24,7 @@
 		return nil;
 
 	closed_ = NO;
+	valueLength_ = 0;
 	output_ = nil;
 	queuedData_ = [[NSMutableData alloc] init];
 	processor_ = nil;
@@ -79,7 +80,72 @@
 	[output_ writeData:data];
 }
 
+- (void)writeValue:(NSObject *)value
+{
+	NSData *objData = [NSKeyedArchiver archivedDataWithRootObject:value];
+	if (!objData) {
+		NSLog(@"%@: Sensor value could not be archived!", [self class]);
+	}
+	NSMutableData *data = [NSMutableData dataWithData:
+			       [[NSString stringWithFormat:@"VALUE %d\n", [objData length]]
+				dataUsingEncoding:NSUTF8StringEncoding]];
+	[data appendData:objData];
+	[output_ writeData:data];
+}
+
 #pragma mark -
+
+- (BOOL)handleSensorValue
+{
+	if ([queuedData_ length] < valueLength_)
+		return NO;
+
+	NSRange range = NSMakeRange(0, valueLength_);
+	NSData *objData = [queuedData_ subdataWithRange:range];
+	[queuedData_ replaceBytesInRange:range withBytes:NULL length:0];
+	valueLength_ = 0;
+
+	NSObject *obj = [NSKeyedUnarchiver unarchiveObjectWithData:objData];
+	if (obj) {
+		[self processInput:obj meta:NO];
+	} else {
+		NSLog(@"Invalid sensor value received!");
+	}
+	return YES;
+}
+
+- (BOOL)handleMetaLine
+{
+	if ([queuedData_ length] == 0)
+		return NO;
+
+	// Look for first '\n' character. We can't convert the whole lot into an NSString
+	// because queuedData_ could be holding sensor values.
+	const unsigned char *p = [queuedData_ bytes];
+	int nl;
+	for (nl = 0; nl < [queuedData_ length]; ++nl) {
+		if (*p++ == '\n')
+			break;
+	}
+	if (nl >= [queuedData_ length])
+		return NO;  // no '\n' found.
+
+	NSData *lineData = [queuedData_ subdataWithRange:NSMakeRange(0, nl)];
+	[queuedData_ replaceBytesInRange:NSMakeRange(0, nl + 1) withBytes:NULL length:0];
+
+	NSString *line = [[[NSString alloc] initWithData:lineData
+						encoding:NSUTF8StringEncoding] autorelease];
+	if (!line) {
+		NSLog(@"Decoding failed? [%@]", lineData);
+		return YES;
+	}
+	if ([line hasPrefix:@"VALUE "]) {
+		valueLength_ = [[line substringFromIndex:6] intValue];
+	} else {
+		[self processInput:line meta:YES];
+	}
+	return YES;
+}
 
 - (void)handleMoreData:(NSNotification *)notification
 {
@@ -91,27 +157,18 @@
 	}
 	[queuedData_ appendData:data];
 
-	// Process complete lines
-	while ([queuedData_ length] > 0) {
-		NSString *str = [[[NSString alloc] initWithData:queuedData_
-						       encoding:NSUTF8StringEncoding] autorelease];
-		if (!str)
-			break;
-		unsigned nlIndex = [str rangeOfString:@"\n"].location;
-		if (nlIndex != NSNotFound) {
-			NSString *line = [str substringToIndex:nlIndex];
-			[self processLine:line];
-			str = [str substringFromIndex:nlIndex + 1];
-			[queuedData_ setData:[str dataUsingEncoding:NSUTF8StringEncoding]];
-		}
+	BOOL more = YES;
+	while (more) {
+		more = (valueLength_ > 0) ? [self handleSensorValue] : [self handleMetaLine];
 	}
 
 	[fh waitForDataInBackgroundAndNotify];
 }
 
-- (void)processLine:(NSString *)line
+- (void)processInput:(NSObject *)object meta:(BOOL)meta
 {
-	[processor_ setArgument:&line atIndex:2];
+	[processor_ setArgument:&object atIndex:2];
+	[processor_ setArgument:&meta atIndex:3];
 	[processor_ invoke];
 }
 

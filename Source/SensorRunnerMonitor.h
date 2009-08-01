@@ -10,6 +10,8 @@
 #import "SensorProtocolEndpoint.h"
 
 
+// This is the endpoint on the sensor side.
+// See SensorStub for the application side.
 @interface SensorRunnerMonitor : NSObject {
 	@private
 	SensorController *sensorController_;

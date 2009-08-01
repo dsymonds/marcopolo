@@ -471,6 +471,8 @@
 				8D723CF40F47A6A000C78FC3 /* SensorRunnerMonitor.m */,
 				8D33D4430F69FAE30017C76B /* SensorLoader.h */,
 				8D33D4440F69FAE30017C76B /* SensorLoader.m */,
+				8D4283900F7EFD3500E4B866 /* SensorProtocolEndpoint.h */,
+				8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -616,8 +618,6 @@
 				8D9053C10F19775E0096466F /* ContextPreferencesPaneController.m */,
 				8D4B0C530F4E967A00006BDA /* SensorPreferencesPaneController.h */,
 				8D4B0C540F4E967A00006BDA /* SensorPreferencesPaneController.m */,
-				8D4283900F7EFD3500E4B866 /* SensorProtocolEndpoint.h */,
-				8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
