@@ -19,6 +19,7 @@
 	NSTask *task_;
 	SensorProtocolEndpoint *endpoint_;
 	BOOL started_;
+	NSObject *value_;
 }
 
 + (id)sensorStubWithSensorInBundle:(NSBundle *)bundle;

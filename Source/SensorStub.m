@@ -19,6 +19,11 @@
 
 @implementation SensorStub
 
++ (void)initialize
+{
+	[self setKeys:[NSArray arrayWithObject:@"value"] triggerChangeNotificationsForDependentKey:@"valueSummary"];
+}
+
 + (id)sensorStubWithSensorInBundle:(NSBundle *)bundle
 {
 	return [[[self alloc] initWithSensorInBundle:bundle] autorelease];
@@ -31,6 +36,7 @@
 
 	sensor_ = [[SensorLoader sensorFromBundle:bundle] retain];
 	started_ = NO;
+	value_ = nil;
 
 	// Find the sensor runner
 	NSString *sensorRunnerPath = [[NSBundle mainBundle] pathForAuxiliaryExecutable:@"SensorRunner"];
@@ -64,6 +70,7 @@
 
 	[sensor_ release];
 	[endpoint_ release];
+	[value_ release];
 	[super dealloc];
 }
 
@@ -91,8 +98,7 @@
 
 - (NSObject *)value
 {
-	// TODO
-	return nil;
+	return value_;
 }
 
 - (NSObject *)valueSummary
@@ -104,14 +110,22 @@
 
 - (void)processInput:(NSObject *)object meta:(BOOL)meta
 {
-	NSLog(@"Need to process in stub: [%@] (meta=%d)", object, meta);
 	if (meta) {
 		NSString *line = (NSString *) object;
-		if ([line isEqualToString:@"STARTED"] || [line isEqualToString:@"STOPPED"]) {
+		BOOL started = [line isEqualToString:@"STARTED"];
+		BOOL stopped = [line isEqualToString:@"STOPPED"];
+		if (started || stopped) {
 			[self willChangeValueForKey:@"started"];
-			started_ = [line isEqualToString:@"STARTED"];
+			started_ = started;
 			[self didChangeValueForKey:@"started"];
+			if (stopped)
+				[self processInput:nil meta:NO];
 		}
+	} else {
+		[self willChangeValueForKey:@"value"];
+		[value_ autorelease];
+		value_ = [object retain];
+		[self didChangeValueForKey:@"value"];
 	}
 }
 
