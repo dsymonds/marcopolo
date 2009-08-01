@@ -13,6 +13,7 @@
 			buildPhases = (
 			);
 			dependencies = (
+				8D4FE8A210246F7000DD9761 /* PBXTargetDependency */,
 				8D1B84840E0A7A4F00D47563 /* PBXTargetDependency */,
 				8D0EACD60E07ADB6004ABEF2 /* PBXTargetDependency */,
 				8D637B930E04A2C7008D3EBA /* PBXTargetDependency */,
@@ -61,6 +62,8 @@
 		8D4B0C550F4E967A00006BDA /* SensorPreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4B0C540F4E967A00006BDA /* SensorPreferencesPaneController.m */; };
 		8D4B0C5E0F4E9CD900006BDA /* SensorsPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D4B0C5D0F4E9CD900006BDA /* SensorsPrefs.tiff */; };
 		8D4FE8431024600F00DD9761 /* SensorTesterTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4FE8421024600F00DD9761 /* SensorTesterTableView.m */; };
+		8D4FE8A010246F5200DD9761 /* RunningApplicationSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4FE89F10246F5200DD9761 /* RunningApplicationSensor.m */; };
+		8D4FE8AE10246F9300DD9761 /* RunningApplicationSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D4FE88E10246E8900DD9761 /* RunningApplicationSensor.sensor */; };
 		8D56753C0E0105AC00EFEBA2 /* TimeOfDaySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */; };
 		8D56758C0E010AAD00EFEBA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		8D5675920E010AE800EFEBA2 /* SensorTester.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5675910E010AE800EFEBA2 /* SensorTester.nib */; };
@@ -137,6 +140,13 @@
 			remoteGlobalIDString = 8D723C9E0F47A16E00C78FC3;
 			remoteInfo = SensorRunner;
 		};
+		8D4FE8A110246F7000DD9761 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D4FE88D10246E8800DD9761 /* RunningApplicationSensor */;
+			remoteInfo = RunningApplicationSensor;
+		};
 		8D637B5B0E04A126008D3EBA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -201,6 +211,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				8D4FE8AE10246F9300DD9761 /* RunningApplicationSensor.sensor in CopyFiles */,
 				8DA6081F0E1D942A00066EA8 /* IPSensor.sensor in CopyFiles */,
 				8D1B848C0E0A7A6700D47563 /* PowerSensor.sensor in CopyFiles */,
 				8D0EACFE0E07AEA2004ABEF2 /* LightSensor.sensor in CopyFiles */,
@@ -266,6 +277,10 @@
 		8D4B0C5D0F4E9CD900006BDA /* SensorsPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = SensorsPrefs.tiff; path = Resources/SensorsPrefs.tiff; sourceTree = "<group>"; };
 		8D4FE8411024600F00DD9761 /* SensorTesterTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorTesterTableView.h; path = Source/SensorTesterTableView.h; sourceTree = "<group>"; };
 		8D4FE8421024600F00DD9761 /* SensorTesterTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorTesterTableView.m; path = Source/SensorTesterTableView.m; sourceTree = "<group>"; };
+		8D4FE88E10246E8900DD9761 /* RunningApplicationSensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunningApplicationSensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D4FE88F10246E8900DD9761 /* RunningApplicationSensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RunningApplicationSensor-Info.plist"; path = "Sensors/RunningApplicationSensor/RunningApplicationSensor-Info.plist"; sourceTree = "<group>"; };
+		8D4FE89E10246F5200DD9761 /* RunningApplicationSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RunningApplicationSensor.h; path = Sensors/RunningApplicationSensor/RunningApplicationSensor.h; sourceTree = "<group>"; };
+		8D4FE89F10246F5200DD9761 /* RunningApplicationSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunningApplicationSensor.m; path = Sensors/RunningApplicationSensor/RunningApplicationSensor.m; sourceTree = "<group>"; };
 		8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeOfDaySensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D56752E0E01055E00EFEBA2 /* TimeOfDaySensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TimeOfDaySensor-Info.plist"; path = "Sensors/TimeOfDaySensor/TimeOfDaySensor-Info.plist"; sourceTree = "<group>"; };
 		8D56753A0E0105AC00EFEBA2 /* TimeOfDaySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeOfDaySensor.h; path = Sensors/TimeOfDaySensor/TimeOfDaySensor.h; sourceTree = "<group>"; };
@@ -359,6 +374,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D4FE88C10246E8800DD9761 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D56752B0E01055E00EFEBA2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,6 +468,7 @@
 				8D1B84620E0A79AA00D47563 /* PowerSensor.sensor */,
 				8DA607F60E1D931A00066EA8 /* IPSensor.sensor */,
 				8D723C9F0F47A16E00C78FC3 /* SensorRunner */,
+				8D4FE88E10246E8900DD9761 /* RunningApplicationSensor.sensor */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -560,6 +583,7 @@
 		8D5675390E01058100EFEBA2 /* Sensors */ = {
 			isa = PBXGroup;
 			children = (
+				8D4FE88F10246E8900DD9761 /* RunningApplicationSensor-Info.plist */,
 				8DA607F70E1D931A00066EA8 /* IPSensor-Info.plist */,
 				8D1B847D0E0A7A1E00D47563 /* PowerSensor-Info.plist */,
 				8D1B847E0E0A7A1E00D47563 /* PowerSensor.h */,
@@ -581,6 +605,8 @@
 				8DA7FE180E064F6F00248CF8 /* MockSensor.m */,
 				8DA608070E1D93C600066EA8 /* IPSensor.h */,
 				8DA608080E1D93C600066EA8 /* IPSensor.m */,
+				8D4FE89E10246F5200DD9761 /* RunningApplicationSensor.h */,
+				8D4FE89F10246F5200DD9761 /* RunningApplicationSensor.m */,
 			);
 			name = Sensors;
 			sourceTree = "<group>";
@@ -681,6 +707,23 @@
 			name = PowerSensor;
 			productName = PowerSensor;
 			productReference = 8D1B84620E0A79AA00D47563 /* PowerSensor.sensor */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D4FE88D10246E8800DD9761 /* RunningApplicationSensor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D4FE89210246E8900DD9761 /* Build configuration list for PBXNativeTarget "RunningApplicationSensor" */;
+			buildPhases = (
+				8D4FE88A10246E8800DD9761 /* Resources */,
+				8D4FE88B10246E8800DD9761 /* Sources */,
+				8D4FE88C10246E8800DD9761 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RunningApplicationSensor;
+			productName = RunningApplicationSensor;
+			productReference = 8D4FE88E10246E8900DD9761 /* RunningApplicationSensor.sensor */;
 			productType = "com.apple.product-type.bundle";
 		};
 		8D56752C0E01055E00EFEBA2 /* TimeOfDaySensor */ = {
@@ -808,6 +851,7 @@
 				8D56752C0E01055E00EFEBA2 /* TimeOfDaySensor */,
 				8D637B8B0E04A280008D3EBA /* USBSensor */,
 				8DA607F50E1D931A00066EA8 /* IPSensor */,
+				8D4FE88D10246E8800DD9761 /* RunningApplicationSensor */,
 				8D723C9E0F47A16E00C78FC3 /* SensorRunner */,
 			);
 		};
@@ -829,6 +873,13 @@
 				8D93600D0F14A11700D3990A /* plus-arrow.png in Resources */,
 				8D4B0C4F0F4E961100006BDA /* SensorsPrefs.nib in Resources */,
 				8D4B0C5E0F4E9CD900006BDA /* SensorsPrefs.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D4FE88A10246E8800DD9761 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,6 +956,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1B84810E0A7A1E00D47563 /* PowerSensor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D4FE88B10246E8800DD9761 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D4FE8A010246F5200DD9761 /* RunningApplicationSensor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,6 +1066,11 @@
 			isa = PBXTargetDependency;
 			target = 8D723C9E0F47A16E00C78FC3 /* SensorRunner */;
 			targetProxy = 8D4284630F7F081F00E4B866 /* PBXContainerItemProxy */;
+		};
+		8D4FE8A210246F7000DD9761 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D4FE88D10246E8800DD9761 /* RunningApplicationSensor */;
+			targetProxy = 8D4FE8A110246F7000DD9761 /* PBXContainerItemProxy */;
 		};
 		8D637B5C0E04A126008D3EBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1139,6 +1203,56 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = PowerSensor;
+				WRAPPER_EXTENSION = sensor;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		8D4FE89010246E8900DD9761 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Sensors/RunningApplicationSensor/RunningApplicationSensor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = RunningApplicationSensor;
+				WRAPPER_EXTENSION = sensor;
+			};
+			name = Debug;
+		};
+		8D4FE89110246E8900DD9761 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Sensors/RunningApplicationSensor/RunningApplicationSensor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = RunningApplicationSensor;
 				WRAPPER_EXTENSION = sensor;
 				ZERO_LINK = NO;
 			};
@@ -1560,6 +1674,15 @@
 			buildConfigurations = (
 				8D1B84640E0A79AB00D47563 /* Debug */,
 				8D1B84650E0A79AB00D47563 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D4FE89210246E8900DD9761 /* Build configuration list for PBXNativeTarget "RunningApplicationSensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D4FE89010246E8900DD9761 /* Debug */,
+				8D4FE89110246E8900DD9761 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
