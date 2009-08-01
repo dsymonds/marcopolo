@@ -86,14 +86,16 @@
 	return [sensor_ isMultiValued];
 }
 
-- (BOOL)started
+- (BOOL)start
 {
-	return started_;
+	[endpoint_ writeLine:@"START"];
+	return YES;
 }
 
-- (void)setStarted:(BOOL)start
+- (BOOL)stop
 {
-	[endpoint_ writeLine:start ? @"START" : @"STOP"];
+	[endpoint_ writeLine:@"STOP"];
+	return YES;
 }
 
 - (NSObject *)value

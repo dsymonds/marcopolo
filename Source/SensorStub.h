@@ -13,7 +13,7 @@
 // KVO-compliant stub for running a sensor in a separate process.
 // This is the endpoint on the application side.
 // See SensorRunnerMonitor for the sensor side.
-@interface SensorStub : NSObject {
+@interface SensorStub : NSObject<Sensor> {
 	@private
 	NSObject<Sensor> *sensor_;
 	NSTask *task_;
@@ -25,21 +25,13 @@
 + (id)sensorStubWithSensorInBundle:(NSBundle *)bundle;
 - (id)initWithSensorInBundle:(NSBundle *)bundle;
 
-// Binding: name
 - (NSString *)name;
 
 - (BOOL)isMultiValued;
 
-// Binding: started
-- (BOOL)started;
-- (void)setStarted:(BOOL)start;
+- (BOOL)start;
+- (BOOL)stop;
 
-// Binding: value
 - (NSObject *)value;
-
-// Binding: value summary
-// This is either the value's description (if it's single-valued),
-// or the number of values (if it's multi-valued).
-- (NSObject *)valueSummary;
 
 @end

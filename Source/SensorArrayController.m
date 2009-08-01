@@ -6,6 +6,7 @@
 //
 
 #import "SensorArrayController.h"
+#import "SensorController.h"
 #import "SensorStub.h"
 #import "ValueSet.h"
 
@@ -22,8 +23,9 @@
 - (void)loadSensorFromBundle:(NSBundle *)bundle
 {
 	SensorStub *s = [[SensorStub alloc] initWithSensorInBundle:bundle];
-	[self addObject:s];
-	[s addObserver:self forKeyPath:@"value" options:0 context:nil];
+	SensorController *sc = [SensorController sensorControllerWithSensor:s];
+	[self addObject:sc];
+	[sc addObserver:self forKeyPath:@"value" options:0 context:nil];
 }
 
 - (void)loadSensorsInPath:(NSString *)path
