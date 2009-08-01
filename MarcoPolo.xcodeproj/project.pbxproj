@@ -60,6 +60,7 @@
 		8D4B0C4F0F4E961100006BDA /* SensorsPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4B0C4E0F4E961100006BDA /* SensorsPrefs.nib */; };
 		8D4B0C550F4E967A00006BDA /* SensorPreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4B0C540F4E967A00006BDA /* SensorPreferencesPaneController.m */; };
 		8D4B0C5E0F4E9CD900006BDA /* SensorsPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D4B0C5D0F4E9CD900006BDA /* SensorsPrefs.tiff */; };
+		8D4FE8431024600F00DD9761 /* SensorTesterTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4FE8421024600F00DD9761 /* SensorTesterTableView.m */; };
 		8D56753C0E0105AC00EFEBA2 /* TimeOfDaySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */; };
 		8D56758C0E010AAD00EFEBA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		8D5675920E010AE800EFEBA2 /* SensorTester.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D5675910E010AE800EFEBA2 /* SensorTester.nib */; };
@@ -263,6 +264,8 @@
 		8D4B0C530F4E967A00006BDA /* SensorPreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorPreferencesPaneController.h; path = Source/SensorPreferencesPaneController.h; sourceTree = "<group>"; };
 		8D4B0C540F4E967A00006BDA /* SensorPreferencesPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorPreferencesPaneController.m; path = Source/SensorPreferencesPaneController.m; sourceTree = "<group>"; };
 		8D4B0C5D0F4E9CD900006BDA /* SensorsPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = SensorsPrefs.tiff; path = Resources/SensorsPrefs.tiff; sourceTree = "<group>"; };
+		8D4FE8411024600F00DD9761 /* SensorTesterTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorTesterTableView.h; path = Source/SensorTesterTableView.h; sourceTree = "<group>"; };
+		8D4FE8421024600F00DD9761 /* SensorTesterTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorTesterTableView.m; path = Source/SensorTesterTableView.m; sourceTree = "<group>"; };
 		8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeOfDaySensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D56752E0E01055E00EFEBA2 /* TimeOfDaySensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TimeOfDaySensor-Info.plist"; path = "Sensors/TimeOfDaySensor/TimeOfDaySensor-Info.plist"; sourceTree = "<group>"; };
 		8D56753A0E0105AC00EFEBA2 /* TimeOfDaySensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeOfDaySensor.h; path = Sensors/TimeOfDaySensor/TimeOfDaySensor.h; sourceTree = "<group>"; };
@@ -585,6 +588,8 @@
 		8D7D5A270E94BDF5005279AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8D4FE8411024600F00DD9761 /* SensorTesterTableView.h */,
+				8D4FE8421024600F00DD9761 /* SensorTesterTableView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -922,6 +927,7 @@
 				8D33D4400F69F9C20017C76B /* SensorStub.m in Sources */,
 				8D33D4460F69FAE30017C76B /* SensorLoader.m in Sources */,
 				8D4283930F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */,
+				8D4FE8431024600F00DD9761 /* SensorTesterTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

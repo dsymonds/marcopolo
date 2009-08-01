@@ -6,12 +6,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "Sensor.h"
 
 
 @class ValueSet;
 
-// The array of sensor stubs.
+// The array of sensor stubs, each wrapped in a SensorController.
 @interface SensorArrayController : NSArrayController {
 }
 
