@@ -13,6 +13,7 @@
 			buildPhases = (
 			);
 			dependencies = (
+				8D2855CA102554AB00A7CDB9 /* PBXTargetDependency */,
 				8D4FE8A210246F7000DD9761 /* PBXTargetDependency */,
 				8D1B84840E0A7A4F00D47563 /* PBXTargetDependency */,
 				8D0EACD60E07ADB6004ABEF2 /* PBXTargetDependency */,
@@ -36,6 +37,8 @@
 		8D1B84810E0A7A1E00D47563 /* PowerSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D1B847F0E0A7A1E00D47563 /* PowerSensor.m */; };
 		8D1B848C0E0A7A6700D47563 /* PowerSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1B84620E0A79AA00D47563 /* PowerSensor.sensor */; };
 		8D1B849E0E0A7DBE00D47563 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D637BAB0E04A61C008D3EBA /* IOKit.framework */; };
+		8D2855C71025546400A7CDB9 /* CrashSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2855C61025546400A7CDB9 /* CrashSensor.m */; };
+		8D2855DB102554DC00A7CDB9 /* CrashSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D2855A61025534200A7CDB9 /* CrashSensor.sensor */; };
 		8D2CEBA30E92F8BB00E1895A /* RulesPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */; };
 		8D2CEBA50E92F9AD00E1895A /* ContextsPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA40E92F9AD00E1895A /* ContextsPrefs.nib */; };
 		8D2CEBA70E92F9D600E1895A /* ContextsPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D2CEBA60E92F9D600E1895A /* ContextsPrefs.tiff */; };
@@ -126,6 +129,13 @@
 			remoteGlobalIDString = 8D1B84610E0A79AA00D47563;
 			remoteInfo = PowerSensor;
 		};
+		8D2855C9102554AB00A7CDB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D2855A51025534200A7CDB9;
+			remoteInfo = CrashSensor;
+		};
 		8D4284610F7F081800E4B866 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -144,7 +154,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D4FE88D10246E8800DD9761 /* RunningApplicationSensor */;
+			remoteGlobalIDString = 8D4FE88D10246E8800DD9761;
 			remoteInfo = RunningApplicationSensor;
 		};
 		8D637B5B0E04A126008D3EBA /* PBXContainerItemProxy */ = {
@@ -211,6 +221,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				8D2855DB102554DC00A7CDB9 /* CrashSensor.sensor in CopyFiles */,
 				8D4FE8AE10246F9300DD9761 /* RunningApplicationSensor.sensor in CopyFiles */,
 				8DA6081F0E1D942A00066EA8 /* IPSensor.sensor in CopyFiles */,
 				8D1B848C0E0A7A6700D47563 /* PowerSensor.sensor in CopyFiles */,
@@ -252,6 +263,10 @@
 		8D1B847E0E0A7A1E00D47563 /* PowerSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PowerSensor.h; path = Sensors/PowerSensor/PowerSensor.h; sourceTree = "<group>"; };
 		8D1B847F0E0A7A1E00D47563 /* PowerSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PowerSensor.m; path = Sensors/PowerSensor/PowerSensor.m; sourceTree = "<group>"; };
 		8D2353A80F1DD0D900A17EEA /* TestHelpers.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = TestHelpers.h; path = Source/TestHelpers.h; sourceTree = "<group>"; };
+		8D2855A61025534200A7CDB9 /* CrashSensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrashSensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D2855A71025534200A7CDB9 /* CrashSensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "CrashSensor-Info.plist"; path = "Sensors/CrashSensor/CrashSensor-Info.plist"; sourceTree = "<group>"; };
+		8D2855C51025546400A7CDB9 /* CrashSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CrashSensor.h; path = Sensors/CrashSensor/CrashSensor.h; sourceTree = "<group>"; };
+		8D2855C61025546400A7CDB9 /* CrashSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CrashSensor.m; path = Sensors/CrashSensor/CrashSensor.m; sourceTree = "<group>"; };
 		8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = RulesPrefs.tiff; path = Resources/RulesPrefs.tiff; sourceTree = "<group>"; };
 		8D2CEBA40E92F9AD00E1895A /* ContextsPrefs.nib */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = ContextsPrefs.nib; path = Resources/ContextsPrefs.nib; sourceTree = "<group>"; };
 		8D2CEBA60E92F9D600E1895A /* ContextsPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = ContextsPrefs.tiff; path = Resources/ContextsPrefs.tiff; sourceTree = "<group>"; };
@@ -374,6 +389,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8D2855A41025534200A7CDB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D4FE88C10246E8800DD9761 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -469,6 +491,7 @@
 				8DA607F60E1D931A00066EA8 /* IPSensor.sensor */,
 				8D723C9F0F47A16E00C78FC3 /* SensorRunner */,
 				8D4FE88E10246E8900DD9761 /* RunningApplicationSensor.sensor */,
+				8D2855A61025534200A7CDB9 /* CrashSensor.sensor */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -583,6 +606,7 @@
 		8D5675390E01058100EFEBA2 /* Sensors */ = {
 			isa = PBXGroup;
 			children = (
+				8D2855A71025534200A7CDB9 /* CrashSensor-Info.plist */,
 				8D4FE88F10246E8900DD9761 /* RunningApplicationSensor-Info.plist */,
 				8DA607F70E1D931A00066EA8 /* IPSensor-Info.plist */,
 				8D1B847D0E0A7A1E00D47563 /* PowerSensor-Info.plist */,
@@ -607,6 +631,8 @@
 				8DA608080E1D93C600066EA8 /* IPSensor.m */,
 				8D4FE89E10246F5200DD9761 /* RunningApplicationSensor.h */,
 				8D4FE89F10246F5200DD9761 /* RunningApplicationSensor.m */,
+				8D2855C51025546400A7CDB9 /* CrashSensor.h */,
+				8D2855C61025546400A7CDB9 /* CrashSensor.m */,
 			);
 			name = Sensors;
 			sourceTree = "<group>";
@@ -707,6 +733,23 @@
 			name = PowerSensor;
 			productName = PowerSensor;
 			productReference = 8D1B84620E0A79AA00D47563 /* PowerSensor.sensor */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8D2855A51025534200A7CDB9 /* CrashSensor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D2855AA1025534300A7CDB9 /* Build configuration list for PBXNativeTarget "CrashSensor" */;
+			buildPhases = (
+				8D2855A21025534200A7CDB9 /* Resources */,
+				8D2855A31025534200A7CDB9 /* Sources */,
+				8D2855A41025534200A7CDB9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrashSensor;
+			productName = CrashSensor;
+			productReference = 8D2855A61025534200A7CDB9 /* CrashSensor.sensor */;
 			productType = "com.apple.product-type.bundle";
 		};
 		8D4FE88D10246E8800DD9761 /* RunningApplicationSensor */ = {
@@ -851,6 +894,7 @@
 				8D56752C0E01055E00EFEBA2 /* TimeOfDaySensor */,
 				8D637B8B0E04A280008D3EBA /* USBSensor */,
 				8DA607F50E1D931A00066EA8 /* IPSensor */,
+				8D2855A51025534200A7CDB9 /* CrashSensor */,
 				8D4FE88D10246E8800DD9761 /* RunningApplicationSensor */,
 				8D723C9E0F47A16E00C78FC3 /* SensorRunner */,
 			);
@@ -873,6 +917,13 @@
 				8D93600D0F14A11700D3990A /* plus-arrow.png in Resources */,
 				8D4B0C4F0F4E961100006BDA /* SensorsPrefs.nib in Resources */,
 				8D4B0C5E0F4E9CD900006BDA /* SensorsPrefs.tiff in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D2855A21025534200A7CDB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -956,6 +1007,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1B84810E0A7A1E00D47563 /* PowerSensor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D2855A31025534200A7CDB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D2855C71025546400A7CDB9 /* CrashSensor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1056,6 +1115,11 @@
 			isa = PBXTargetDependency;
 			target = 8D1B84610E0A79AA00D47563 /* PowerSensor */;
 			targetProxy = 8D1B84830E0A7A4F00D47563 /* PBXContainerItemProxy */;
+		};
+		8D2855CA102554AB00A7CDB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D2855A51025534200A7CDB9 /* CrashSensor */;
+			targetProxy = 8D2855C9102554AB00A7CDB9 /* PBXContainerItemProxy */;
 		};
 		8D4284620F7F081800E4B866 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1203,6 +1267,56 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = PowerSensor;
+				WRAPPER_EXTENSION = sensor;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		8D2855A81025534300A7CDB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Sensors/CrashSensor/CrashSensor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = CrashSensor;
+				WRAPPER_EXTENSION = sensor;
+			};
+			name = Debug;
+		};
+		8D2855A91025534300A7CDB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Sensors/CrashSensor/CrashSensor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = CrashSensor;
 				WRAPPER_EXTENSION = sensor;
 				ZERO_LINK = NO;
 			};
@@ -1674,6 +1788,15 @@
 			buildConfigurations = (
 				8D1B84640E0A79AB00D47563 /* Debug */,
 				8D1B84650E0A79AB00D47563 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D2855AA1025534300A7CDB9 /* Build configuration list for PBXNativeTarget "CrashSensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D2855A81025534300A7CDB9 /* Debug */,
+				8D2855A91025534300A7CDB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

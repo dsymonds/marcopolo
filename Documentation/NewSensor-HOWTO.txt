@@ -10,6 +10,7 @@ Adding a new sensor
     - Wrapper Extension: "sensor"
   - Properties tab:
     - Identifier: "au.id.symonds.MarcoPolo.FooSensor"
+    - Principal Class: "FooSensor"
 * Move FooSensor-Info.plist file into Sensors group
 * Edit FooSensor-Info.plist
   - CFBundleDevelopmentRegion: "en"
