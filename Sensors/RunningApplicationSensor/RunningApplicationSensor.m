@@ -84,17 +84,10 @@
 - (NSObject *)value
 {
 	[lock_ lock];
-
-	NSMutableArray *array = [NSMutableArray arrayWithCapacity:[apps_ count]];
-	NSEnumerator *en = [apps_ objectEnumerator];
-	NSDictionary *app;
-	while ((app = [en nextObject])) {
-		[array addObject:app];
-	}
-
+	NSArray *apps = [[apps_ copy] autorelease];
 	[lock_ unlock];
 
-	return array;
+	return apps;
 }
 
 - (void)update

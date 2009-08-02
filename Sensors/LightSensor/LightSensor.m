@@ -72,7 +72,6 @@
 - (void)stop
 {
 	[timer_ invalidate];
-	[timer_ release];
 	timer_ = nil;
 
 	[self willChangeValueForKey:@"value"];
@@ -89,35 +88,35 @@
 {
 	// Read from the sensor device - index 0, 0 inputs, 2 outputs
 	int l, r;
+	double v = 0;
 	if (IOConnectMethodScalarIScalarO(ioPort_, 0, 0, 2, &l, &r) == KERN_SUCCESS) {
-		[self willChangeValueForKey:@"value"];
-		[lock_ lock];
-
 		// Average of left and right
 		static const double kMaxCombinedLightValue = 4096.0;
-		value_ = (l + r) / kMaxCombinedLightValue;
-
-		[lock_ unlock];
-		[self didChangeValueForKey:@"value"];
+		v = (l + r) / kMaxCombinedLightValue;
 	}
 
 	// Schedule the timer for the next tick.
-	[timer_ autorelease];
-	timer_ = [[NSTimer scheduledTimerWithTimeInterval:LIGHT_UPDATE_INTERVAL
-						   target:self
-						 selector:@selector(tick:)
-						 userInfo:nil
-						  repeats:NO] retain];
+	timer_ = [NSTimer scheduledTimerWithTimeInterval:LIGHT_UPDATE_INTERVAL
+						  target:self
+						selector:@selector(tick:)
+						userInfo:nil
+						 repeats:NO];
+
+	[self willChangeValueForKey:@"value"];
+	[lock_ lock];
+	value_ = v;
+	[lock_ unlock];
+	[self didChangeValueForKey:@"value"];
 }
 
 - (NSObject *)value
 {
+	if (![self running])
+		return nil;
+
 	[lock_ lock];
 	double v = value_;
 	[lock_ unlock];
-
-	if (v < 0)
-		return nil;  // we're not running!
 
 	return [NSDictionary dictionaryWithObjectsAndKeys:
 		[NSNumber numberWithDouble:v], @"data",
