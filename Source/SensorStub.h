@@ -16,6 +16,8 @@
 @interface SensorStub : NSObject<Sensor> {
 	@private
 	NSObject<Sensor> *sensor_;
+	NSString *sensorRunnerPath_, *bundlePath_;
+
 	NSTask *task_;
 	SensorProtocolEndpoint *endpoint_;
 	BOOL running_;

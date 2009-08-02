@@ -39,45 +39,24 @@
 	value_ = nil;
 
 	// Find the sensor runner
-	NSString *sensorRunnerPath = [[NSBundle mainBundle] pathForAuxiliaryExecutable:@"SensorRunner"];
-	if (!sensorRunnerPath) {
+	sensorRunnerPath_ = [[[NSBundle mainBundle] pathForAuxiliaryExecutable:@"SensorRunner"] copy];
+	if (!sensorRunnerPath_) {
 		NSLog(@"Argh! Couldn't find SensorRunner!");
 		return nil;
 	}
-
-	// Start sensor in a separate task
-	// TODO: Move this to -start
-	task_ = [[NSTask alloc] init];
-	[task_ setLaunchPath:sensorRunnerPath];
-	[task_ setArguments:[NSArray arrayWithObject:[bundle bundlePath]]];
-	[task_ setStandardInput:[NSPipe pipe]];
-	[task_ setStandardOutput:[NSPipe pipe]];
-
-	endpoint_ = [[SensorProtocolEndpoint alloc] init];
-	[endpoint_ setInputProcessor:self selector:@selector(processInput:meta:)];
-	[endpoint_ setInput:[[task_ standardOutput] fileHandleForReading]];
-	[endpoint_ setOutput:[[task_ standardInput] fileHandleForWriting]];
-
-	[[NSNotificationCenter defaultCenter] addObserver:self
-						 selector:@selector(sensorDied:)
-						     name:NSTaskDidTerminateNotification
-						   object:task_];
-	[task_ launch];
+	bundlePath_ = [[bundle bundlePath] copy];
 
 	return self;
 }
 
 - (void)dealloc
 {
-	// TODO: terminate task gracefully?
-	[[NSNotificationCenter defaultCenter] removeObserver:self
-							name:NSTaskDidTerminateNotification
-						      object:task_];
-	[task_ terminate];
-	[task_ release];
+	if (task_)
+		[self stop];
 
 	[sensor_ release];
-	[endpoint_ release];
+	[sensorRunnerPath_ release];
+	[bundlePath_ release];
 	[value_ release];
 	[super dealloc];
 }
@@ -96,12 +75,55 @@
 
 - (void)start
 {
+	if (task_)
+		return;
+
+	// Start sensor in a separate task
+	task_ = [[NSTask alloc] init];
+	[task_ setLaunchPath:sensorRunnerPath_];
+	[task_ setArguments:[NSArray arrayWithObject:bundlePath_]];
+	[task_ setStandardInput:[NSPipe pipe]];
+	[task_ setStandardOutput:[NSPipe pipe]];
+
+	endpoint_ = [[SensorProtocolEndpoint alloc] init];
+	[endpoint_ setInputProcessor:self selector:@selector(processInput:meta:)];
+	[endpoint_ setInput:[[task_ standardOutput] fileHandleForReading]];
+	[endpoint_ setOutput:[[task_ standardInput] fileHandleForWriting]];
+
+	[[NSNotificationCenter defaultCenter] addObserver:self
+						 selector:@selector(sensorDied:)
+						     name:NSTaskDidTerminateNotification
+						   object:task_];
+	[task_ launch];
+
 	[endpoint_ writeLine:@"START"];
 }
 
 - (void)stop
 {
+	if (!task_)
+		return;
+
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+							name:NSTaskDidTerminateNotification
+						      object:task_];
+
 	[endpoint_ writeLine:@"STOP"];
+
+	[task_ terminate];
+	[task_ release];
+	[endpoint_ release];
+	task_ = nil;
+	endpoint_ = nil;
+
+	[self willChangeValueForKey:@"running"];
+	running_ = NO;
+	[self didChangeValueForKey:@"running"];
+
+	[self willChangeValueForKey:@"value"];
+	[value_ autorelease];
+	value_ = nil;
+	[self didChangeValueForKey:@"value"];
 }
 
 - (BOOL)running
@@ -116,6 +138,7 @@
 
 - (NSObject *)valueSummary
 {
+	// TODO
 	return @"NYI";
 }
 
@@ -145,10 +168,11 @@
 - (void)sensorDied:(id)dummy
 {
 	NSLog(@"oh NOES!");
+	[task_ autorelease];
+	task_ = nil;
 	[self processInput:@"STOPPED" meta:YES];
 
-	// TODO: move task launch/termination into -start and -stop,
-	// and then we can consider restarting the task here.
+	// TODO: Consider restarting the task here.
 }
 
 @end
