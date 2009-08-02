@@ -80,11 +80,14 @@
 {
 	if ([sensor_ running] == shouldRun)
 		return;
+
+	[self willChangeValueForKey:@"running"];
 	if (shouldRun) {
 		[sensor_ start];
 	} else {
 		[sensor_ stop];
 	}
+	[self didChangeValueForKey:@"running"];
 }
 
 - (NSObject *)value

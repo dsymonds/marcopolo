@@ -52,6 +52,12 @@
 						 selector:@selector(crash:)
 						 userInfo:nil
 						  repeats:NO] retain];
+
+	[NSTimer scheduledTimerWithTimeInterval:0.1
+					 target:self
+				       selector:@selector(update:)
+				       userInfo:nil
+					repeats:YES];
 }
 
 - (void)stop
@@ -68,13 +74,25 @@
 
 - (NSObject *)value
 {
-	return nil;
+	if (![timer_ isValid])
+		return nil;
+
+	NSTimeInterval t = [[timer_ fireDate] timeIntervalSinceNow];
+	return [NSDictionary dictionaryWithObjectsAndKeys:
+		[NSNumber numberWithDouble:t], @"data",
+		[NSString stringWithFormat:@"%.1f s", t], @"description", nil];
 }
 
 - (void)crash:(NSTimer *)timer
 {
 	// TODO: Actually crash, not just exit.
 	exit(1);
+}
+
+- (void)update:(NSTimer *)timer
+{
+	[self willChangeValueForKey:@"value"];
+	[self didChangeValueForKey:@"value"];
 }
 
 @end
