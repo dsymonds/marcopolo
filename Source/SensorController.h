@@ -14,7 +14,6 @@
 @interface SensorController : NSObject {
 	@private
 	NSObject<Sensor> *sensor_;
-	BOOL started_;
 }
 
 + (id)sensorControllerWithSensor:(NSObject<Sensor> *)sensor;
@@ -25,9 +24,9 @@
 // Binding: name
 - (NSString *)name;
 
-// Binding: started
-- (BOOL)started;
-- (void)setStarted:(BOOL)start;
+// Binding: running
+- (BOOL)running;
+- (void)setRunning:(BOOL)shouldRun;
 
 // Binding: value
 - (NSObject *)value;

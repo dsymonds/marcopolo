@@ -18,7 +18,7 @@
 	NSObject<Sensor> *sensor_;
 	NSTask *task_;
 	SensorProtocolEndpoint *endpoint_;
-	BOOL started_;
+	BOOL running_;
 	NSObject *value_;
 }
 
@@ -29,8 +29,9 @@
 
 - (BOOL)isMultiValued;
 
-- (BOOL)start;
-- (BOOL)stop;
+- (void)start;
+- (void)stop;
+- (BOOL)running;
 
 - (NSObject *)value;
 

@@ -18,6 +18,23 @@
 
 @implementation CrashSensor
 
+- (id)init
+{
+	if (!(self = [super init]))
+		return nil;
+
+	timer_ = nil;
+
+	return self;
+}
+
+- (void)dealloc
+{
+	[timer_ invalidate];
+	[timer_ release];
+	[super dealloc];
+}
+
 - (NSString *)name
 {
 	return @"Crash";
@@ -28,22 +45,25 @@
 	return NO;
 }
 
-- (BOOL)start
+- (void)start
 {
 	timer_ = [[NSTimer scheduledTimerWithTimeInterval:3.0
 						   target:self
 						 selector:@selector(crash:)
 						 userInfo:nil
 						  repeats:NO] retain];
-	return YES;
 }
 
-- (BOOL)stop
+- (void)stop
 {
 	[timer_ invalidate];
 	[timer_ release];
 	timer_ = nil;
-	return YES;
+}
+
+- (BOOL)running
+{
+	return timer_ != nil;
 }
 
 - (NSObject *)value

@@ -38,6 +38,7 @@ static void sourceChange(void *info)
 		return nil;
 
 	state_ = kUnknown;
+	runLoopSource_ = nil;
 
 	return self;
 }
@@ -57,27 +58,30 @@ static void sourceChange(void *info)
 	return NO;
 }
 
-- (BOOL)start
+- (void)start
 {
 	// register for notifications
 	runLoopSource_ = IOPSNotificationCreateRunLoopSource(sourceChange, self);
 	CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource_, kCFRunLoopDefaultMode);
 
 	[self update];
-	return YES;
 }
 
-- (BOOL)stop
+- (void)stop
 {
 	// remove notification registration
 	CFRunLoopRemoveSource(CFRunLoopGetCurrent(), runLoopSource_, kCFRunLoopDefaultMode);
 	CFRelease(runLoopSource_);
+	runLoopSource_ = nil;
 
 	[self willChangeValueForKey:@"value"];
 	state_ = kUnknown;
 	[self didChangeValueForKey:@"value"];
+}
 
-	return YES;
+- (BOOL)running
+{
+	return runLoopSource_ != nil;
 }
 
 - (NSObject *)value

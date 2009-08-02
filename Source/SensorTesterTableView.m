@@ -22,7 +22,7 @@
 		}
 
 		SensorController *sc = [[sensorArray arrangedObjects] objectAtIndex:row];
-		[sc setStarted:![sc started]];
+		[sc setRunning:![sc running]];
 		return;
 	}
 

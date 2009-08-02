@@ -13,6 +13,7 @@
 	@private
 	NSLock *lock_;
 	NSMutableArray *apps_;
+	BOOL running_;
 }
 
 @end

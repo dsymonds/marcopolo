@@ -17,8 +17,9 @@
 // Sensor protocol methods
 - (NSString *)name;
 - (BOOL)isMultiValued;
-- (BOOL)start;
-- (BOOL)stop;
+- (void)start;
+- (void)stop;
+- (BOOL)running;
 - (NSObject *)value;
 
 // Mock controls

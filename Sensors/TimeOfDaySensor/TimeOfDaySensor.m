@@ -44,13 +44,12 @@
 	return NO;
 }
 
-- (BOOL)start
+- (void)start
 {
 	[self tick:nil];
-	return YES;
 }
 
-- (BOOL)stop
+- (void)stop
 {
 	[timer_ invalidate];
 	[timer_ release];
@@ -60,8 +59,11 @@
 	[value_ autorelease];
 	value_ = nil;
 	[self didChangeValueForKey:@"value"];
+}
 
-	return YES;
+- (BOOL)running
+{
+	return timer_ != nil;
 }
 
 - (void)tick:(NSTimer *)timer
@@ -86,7 +88,7 @@
 	if (!value_)
 		return nil;
 
-	// Knock out seconds
+	// Ignore seconds
 	NSDate *date = [value_ dateByAddingYears:0 months:0 days:0
 					   hours:0 minutes:0 seconds:-[value_ secondOfMinute]];
 	return [NSDictionary dictionaryWithObjectsAndKeys:

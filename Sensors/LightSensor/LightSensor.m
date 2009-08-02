@@ -24,6 +24,7 @@
 	if (!(self = [super init]))
 		return nil;
 
+	timer_ = nil;
 	lock_ = [[NSLock alloc] init];
 	value_ = -1;
 
@@ -48,7 +49,7 @@
 	return NO;
 }
 
-- (BOOL)start
+- (void)start
 {
 	// Find the IO service
 	kern_return_t kr;
@@ -59,14 +60,16 @@
 		kr = IOServiceOpen(serviceObject, mach_task_self(), 0, &ioPort_);
 		IOObjectRelease(serviceObject);
 	}
-	if (!serviceObject || (kr != KERN_SUCCESS))
-		return NO;
+	if (!serviceObject || (kr != KERN_SUCCESS)) {
+		[self willChangeValueForKey:@"running"];
+		[self didChangeValueForKey:@"running"];
+		return;
+	}
 
 	[self tick:nil];
-	return YES;
 }
 
-- (BOOL)stop
+- (void)stop
 {
 	[timer_ invalidate];
 	[timer_ release];
@@ -75,8 +78,11 @@
 	[self willChangeValueForKey:@"value"];
 	value_ = -1;
 	[self didChangeValueForKey:@"value"];
+}
 
-	return YES;
+- (BOOL)running
+{
+	return timer_ != nil;
 }
 
 - (void)tick:(NSTimer *)timer

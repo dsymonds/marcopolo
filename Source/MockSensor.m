@@ -42,22 +42,19 @@
 	return multi_;
 }
 
-- (BOOL)start
+- (void)start
 {
-	if (!started_) {
-		started_ = YES;
-		return YES;
-	} else
-		return NO;
+	started_ = YES;
 }
 
-- (BOOL)stop
+- (void)stop
 {
-	if (started_) {
-		started_ = NO;
-		return YES;
-	} else
-		return NO;
+	started_ = NO;
+}
+
+- (BOOL)running
+{
+	return started_;
 }
 
 - (NSObject *)value

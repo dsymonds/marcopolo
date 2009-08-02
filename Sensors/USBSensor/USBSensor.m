@@ -51,6 +51,7 @@ static void devRemoved(void *ref, io_iterator_t iterator)
 
 	lock_ = [[NSLock alloc] init];
 	devices_ = [[NSMutableSet alloc] init];
+	runLoopSource_ = nil;
 
 	return self;
 }
@@ -72,7 +73,7 @@ static void devRemoved(void *ref, io_iterator_t iterator)
 	return YES;
 }
 
-- (BOOL)start
+- (void)start
 {
 	notificationPort_ = IONotificationPortCreate(kIOMasterPortDefault);
 	runLoopSource_ = IONotificationPortGetRunLoopSource(notificationPort_);
@@ -91,22 +92,24 @@ static void devRemoved(void *ref, io_iterator_t iterator)
 	// Prime notifications to get the currently connected devices
 	[self devAdded:addedIterator_];
 	[self devRemoved:removedIterator_];
-
-	return YES;
 }
 
-- (BOOL)stop
+- (void)stop
 {
 	CFRunLoopRemoveSource(CFRunLoopGetCurrent(), runLoopSource_, kCFRunLoopDefaultMode);
 	IONotificationPortDestroy(notificationPort_);
 	IOObjectRelease(addedIterator_);
 	IOObjectRelease(removedIterator_);
+	runLoopSource_ = nil;
 
 	[self willChangeValueForKey:@"value"];
 	[devices_ removeAllObjects];
 	[self didChangeValueForKey:@"value"];
+}
 
-	return YES;
+- (BOOL)running
+{
+	return runLoopSource_ != nil;
 }
 
 - (NSObject *)value

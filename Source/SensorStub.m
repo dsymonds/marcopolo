@@ -35,7 +35,7 @@
 		return nil;
 
 	sensor_ = [[SensorLoader sensorFromBundle:bundle] retain];
-	started_ = NO;
+	running_ = NO;
 	value_ = nil;
 
 	// Find the sensor runner
@@ -46,6 +46,7 @@
 	}
 
 	// Start sensor in a separate task
+	// TODO: Move this to -start
 	task_ = [[NSTask alloc] init];
 	[task_ setLaunchPath:sensorRunnerPath];
 	[task_ setArguments:[NSArray arrayWithObject:[bundle bundlePath]]];
@@ -57,6 +58,10 @@
 	[endpoint_ setInput:[[task_ standardOutput] fileHandleForReading]];
 	[endpoint_ setOutput:[[task_ standardInput] fileHandleForWriting]];
 
+	[[NSNotificationCenter defaultCenter] addObserver:self
+						 selector:@selector(sensorDied:)
+						     name:NSTaskDidTerminateNotification
+						   object:task_];
 	[task_ launch];
 
 	return self;
@@ -65,6 +70,9 @@
 - (void)dealloc
 {
 	// TODO: terminate task gracefully?
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+							name:NSTaskDidTerminateNotification
+						      object:task_];
 	[task_ terminate];
 	[task_ release];
 
@@ -86,16 +94,19 @@
 	return [sensor_ isMultiValued];
 }
 
-- (BOOL)start
+- (void)start
 {
 	[endpoint_ writeLine:@"START"];
-	return YES;
 }
 
-- (BOOL)stop
+- (void)stop
 {
 	[endpoint_ writeLine:@"STOP"];
-	return YES;
+}
+
+- (BOOL)running
+{
+	return running_;
 }
 
 - (NSObject *)value
@@ -117,9 +128,9 @@
 		BOOL started = [line isEqualToString:@"STARTED"];
 		BOOL stopped = [line isEqualToString:@"STOPPED"];
 		if (started || stopped) {
-			[self willChangeValueForKey:@"started"];
-			started_ = started;
-			[self didChangeValueForKey:@"started"];
+			[self willChangeValueForKey:@"running"];
+			running_ = started;
+			[self didChangeValueForKey:@"running"];
 			if (stopped)
 				[self processInput:nil meta:NO];
 		}
@@ -129,6 +140,15 @@
 		value_ = [object retain];
 		[self didChangeValueForKey:@"value"];
 	}
+}
+
+- (void)sensorDied:(id)dummy
+{
+	NSLog(@"oh NOES!");
+	[self processInput:@"STOPPED" meta:YES];
+
+	// TODO: move task launch/termination into -start and -stop,
+	// and then we can consider restarting the task here.
 }
 
 @end

@@ -47,6 +47,7 @@
 	sensor_ = [sensor retain];
 
 	[sensor_ addObserver:self forKeyPath:@"value" options:0 context:nil];
+	[sensor_ addObserver:self forKeyPath:@"running" options:0 context:nil];
 
 	return self;
 }
@@ -59,6 +60,7 @@
 - (void)dealloc
 {
 	[sensor_ removeObserver:self forKeyPath:@"value"];
+	[sensor_ removeObserver:self forKeyPath:@"running"];
 
 	[sensor_ release];
 	[super dealloc];
@@ -69,31 +71,19 @@
 	return [sensor_ name];
 }
 
-- (BOOL)started
+- (BOOL)running
 {
-	return started_;
+	return [sensor_ running];
 }
 
-- (void)setStarted:(BOOL)start
+- (void)setRunning:(BOOL)shouldRun
 {
-	if (started_ == start)
+	if ([sensor_ running] == shouldRun)
 		return;
-	if (start) {
-		// Attempt to start the sensor
-		if ([sensor_ start])
-			started_ = YES;
-		else {
-			NSLog(@"Failed to start sensor: %@", [sensor_ name]);
-			[self setStarted:NO];  // ensure KVO
-		}
+	if (shouldRun) {
+		[sensor_ start];
 	} else {
-		// Attempt to stop the sensor
-		if ([sensor_ stop])
-			started_ = NO;
-		else {
-			NSLog(@"Failed to stop sensor: %@", [sensor_ name]);
-			[self setStarted:YES];  // ensure KVO
-		}
+		[sensor_ stop];
 	}
 }
 
@@ -133,6 +123,10 @@
 	if ((object == sensor_) && [keyPath isEqualToString:@"value"]) {
 		[self willChangeValueForKey:@"value"];
 		[self didChangeValueForKey:@"value"];
+	} else if ((object == sensor_) && [keyPath isEqualToString:@"running"]) {
+		// Only valid for SensorStub.
+		[self willChangeValueForKey:@"running"];
+		[self didChangeValueForKey:@"running"];
 	} else
 		[super observeValueForKeyPath:keyPath ofObject:object
 				       change:change context:context];

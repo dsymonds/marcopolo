@@ -22,10 +22,16 @@
 // or only a single value. MUST be implemented.
 - (BOOL)isMultiValued;
 
-// Start/stop the sensor. MUST be implemented.
-// Return value is YES on success, NO on failure.
-- (BOOL)start;
-- (BOOL)stop;
+// Attempt to start/stop the sensor. MUST be implemented.
+// TODO: -stop should imply that the "value" binding changes.
+- (void)start;
+- (void)stop;
+
+// Whether the sensor is running. MUST be implemented.
+// The KVO notification does NOT need to be posted during -start and -stop;
+// it will be assumed they succeed if no change notification is made.
+// Binding: "running" (read-only)
+- (BOOL)running;
 
 // Retrieve the current value(s) of this sensor. If it is multi-valued, this
 // must return an NSArray of the values. MUST be implemented.
@@ -33,6 +39,7 @@
 // - data: An NSCoding-conformant NSObject descendant.
 // - description: A human-readable string describing the value.
 // If there is no data (or the sensor is stopped) the sensor MAY return nil.
+// Binding: "value" (read-only)
 - (NSObject *)value;
 
 @end

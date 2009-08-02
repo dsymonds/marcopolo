@@ -47,7 +47,7 @@
 	return YES;
 }
 
-- (BOOL)start
+- (void)start
 {
 	[[[NSWorkspace sharedWorkspace] notificationCenter]
 	 addObserver:self
@@ -59,20 +59,26 @@
 	 selector:@selector(update)
 	 name:NSWorkspaceDidTerminateApplicationNotification
 	 object:nil];
+	running_ = YES;
 
 	[self update];
-	return YES;
 }
 
-- (BOOL)stop
+- (void)stop
 {
 	[[[NSWorkspace sharedWorkspace] notificationCenter] removeObserver:self
 								      name:nil
 								    object:nil];
+	running_ = NO;
 
+	[self willChangeValueForKey:@"value"];
 	[self setApps:[NSArray array]];
+	[self didChangeValueForKey:@"value"];
+}
 
-	return YES;
+- (BOOL)running
+{
+	return running_;
 }
 
 - (NSObject *)value

@@ -41,6 +41,8 @@ static void ipChange(SCDynamicStoreRef store, CFArrayRef changedKeys, void *info
 
 	lock_ = [[NSLock alloc] init];
 	addresses_ = [[NSMutableArray alloc] init];
+	store_ = nil;
+	runLoop_ = nil;
 
 	return self;
 }
@@ -62,7 +64,7 @@ static void ipChange(SCDynamicStoreRef store, CFArrayRef changedKeys, void *info
 	return YES;
 }
 
-- (BOOL)start
+- (void)start
 {
 	// Register for asynchronous notifications
 	SCDynamicStoreContext ctxt;
@@ -83,23 +85,26 @@ static void ipChange(SCDynamicStoreRef store, CFArrayRef changedKeys, void *info
 	[NSThread detachNewThreadSelector:@selector(updateInThread:)
 				 toTarget:self
 			       withObject:nil];
-
-	return YES;
 }
 
-- (BOOL)stop
+- (void)stop
 {
 	CFRunLoopRemoveSource(CFRunLoopGetCurrent(), runLoop_, kCFRunLoopCommonModes);
 	CFRelease(runLoop_);
 	CFRelease(store_);
+	runLoop_ = nil;
+	store_ = nil;
 
 	[self willChangeValueForKey:@"value"];
 	[lock_ lock];
 	[addresses_ removeAllObjects];
 	[lock_ unlock];
 	[self didChangeValueForKey:@"value"];
+}
 
-	return YES;
+- (BOOL)running
+{
+	return runLoop_ != nil;
 }
 
 - (NSObject *)value

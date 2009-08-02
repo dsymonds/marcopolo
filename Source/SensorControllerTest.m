@@ -58,17 +58,17 @@
 
 - (void)testStartingAndStopping
 {
-	STAssertEquals([sensorController started], NO, nil);
-	[sensorController setStarted:YES];
-	STAssertEquals([sensorController started], YES, nil);
-	[sensorController setStarted:NO];
-	STAssertEquals([sensorController started], NO, nil);
+	STAssertEquals([sensorController running], NO, nil);
+	[sensorController setRunning:YES];
+	STAssertEquals([sensorController running], YES, nil);
+	[sensorController setRunning:NO];
+	STAssertEquals([sensorController running], NO, nil);
 }
 
 - (void)testValueBinding
 {
-	[sensorController setStarted:YES];
-	STAssertEquals([sensorController started], YES, nil);
+	[sensorController setRunning:YES];
+	STAssertEquals([sensorController running], YES, nil);
 
 	[mockSensor setMulti:NO];
 	NSObject *sval = [sensorController value];

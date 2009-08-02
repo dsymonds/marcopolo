@@ -33,7 +33,7 @@
 	endpoint_ = [[SensorProtocolEndpoint alloc] init];
 
 	[sensorController_ addObserver:self
-			    forKeyPath:@"started"
+			    forKeyPath:@"running"
 			       options:nil
 			       context:nil];
 	[sensorController_ addObserver:self
@@ -49,7 +49,7 @@
 }
 
 - (void)dealloc {
-	[sensorController_ removeObserver:self forKeyPath:@"started"];
+	[sensorController_ removeObserver:self forKeyPath:@"running"];
 	[sensorController_ removeObserver:self forKeyPath:@"value"];
 
 	[sensorController_ release];
@@ -69,9 +69,9 @@
 			change:(NSDictionary *)change
 		       context:(void *)context
 {
-	if ([keyPath isEqualToString:@"started"]) {
-		BOOL started = [sensorController_ started];
-		[endpoint_ writeLine:started ? @"STARTED" : @"STOPPED"];
+	if ([keyPath isEqualToString:@"running"]) {
+		BOOL running = [sensorController_ running];
+		[endpoint_ writeLine:running ? @"STARTED" : @"STOPPED"];
 	}
 	if ([keyPath isEqualToString:@"value"]) {
 		NSObject *value = [sensorController_ value];
@@ -92,9 +92,9 @@
 
 	//NSLog(@"Processing line: [%@]", line);
 	if ([line isEqualToString:@"START"]) {
-		[sensorController_ setStarted:YES];
+		[sensorController_ setRunning:YES];
 	} else if ([line isEqualToString:@"STOP"]) {
-		[sensorController_ setStarted:NO];
+		[sensorController_ setRunning:NO];
 	}
 }
 
