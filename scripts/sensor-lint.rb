@@ -47,6 +47,7 @@ class Linter
                  plist['CFBundleDevelopmentRegion'])
     assertEquals('CFBundleIdentifier', "au.id.symonds.MarcoPolo.#{@sensor}",
                  plist['CFBundleIdentifier'])
+    assertEquals('NSPrincipalClass', @sensor, plist['NSPrincipalClass'])
   end
 end
 
