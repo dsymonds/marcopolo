@@ -11,6 +11,7 @@
 
 
 @interface IPSensor : NSObject<Sensor> {
+	@private
 	NSLock *lock_;
 	NSMutableArray *addresses_;
 	SCDynamicStoreRef store_;

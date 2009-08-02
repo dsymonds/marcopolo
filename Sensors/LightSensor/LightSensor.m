@@ -7,8 +7,8 @@
 
 #import "LightSensor.h"
 
-// Update every half second
-#define LIGHT_UPDATE_INTERVAL ((NSTimeInterval) 0.5)
+
+#define kLightUpdateInterval	((NSTimeInterval) 0.5)
 
 
 @interface LightSensor (Private)
@@ -66,47 +66,23 @@
 		return;
 	}
 
-	[self tick:nil];
+	timer_ = [NSTimer scheduledTimerWithTimeInterval:kLightUpdateInterval
+						  target:self
+						selector:@selector(tick:)
+						userInfo:nil
+						 repeats:YES];
+	[timer_ fire];
 }
 
 - (void)stop
 {
 	[timer_ invalidate];
 	timer_ = nil;
-
-	[self willChangeValueForKey:@"value"];
-	value_ = -1;
-	[self didChangeValueForKey:@"value"];
 }
 
 - (BOOL)running
 {
 	return timer_ != nil;
-}
-
-- (void)tick:(NSTimer *)timer
-{
-	// Read from the sensor device - index 0, 0 inputs, 2 outputs
-	int l, r;
-	double v = 0;
-	if (IOConnectMethodScalarIScalarO(ioPort_, 0, 0, 2, &l, &r) == KERN_SUCCESS) {
-		// Average of left and right
-		static const double kMaxCombinedLightValue = 4096.0;
-		v = (l + r) / kMaxCombinedLightValue;
-	}
-
-	// Schedule the timer for the next tick.
-	timer_ = [NSTimer scheduledTimerWithTimeInterval:LIGHT_UPDATE_INTERVAL
-						  target:self
-						selector:@selector(tick:)
-						userInfo:nil
-						 repeats:NO];
-
-	[self willChangeValueForKey:@"value"];
-	[lock_ lock];
-	value_ = v;
-	[lock_ unlock];
-	[self didChangeValueForKey:@"value"];
 }
 
 - (NSObject *)value
@@ -121,6 +97,24 @@
 	return [NSDictionary dictionaryWithObjectsAndKeys:
 		[NSNumber numberWithDouble:v], @"data",
 		[NSString stringWithFormat:@"%.0f%%", v * 100], @"description", nil];
+}
+
+- (void)tick:(NSTimer *)timer
+{
+	// Read from the sensor device - index 0, 0 inputs, 2 outputs
+	int l, r;
+	double v = 0;
+	if (IOConnectMethodScalarIScalarO(ioPort_, 0, 0, 2, &l, &r) == KERN_SUCCESS) {
+		// Average of left and right
+		static const double kMaxCombinedLightValue = 4096.0;
+		v = (l + r) / kMaxCombinedLightValue;
+	}
+
+	[self willChangeValueForKey:@"value"];
+	[lock_ lock];
+	value_ = v;
+	[lock_ unlock];
+	[self didChangeValueForKey:@"value"];
 }
 
 @end

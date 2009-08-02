@@ -196,7 +196,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8D7A2DA21025ADDE00C0553E /* WiFiSensor */;
+			remoteGlobalIDString = 8D7A2DA21025ADDE00C0553E;
 			remoteInfo = WiFiSensor;
 		};
 		8DA6081D0E1D941900066EA8 /* PBXContainerItemProxy */ = {

@@ -10,6 +10,7 @@
 
 
 @interface PowerSensor : NSObject<Sensor> {
+	@private
 	enum {
 		kUnknown = -1,
 		kBattery = 0,

@@ -27,6 +27,7 @@ static void ipChange(SCDynamicStoreRef store, CFArrayRef changedKeys, void *info
 
 - (NSArray *)allAddresses;
 - (void)updateInThread:(id)arg;
+- (void)setAddresses:(NSArray *)arr;
 
 @end
 
@@ -95,11 +96,7 @@ static void ipChange(SCDynamicStoreRef store, CFArrayRef changedKeys, void *info
 	runLoop_ = nil;
 	store_ = nil;
 
-	[self willChangeValueForKey:@"value"];
-	[lock_ lock];
-	[addresses_ removeAllObjects];
-	[lock_ unlock];
-	[self didChangeValueForKey:@"value"];
+	[self setAddresses:[NSArray array]];
 }
 
 - (BOOL)running
@@ -110,19 +107,10 @@ static void ipChange(SCDynamicStoreRef store, CFArrayRef changedKeys, void *info
 - (NSObject *)value
 {
 	[lock_ lock];
-
-	NSMutableArray *array = [NSMutableArray arrayWithCapacity:[addresses_ count]];
-	NSEnumerator *en = [addresses_ objectEnumerator];
-	NSString *ip;
-	while ((ip = [en nextObject])) {
-		[array addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-				  ip, @"data",
-				  ip, @"description", nil]];
-	}
-
+	NSArray *addresses = [[addresses_ copy] autorelease];
 	[lock_ unlock];
 
-	return array;
+	return addresses;
 }
 
 #pragma mark -
@@ -163,15 +151,29 @@ static void ipChange(SCDynamicStoreRef store, CFArrayRef changedKeys, void *info
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
-	NSArray *addrs = [self allAddresses];
+	[self setAddresses:[self allAddresses]];
+
+	[pool release];
+}
+
+// Takes an array of IP addresses.
+// Each address is expanded into a value dictionary.
+- (void)setAddresses:(NSArray *)arr
+{
+	NSMutableArray *addresses = [NSMutableArray arrayWithCapacity:[arr count]];
+	NSEnumerator *en = [arr objectEnumerator];
+	NSString *ip;
+	while ((ip = [en nextObject])) {
+		[addresses addObject:
+		 [NSDictionary dictionaryWithObjectsAndKeys:
+		  ip, @"data", ip, @"description", nil]];
+	}
 
 	[self willChangeValueForKey:@"value"];
 	[lock_ lock];
-	[addresses_ setArray:addrs];
+	[addresses_ setArray:addresses];
 	[lock_ unlock];
 	[self didChangeValueForKey:@"value"];
-
-	[pool release];
 }
 
 @end

@@ -9,6 +9,7 @@
 
 
 @interface USBDevice : NSObject {
+	@private
 	NSNumber *vendorID_, *productID_;
 	NSString *description_;
 }

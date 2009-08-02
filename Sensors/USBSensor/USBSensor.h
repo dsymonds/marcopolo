@@ -10,6 +10,7 @@
 
 
 @interface USBSensor : NSObject<Sensor> {
+	@private
 	NSLock *lock_;
 	NSMutableSet *devices_;  // collection of USBDevice objects
 

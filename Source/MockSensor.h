@@ -10,6 +10,7 @@
 
 
 @interface MockSensor : NSObject<Sensor> {
+	@private
 	BOOL multi_, started_;
 	int value_;
 }

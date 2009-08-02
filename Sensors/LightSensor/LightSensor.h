@@ -10,6 +10,7 @@
 
 
 @interface LightSensor : NSObject<Sensor> {
+	@private
 	NSTimer *timer_;
 	NSLock *lock_;
 	io_connect_t ioPort_;

@@ -12,7 +12,7 @@
 // A sensor for testing. It crashes three seconds after starting.
 @interface CrashSensor : NSObject<Sensor> {
 	@private
-	NSTimer *timer_;
+	NSTimer *crashTimer_, *updateTimer_;
 }
 
 @end
