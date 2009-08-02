@@ -70,10 +70,7 @@
 								      name:nil
 								    object:nil];
 	running_ = NO;
-
-	[self willChangeValueForKey:@"value"];
 	[self setApps:[NSArray array]];
-	[self didChangeValueForKey:@"value"];
 }
 
 - (BOOL)running
