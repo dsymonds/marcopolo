@@ -43,6 +43,7 @@ class Linter
     # check the plist file
     plist_filename = File.join(@sensor_dir, "#{@sensor}-Info.plist")
     plist = Plist::parse_xml(plist_filename)
+    assert(plist, "#{plist_filename} is not a valid plist")
     assertEquals('CFBundleDevelopmentRegion', 'en',
                  plist['CFBundleDevelopmentRegion'])
     assertEquals('CFBundleIdentifier', "au.id.symonds.MarcoPolo.#{@sensor}",
