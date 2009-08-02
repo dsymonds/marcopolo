@@ -10,6 +10,11 @@
 
 
 @interface WiFiSensor : NSObject<Sensor> {
+	@private
+	NSLock *lock_;
+	NSMutableArray *accessPoints_;
+	NSTimer *timer_;  // owned by run loop
+	int osxMinorVersion_;
 }
 
 @end

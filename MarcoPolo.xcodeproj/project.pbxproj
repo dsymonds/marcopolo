@@ -92,6 +92,10 @@
 		8D76DEFC0E371FBC00DF4015 /* RuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEFA0E371FBC00DF4015 /* RuleSet.m */; };
 		8D7A2DAB1025AEE400C0553E /* WiFiSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A2DAA1025AEE400C0553E /* WiFiSensor.m */; };
 		8D7A2DBE1025AF9300C0553E /* WiFiSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D7A2DA31025ADDE00C0553E /* WiFiSensor.sensor */; };
+		8D7A2DFB1025B1EA00C0553E /* OS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A2DFA1025B1EA00C0553E /* OS.m */; };
+		8D7A2E241025B4CD00C0553E /* Apple80211.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7A2E231025B4CD00C0553E /* Apple80211.framework */; };
+		8D7A2E261025B58B00C0553E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97324FDCFA39411CA2CEA /* AppKit.framework */; };
+		8D7A2E281025B5A300C0553E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7A2E271025B5A300C0553E /* CoreFoundation.framework */; };
 		8D7D5ABB0E958D9C005279AD /* PreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */; };
 		8D9053C20F19775E0096466F /* ContextPreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9053C10F19775E0096466F /* ContextPreferencesPaneController.m */; };
 		8D93600B0F14A11700D3990A /* minus-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9360080F14A11700D3990A /* minus-8.png */; };
@@ -344,6 +348,11 @@
 		8D7A2DA41025ADDE00C0553E /* WiFiSensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WiFiSensor-Info.plist"; path = "Sensors/WiFiSensor/WiFiSensor-Info.plist"; sourceTree = "<group>"; };
 		8D7A2DA91025AEE400C0553E /* WiFiSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WiFiSensor.h; path = Sensors/WiFiSensor/WiFiSensor.h; sourceTree = "<group>"; };
 		8D7A2DAA1025AEE400C0553E /* WiFiSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WiFiSensor.m; path = Sensors/WiFiSensor/WiFiSensor.m; sourceTree = "<group>"; };
+		8D7A2DE81025B15500C0553E /* Apple80211.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Apple80211.h; path = Sensors/WiFiSensor/Apple80211.h; sourceTree = "<group>"; };
+		8D7A2DF91025B1EA00C0553E /* OS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OS.h; path = Source/OS.h; sourceTree = "<group>"; };
+		8D7A2DFA1025B1EA00C0553E /* OS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OS.m; path = Source/OS.m; sourceTree = "<group>"; };
+		8D7A2E231025B4CD00C0553E /* Apple80211.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apple80211.framework; path = /System/Library/PrivateFrameworks/Apple80211.framework; sourceTree = "<absolute>"; };
+		8D7A2E271025B5A300C0553E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		8D7D5AB90E958D9C005279AD /* PreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesPaneController.h; path = Source/PreferencesPaneController.h; sourceTree = "<group>"; };
 		8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesPaneController.m; path = Source/PreferencesPaneController.m; sourceTree = "<group>"; };
 		8D9053C00F19775E0096466F /* ContextPreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextPreferencesPaneController.h; path = Source/ContextPreferencesPaneController.h; sourceTree = "<group>"; };
@@ -451,6 +460,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D7A2E241025B4CD00C0553E /* Apple80211.framework in Frameworks */,
+				8D7A2E261025B58B00C0553E /* AppKit.framework in Frameworks */,
+				8D7A2E281025B5A300C0553E /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +557,8 @@
 				8D33D4440F69FAE30017C76B /* SensorLoader.m */,
 				8D4283900F7EFD3500E4B866 /* SensorProtocolEndpoint.h */,
 				8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */,
+				8D7A2DF91025B1EA00C0553E /* OS.h */,
+				8D7A2DFA1025B1EA00C0553E /* OS.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -569,6 +583,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D7A2E271025B5A300C0553E /* CoreFoundation.framework */,
+				8D7A2E231025B4CD00C0553E /* Apple80211.framework */,
 				8DA608620E1D977500066EA8 /* SystemConfiguration.framework */,
 				8D637BAB0E04A61C008D3EBA /* IOKit.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
@@ -629,6 +645,7 @@
 		8D5675390E01058100EFEBA2 /* Sensors */ = {
 			isa = PBXGroup;
 			children = (
+				8D7A2DE81025B15500C0553E /* Apple80211.h */,
 				8D7A2DA41025ADDE00C0553E /* WiFiSensor-Info.plist */,
 				8D2855A71025534200A7CDB9 /* CrashSensor-Info.plist */,
 				8D4FE88F10246E8900DD9761 /* RunningApplicationSensor-Info.plist */,
@@ -1127,6 +1144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D7A2DAB1025AEE400C0553E /* WiFiSensor.m in Sources */,
+				8D7A2DFB1025B1EA00C0553E /* OS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1668,6 +1686,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -1694,6 +1717,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
