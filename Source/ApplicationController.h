@@ -10,6 +10,7 @@
 
 @class ContextCollection;
 @class PreferencesController;
+@class SensorArrayController;
 
 
 @interface ApplicationController : NSObject {
@@ -19,10 +20,12 @@
 	PreferencesController *preferencesController_;
 
 	ContextCollection *contextCollection_;
+	SensorArrayController *sensorArrayController_;
 }
 
 - (IBAction)runPreferences:(id)sender;
 
 - (ContextCollection *)contextCollection;
+- (SensorArrayController *)sensorArrayController;
 
 @end

@@ -55,6 +55,14 @@
 		8D35C6320DFE9C2400AF7A7D /* ContextGroupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */; };
 		8D37896D101D905800D16DAF /* SensorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D33D4440F69FAE30017C76B /* SensorLoader.m */; };
 		8D3A5EC5104FBF5100FAAAAE /* RuleList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3A5EC4104FBF5100FAAAAE /* RuleList.m */; };
+		8D3A5EF5104FC58200FAAAAE /* CrashSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D2855A61025534200A7CDB9 /* CrashSensor.sensor */; };
+		8D3A5EF6104FC58200FAAAAE /* IPSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DA607F60E1D931A00066EA8 /* IPSensor.sensor */; };
+		8D3A5EF7104FC58200FAAAAE /* LightSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D0EACB00E07A99C004ABEF2 /* LightSensor.sensor */; };
+		8D3A5EF8104FC58200FAAAAE /* PowerSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D1B84620E0A79AA00D47563 /* PowerSensor.sensor */; };
+		8D3A5EF9104FC58200FAAAAE /* RunningApplicationSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D4FE88E10246E8900DD9761 /* RunningApplicationSensor.sensor */; };
+		8D3A5EFA104FC58200FAAAAE /* TimeOfDaySensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */; };
+		8D3A5EFB104FC58200FAAAAE /* USBSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D637B8C0E04A280008D3EBA /* USBSensor.sensor */; };
+		8D3A5EFC104FC58200FAAAAE /* WiFiSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D7A2DA31025ADDE00C0553E /* WiFiSensor.sensor */; };
 		8D4283500F7EFA2A00E4B866 /* SensorRunner in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D723C9F0F47A16E00C78FC3 /* SensorRunner */; };
 		8D4283920F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */; };
 		8D4283930F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */; };
@@ -208,6 +216,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		8D3A5F2C104FC59200FAAAAE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8D3A5EF5104FC58200FAAAAE /* CrashSensor.sensor in CopyFiles */,
+				8D3A5EF6104FC58200FAAAAE /* IPSensor.sensor in CopyFiles */,
+				8D3A5EF7104FC58200FAAAAE /* LightSensor.sensor in CopyFiles */,
+				8D3A5EF8104FC58200FAAAAE /* PowerSensor.sensor in CopyFiles */,
+				8D3A5EF9104FC58200FAAAAE /* RunningApplicationSensor.sensor in CopyFiles */,
+				8D3A5EFA104FC58200FAAAAE /* TimeOfDaySensor.sensor in CopyFiles */,
+				8D3A5EFB104FC58200FAAAAE /* USBSensor.sensor in CopyFiles */,
+				8D3A5EFC104FC58200FAAAAE /* WiFiSensor.sensor in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D4283770F7EFAB800E4B866 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -747,6 +772,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				8D3A5F2C104FC59200FAAAAE /* CopyFiles */,
 				8D723D1D0F47AA0500C78FC3 /* CopyFiles */,
 			);
 			buildRules = (

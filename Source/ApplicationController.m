@@ -8,6 +8,7 @@
 #import "ApplicationController.h"
 #import "ContextCollection.h"
 #import "PreferencesController.h"
+#import "SensorArrayController.h"
 
 
 @interface ApplicationController (Private)
@@ -26,6 +27,7 @@
 		return nil;
 
 	contextCollection_ = [[ContextCollection alloc] init];
+	sensorArrayController_ = [[SensorArrayController alloc] init];
 
 	preferencesController_ = [[PreferencesController alloc] initWithApplicationController:self];
 
@@ -43,6 +45,8 @@
 
 - (void)awakeFromNib
 {
+	[sensorArrayController_ loadSensors];
+
 	[self loadStatusItem];
 
 	NSString *prefPane = [[NSUserDefaults standardUserDefaults] stringForKey:@"DebugShowPrefPaneOnStartup"];
@@ -82,6 +86,11 @@
 - (ContextCollection *)contextCollection
 {
 	return contextCollection_;
+}
+
+- (SensorArrayController *)sensorArrayController
+{
+	return sensorArrayController_;
 }
 
 @end
