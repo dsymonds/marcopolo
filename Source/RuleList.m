@@ -1,16 +1,16 @@
 //
-//  RuleSet.m
+//  RuleList.m
 //  MarcoPolo
 //
 //  Created by David Symonds on 23/07/08.
 //
 
-#import "RuleSet.h"
+#import "RuleList.h"
 
 
-@implementation RuleSet
+@implementation RuleList
 
-+ (id)ruleSet
++ (id)ruleList
 {
 	return [[[self alloc] init] autorelease];
 }

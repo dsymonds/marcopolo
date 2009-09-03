@@ -1,5 +1,5 @@
 //
-//  RuleSet.h
+//  RuleList.h
 //  MarcoPolo
 //
 //  Created by David Symonds on 23/07/08.
@@ -9,13 +9,13 @@
 #import "Rule.h"
 
 
-// A set of rules.
-@interface RuleSet : NSObject {
+// A list of rules.
+@interface RuleList : NSObject {
 	@private
 	NSMutableArray *rules_;
 }
 
-+ (id)ruleSet;
++ (id)ruleList;
 - (id)init;
 
 - (NSEnumerator *)ruleEnumerator;

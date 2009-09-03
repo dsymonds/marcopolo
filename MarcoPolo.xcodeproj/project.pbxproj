@@ -54,6 +54,7 @@
 		8D35C6290DFE999200AF7A7D /* ContextGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6270DFE999200AF7A7D /* ContextGroup.m */; };
 		8D35C6320DFE9C2400AF7A7D /* ContextGroupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */; };
 		8D37896D101D905800D16DAF /* SensorLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D33D4440F69FAE30017C76B /* SensorLoader.m */; };
+		8D3A5EC5104FBF5100FAAAAE /* RuleList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3A5EC4104FBF5100FAAAAE /* RuleList.m */; };
 		8D4283500F7EFA2A00E4B866 /* SensorRunner in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D723C9F0F47A16E00C78FC3 /* SensorRunner */; };
 		8D4283920F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */; };
 		8D4283930F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */; };
@@ -88,8 +89,6 @@
 		8D723CF50F47A6A000C78FC3 /* SensorRunnerMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D723CF40F47A6A000C78FC3 /* SensorRunnerMonitor.m */; };
 		8D723D430F47AAE800C78FC3 /* SensorRunner in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D723C9F0F47A16E00C78FC3 /* SensorRunner */; };
 		8D76DEE80E371D3B00DF4015 /* ExactRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEE70E371D3B00DF4015 /* ExactRule.m */; };
-		8D76DEFB0E371FBC00DF4015 /* RuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEFA0E371FBC00DF4015 /* RuleSet.m */; };
-		8D76DEFC0E371FBC00DF4015 /* RuleSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEFA0E371FBC00DF4015 /* RuleSet.m */; };
 		8D7A2DAB1025AEE400C0553E /* WiFiSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A2DAA1025AEE400C0553E /* WiFiSensor.m */; };
 		8D7A2DBE1025AF9300C0553E /* WiFiSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D7A2DA31025ADDE00C0553E /* WiFiSensor.sensor */; };
 		8D7A2DFB1025B1EA00C0553E /* OS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A2DFA1025B1EA00C0553E /* OS.m */; };
@@ -297,6 +296,8 @@
 		8D35C6270DFE999200AF7A7D /* ContextGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextGroup.m; path = Source/ContextGroup.m; sourceTree = "<group>"; };
 		8D35C6300DFE9C2400AF7A7D /* ContextGroupTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextGroupTest.h; path = Source/ContextGroupTest.h; sourceTree = "<group>"; };
 		8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextGroupTest.m; path = Source/ContextGroupTest.m; sourceTree = "<group>"; };
+		8D3A5EC3104FBF5100FAAAAE /* RuleList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuleList.h; path = Source/RuleList.h; sourceTree = "<group>"; };
+		8D3A5EC4104FBF5100FAAAAE /* RuleList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RuleList.m; path = Source/RuleList.m; sourceTree = "<group>"; };
 		8D4283900F7EFD3500E4B866 /* SensorProtocolEndpoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorProtocolEndpoint.h; path = Source/SensorProtocolEndpoint.h; sourceTree = "<group>"; };
 		8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorProtocolEndpoint.m; path = Source/SensorProtocolEndpoint.m; sourceTree = "<group>"; };
 		8D477E380F24635B009CD458 /* ContextNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextNode.h; path = Source/ContextNode.h; sourceTree = "<group>"; };
@@ -342,8 +343,6 @@
 		8D76DEDA0E371C7800DF4015 /* Rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rule.h; path = Source/Rule.h; sourceTree = "<group>"; };
 		8D76DEE60E371D3B00DF4015 /* ExactRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExactRule.h; path = Source/ExactRule.h; sourceTree = "<group>"; };
 		8D76DEE70E371D3B00DF4015 /* ExactRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExactRule.m; path = Source/ExactRule.m; sourceTree = "<group>"; };
-		8D76DEF90E371FBC00DF4015 /* RuleSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuleSet.h; path = Source/RuleSet.h; sourceTree = "<group>"; };
-		8D76DEFA0E371FBC00DF4015 /* RuleSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RuleSet.m; path = Source/RuleSet.m; sourceTree = "<group>"; };
 		8D7A2DA31025ADDE00C0553E /* WiFiSensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiFiSensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D7A2DA41025ADDE00C0553E /* WiFiSensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WiFiSensor-Info.plist"; path = "Sensors/WiFiSensor/WiFiSensor-Info.plist"; sourceTree = "<group>"; };
 		8D7A2DA91025AEE400C0553E /* WiFiSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WiFiSensor.h; path = Sensors/WiFiSensor/WiFiSensor.h; sourceTree = "<group>"; };
@@ -608,6 +607,8 @@
 		8D35C5F70DFE7F3300AF7A7D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8D3A5EC3104FBF5100FAAAAE /* RuleList.h */,
+				8D3A5EC4104FBF5100FAAAAE /* RuleList.m */,
 				8D69AD000F1741A70019E8A8 /* ContextCollection.h */,
 				8D69AD010F1741A70019E8A8 /* ContextCollection.m */,
 				8DBF0AC00E1A2902009F1FCE /* ValueSet.h */,
@@ -626,8 +627,6 @@
 				8D76DEDA0E371C7800DF4015 /* Rule.h */,
 				8D76DEE60E371D3B00DF4015 /* ExactRule.h */,
 				8D76DEE70E371D3B00DF4015 /* ExactRule.m */,
-				8D76DEF90E371FBC00DF4015 /* RuleSet.h */,
-				8D76DEFA0E371FBC00DF4015 /* RuleSet.m */,
 				8DBE19910E39C93E002AC5EC /* ExactRuleTest.h */,
 				8DBE19920E39C93E002AC5EC /* ExactRuleTest.m */,
 				8DBE19DE0E39CE7A002AC5EC /* LogicRule.h */,
@@ -1055,7 +1054,6 @@
 				8D56765F0E01EDD300EFEBA2 /* SensorController.m in Sources */,
 				8DBF0AC40E1A2902009F1FCE /* ValueSet.m in Sources */,
 				8D76DEE80E371D3B00DF4015 /* ExactRule.m in Sources */,
-				8D76DEFB0E371FBC00DF4015 /* RuleSet.m in Sources */,
 				8DBE19E00E39CE7A002AC5EC /* LogicRule.m in Sources */,
 				8DFEDA3C0E54E8C00069AA8C /* ApplicationController.m in Sources */,
 				8DBB44840E8B01F300B2D66F /* PreferencesController.m in Sources */,
@@ -1067,6 +1065,7 @@
 				8D33D43F0F69F9C20017C76B /* SensorStub.m in Sources */,
 				8D33D4450F69FAE30017C76B /* SensorLoader.m in Sources */,
 				8D4283920F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */,
+				8D3A5EC5104FBF5100FAAAAE /* RuleList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1169,7 +1168,6 @@
 				8D95D9010E19A0BD002C1B79 /* SensorControllerTest.m in Sources */,
 				8DBF0AC60E1A2906009F1FCE /* ValueSetTest.m in Sources */,
 				8DBF0AC70E1A2907009F1FCE /* ValueSet.m in Sources */,
-				8D76DEFC0E371FBC00DF4015 /* RuleSet.m in Sources */,
 				8DBE19930E39C93E002AC5EC /* ExactRuleTest.m in Sources */,
 				8DBE199D0E39CAB7002AC5EC /* ExactRule.m in Sources */,
 				8DBE19E10E39CE7A002AC5EC /* LogicRule.m in Sources */,
