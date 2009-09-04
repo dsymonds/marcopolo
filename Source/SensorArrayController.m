@@ -36,7 +36,6 @@
 	while ((name = [en nextObject])) {
 		if ([name hasSuffix:@".sensor"]) {
 			NSString *fullPath = [path stringByAppendingPathComponent:name];
-			// TODO: we need to resolve symlinks
 			[self loadSensorFromBundle:[NSBundle bundleWithPath:fullPath]];
 		}
 	}

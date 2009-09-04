@@ -16,31 +16,37 @@ static NSDictionary *usbVendorDb = nil;
 + (NSDictionary *)sharedUSBVendorDB
 {
 	if (!usbVendorDb) {
+		NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:1000];
 		NSString *path = [[NSBundle bundleForClass:[self class]] pathForResource:@"usb-vendors"
 										  ofType:@"txt"];
 		if (!path) {
 			NSLog(@"Couldn't find usb-vendors.txt");
 			return nil;
 		}
-		NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-		FILE *f = fopen([path cStringUsingEncoding:NSUTF8StringEncoding], "r");
-		// TODO: handle failure
-		while (!feof(f)) {
-			char buf[200];
-			if (!fgets(buf, sizeof(buf), f))
-				break;
-			// Line format:  1033|NEC Corporation
-			NSString *line = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
-			NSScanner *scan = [NSScanner scannerWithString:line];
-			NSString *vendor_id, *vendor_name;
-			[scan scanUpToString:@"|" intoString:&vendor_id];
-			[scan setScanLocation:[scan scanLocation] + 1];
-			[scan scanUpToString:@"\n" intoString:&vendor_name];
-
-			[dict setValue:vendor_name forKey:vendor_id];
+		NSData *data = [[NSFileManager defaultManager] contentsAtPath:path];
+		if (!data) {
+			NSLog(@"Couldn't read %@", path);
+			return nil;
 		}
-		fclose(f);
-		usbVendorDb = dict;
+		NSString *stringData = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+		if (!stringData) {
+			NSLog(@"Data in %@ is not UTF-8", path);
+			return nil;
+		}
+		NSCharacterSet *nl = [NSCharacterSet characterSetWithCharactersInString:@"\n"];
+		NSScanner *scanner = [NSScanner scannerWithString:stringData];
+		[scanner setCharactersToBeSkipped:nl];
+		NSString *line;
+		while ([scanner scanUpToCharactersFromSet:nl intoString:&line]) {
+			NSArray *parts = [line componentsSeparatedByString:@"|"];
+			if ([parts count] != 2) {
+				NSLog(@"Malformed line: [%@]", line);
+				continue;
+			}
+
+			[dict setValue:[parts objectAtIndex:1] forKey:[parts objectAtIndex:0]];
+		}
+		usbVendorDb = [dict retain];
 	}
 
 	return usbVendorDb;

@@ -75,6 +75,9 @@ static void devRemoved(void *ref, io_iterator_t iterator)
 
 - (void)start
 {
+	// Load the vendor DB early.
+	[USBVendorDB sharedUSBVendorDB];
+
 	notificationPort_ = IONotificationPortCreate(kIOMasterPortDefault);
 	runLoopSource_ = IONotificationPortGetRunLoopSource(notificationPort_);
 	CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource_, kCFRunLoopDefaultMode);
