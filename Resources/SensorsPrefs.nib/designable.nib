@@ -8,7 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="1"/>
+			<integer value="5"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -277,6 +277,7 @@
 					<string>running</string>
 					<string>value</string>
 					<string>value.description</string>
+					<string>valueSummary</string>
 				</object>
 				<bool key="NSEditable">YES</bool>
 				<object class="_NSManagedProxy" key="_NSManagedProxy"/>
@@ -340,19 +341,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: arrangedObjects.value</string>
+						<string key="label">value: arrangedObjects.valueSummary</string>
 						<reference key="source" ref="967563370"/>
 						<reference key="destination" ref="1020236776"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="967563370"/>
 							<reference key="NSDestination" ref="1020236776"/>
-							<string key="NSLabel">value: arrangedObjects.value</string>
+							<string key="NSLabel">value: arrangedObjects.valueSummary</string>
 							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">arrangedObjects.value</string>
+							<string key="NSKeyPath">arrangedObjects.valueSummary</string>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">31</int>
+					<int key="connectionID">32</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -541,7 +542,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">31</int>
+			<int key="maxID">32</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
