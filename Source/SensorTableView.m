@@ -1,15 +1,15 @@
 //
-//  SensorTesterTableView.m
+//  SensorTableView.m
 //  MarcoPolo
 //
 //  Created by David Symonds on 1/08/09.
 //
 
 #import "SensorController.h"
-#import "SensorTesterTableView.h"
+#import "SensorTableView.h"
 
 
-@implementation SensorTesterTableView
+@implementation SensorTableView
 
 - (void)keyDown:(NSEvent *)event
 {

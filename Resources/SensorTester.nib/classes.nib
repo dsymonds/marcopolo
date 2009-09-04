@@ -13,19 +13,6 @@
 			<string>NSArrayController</string>
 		</dict>
 		<dict>
-			<key>CLASS</key>
-			<string>SensorTesterTableView</string>
-			<key>LANGUAGE</key>
-			<string>ObjC</string>
-			<key>OUTLETS</key>
-			<dict>
-				<key>sensorArray</key>
-				<string>NSArrayController</string>
-			</dict>
-			<key>SUPERCLASS</key>
-			<string>NSTableView</string>
-		</dict>
-		<dict>
 			<key>ACTIONS</key>
 			<dict>
 				<key>toggleAutomaticLinkDetection</key>
@@ -43,6 +30,19 @@
 			<string>ObjC</string>
 			<key>SUPERCLASS</key>
 			<string>NSObject</string>
+		</dict>
+		<dict>
+			<key>CLASS</key>
+			<string>SensorTableView</string>
+			<key>LANGUAGE</key>
+			<string>ObjC</string>
+			<key>OUTLETS</key>
+			<dict>
+				<key>sensorArray</key>
+				<string>NSArrayController</string>
+			</dict>
+			<key>SUPERCLASS</key>
+			<string>NSTableView</string>
 		</dict>
 	</array>
 	<key>IBVersion</key>

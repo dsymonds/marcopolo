@@ -74,7 +74,6 @@
 		8D4B0C4F0F4E961100006BDA /* SensorsPrefs.nib in Resources */ = {isa = PBXBuildFile; fileRef = 8D4B0C4E0F4E961100006BDA /* SensorsPrefs.nib */; };
 		8D4B0C550F4E967A00006BDA /* SensorPreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4B0C540F4E967A00006BDA /* SensorPreferencesPaneController.m */; };
 		8D4B0C5E0F4E9CD900006BDA /* SensorsPrefs.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 8D4B0C5D0F4E9CD900006BDA /* SensorsPrefs.tiff */; };
-		8D4FE8431024600F00DD9761 /* SensorTesterTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4FE8421024600F00DD9761 /* SensorTesterTableView.m */; };
 		8D4FE8A010246F5200DD9761 /* RunningApplicationSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4FE89F10246F5200DD9761 /* RunningApplicationSensor.m */; };
 		8D4FE8AE10246F9300DD9761 /* RunningApplicationSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D4FE88E10246E8900DD9761 /* RunningApplicationSensor.sensor */; };
 		8D56753C0E0105AC00EFEBA2 /* TimeOfDaySensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */; };
@@ -104,6 +103,8 @@
 		8D7A2E261025B58B00C0553E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97324FDCFA39411CA2CEA /* AppKit.framework */; };
 		8D7A2E281025B5A300C0553E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7A2E271025B5A300C0553E /* CoreFoundation.framework */; };
 		8D7D5ABB0E958D9C005279AD /* PreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */; };
+		8D7E109B1051058D009D1E32 /* SensorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E109A1051058D009D1E32 /* SensorTableView.m */; };
+		8D7E109C1051058D009D1E32 /* SensorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E109A1051058D009D1E32 /* SensorTableView.m */; };
 		8D9053C20F19775E0096466F /* ContextPreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9053C10F19775E0096466F /* ContextPreferencesPaneController.m */; };
 		8D93600B0F14A11700D3990A /* minus-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9360080F14A11700D3990A /* minus-8.png */; };
 		8D93600C0F14A11700D3990A /* plus-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D9360090F14A11700D3990A /* plus-8.png */; };
@@ -331,8 +332,6 @@
 		8D4B0C530F4E967A00006BDA /* SensorPreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorPreferencesPaneController.h; path = Source/SensorPreferencesPaneController.h; sourceTree = "<group>"; };
 		8D4B0C540F4E967A00006BDA /* SensorPreferencesPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorPreferencesPaneController.m; path = Source/SensorPreferencesPaneController.m; sourceTree = "<group>"; };
 		8D4B0C5D0F4E9CD900006BDA /* SensorsPrefs.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = SensorsPrefs.tiff; path = Resources/SensorsPrefs.tiff; sourceTree = "<group>"; };
-		8D4FE8411024600F00DD9761 /* SensorTesterTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorTesterTableView.h; path = Source/SensorTesterTableView.h; sourceTree = "<group>"; };
-		8D4FE8421024600F00DD9761 /* SensorTesterTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorTesterTableView.m; path = Source/SensorTesterTableView.m; sourceTree = "<group>"; };
 		8D4FE88E10246E8900DD9761 /* RunningApplicationSensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunningApplicationSensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D4FE88F10246E8900DD9761 /* RunningApplicationSensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RunningApplicationSensor-Info.plist"; path = "Sensors/RunningApplicationSensor/RunningApplicationSensor-Info.plist"; sourceTree = "<group>"; };
 		8D4FE89E10246F5200DD9761 /* RunningApplicationSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RunningApplicationSensor.h; path = Sensors/RunningApplicationSensor/RunningApplicationSensor.h; sourceTree = "<group>"; };
@@ -379,6 +378,8 @@
 		8D7A2E271025B5A300C0553E /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		8D7D5AB90E958D9C005279AD /* PreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesPaneController.h; path = Source/PreferencesPaneController.h; sourceTree = "<group>"; };
 		8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesPaneController.m; path = Source/PreferencesPaneController.m; sourceTree = "<group>"; };
+		8D7E10991051058D009D1E32 /* SensorTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorTableView.h; path = Source/SensorTableView.h; sourceTree = "<group>"; };
+		8D7E109A1051058D009D1E32 /* SensorTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorTableView.m; path = Source/SensorTableView.m; sourceTree = "<group>"; };
 		8D9053C00F19775E0096466F /* ContextPreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContextPreferencesPaneController.h; path = Source/ContextPreferencesPaneController.h; sourceTree = "<group>"; };
 		8D9053C10F19775E0096466F /* ContextPreferencesPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContextPreferencesPaneController.m; path = Source/ContextPreferencesPaneController.m; sourceTree = "<group>"; };
 		8D9360080F14A11700D3990A /* minus-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "minus-8.png"; path = "Resources/minus-8.png"; sourceTree = "<group>"; };
@@ -707,8 +708,8 @@
 		8D7D5A270E94BDF5005279AD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8D4FE8411024600F00DD9761 /* SensorTesterTableView.h */,
-				8D4FE8421024600F00DD9761 /* SensorTesterTableView.m */,
+				8D7E10991051058D009D1E32 /* SensorTableView.h */,
+				8D7E109A1051058D009D1E32 /* SensorTableView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1092,6 +1093,7 @@
 				8D33D4450F69FAE30017C76B /* SensorLoader.m in Sources */,
 				8D4283920F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */,
 				8D3A5EC5104FBF5100FAAAAE /* RuleList.m in Sources */,
+				8D7E109B1051058D009D1E32 /* SensorTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1138,7 +1140,7 @@
 				8D33D4400F69F9C20017C76B /* SensorStub.m in Sources */,
 				8D33D4460F69FAE30017C76B /* SensorLoader.m in Sources */,
 				8D4283930F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */,
-				8D4FE8431024600F00DD9761 /* SensorTesterTableView.m in Sources */,
+				8D7E109C1051058D009D1E32 /* SensorTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
