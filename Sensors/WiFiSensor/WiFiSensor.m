@@ -96,6 +96,7 @@ static NSString *macToString(const UInt8 *mac)
 
 - (void)update:(NSTimer *)timer
 {
+	// TODO: Flatten this. We can't compile Tiger/Leopard and Snow Leopard support into one binary anyway.
 	if (osxMinorVersion_ == 4 || osxMinorVersion_ == 5) {
 		NSArray *arr = [self updateWithApple80211];
 		[self setAccessPoints:(arr ? arr : [NSArray array])];
@@ -113,27 +114,43 @@ static NSString *macToString(const UInt8 *mac)
 		return nil;
 
 	// First, if we are already associated with an AP then we return only it, without scanning.
-	// This avoids disrupting existing connections.
+	// This avoids disrupting existing network connections.
 	WirelessInfo winfo;
 	if (WirelessGetInfo(wctxt, &winfo) == noErr) {
+		// TODO: This isn't working for me in Leopard. Need to debug.
+		//NSLog(@"winfo.power=%d, winfo.link_qual=%d", winfo.power, winfo.link_qual);
 		if (winfo.power > 0 && winfo.link_qual > 0) {
 			NSString *ssid = [NSString stringWithCString:(const char *) winfo.name
 							    encoding:NSISOLatin1StringEncoding];
 			NSString *mac = macToString(winfo.macAddress);
+			WirelessDetach(wctxt);
 			return [NSArray arrayWithObject:
 				[NSDictionary dictionaryWithObjectsAndKeys:
 				 ssid, @"SSID", mac, @"MAC", nil]];
 		}
 	}
 
-	// FAKE DATA
-	return [NSArray arrayWithObject:
-		[NSDictionary dictionaryWithObjectsAndKeys:
-		 @"D-Link", @"SSID", @"00:50:ba:e1:fa:46", @"MAC", nil]];
+	NSArray *list;
+	if (WirelessScan(wctxt, (CFArrayRef *) &list, 1) != noErr) {
+		WirelessDetach(wctxt);
+		return nil;
+	}
 
-	// TODO: actual scanning
+	NSMutableArray *aps = [NSMutableArray arrayWithCapacity:[list count]];
+	NSEnumerator *en = [list objectEnumerator];
+	NSData *data;
+	while ((data = [en nextObject])) {
+		const WirelessNetworkInfo *wni = (const WirelessNetworkInfo *) [data bytes];
+		// XXX: Verify this string encoding somehow.
+		NSString *ssid = [NSString stringWithCString:(const char *) wni->name
+						    encoding:NSISOLatin1StringEncoding];
+		NSString *mac = macToString(wni->macAddress);
+		[aps addObject:[NSDictionary dictionaryWithObjectsAndKeys:
+				ssid, @"SSID", mac, @"MAC", nil]];
+	}
 
-	return nil;
+	WirelessDetach(wctxt);
+	return aps;
 }
 
 // Takes an array of dictionaries, each with SSID and MAC keys.
