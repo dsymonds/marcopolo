@@ -5,11 +5,27 @@
 //  Created by David Symonds on 13/03/09.
 //
 
+#import "OS.h"
 #import "Sensor.h"
 #import "SensorLoader.h"
 
 
 @implementation SensorLoader
+
++ (BOOL)canLoadSensorFromBundle:(NSBundle *)bundle
+{
+	NSDictionary *info = [bundle infoDictionary];
+	int osxVersion = OSXVersion();
+
+	NSNumber *min = [info objectForKey:@"MPMinimumOSVersion"];
+	if (min && (osxVersion < [min intValue]))
+		return NO;
+	NSNumber *max = [info objectForKey:@"MPMaximumOSVersion"];
+	if (max && ([max intValue] < osxVersion))
+		return NO;
+
+	return YES;
+}
 
 + (NSObject<Sensor> *)sensorFromBundle:(NSBundle *)bundle
 {

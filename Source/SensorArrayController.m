@@ -7,6 +7,7 @@
 
 #import "SensorArrayController.h"
 #import "SensorController.h"
+#import "SensorLoader.h"
 #import "SensorStub.h"
 #import "ValueSet.h"
 
@@ -36,7 +37,10 @@
 	while ((name = [en nextObject])) {
 		if ([name hasSuffix:@".sensor"]) {
 			NSString *fullPath = [path stringByAppendingPathComponent:name];
-			[self loadSensorFromBundle:[NSBundle bundleWithPath:fullPath]];
+			NSBundle *bundle = [NSBundle bundleWithPath:fullPath];
+			if ([SensorLoader canLoadSensorFromBundle:bundle]) {
+				[self loadSensorFromBundle:bundle];
+			}
 		}
 	}
 }

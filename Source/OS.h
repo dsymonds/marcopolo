@@ -8,9 +8,6 @@
 #import <Cocoa/Cocoa.h>
 
 
-// Return the minor version of OS X.
-// 0 = error
-// 4 = Tiger
-// 5 = Leopard
-// ? = Snow Leopard (needs testing)
-int OSXMinorVersion();
+// Return the version of OS X, in base 100.
+// e.g. 10.5.8 -> 100508
+int OSXVersion();

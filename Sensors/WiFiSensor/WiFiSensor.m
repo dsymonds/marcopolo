@@ -6,7 +6,6 @@
 //
 
 #import "Apple80211.h"
-#import "OS.h"
 #import "WiFiSensor.h"
 
 
@@ -34,7 +33,6 @@
 	lock_ = [[NSLock alloc] init];
 	accessPoints_ = [[NSMutableArray alloc] init];
 	timer_ = nil;
-	osxMinorVersion_ = OSXMinorVersion();
 
 	return self;
 }
@@ -96,11 +94,8 @@ static NSString *macToString(const UInt8 *mac)
 
 - (void)update:(NSTimer *)timer
 {
-	// TODO: Flatten this. We can't compile Tiger/Leopard and Snow Leopard support into one binary anyway.
-	if (osxMinorVersion_ == 4 || osxMinorVersion_ == 5) {
-		NSArray *arr = [self updateWithApple80211];
-		[self setAccessPoints:(arr ? arr : [NSArray array])];
-	}
+	NSArray *arr = [self updateWithApple80211];
+	[self setAccessPoints:(arr ? arr : [NSArray array])];
 }
 
 - (NSArray *)updateWithApple80211

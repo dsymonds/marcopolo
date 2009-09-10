@@ -98,7 +98,6 @@
 		8D76DEE80E371D3B00DF4015 /* ExactRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEE70E371D3B00DF4015 /* ExactRule.m */; };
 		8D7A2DAB1025AEE400C0553E /* WiFiSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A2DAA1025AEE400C0553E /* WiFiSensor.m */; };
 		8D7A2DBE1025AF9300C0553E /* WiFiSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D7A2DA31025ADDE00C0553E /* WiFiSensor.sensor */; };
-		8D7A2DFB1025B1EA00C0553E /* OS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A2DFA1025B1EA00C0553E /* OS.m */; };
 		8D7A2E241025B4CD00C0553E /* Apple80211.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7A2E231025B4CD00C0553E /* Apple80211.framework */; };
 		8D7A2E261025B58B00C0553E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97324FDCFA39411CA2CEA /* AppKit.framework */; };
 		8D7A2E281025B5A300C0553E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7A2E271025B5A300C0553E /* CoreFoundation.framework */; };
@@ -117,6 +116,9 @@
 		8DA608630E1D977500066EA8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DA608620E1D977500066EA8 /* SystemConfiguration.framework */; };
 		8DA7FE190E064F6F00248CF8 /* MockSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DA7FE180E064F6F00248CF8 /* MockSensor.m */; };
 		8DA7FE310E0653EB00248CF8 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
+		8DBAC9801058F48F00C7BC2D /* OS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A2DFA1025B1EA00C0553E /* OS.m */; };
+		8DBAC9811058F49C00C7BC2D /* OS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A2DFA1025B1EA00C0553E /* OS.m */; };
+		8DBAC9821058F4A300C7BC2D /* OS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A2DFA1025B1EA00C0553E /* OS.m */; };
 		8DBB44840E8B01F300B2D66F /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB44830E8B01F300B2D66F /* PreferencesController.m */; };
 		8DBE19930E39C93E002AC5EC /* ExactRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE19920E39C93E002AC5EC /* ExactRuleTest.m */; };
 		8DBE199D0E39CAB7002AC5EC /* ExactRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEE70E371D3B00DF4015 /* ExactRule.m */; };
@@ -1094,6 +1096,7 @@
 				8D4283920F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */,
 				8D3A5EC5104FBF5100FAAAAE /* RuleList.m in Sources */,
 				8D7E109B1051058D009D1E32 /* SensorTableView.m in Sources */,
+				8DBAC9811058F49C00C7BC2D /* OS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1141,6 +1144,7 @@
 				8D33D4460F69FAE30017C76B /* SensorLoader.m in Sources */,
 				8D4283930F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */,
 				8D7E109C1051058D009D1E32 /* SensorTableView.m in Sources */,
+				8DBAC9801058F48F00C7BC2D /* OS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1163,6 +1167,7 @@
 				8D723CF50F47A6A000C78FC3 /* SensorRunnerMonitor.m in Sources */,
 				8D4283940F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */,
 				8D4283D50F7F02D400E4B866 /* SensorLoader.m in Sources */,
+				8DBAC9821058F4A300C7BC2D /* OS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1171,7 +1176,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D7A2DAB1025AEE400C0553E /* WiFiSensor.m in Sources */,
-				8D7A2DFB1025B1EA00C0553E /* OS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

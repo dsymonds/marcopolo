@@ -8,12 +8,12 @@
 #import "OS.h"
 
 
-int OSXMinorVersion()
+int OSXVersion()
 {
-	long major, minor;
-	if (Gestalt(gestaltSystemVersionMajor, &major) || Gestalt(gestaltSystemVersionMinor, &minor))
+	long major, minor, bugfix;
+	if (Gestalt(gestaltSystemVersionMajor, &major) ||
+	    Gestalt(gestaltSystemVersionMinor, &minor) ||
+	    Gestalt(gestaltSystemVersionBugFix, &bugfix))
 		return 0;
-	if (major != 10)
-		return 0;
-	return minor;
+	return ((major * 100) + minor) * 100 + bugfix;
 }
