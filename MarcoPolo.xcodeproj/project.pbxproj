@@ -20,7 +20,7 @@
 				8D4FE8A210246F7000DD9761 /* PBXTargetDependency */,
 				8D637B5C0E04A126008D3EBA /* PBXTargetDependency */,
 				8D637B930E04A2C7008D3EBA /* PBXTargetDependency */,
-				8D7A2DAE1025AF5A00C0553E /* PBXTargetDependency */,
+				8DBACACD1058F87600C7BC2D /* PBXTargetDependency */,
 			);
 			name = "All Sensors";
 			productName = "All Sensors";
@@ -62,7 +62,6 @@
 		8D3A5EF9104FC58200FAAAAE /* RunningApplicationSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D4FE88E10246E8900DD9761 /* RunningApplicationSensor.sensor */; };
 		8D3A5EFA104FC58200FAAAAE /* TimeOfDaySensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */; };
 		8D3A5EFB104FC58200FAAAAE /* USBSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D637B8C0E04A280008D3EBA /* USBSensor.sensor */; };
-		8D3A5EFC104FC58200FAAAAE /* WiFiSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D7A2DA31025ADDE00C0553E /* WiFiSensor.sensor */; };
 		8D4283500F7EFA2A00E4B866 /* SensorRunner in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D723C9F0F47A16E00C78FC3 /* SensorRunner */; };
 		8D4283920F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */; };
 		8D4283930F7EFD3500E4B866 /* SensorProtocolEndpoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */; };
@@ -83,6 +82,7 @@
 		8D5675980E010C9200EFEBA2 /* SensorArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5675960E010C9200EFEBA2 /* SensorArrayController.m */; };
 		8D56765F0E01EDD300EFEBA2 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
 		8D5676600E01EDD300EFEBA2 /* SensorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D56765E0E01EDD300EFEBA2 /* SensorController.m */; };
+		8D5F41CB10591CBD003A53C9 /* OS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A2DFA1025B1EA00C0553E /* OS.m */; };
 		8D637B7F0E04A1E3008D3EBA /* TimeOfDaySensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */; };
 		8D637B9A0E04A332008D3EBA /* USBSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D637B990E04A332008D3EBA /* USBSensor.m */; };
 		8D637BAC0E04A61C008D3EBA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D637BAB0E04A61C008D3EBA /* IOKit.framework */; };
@@ -96,11 +96,6 @@
 		8D723CF50F47A6A000C78FC3 /* SensorRunnerMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D723CF40F47A6A000C78FC3 /* SensorRunnerMonitor.m */; };
 		8D723D430F47AAE800C78FC3 /* SensorRunner in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D723C9F0F47A16E00C78FC3 /* SensorRunner */; };
 		8D76DEE80E371D3B00DF4015 /* ExactRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEE70E371D3B00DF4015 /* ExactRule.m */; };
-		8D7A2DAB1025AEE400C0553E /* WiFiSensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A2DAA1025AEE400C0553E /* WiFiSensor.m */; };
-		8D7A2DBE1025AF9300C0553E /* WiFiSensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D7A2DA31025ADDE00C0553E /* WiFiSensor.sensor */; };
-		8D7A2E241025B4CD00C0553E /* Apple80211.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7A2E231025B4CD00C0553E /* Apple80211.framework */; };
-		8D7A2E261025B58B00C0553E /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97324FDCFA39411CA2CEA /* AppKit.framework */; };
-		8D7A2E281025B5A300C0553E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7A2E271025B5A300C0553E /* CoreFoundation.framework */; };
 		8D7D5ABB0E958D9C005279AD /* PreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */; };
 		8D7E109B1051058D009D1E32 /* SensorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E109A1051058D009D1E32 /* SensorTableView.m */; };
 		8D7E109C1051058D009D1E32 /* SensorTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E109A1051058D009D1E32 /* SensorTableView.m */; };
@@ -119,6 +114,12 @@
 		8DBAC9801058F48F00C7BC2D /* OS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A2DFA1025B1EA00C0553E /* OS.m */; };
 		8DBAC9811058F49C00C7BC2D /* OS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A2DFA1025B1EA00C0553E /* OS.m */; };
 		8DBAC9821058F4A300C7BC2D /* OS.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7A2DFA1025B1EA00C0553E /* OS.m */; };
+		8DBAC9DA1058F84000C7BC2D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97324FDCFA39411CA2CEA /* AppKit.framework */; };
+		8DBAC9DB1058F84000C7BC2D /* Apple80211.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7A2E231025B4CD00C0553E /* Apple80211.framework */; };
+		8DBAC9DC1058F84000C7BC2D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7A2E271025B5A300C0553E /* CoreFoundation.framework */; };
+		8DBACABB1058F85F00C7BC2D /* WiFiApple80211Sensor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBACABA1058F85F00C7BC2D /* WiFiApple80211Sensor.m */; };
+		8DBACACF1058F8AF00C7BC2D /* WiFiApple80211Sensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DBAC9BE1058F7C900C7BC2D /* WiFiApple80211Sensor.sensor */; };
+		8DBACB161058F8D600C7BC2D /* WiFiApple80211Sensor.sensor in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DBAC9BE1058F7C900C7BC2D /* WiFiApple80211Sensor.sensor */; };
 		8DBB44840E8B01F300B2D66F /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBB44830E8B01F300B2D66F /* PreferencesController.m */; };
 		8DBE19930E39C93E002AC5EC /* ExactRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBE19920E39C93E002AC5EC /* ExactRuleTest.m */; };
 		8DBE199D0E39CAB7002AC5EC /* ExactRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D76DEE70E371D3B00DF4015 /* ExactRule.m */; };
@@ -202,19 +203,19 @@
 			remoteGlobalIDString = 8D637B8B0E04A280008D3EBA;
 			remoteInfo = USBSensor;
 		};
-		8D7A2DAD1025AF5A00C0553E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8D7A2DA21025ADDE00C0553E;
-			remoteInfo = WiFiSensor;
-		};
 		8DA6081D0E1D941900066EA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8DA607F50E1D931A00066EA8;
 			remoteInfo = IPSensor;
+		};
+		8DBACACC1058F87600C7BC2D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DBAC9BD1058F7C900C7BC2D;
+			remoteInfo = WiFiApple80211Sensor;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -225,6 +226,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				8DBACACF1058F8AF00C7BC2D /* WiFiApple80211Sensor.sensor in CopyFiles */,
 				8D3A5EF5104FC58200FAAAAE /* CrashSensor.sensor in CopyFiles */,
 				8D3A5EF6104FC58200FAAAAE /* IPSensor.sensor in CopyFiles */,
 				8D3A5EF7104FC58200FAAAAE /* LightSensor.sensor in CopyFiles */,
@@ -232,7 +234,6 @@
 				8D3A5EF9104FC58200FAAAAE /* RunningApplicationSensor.sensor in CopyFiles */,
 				8D3A5EFA104FC58200FAAAAE /* TimeOfDaySensor.sensor in CopyFiles */,
 				8D3A5EFB104FC58200FAAAAE /* USBSensor.sensor in CopyFiles */,
-				8D3A5EFC104FC58200FAAAAE /* WiFiSensor.sensor in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,7 +263,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				8D7A2DBE1025AF9300C0553E /* WiFiSensor.sensor in CopyFiles */,
+				8DBACB161058F8D600C7BC2D /* WiFiApple80211Sensor.sensor in CopyFiles */,
 				8D2855DB102554DC00A7CDB9 /* CrashSensor.sensor in CopyFiles */,
 				8D4FE8AE10246F9300DD9761 /* RunningApplicationSensor.sensor in CopyFiles */,
 				8DA6081F0E1D942A00066EA8 /* IPSensor.sensor in CopyFiles */,
@@ -369,11 +370,6 @@
 		8D76DEDA0E371C7800DF4015 /* Rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rule.h; path = Source/Rule.h; sourceTree = "<group>"; };
 		8D76DEE60E371D3B00DF4015 /* ExactRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExactRule.h; path = Source/ExactRule.h; sourceTree = "<group>"; };
 		8D76DEE70E371D3B00DF4015 /* ExactRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExactRule.m; path = Source/ExactRule.m; sourceTree = "<group>"; };
-		8D7A2DA31025ADDE00C0553E /* WiFiSensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiFiSensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D7A2DA41025ADDE00C0553E /* WiFiSensor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WiFiSensor-Info.plist"; path = "Sensors/WiFiSensor/WiFiSensor-Info.plist"; sourceTree = "<group>"; };
-		8D7A2DA91025AEE400C0553E /* WiFiSensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WiFiSensor.h; path = Sensors/WiFiSensor/WiFiSensor.h; sourceTree = "<group>"; };
-		8D7A2DAA1025AEE400C0553E /* WiFiSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WiFiSensor.m; path = Sensors/WiFiSensor/WiFiSensor.m; sourceTree = "<group>"; };
-		8D7A2DE81025B15500C0553E /* Apple80211.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Apple80211.h; path = Sensors/WiFiSensor/Apple80211.h; sourceTree = "<group>"; };
 		8D7A2DF91025B1EA00C0553E /* OS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OS.h; path = Source/OS.h; sourceTree = "<group>"; };
 		8D7A2DFA1025B1EA00C0553E /* OS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OS.m; path = Source/OS.m; sourceTree = "<group>"; };
 		8D7A2E231025B4CD00C0553E /* Apple80211.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apple80211.framework; path = /System/Library/PrivateFrameworks/Apple80211.framework; sourceTree = "<absolute>"; };
@@ -398,6 +394,11 @@
 		8DA7FE180E064F6F00248CF8 /* MockSensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MockSensor.m; path = Source/MockSensor.m; sourceTree = "<group>"; };
 		8DA7FE290E06519000248CF8 /* SensorControllerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SensorControllerTest.h; path = Source/SensorControllerTest.h; sourceTree = "<group>"; };
 		8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SensorControllerTest.m; path = Source/SensorControllerTest.m; sourceTree = "<group>"; };
+		8DBAC9BE1058F7C900C7BC2D /* WiFiApple80211Sensor.sensor */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiFiApple80211Sensor.sensor; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DBACABA1058F85F00C7BC2D /* WiFiApple80211Sensor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WiFiApple80211Sensor.m; path = Sensors/WiFiApple80211Sensor/WiFiApple80211Sensor.m; sourceTree = "<group>"; };
+		8DBACB261058F91700C7BC2D /* Apple80211.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Apple80211.h; path = Sensors/WiFiApple80211Sensor/Apple80211.h; sourceTree = "<group>"; };
+		8DBACB271058F91700C7BC2D /* WiFiApple80211Sensor-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "WiFiApple80211Sensor-Info.plist"; path = "Sensors/WiFiApple80211Sensor/WiFiApple80211Sensor-Info.plist"; sourceTree = "<group>"; };
+		8DBACB281058F91700C7BC2D /* WiFiApple80211Sensor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WiFiApple80211Sensor.h; path = Sensors/WiFiApple80211Sensor/WiFiApple80211Sensor.h; sourceTree = "<group>"; };
 		8DBB44820E8B01F300B2D66F /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PreferencesController.h; path = Source/PreferencesController.h; sourceTree = "<group>"; };
 		8DBB44830E8B01F300B2D66F /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PreferencesController.m; path = Source/PreferencesController.m; sourceTree = "<group>"; };
 		8DBE19910E39C93E002AC5EC /* ExactRuleTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExactRuleTest.h; path = Source/ExactRuleTest.h; sourceTree = "<group>"; };
@@ -483,21 +484,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D7A2DA11025ADDE00C0553E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D7A2E241025B4CD00C0553E /* Apple80211.framework in Frameworks */,
-				8D7A2E261025B58B00C0553E /* AppKit.framework in Frameworks */,
-				8D7A2E281025B5A300C0553E /* CoreFoundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8DA607F40E1D931A00066EA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8DA608630E1D977500066EA8 /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DBAC9BC1058F7C900C7BC2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DBAC9DA1058F84000C7BC2D /* AppKit.framework in Frameworks */,
+				8DBAC9DB1058F84000C7BC2D /* Apple80211.framework in Frameworks */,
+				8DBAC9DC1058F84000C7BC2D /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,17 +544,17 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* MarcoPolo.app */,
-				8DE55AD20DFE7AF800D79CF0 /* Unit Tests.octest */,
 				8D56757A0E0109CD00EFEBA2 /* SensorTester.app */,
-				8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */,
-				8D637B8C0E04A280008D3EBA /* USBSensor.sensor */,
+				8D723C9F0F47A16E00C78FC3 /* SensorRunner */,
+				8D2855A61025534200A7CDB9 /* CrashSensor.sensor */,
+				8DE55AD20DFE7AF800D79CF0 /* Unit Tests.octest */,
+				8DA607F60E1D931A00066EA8 /* IPSensor.sensor */,
 				8D0EACB00E07A99C004ABEF2 /* LightSensor.sensor */,
 				8D1B84620E0A79AA00D47563 /* PowerSensor.sensor */,
-				8DA607F60E1D931A00066EA8 /* IPSensor.sensor */,
-				8D723C9F0F47A16E00C78FC3 /* SensorRunner */,
 				8D4FE88E10246E8900DD9761 /* RunningApplicationSensor.sensor */,
-				8D2855A61025534200A7CDB9 /* CrashSensor.sensor */,
-				8D7A2DA31025ADDE00C0553E /* WiFiSensor.sensor */,
+				8D56752D0E01055E00EFEBA2 /* TimeOfDaySensor.sensor */,
+				8D637B8C0E04A280008D3EBA /* USBSensor.sensor */,
+				8DBAC9BE1058F7C900C7BC2D /* WiFiApple80211Sensor.sensor */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -574,18 +575,18 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8D7A2DF91025B1EA00C0553E /* OS.h */,
+				8D7A2DFA1025B1EA00C0553E /* OS.m */,
 				32CA4F630368D1EE00C91783 /* MarcoPolo.pch */,
-				29B97316FDCFA39411CA2CEA /* main.m */,
-				8D2353A80F1DD0D900A17EEA /* TestHelpers.h */,
-				8D723CAF0F47A20700C78FC3 /* SensorRunner.m */,
-				8D723CF30F47A6A000C78FC3 /* SensorRunnerMonitor.h */,
-				8D723CF40F47A6A000C78FC3 /* SensorRunnerMonitor.m */,
 				8D33D4430F69FAE30017C76B /* SensorLoader.h */,
 				8D33D4440F69FAE30017C76B /* SensorLoader.m */,
 				8D4283900F7EFD3500E4B866 /* SensorProtocolEndpoint.h */,
 				8D4283910F7EFD3500E4B866 /* SensorProtocolEndpoint.m */,
-				8D7A2DF91025B1EA00C0553E /* OS.h */,
-				8D7A2DFA1025B1EA00C0553E /* OS.m */,
+				8D723CAF0F47A20700C78FC3 /* SensorRunner.m */,
+				8D723CF30F47A6A000C78FC3 /* SensorRunnerMonitor.h */,
+				8D723CF40F47A6A000C78FC3 /* SensorRunnerMonitor.m */,
+				8D2353A80F1DD0D900A17EEA /* TestHelpers.h */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -593,16 +594,14 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8D4B0C4E0F4E961100006BDA /* SensorsPrefs.nib */,
-				8D4B0C5D0F4E9CD900006BDA /* SensorsPrefs.tiff */,
-				8D9360070F14A0F900D3990A /* Misc. Graphics */,
 				8D16A7A00E8FB20100765403 /* Prefs */,
-				8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */,
-				8D56757C0E0109CD00EFEBA2 /* SensorTester-Info.plist */,
+				8D9360070F14A0F900D3990A /* Misc. Graphics */,
 				8D1107310486CEB800E47090 /* Info.plist */,
-				8DE55AD30DFE7AF800D79CF0 /* Unit Tests-Info.plist */,
-				8D5675910E010AE800EFEBA2 /* SensorTester.nib */,
 				8DFEDA350E54E7140069AA8C /* MainMenu.nib */,
+				8D5675910E010AE800EFEBA2 /* SensorTester.nib */,
+				8D56757C0E0109CD00EFEBA2 /* SensorTester-Info.plist */,
+				8DE55AD30DFE7AF800D79CF0 /* Unit Tests-Info.plist */,
+				8D637C3D0E04CEB7008D3EBA /* usb-vendors.txt */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -628,6 +627,8 @@
 				8D16A7070E8F66C900765403 /* GeneralPrefs.nib */,
 				8D16A79E0E8FB1FE00765403 /* GeneralPrefs.tiff */,
 				8D2CEBA20E92F8BB00E1895A /* RulesPrefs.tiff */,
+				8D4B0C4E0F4E961100006BDA /* SensorsPrefs.nib */,
+				8D4B0C5D0F4E9CD900006BDA /* SensorsPrefs.tiff */,
 			);
 			name = Prefs;
 			sourceTree = "<group>";
@@ -635,24 +636,18 @@
 		8D35C5F70DFE7F3300AF7A7D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8D3A5EC3104FBF5100FAAAAE /* RuleList.h */,
-				8D3A5EC4104FBF5100FAAAAE /* RuleList.m */,
-				8D69AD000F1741A70019E8A8 /* ContextCollection.h */,
-				8D69AD010F1741A70019E8A8 /* ContextCollection.m */,
-				8DBF0AC00E1A2902009F1FCE /* ValueSet.h */,
-				8DBF0AC10E1A2902009F1FCE /* ValueSet.m */,
-				8DBF0AC20E1A2902009F1FCE /* ValueSetTest.h */,
-				8DBF0AC30E1A2902009F1FCE /* ValueSetTest.m */,
 				8D35C5F80DFE7F7D00AF7A7D /* Context.h */,
 				8D35C5F90DFE7F7D00AF7A7D /* Context.m */,
+				8D69AD000F1741A70019E8A8 /* ContextCollection.h */,
+				8D69AD010F1741A70019E8A8 /* ContextCollection.m */,
 				8D35C6260DFE999200AF7A7D /* ContextGroup.h */,
 				8D35C6270DFE999200AF7A7D /* ContextGroup.m */,
 				8D35C6300DFE9C2400AF7A7D /* ContextGroupTest.h */,
 				8D35C6310DFE9C2400AF7A7D /* ContextGroupTest.m */,
+				8D477E380F24635B009CD458 /* ContextNode.h */,
+				8D477E390F24635B009CD458 /* ContextNode.m */,
 				8D35C6090DFE851A00AF7A7D /* ContextTest.h */,
 				8D35C60A0DFE851A00AF7A7D /* ContextTest.m */,
-				8D5A064D0DFFBE60009346BF /* Sensor.h */,
-				8D76DEDA0E371C7800DF4015 /* Rule.h */,
 				8D76DEE60E371D3B00DF4015 /* ExactRule.h */,
 				8D76DEE70E371D3B00DF4015 /* ExactRule.m */,
 				8DBE19910E39C93E002AC5EC /* ExactRuleTest.h */,
@@ -661,10 +656,16 @@
 				8DBE19DF0E39CE7A002AC5EC /* LogicRule.m */,
 				8D93F7850E50FB0000AE3E1E /* LogicRuleTest.h */,
 				8D93F7860E50FB0000AE3E1E /* LogicRuleTest.m */,
-				8D477E380F24635B009CD458 /* ContextNode.h */,
-				8D477E390F24635B009CD458 /* ContextNode.m */,
+				8D76DEDA0E371C7800DF4015 /* Rule.h */,
+				8D3A5EC3104FBF5100FAAAAE /* RuleList.h */,
+				8D3A5EC4104FBF5100FAAAAE /* RuleList.m */,
+				8D5A064D0DFFBE60009346BF /* Sensor.h */,
 				8D33D43D0F69F9C20017C76B /* SensorStub.h */,
 				8D33D43E0F69F9C20017C76B /* SensorStub.m */,
+				8DBF0AC00E1A2902009F1FCE /* ValueSet.h */,
+				8DBF0AC10E1A2902009F1FCE /* ValueSet.m */,
+				8DBF0AC20E1A2902009F1FCE /* ValueSetTest.h */,
+				8DBF0AC30E1A2902009F1FCE /* ValueSetTest.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -672,37 +673,37 @@
 		8D5675390E01058100EFEBA2 /* Sensors */ = {
 			isa = PBXGroup;
 			children = (
-				8D7A2DE81025B15500C0553E /* Apple80211.h */,
-				8D7A2DA41025ADDE00C0553E /* WiFiSensor-Info.plist */,
+				8DBACB261058F91700C7BC2D /* Apple80211.h */,
+				8D2855C51025546400A7CDB9 /* CrashSensor.h */,
+				8D2855C61025546400A7CDB9 /* CrashSensor.m */,
 				8D2855A71025534200A7CDB9 /* CrashSensor-Info.plist */,
-				8D4FE88F10246E8900DD9761 /* RunningApplicationSensor-Info.plist */,
+				8DA608070E1D93C600066EA8 /* IPSensor.h */,
+				8DA608080E1D93C600066EA8 /* IPSensor.m */,
 				8DA607F70E1D931A00066EA8 /* IPSensor-Info.plist */,
-				8D1B847D0E0A7A1E00D47563 /* PowerSensor-Info.plist */,
-				8D1B847E0E0A7A1E00D47563 /* PowerSensor.h */,
-				8D1B847F0E0A7A1E00D47563 /* PowerSensor.m */,
 				8D0EACC30E07AB1C004ABEF2 /* LightSensor.h */,
 				8D0EACC40E07AB1C004ABEF2 /* LightSensor.m */,
 				8D0EACA40E07A931004ABEF2 /* LightSensor-Info.plist */,
-				8D637C240E04CD32008D3EBA /* USBVendorDB.h */,
-				8D637C250E04CD32008D3EBA /* USBVendorDB.m */,
-				8D637B980E04A332008D3EBA /* USBSensor.h */,
-				8D637B990E04A332008D3EBA /* USBSensor.m */,
-				8D637B8D0E04A280008D3EBA /* USBSensor-Info.plist */,
+				8DA7FE170E064F6F00248CF8 /* MockSensor.h */,
+				8DA7FE180E064F6F00248CF8 /* MockSensor.m */,
+				8D1B847D0E0A7A1E00D47563 /* PowerSensor-Info.plist */,
+				8D1B847E0E0A7A1E00D47563 /* PowerSensor.h */,
+				8D1B847F0E0A7A1E00D47563 /* PowerSensor.m */,
+				8D4FE89E10246F5200DD9761 /* RunningApplicationSensor.h */,
+				8D4FE89F10246F5200DD9761 /* RunningApplicationSensor.m */,
+				8D4FE88F10246E8900DD9761 /* RunningApplicationSensor-Info.plist */,
 				8D56752E0E01055E00EFEBA2 /* TimeOfDaySensor-Info.plist */,
 				8D56753A0E0105AC00EFEBA2 /* TimeOfDaySensor.h */,
 				8D56753B0E0105AC00EFEBA2 /* TimeOfDaySensor.m */,
 				8D637C580E04D2DD008D3EBA /* USBDevice.h */,
 				8D637C590E04D2DD008D3EBA /* USBDevice.m */,
-				8DA7FE170E064F6F00248CF8 /* MockSensor.h */,
-				8DA7FE180E064F6F00248CF8 /* MockSensor.m */,
-				8DA608070E1D93C600066EA8 /* IPSensor.h */,
-				8DA608080E1D93C600066EA8 /* IPSensor.m */,
-				8D4FE89E10246F5200DD9761 /* RunningApplicationSensor.h */,
-				8D4FE89F10246F5200DD9761 /* RunningApplicationSensor.m */,
-				8D2855C51025546400A7CDB9 /* CrashSensor.h */,
-				8D2855C61025546400A7CDB9 /* CrashSensor.m */,
-				8D7A2DA91025AEE400C0553E /* WiFiSensor.h */,
-				8D7A2DAA1025AEE400C0553E /* WiFiSensor.m */,
+				8D637B980E04A332008D3EBA /* USBSensor.h */,
+				8D637B990E04A332008D3EBA /* USBSensor.m */,
+				8D637B8D0E04A280008D3EBA /* USBSensor-Info.plist */,
+				8D637C240E04CD32008D3EBA /* USBVendorDB.h */,
+				8D637C250E04CD32008D3EBA /* USBVendorDB.m */,
+				8DBACB281058F91700C7BC2D /* WiFiApple80211Sensor.h */,
+				8DBACABA1058F85F00C7BC2D /* WiFiApple80211Sensor.m */,
+				8DBACB271058F91700C7BC2D /* WiFiApple80211Sensor-Info.plist */,
 			);
 			name = Sensors;
 			sourceTree = "<group>";
@@ -729,20 +730,20 @@
 		8DA7FE280E06516400248CF8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8DFEDA3A0E54E8C00069AA8C /* ApplicationController.h */,
+				8DFEDA3B0E54E8C00069AA8C /* ApplicationController.m */,
+				8D9053C00F19775E0096466F /* ContextPreferencesPaneController.h */,
+				8D9053C10F19775E0096466F /* ContextPreferencesPaneController.m */,
+				8DBB44820E8B01F300B2D66F /* PreferencesController.h */,
+				8DBB44830E8B01F300B2D66F /* PreferencesController.m */,
+				8D7D5AB90E958D9C005279AD /* PreferencesPaneController.h */,
+				8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */,
 				8D5675950E010C9200EFEBA2 /* SensorArrayController.h */,
 				8D5675960E010C9200EFEBA2 /* SensorArrayController.m */,
 				8D56765D0E01EDD300EFEBA2 /* SensorController.h */,
 				8D56765E0E01EDD300EFEBA2 /* SensorController.m */,
 				8DA7FE290E06519000248CF8 /* SensorControllerTest.h */,
 				8DA7FE2A0E06519000248CF8 /* SensorControllerTest.m */,
-				8DFEDA3A0E54E8C00069AA8C /* ApplicationController.h */,
-				8DFEDA3B0E54E8C00069AA8C /* ApplicationController.m */,
-				8DBB44820E8B01F300B2D66F /* PreferencesController.h */,
-				8DBB44830E8B01F300B2D66F /* PreferencesController.m */,
-				8D7D5AB90E958D9C005279AD /* PreferencesPaneController.h */,
-				8D7D5ABA0E958D9C005279AD /* PreferencesPaneController.m */,
-				8D9053C00F19775E0096466F /* ContextPreferencesPaneController.h */,
-				8D9053C10F19775E0096466F /* ContextPreferencesPaneController.m */,
 				8D4B0C530F4E967A00006BDA /* SensorPreferencesPaneController.h */,
 				8D4B0C540F4E967A00006BDA /* SensorPreferencesPaneController.m */,
 			);
@@ -910,23 +911,6 @@
 			productReference = 8D723C9F0F47A16E00C78FC3 /* SensorRunner */;
 			productType = "com.apple.product-type.tool";
 		};
-		8D7A2DA21025ADDE00C0553E /* WiFiSensor */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8D7A2DA71025ADDF00C0553E /* Build configuration list for PBXNativeTarget "WiFiSensor" */;
-			buildPhases = (
-				8D7A2D9F1025ADDE00C0553E /* Resources */,
-				8D7A2DA01025ADDE00C0553E /* Sources */,
-				8D7A2DA11025ADDE00C0553E /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = WiFiSensor;
-			productName = WiFiSensor;
-			productReference = 8D7A2DA31025ADDE00C0553E /* WiFiSensor.sensor */;
-			productType = "com.apple.product-type.bundle";
-		};
 		8DA607F50E1D931A00066EA8 /* IPSensor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DA607FA0E1D931B00066EA8 /* Build configuration list for PBXNativeTarget "IPSensor" */;
@@ -941,6 +925,22 @@
 			name = IPSensor;
 			productName = IPSensor;
 			productReference = 8DA607F60E1D931A00066EA8 /* IPSensor.sensor */;
+			productType = "com.apple.product-type.bundle";
+		};
+		8DBAC9BD1058F7C900C7BC2D /* WiFiApple80211Sensor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DBAC9C21058F7C900C7BC2D /* Build configuration list for PBXNativeTarget "WiFiApple80211Sensor" */;
+			buildPhases = (
+				8DBAC9BB1058F7C900C7BC2D /* Sources */,
+				8DBAC9BC1058F7C900C7BC2D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiFiApple80211Sensor;
+			productName = WiFiApple80211Sensor;
+			productReference = 8DBAC9BE1058F7C900C7BC2D /* WiFiApple80211Sensor.sensor */;
 			productType = "com.apple.product-type.bundle";
 		};
 		8DE55AD10DFE7AF800D79CF0 /* Unit Tests */ = {
@@ -975,17 +975,17 @@
 			targets = (
 				8D1107260486CEB800E47090 /* MarcoPolo */,
 				8D5675790E0109CD00EFEBA2 /* SensorTester */,
+				8D723C9E0F47A16E00C78FC3 /* SensorRunner */,
 				8DE55AD10DFE7AF800D79CF0 /* Unit Tests */,
 				8D637B580E04A111008D3EBA /* All Sensors */,
+				8D2855A51025534200A7CDB9 /* CrashSensor */,
+				8DA607F50E1D931A00066EA8 /* IPSensor */,
 				8D0EACAF0E07A99C004ABEF2 /* LightSensor */,
 				8D1B84610E0A79AA00D47563 /* PowerSensor */,
+				8D4FE88D10246E8800DD9761 /* RunningApplicationSensor */,
 				8D56752C0E01055E00EFEBA2 /* TimeOfDaySensor */,
 				8D637B8B0E04A280008D3EBA /* USBSensor */,
-				8DA607F50E1D931A00066EA8 /* IPSensor */,
-				8D2855A51025534200A7CDB9 /* CrashSensor */,
-				8D4FE88D10246E8800DD9761 /* RunningApplicationSensor */,
-				8D723C9E0F47A16E00C78FC3 /* SensorRunner */,
-				8D7A2DA21025ADDE00C0553E /* WiFiSensor */,
+				8DBAC9BD1058F7C900C7BC2D /* WiFiApple80211Sensor */,
 			);
 		};
 /* End PBXProject section */
@@ -1028,13 +1028,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5675920E010AE800EFEBA2 /* SensorTester.nib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D7A2D9F1025ADDE00C0553E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1171,19 +1164,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8D7A2DA01025ADDE00C0553E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8D7A2DAB1025AEE400C0553E /* WiFiSensor.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8DA607F30E1D931A00066EA8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8DA608090E1D93C600066EA8 /* IPSensor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DBAC9BB1058F7C900C7BC2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DBACABB1058F85F00C7BC2D /* WiFiApple80211Sensor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1207,6 +1200,7 @@
 				8D69AD030F1741A70019E8A8 /* ContextCollection.m in Sources */,
 				8D477E3A0F24635B009CD458 /* ContextNode.m in Sources */,
 				8D37896D101D905800D16DAF /* SensorLoader.m in Sources */,
+				8D5F41CB10591CBD003A53C9 /* OS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1263,15 +1257,15 @@
 			target = 8D637B8B0E04A280008D3EBA /* USBSensor */;
 			targetProxy = 8D637B920E04A2C7008D3EBA /* PBXContainerItemProxy */;
 		};
-		8D7A2DAE1025AF5A00C0553E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8D7A2DA21025ADDE00C0553E /* WiFiSensor */;
-			targetProxy = 8D7A2DAD1025AF5A00C0553E /* PBXContainerItemProxy */;
-		};
 		8DA6081E0E1D941900066EA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8DA607F50E1D931A00066EA8 /* IPSensor */;
 			targetProxy = 8DA6081D0E1D941900066EA8 /* PBXContainerItemProxy */;
+		};
+		8DBACACD1058F87600C7BC2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DBAC9BD1058F7C900C7BC2D /* WiFiApple80211Sensor */;
+			targetProxy = 8DBACACC1058F87600C7BC2D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1711,66 +1705,6 @@
 			};
 			name = Release;
 		};
-		8D7A2DA51025ADDF00C0553E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "Sensors/WiFiSensor/WiFiSensor-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = WiFiSensor;
-				WRAPPER_EXTENSION = sensor;
-			};
-			name = Debug;
-		};
-		8D7A2DA61025ADDF00C0553E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
-				);
-				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				INFOPLIST_FILE = "Sensors/WiFiSensor/WiFiSensor-Info.plist";
-				INSTALL_PATH = "$(HOME)/Library/Bundles";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = WiFiSensor;
-				WRAPPER_EXTENSION = sensor;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 		8DA607F80E1D931B00066EA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1820,6 +1754,70 @@
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = IPSensor;
+				WRAPPER_EXTENSION = sensor;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		8DBAC9C01058F7C900C7BC2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Sensors/WiFiApple80211Sensor/WiFiApple80211Sensor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = WiFiApple80211Sensor;
+				WRAPPER_EXTENSION = sensor;
+			};
+			name = Debug;
+		};
+		8DBAC9C11058F7C900C7BC2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
+				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Sensors/WiFiApple80211Sensor/WiFiApple80211Sensor-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = WiFiApple80211Sensor;
 				WRAPPER_EXTENSION = sensor;
 				ZERO_LINK = NO;
 			};
@@ -2027,20 +2025,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D7A2DA71025ADDF00C0553E /* Build configuration list for PBXNativeTarget "WiFiSensor" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8D7A2DA51025ADDF00C0553E /* Debug */,
-				8D7A2DA61025ADDF00C0553E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8DA607FA0E1D931B00066EA8 /* Build configuration list for PBXNativeTarget "IPSensor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8DA607F80E1D931B00066EA8 /* Debug */,
 				8DA607F90E1D931B00066EA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DBAC9C21058F7C900C7BC2D /* Build configuration list for PBXNativeTarget "WiFiApple80211Sensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DBAC9C01058F7C900C7BC2D /* Debug */,
+				8DBAC9C11058F7C900C7BC2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

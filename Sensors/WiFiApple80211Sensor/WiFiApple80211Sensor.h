@@ -1,5 +1,5 @@
 //
-//  WiFiSensor.h
+//  WiFiApple80211Sensor.h
 //  MarcoPolo
 //
 //  Created by David Symonds on 2/08/09.
@@ -9,7 +9,7 @@
 #import "Sensor.h"
 
 
-@interface WiFiSensor : NSObject<Sensor> {
+@interface WiFiApple80211Sensor : NSObject<Sensor> {
 	@private
 	NSLock *lock_;
 	NSMutableArray *accessPoints_;

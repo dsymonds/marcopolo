@@ -24,4 +24,4 @@ Adding a new sensor
   - "All Sensors" target
 * Add FooSensor.sensor product to:
   - "Copy Files" phase of SensorTester target
-  - "Copy Files" phase of MarcoPolo target  [not yet, though]
+  - "Copy Files" phase of MarcoPolo target

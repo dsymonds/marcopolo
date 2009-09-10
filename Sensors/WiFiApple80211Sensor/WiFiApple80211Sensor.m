@@ -1,18 +1,18 @@
 //
-//  WiFiSensor.m
+//  WiFiApple80211Sensor.m
 //  MarcoPolo
 //
 //  Created by David Symonds on 2/08/09.
 //
 
 #import "Apple80211.h"
-#import "WiFiSensor.h"
+#import "WiFiApple80211Sensor.h"
 
 
 #define kWiFiScanInterval	((NSTimeInterval) 10)
 
 
-@interface WiFiSensor (Private)
+@interface WiFiApple80211Sensor (Private)
 
 - (void)update:(NSTimer *)timer;
 - (NSArray *)updateWithApple80211;
@@ -23,7 +23,7 @@
 
 #pragma mark -
 
-@implementation WiFiSensor
+@implementation WiFiApple80211Sensor
 
 - (id)init
 {
