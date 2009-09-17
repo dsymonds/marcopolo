@@ -41,21 +41,35 @@
 	return self;
 }
 
-#pragma mark NSCoder protocol
-
-- (id)initWithCoder:(NSCoder *)coder
-{
-	return [self initAsType:[coder decodeIntForKey:@"Type"]
-		   withSubrules:[coder decodeObjectForKey:@"Subrules"]];
-}
-
-- (void)encodeWithCoder:(NSCoder *)coder
-{
-	[coder encodeInt:type_ forKey:@"Type"];
-	[coder encodeObject:subrules_ forKey:@"Subrules"];
-}
-
 #pragma mark Rule protocol
+
+- (NSObject *)definition
+{
+	NSString *op = @"???";
+	switch (type_) {
+		case kLogicRuleAND:
+			op = @"AND";
+			break;
+		case kLogicRuleOR:
+			op = @"OR";
+			break;
+		case kLogicRuleNOT:
+			op = @"NOT";
+			break;
+	}
+
+	NSMutableArray *subrules = [NSMutableArray arrayWithCapacity:[subrules_ count]];
+	NSEnumerator *en = [subrules_ objectEnumerator];
+	id<Rule> subrule;
+	while ((subrule = [en nextObject])) {
+		[subrules addObject:[subrule definition]];
+	}
+
+	return [NSDictionary dictionaryWithObjectsAndKeys:
+		@"Logic", @"type",
+		op, @"operator",
+		subrules, @"subrules", nil];
+}
 
 - (BOOL)matches:(ValueSet *)valueSet
 {
@@ -67,9 +81,9 @@
 		match = YES;
 
 	NSEnumerator *en = [subrules_ objectEnumerator];
-	id<Rule> obj;
-	while ((obj = [en nextObject])) {
-		BOOL individualMatch = [obj matches:valueSet];
+	id<Rule> subrule;
+	while ((subrule = [en nextObject])) {
+		BOOL individualMatch = [subrule matches:valueSet];
 		switch (type_) {
 			case kLogicRuleAND:
 				match = match && individualMatch;

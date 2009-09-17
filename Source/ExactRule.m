@@ -27,21 +27,15 @@
 	return self;
 }
 
-#pragma mark NSCoding protocol
-
-- (id)initWithCoder:(NSCoder *)decoder
-{
-	return [self initWithSensor:[decoder decodeObjectForKey:@"Sensor"]
-			      value:[decoder decodeObjectForKey:@"Value"]];
-}
-
-- (void)encodeWithCoder:(NSCoder *)encoder
-{
-	[encoder encodeObject:sensor_ forKey:@"Sensor"];
-	[encoder encodeObject:value_ forKey:@"Value"];
-}
-
 #pragma mark Rule protocol
+
+- (NSObject *)definition
+{
+	return [NSDictionary dictionaryWithObjectsAndKeys:
+		@"Exact", @"type",
+		sensor_, @"sensor",
+		value_, @"value", nil];
+}
 
 - (BOOL)matches:(ValueSet *)valueSet
 {

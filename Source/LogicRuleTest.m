@@ -8,6 +8,7 @@
 #import "ExactRule.h"
 #import "LogicRule.h"
 #import "LogicRuleTest.h"
+#import "TestHelpers.h"
 #import "ValueSet.h"
 
 
@@ -44,14 +45,33 @@
 	return vs;
 }
 
+- (id<Rule>)ruleForValue:(NSObject *)value
+{
+	return [ExactRule exactRuleWithSensor:@"Mock" value:value];
+}
+
 - (LogicRule *)logicRule:(LogicRuleType)type withExactMatchSubrulesFrom:(NSArray *)valueArray
 {
 	NSMutableArray *subrules = [NSMutableArray arrayWithCapacity:[valueArray count]];
 	NSEnumerator *en = [valueArray objectEnumerator];
 	id val;
 	while ((val = [en nextObject]))
-		[subrules addObject:[ExactRule exactRuleWithSensor:@"Mock" value:val]];
+		[subrules addObject:[self ruleForValue:val]];
 	return [LogicRule logicRuleOfType:type withSubrules:subrules];
+}
+
+- (void)testDefinition
+{
+	LogicRule *rule = [self logicRule:kLogicRuleAND withExactMatchSubrulesFrom:one_two];
+	NSObject *def = [rule definition];
+	NSDictionary *expected = [NSDictionary dictionaryWithObjectsAndKeys:
+				  @"Logic", @"type",
+				  @"AND", @"operator",
+				  [NSArray arrayWithObjects:
+				   [[self ruleForValue:one] definition],
+				   [[self ruleForValue:two] definition], nil],
+				  @"subrules", nil];
+	STAssertEqualObjects(def, expected, nil);
 }
 
 - (void)testLogicAnd

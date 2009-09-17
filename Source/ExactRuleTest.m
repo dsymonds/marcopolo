@@ -24,6 +24,17 @@
 	return [self mockValueSetWithValues:[NSArray arrayWithObject:value]];
 }
 
+- (void)testDefinition
+{
+	ExactRule *rule = [ExactRule exactRuleWithSensor:@"Mock" value:[NSNumber numberWithInt:1]];
+	NSObject *def = [rule definition];
+	NSDictionary *expected = [NSDictionary dictionaryWithObjectsAndKeys:
+				  @"Exact", @"type",
+				  @"Mock", @"sensor",
+				  [NSNumber numberWithInt:1], @"value", nil];
+	STAssertEqualObjects(def, expected, nil);
+}
+
 - (void)testRuleMatching
 {
 	ExactRule *rule = [ExactRule exactRuleWithSensor:@"Mock" value:[NSNumber numberWithInt:1]];

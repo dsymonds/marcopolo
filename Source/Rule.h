@@ -11,7 +11,10 @@
 
 
 // The interface for all types of rules.
-@protocol Rule<NSCoding>
+@protocol Rule
+
+// Return the rule's definition as an NSCoding-conformant object.
+- (NSObject *)definition;
 
 - (BOOL)matches:(ValueSet *)valueSet;
 
